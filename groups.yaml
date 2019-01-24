@@ -267,15 +267,15 @@
   light_hallen:
     name: Hallens lampor
     entities:
-    - light.hall__1
-    - light.hall__2
+    - light.hall_1
+    - light.hall_2
  
   light_koket:
     name: Kökets lampor
     entities:
     - light.skafferiet
     - group.light_fibaro_koket
-    - light.koket__bank
+    - light.koket_bank
 
  
   light_kallaren:
@@ -291,8 +291,8 @@
   light_tvattstugan:
     name: Tvättstugans lampor
     entities:
-    - light.tvattstugan__1
-    - light.tvattstugan__2
+    - light.tvattstugan_1
+    - light.tvattstugan_2
 
 
   light_sovrummet:
@@ -305,10 +305,10 @@
   light_vardagsrum:
     name: Vardagsrums lampor
     entities:
-    - light.vardagsrum__stativ
-    - light.vardagsrum__tak
-    - light.vardagsrum__trapp
-    - light.vardagsrum__spotlights
+    - light.vardagsrum_stativ
+    - light.vardagsrum_tak
+    - light.vardagsrum_trapp
+    - light.vardagsrum_spotlights
  
   scenes_vardagsrum:
      name: Scener Vardagsrum
@@ -519,12 +519,12 @@
   controllable_devices:
     name: Controllable Devices
     entities:
-    - light.vardagsrum__tak
-    - light.vardagsrum__trapp
+    - light.vardagsrum_tak
+    - light.vardagsrum_trapp
     - light.sovrummet_1
     - light.sovrummet_2  
-    - light.tvattstugan__1
-    - light.tvattstugan__2
+    - light.tvattstugan_1
+    - light.tvattstugan_2
     - light.skafferiet
     - group.light_fibaro_koket
     - group.light_kallaren

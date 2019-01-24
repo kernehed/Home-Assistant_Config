@@ -137,25 +137,25 @@ light.kallarspot_6:
 #### LIGHTS ####
 ################
 
-light.tvattstugan__1:
+light.tvattstugan_1:
   friendly_name: Tvättstugelampa 1
-light.tvattstugan__2:
+light.tvattstugan_2:
   friendly_name: Tvättstugelampa 2
 light.sovrummet_1:
   friendly_name: Bellas lampa
 light.sovrummet_2:
   friendly_name: Oskars lampa
-light.vardagsrum__stativ:
+light.vardagsrum_stativ:
   friendly_name: Stativlampa
-light.vardagsrum__tak:
+light.vardagsrum_tak:
   friendly_name: Taklampa
-light.vardagsrum__trapp:
+light.vardagsrum_trapp:
   friendly_name: Trapplampa
 light.skafferiet:
   friendly_name: Skafferilampa
-light.hall__1:
+light.hall_1:
   friendly_name: Halllampa 1
-light.hall__2:
+light.hall_2:
   friendly_name: Halllampa 2
 light.fibaro_system_fgd212_dimmer_2_level:
   friendly_name: Köks spottar

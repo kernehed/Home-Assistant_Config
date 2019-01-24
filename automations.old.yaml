@@ -22,9 +22,9 @@
           state: 'unknown'
   action:
     - service: light.turn_off
-      entity_id: light.vardagsrum__stativ
+      entity_id: light.vardagsrum_stativ
     - service: light.turn_off
-      entity_id: light.vardagsrum__tak
+      entity_id: light.vardagsrum_tak
     - service: light.turn_off
       entity_id: group.light_tvattstugan
     - service: light.turn_off
@@ -34,9 +34,9 @@
     - service: light.turn_off
       entity_id: light.fibaro_system_fgd212_dimmer_2_level
     - service: light.turn_off
-      entity_id: light.vardagsrum__spotlights
+      entity_id: light.vardagsrum_spotlights
     - service: light.turn_on
-      entity_id: light.vardagsrum__trapp
+      entity_id: light.vardagsrum_trapp
     - service: light.turn_off
       entity_id: group.light_kitchen
 
@@ -70,14 +70,14 @@
         - fri
   action:
     - service: light.turn_on
-      entity_id: light.hall__1
+      entity_id: light.hall_1
     - service: light.turn_on
-      entity_id: light.hall__2
+      entity_id: light.hall_2
     - service: light.turn_on
       entity_id: group.light_hallen
     - service: light.turn_on
       data:
-        entity_id: light.vardagsrum__spotlights
+        entity_id: light.vardagsrum_spotlights
         brightness: 30
 #    - service: light.turn_on
 #      data:
@@ -111,14 +111,14 @@
         - sun
   action:
     - service: light.turn_on
-      entity_id: light.vardagsrum__stativ
+      entity_id: light.vardagsrum_stativ
     - service: light.turn_on
-      entity_id: light.vardagsrum__trapp
+      entity_id: light.vardagsrum_trapp
     - service: light.turn_on
       entity_id: group.light_hallen
     - service: light.turn_on
       data:
-        entity_id: light.vardagsrum__spotlights
+        entity_id: light.vardagsrum_spotlights
         brightness: 30
 #    - service: light.turn_on
 #      data:
@@ -138,7 +138,7 @@
     to: 'on'
   action:
     service: light.turn_on
-    entity_id: light.koket__bank
+    entity_id: light.koket_bank
 
 - alias: Släck bänkbelysningen efter 10 min när sista rörelse
   initial_state: 'on'
@@ -150,7 +150,7 @@
       minutes: 4
   action:
     service: light.turn_off
-    entity_id: light.koket__bank  
+    entity_id: light.koket_bank  
     
 ################################       
 ######## BADRUMSSENSOR #########
@@ -1112,8 +1112,8 @@
   trigger:
     platform: state
     entity_id:
-    - light.hall__1
-    - light.hall__2
+    - light.hall_1
+    - light.hall_2
     - light.kallarspot_1
     - light.kallarspot_2
     - light.kallarspot_3
@@ -1123,11 +1123,11 @@
     - light.skafferiet
     - light.sovrummet_1
     - light.sovrummet_2
-    - light.tvattstugan__1
-    - light.tvattstugan__2
-    - light.vardagsrum__stativ
-    - light.vardagsrum__tak
-    - light.vardagsrum__trapp
+    - light.tvattstugan_1
+    - light.tvattstugan_2
+    - light.vardagsrum_stativ
+    - light.vardagsrum_tak
+    - light.vardagsrum_trapp
     - light.theus_lampa
     - light.evenice_lampa
     - light.badrumslampa_1
@@ -1395,7 +1395,7 @@
       entity_id: 
       - group.theus_rum
       - group.hallen
-      - light.vardagsrum__trapp
+      - light.vardagsrum_trapp
     - service: media_player.volume_set
       entity_id:
       - media_player.entre_speaker
@@ -1422,7 +1422,7 @@
       entity_id:
       - group.theus_rum
       - group.hallen
-      - light.vardagsrum__trapp
+      - light.vardagsrum_trapp
     - service: switch.turn_on
       entity_id: switch.rest_julbelysning
 

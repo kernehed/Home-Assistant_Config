@@ -283,13 +283,13 @@
     service: light.turn_on
   - data:
       brightness: '30'
-      entity_id: light.vardagsrum__spotlights
+      entity_id: light.vardagsrum_spotlights
     service: light.turn_on
   - data:
-      entity_id: light.vardagsrum__trapp
+      entity_id: light.vardagsrum_trapp
     service: light.turn_on
   - data:
-      entity_id: light.vardagsrum__tak
+      entity_id: light.vardagsrum_tak
     service: light.turn_on
   - data:
       entity_id: switch.fibaro_wall_plug_2_switch

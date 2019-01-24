@@ -1,29 +1,29 @@
 # Scene for media player
   - name: Livingroom normal
     entities:
-#        light.vardagsrum__tak:
+#        light.vardagsrum_tak:
 #            state: on
 #            transition: 3
 #            brightness: 140
-        light.vardagsrum__stativ: off
-        light.vardagsrum__spotlights:
+        light.vardagsrum_stativ: off
+        light.vardagsrum_spotlights:
             state: on
             transition: 3
             brightness: 30
-        light.vardagsrum__trapp:
+        light.vardagsrum_trapp:
             state: on
             transition: 3
             brightness: 140
             
   - name: Livingroom dim
     entities:
-        light.vardagsrum__tak: off
-        light.vardagsrum__stativ:
+        light.vardagsrum_tak: off
+        light.vardagsrum_stativ:
             state: on
             transition: 3
             brightness: 45
-        light.vardagsrum__spotlights:
+        light.vardagsrum_spotlights:
             state: on
             transition: 3
             brightness: 10    
-        light.vardagsrum__trapp: off
+        light.vardagsrum_trapp: off

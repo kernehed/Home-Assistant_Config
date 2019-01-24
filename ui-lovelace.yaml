@@ -288,7 +288,7 @@ views:
         show_header_toggle: false
         entities:
           - light.skafferiet
-          - light.koket__bank
+          - light.koket_bank
           - light.fibaro_system_fgd212_dimmer_2_level
       - id: c6d2a2551aac4a26a0ae2d356efee413  # Automatically created id
         type: custom:mini-media-player
@@ -308,10 +308,10 @@ views:
         title: Vardagsrums lampor
         show_header_toggle: false
         entities:
-          - light.vardagsrum__stativ
-          - light.vardagsrum__tak
-          - light.vardagsrum__trapp
-          - light.vardagsrum__spotlights
+          - light.vardagsrum_stativ
+          - light.vardagsrum_tak
+          - light.vardagsrum_trapp
+          - light.vardagsrum_spotlights
           - switch.fibaro_wall_plug_1_switch
       - id: a87ac6a51dd746bfb8c69124215215125  # Automatically created id
         type: entities
@@ -342,8 +342,8 @@ views:
         type: entities
         title: Hallens lampor
         entities:
-          - light.hall__1
-          - light.hall__2
+          - light.hall_1
+          - light.hall_2
       - id: 890b620d2fc946d18e6eb74bca7c729b  # Automatically created id
         type: entities
         title: Altan lampor
@@ -377,8 +377,8 @@ views:
         type: entities
         title: Tvättstugans lampor
         entities:
-          - light.tvattstugan__1
-          - light.tvattstugan__2
+          - light.tvattstugan_1
+          - light.tvattstugan_2
       - id: 3955d8211b294c8480f793f146078410  # Automatically created id
         type: entities
         title: Källarens lampor

@@ -1,0 +1,75 @@
+#########################################################
+##                    INPUT SELECT                     ## 
+#########################################################
+
+  radio_station:
+    name: 'Välj Radiostation:'
+    options:
+      - SR P3
+      - SR P4 Gävleborg
+      - Mix Megapol
+      - NRJ
+      - RockKlassiker
+      - Vinyl FM
+      - Julradio P4
+      - Julradio P2
+
+
+      
+  chromecast_radio:
+    name: 'Välj högtalare:'
+    options:
+      - Entre
+      - Vardagsrum
+      - Köket
+      - Alla
+    initial: Entre
+    icon: mdi:speaker-wireless
+
+
+
+    
+  modes:
+    name: 'Läge:'
+    options:
+      - Hemmaläge
+      - Bortaläge
+      - Gästläge
+      - Julläge
+    initial: Hemmaläge
+    icon: mdi:door
+
+
+
+  christmas_pattern:
+    name: 'Välj pattern:'
+    options:
+      - None
+      - Color Waves
+      - Palette Test
+      - Pride
+      - Rainbow
+      - Rainbow Glitter
+      - Snow Glitter
+      - Confetti
+      - Juggle
+      - Sinelon
+      - BPM
+      - Solid
+    initial: None
+    icon: mdi:snowflake
+    
+  christmas_palette:
+    name: 'Välj palette:'
+    options:
+      - None
+      - Rainbow
+      - Rainbow Stripe
+      - Cloud
+      - Lava
+      - Ocean
+      - Forest
+      - Party
+      - Heat
+    initial: None
+    icon: mdi:vanish

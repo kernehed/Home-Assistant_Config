@@ -1,0 +1,48 @@
+# Zones
+- name: Anna
+  latitude: !secret anna_lat
+  longitude: !secret anna_long
+  radius: 50
+  icon: mdi:home-variant
+
+- name: PEAK HQ
+  latitude: !secret ojobb_lat
+  longitude: !secret ojobb_long
+  radius: 50
+  icon: mdi:briefcase
+  
+- name: Bellas jobb
+  latitude: !secret bjobb_lat
+  longitude: !secret bjobb_long 
+  radius: 50
+  icon: mdi:briefcase
+  
+- name: GEAB
+  latitude: !secret gjobb_lat
+  longitude: !secret gjobb_long 
+  radius: 50
+  icon: mdi:briefcase
+ 
+- name: Mamma
+  latitude: !secret mamma_lat
+  longitude: !secret mamma_long 
+  radius: 50
+  icon: mdi:home-variant
+  
+- name: Skolan
+  latitude: !secret skolan_lat
+  longitude: !secret skolan_long 
+  radius: 50
+  icon: mdi:school
+
+- name: ICA Fjällbacken
+  latitude: !secret fjallbacken_lat
+  longitude: !secret fjallbacken_long
+  radius: 50
+  icon: mdi:cart
+
+- name: Tempo
+  latitude: !secret tempo_lat
+  longitude: !secret tempo_long 
+  radius: 50
+  icon: mdi:cart

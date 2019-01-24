@@ -1,0 +1,116 @@
+####################
+## Pattern JULLED ##
+####################
+  pattern_colorwaves:
+    url: http://192.168.2.15/pattern?value=0
+    method: post
+  pattern_palettetest:
+    url: http://192.168.2.15/pattern?value=1
+    method: post
+  pattern_pride:
+    url: http://192.168.2.15/pattern?value=2
+    method: post
+  pattern_rainbow:
+    url: http://192.168.2.15/pattern?value=3
+    method: post
+  pattern_rainbowglitter:
+    url: http://192.168.2.15/pattern?value=4
+    method: post
+  pattern_snowglitter:
+    url: http://192.168.2.15/pattern?value=5
+    method: post
+  pattern_confetti:
+    url: http://192.168.2.15/pattern?value=6
+    method: post
+  pattern_sinelon:
+    url: http://192.168.2.15/pattern?value=7
+    method: post
+  pattern_juggle:
+    url: http://192.168.2.15/pattern?value=8
+    method: post
+  pattern_bpm:
+    url: http://192.168.2.15/pattern?value=9
+    method: post
+  pattern_solid:
+    url: http://192.168.2.15/pattern?value=10
+    method: post
+
+##################
+## Power ON/OFF ##
+##################
+  led_on:
+    url: http://192.168.2.15/power?value=1
+    method: post
+  led_off:
+    url: http://192.168.2.15/power?value=0
+    method: post
+    
+##################
+##Palette JULLED##
+##################
+
+  palette_rainbow:
+    url: http://192.168.2.15/palette?value=0
+    method: post
+  palette_rainbowstripe:
+    url: http://192.168.2.15/palette?value=1
+    method: post
+  palette_cloud:
+    url: http://192.168.2.15/palette?value=2
+    method: post
+  palette_lava:
+    url: http://192.168.2.15/palette?value=3
+    method: post
+  palette_ocean:
+    url: http://192.168.2.15/palette?value=4
+    method: post
+  palette_forest:
+    url: http://192.168.2.15/palette?value=5
+    method: post
+  palette_party:
+    url: http://192.168.2.15/palette?value=6
+    method: post
+  palette_heat:
+    url: http://192.168.2.15/palette?value=7
+    method: post
+
+
+    
+    
+#### url: http://192.168.0.43/brightness?value={{ states('input_number.YOURNUMBER') }}     -   AUTOMATION ####
+################    
+## Brightness ##
+################
+
+  brightness_current:
+    url: http://192.168.2.15/brightness
+    method: get
+  brightness_140:
+    url: http://192.168.2.15/brightness?value=140
+    method: post
+  brightness_120:
+    url: http://192.168.2.15/brightness?value=120
+    method: post
+  brightness_100:
+    url: http://192.168.2.15/brightness?value=100
+    method: post
+  brightness_80:
+    url: http://192.168.2.15/brightness?value=80
+    method: post
+  brightness_60:
+    url: http://192.168.2.15/brightness?value=60
+    method: post
+  brightness_40:
+    url: http://192.168.2.15/brightness?value=40
+    method: post
+  brightness_20:
+    url: http://192.168.2.15/brightness?value=20
+    method: post
+    
+##################    
+## COLOR PICKER ##
+##################
+
+  color_picker_standardlight:
+     url: http://192.168.2.15:80/solidColor?r=191&g=140&b=44
+     method: post

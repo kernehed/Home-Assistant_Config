@@ -1,0 +1,626 @@
+
+####VIEWS#####
+
+  default_view: #Detta är vad som syns under Hem
+   name: Hem
+   view: yes
+   entities:
+   - group.frontend_devices_adults
+   - group.sensor_adults
+   - group.las
+   - camera.entre
+   - sensor.trafikverket_luftstation_gavle
+   - sun.sun
+   - sensor.vader_temperature
+   - device_tracker.iphone_2
+   - device_tracker.annasiphone
+   - group.motion_sensors
+   - group.christmas        #Använd vid julen!
+   - group.brandvarnare
+   - group.sparsnas
+   - group.las
+   - group.door_window_sensors
+   - group.lufdatan
+   - group.pollen
+   - group.temperaturer
+
+
+
+   
+
+
+   
+  koket:
+    name: Köket
+    view: yes
+    entities:
+    - group.light_koket
+    - media_player.kitchen_speaker
+    - media_player.kitchen_mini
+
+  vardagsrum:
+    name: Vardagsrum
+    view: yes
+    entities:
+    - group.light_vardagsrum
+    - group.media_player1
+    - media_player.google_home
+    - group.fibaroplug_1
+    - group.temperatur_overvaning
+
+    
+  hallen:
+    name: Hallen
+    view: yes
+    entities:
+    - group.light_hallen
+    - media_player.entre_speaker
+    - group.radio
+    - group.tryckmatta_sensor
+    - group.temperatur_entre
+  
+  kallaren:
+    name: Källaren
+    view: yes
+    entities:
+    - group.light_tvattstugan
+    - group.luftfuktighet_sensor
+    - group.light_kallaren
+    - group.media_player3
+
+    
+  sovrummet:
+    name: Sovrummet
+    view: yes
+    entities:
+    - group.light_sovrummet
+    - media_player.bedroom
+    - media_player.bedroom_mini
+
+
+  barnens_rum:
+    name: Barnens rum
+    view: yes
+    entities:
+    - group.theus_rum
+    - group.evenice_rum
+    - media_player.evenice_mini
+    - media_player.theus_mini    
+
+  matsedel:
+    name: Matsedel
+    icon: mdi:food
+    view: yes
+    entities:
+    - group.lillhagsskolan_matsedel
+    - group.storhagensforskola_matsedel
+
+  system:
+    name: System & Nätverk
+    icon: mdi:server-network
+    view: yes
+    entities:
+    - group.sensor_systemmonitor
+    - group.network
+    - group.ubiquiti
+    - group.speedtest
+
+  webbkameror:
+    name: Webbkameror
+    icon: mdi:video
+    view: yes
+    entities:
+    - camera.entre
+    - group.cameras 
+
+#  lufdata:
+#    name: Luftdata
+#    icon: mdi:cloud-outline
+#    view: yes
+#    entities:
+#    - group.lufdatan
+#    - group.trafikverket
+
+  media:
+    name: Media
+    icon: mdi:play-circle
+    view: yes
+    entities:
+    - media_player.livingroom
+    - media_player.bedroom
+    - media_player.basement
+    - media_player.entre_speaker
+    - media_player.livingroom_speaker
+    - media_player.kitchen_speaker
+    - media_player.hela_huset
+    - media_player.bedroom_mini
+    - media_player.kitchen_mini
+    - media_player.koket
+    - media_player.uppe
+    - media_player.google_home
+    - media_player.nere
+    - media_player.evenice_mini
+    - media_player.theus_mini
+    - group.radio
+    
+
+  automationer:
+    name: Automationer
+    icon: mdi:settings
+    view: yes
+    entities:
+    - automation.alarm_away_mode_armed
+    - automation.alarm_away_mode_arming
+    - automation.alarm_disarmed
+    - automation.alarm_home_mode_armed
+    - automation.alarm_triggered
+    - automation.alarm_warning
+    - automation.away_mode
+    - automation.backup_dropbox
+    - automation.backup_local
+    - automation.bella_anna
+    - automation.bella_ej_hemma
+    - automation.bella_fjallbacken
+    - automation.bella_hemma
+    - automation.bella_jobb
+    - automation.bella_tempo
+    - automation.bortalage_input
+    - automation.brandvarnare
+    - automation.dorrklockan
+    - automation.dorrklockan_halloween
+    - automation.evenice_fodelsedag
+    - automation.eves_bokinlamning
+    - automation.eves_gymnastik
+    - automation.eves_laxa
+    - automation.gastelage_input
+    - automation.hass_ready
+    - automation.hass_started
+    - automation.hass_stopped
+    - automation.hass_updater
+    - automation.hemmalage_input
+    - automation.isabelles_fodelsedag
+    - automation.jullage_input
+    - automation.kamera_motion
+    - automation.las_laset_kl_2100
+    - automation.las_upp_laset
+    - automation.light_unavailable
+    - automation.luftfuktighet_overstigen_50_procent
+    - automation.milla_mat
+    - automation.nagon_hemma
+    - automation.new_device_tracked
+    - automation.norrsken_nara
+    - automation.oskar_fjallbacken
+    - automation.oskar_tempo
+    - automation.oskars_fodelsedag
+    - automation.people_greeting
+    - automation.people_greeting_2
+    - automation.radio_helgerna
+    - automation.radio_weekdays
+    - automation.set_radio_volume
+    - automation.set_startup_theme
+    - automation.sla_av_julbelysning_ute
+    - automation.sla_pa_julbelysning_ute
+    - automation.slack_bankbelysningen_efter_10_min_nar_sista_rorelse
+    - automation.slack_bankbelysningen_efter_7_min_vid_sista_rorelse
+    - automation.slack_bankbelysningen_efter_7_min_vid_sista_rorelse_2
+    - automation.slack_kallare_lamporna_efter_2_min_nar_sista_rorelse_i_kallaren
+    - automation.slack_skafferiet_lampan_efter_2_min_nar_sista_rorelse_i_skafferiet
+    - automation.slack_tvattstuge_lamporna_efter_10_min_nar_sista_rorelse
+    - automation.stang_av_lamporna_vid_0000
+    - automation.tand_bankbelysningen_nar_rorelse
+    - automation.tand_bankbelysningen_vid_rorelse
+    - automation.tand_bankbelysningen_vid_rorelse_2
+    - automation.tand_kallare_lamporna_nar_rorelse_i_kallaren
+    - automation.tand_lampor_om_nagon_ar_hemma_solnedgang
+    - automation.tand_lamporna_vid_0700
+    - automation.tand_lamporna_vid_0800
+    - automation.tand_skafferiet_lampan_nar_rorelse_i_skafferiet
+    - automation.tand_tvattstuge_lamporna_nar_rorelse
+    - automation.theus_fodelsedag
+    - automation.tts_lillhagsskolan_mat
+    - automation.tts_storhagensforskola_mat
+
+
+####GROUPS#####
+  
+  devices_bella:
+    name: Enheter bella
+    entities:
+    - device_tracker.iphone_7
+    - device_tracker.google_maps_103719873476746592925
+
+#  people_status:
+#    name: Vuxna status
+#    entities:
+#      - sensor.oskar_status
+#      - sensor.bella_status
+
+    
+  devices_oskar:
+    name: Enheter oskar
+    entities:
+    - device_tracker.oneplus_6
+    - device_tracker.google_maps_114170795730412573739
+
+  frontend_devices_adults:
+    name: Enheter
+    entities:
+    - sensor.oskar_devices
+    - sensor.oskar_tid_till_hem
+    - sensor.bella_devices
+    - sensor.bella_tid_till_hem
+    - device_tracker.annasiphone
+    - device_tracker.iphone_2
+    - device_tracker.2400ba681267
+
+
+  devices_adults:
+    name: Enheter
+    entities:
+    - device_tracker.oneplus_6
+    - device_tracker.iphone_7
+    - device_tracker.iphone_2
+    - device_tracker.2400ba681267
+    - device_tracker.google_maps_103719873476746592925
+    
+    
+  light_hallen:
+    name: Hallens lampor
+    entities:
+    - light.hall__1
+    - light.hall__2
+ 
+  light_koket:
+    name: Kökets lampor
+    entities:
+    - light.skafferiet
+    - group.light_fibaro_koket
+    - light.koket__bank
+
+ 
+  light_kallaren:
+    name: Källarens lampor
+    entities:
+    - light.kallarspot_1
+    - light.kallarspot_2
+    - light.kallarspot_3
+    - light.kallarspot_4
+    - light.kallarspot_5
+    - light.kallarspot_6
+
+  light_tvattstugan:
+    name: Tvättstugans lampor
+    entities:
+    - light.tvattstugan__1
+    - light.tvattstugan__2
+
+
+  light_sovrummet:
+    name: Sovrumslampor
+    entities:
+    - light.sovrummet_1
+    - light.sovrummet_2  
+
+
+  light_vardagsrum:
+    name: Vardagsrums lampor
+    entities:
+    - light.vardagsrum__stativ
+    - light.vardagsrum__tak
+    - light.vardagsrum__trapp
+    - light.vardagsrum__spotlights
+ 
+  scenes_vardagsrum:
+     name: Scener Vardagsrum
+     entities:
+     - scene.livingroom_dim
+     - scene.livingroom_normal
+
+  media_player1:
+     name: Vardagsrummet
+     entities:
+     - media_player.livingroom
+
+     
+  media_player2:
+     name: Sovrummet
+     entities:
+     - media_player.bedroom
+     
+     
+  media_player3:
+     name: Källaren
+     entities:
+     - media_player.basement
+     
+     
+  media_player4:
+     name: Vardagsrums Speaker
+     entities:
+     - media_player.livingroom_speaker
+     
+     
+  automationer_vardagsrum:
+     name: Automationer i Vardagsrum
+     entities:
+     - automation.media_player_pausedstopped
+     - automation.media_player_playing
+     - automation.stang_av_lamporna_vid_2300
+     - automation.tand_lamporna_vid_0600
+     - automation.tand_lamporna_vid_0800
+    
+  automationer_zoner:
+     name: Automationer Zoner
+     entities:
+     - automation.bella_anna
+     - automation.bella_ej_hemma
+     - automation.bella_hemma
+     - automation.bella_jobb
+     - automation.oskar_ej_hemma
+     
+  sensor_systemmonitor:
+     name: Systeminformation
+     entities:
+     - sensor.processor_use
+     - sensor.memory_free
+     - sensor.disk_free_home
+     - sensor.last_boot
+
+  network:
+     name: Nätverksinformation
+     entities:
+     - sensor.plex
+     - binary_sensor.gaming_pc
+     - binary_sensor.server_1
+     - binary_sensor.server_2
+     - binary_sensor.windows_server
+     - binary_sensor.teamspeak
+     - binary_sensor.harmony_hub
+     - binary_sensor.hall_plattan
+
+  ubiquiti:
+     name: Ubiquiti
+     entities:
+     - binary_sensor.accesspunkt_1
+     - binary_sensor.accesspunkt_2
+     - binary_sensor.ubiquiti_controller
+     - binary_sensor.ubiquiti_switch
+     - binary_sensor.ubiquiti_nvr
+     - binary_sensor.entre_kamera
+
+
+  speedtest:
+     name: Bandbredd
+     entities:
+     - sensor.speedtest_download
+     - sensor.speedtest_upload
+     - sensor.speedtest_ping
+    
+  media_spotify:
+     name: Spotify
+     entities:
+     - media_player.spotify
+   
+  luftfuktighet_sensor:
+     name: Tvättstugeinformation
+     entities:
+     - sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_relative_humidity
+     - sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_temperature
+     
+     
+  tryckmatta_sensor:
+     name: Tryckmatta
+     entities:
+     - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor
+    
+    
+  radio:
+     name: Radio
+     entities:
+     - input_select.radio_station
+     - input_select.chromecast_radio
+     - script.radio_p3
+     - input_number.volume_radio
+     
+  motion_sensors:
+    name: Rörelsesensor
+    entities:
+    - binary_sensor.tvattstugan_motion_sensor
+    - binary_sensor.skafferiet_motion_sensor 
+    - binary_sensor.kallaren_motion_sensor
+    - binary_sensor.trapp_motion_sensor
+    - binary_sensor.banksensor
+    - binary_sensor.unifi_camera
+     
+  fibaroplug_1:
+    name: Fibaro
+    entities:
+    - switch.fibaro_wall_plug_1_switch
+    - sensor.fibaro_wall_plug_1_power
+    
+  fibaroplug_2:
+    name: Theus 
+    entities:
+    - switch.fibaro_wall_plug_2_switch
+    - sensor.fibaro_wall_plug_2_power
+     
+  cameras:
+    name: Webbkameror
+    entities:
+    - camera.akersjons_webbkamera
+    - camera.gordalens_webbkamera
+    - camera.gavle_flytplats_webbkamera
+    - camera.jukkasjarvi_ishotell_webbkamera
+    - camera.tarnaby_webbkamera
+    
+  modes:
+    name: Lägesväljare
+    entities:
+    - input_select.modes
+    - switch.alarm
+    
+  christmas:
+    name: Uteslingan
+    entities:
+    - input_select.christmas_pattern
+    - input_select.christmas_palette
+    - switch.rest_julbelysning
+
+
+  sparsnas:
+    name: Elförbrukning
+    entities:
+    - sensor.energiforbrukning
+    - sensor.kwh_today
+    - sensor.kwh_current_month
+    - sensor.batteri
+    - sensor.sparsnas_frequency_error
+    - history_graph.gr1
+
+
+  las:
+    name: Låset
+    entities:
+    - lock.polycontrol_danalock_v3_btze_locked
+    - sensor.zwave_battery_front_door
+    - alarm_control_panel.kernehed_manison
+    - binary_sensor.dorrklockan
+
+  
+  light_fibaro_koket:
+    name: Köks spottar
+    icon: mdi:spotlight-beam
+    entities:
+    - light.fibaro_system_fgd212_dimmer_2_level
+#    - sensor.fibaro_system_fgd212_dimmer_2_power
+
+  sensor_adults:
+    name: Oskar & Bella
+    entities:
+    - sensor.oskar
+    - sensor.bella
+    
+  weathersky:
+     name: Väder
+     entities:
+     - ensor.dark_sky_apparent_temperature
+     - sensor.dark_sky_daily_summary
+     - sensor.dark_sky_humidity
+     - sensor.dark_sky_icon
+     - sensor.dark_sky_precip_intensity
+     - sensor.dark_sky_precip_probability
+     - sensor.dark_sky_pressure
+     - sensor.dark_sky_summary
+     - sensor.dark_sky_temperature
+     - sensor.dark_sky_wind_bearing
+     - sensor.dark_sky_wind_speed
+    
+ 
+  controllable_devices:
+    name: Controllable Devices
+    entities:
+    - light.vardagsrum__tak
+    - light.vardagsrum__trapp
+    - light.sovrummet_1
+    - light.sovrummet_2  
+    - light.tvattstugan__1
+    - light.tvattstugan__2
+    - light.skafferiet
+    - group.light_fibaro_koket
+    - group.light_kallaren
+    
+  door_window_sensors:
+    name: Dörr och fönster sensorer
+    entities:
+    - binary_sensor.back_door_sensor
+    - binary_sensor.front_door_sensor
+
+  lufdatan:
+    name: Luftdata
+    entities:
+    - sensor.luftdaten_pm10
+    - sensor.luftdaten_pm25
+    - sensor.luftdaten_humidity
+    - sensor.luftdaten_temperature
+
+  temperatur_entre:
+    name: Temperatur entré
+    entities:
+    - sensor.fibaro_system_unknown_type0c02_id1003_temperature_2
+    
+  temperatur_overvaning:
+    name: Temperatur uppe
+    entities:
+    - sensor.fibaro_system_unknown_type0c02_id1003_temperature_3
+  
+  temperaturer:
+    name: Temperaturer
+    entities:
+    - sensor.fibaro_system_unknown_type0c02_id1003_temperature_3
+    - sensor.fibaro_system_unknown_type0c02_id1003_temperature_2
+    - sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_temperature
+    - sensor.luftdaten_temperature
+  
+  
+  trafikverket:
+    name: Trafikverket
+    entities:
+    - sensor.trafikverket_luftstation_gavle
+
+  pollen:
+    name: Pollennivåer
+    entities:
+    - sensor.pollen_al
+    - sensor.pollen_alm
+    - sensor.pollen_bjork
+    - sensor.pollen_bok
+    - sensor.pollen_ek
+    - sensor.pollen_grabo
+    - sensor.pollen_gras
+    - sensor.pollen_hassel
+    - sensor.pollen_slag_vide
+    
+  theus_rum:
+    name: Theus
+    entities:
+    - light.theus_lampa
+    - switch.fibaro_wall_plug_2_switch
+    - sensor.fibaro_wall_plug_2_power
+    
+  evenice_rum:
+    name: Evenice
+    entities:
+    - light.evenice_lampa
+    
+  brandvarnare:
+    name: Brandvarnare
+    entities:
+    - binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor
+    - binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_2
+    
+    
+  lillhagsskolan_matsedel:
+    name: Lillhagsskolans matsedel
+    entities:
+    - sensor.lillhagsskolan_lunch_mandag
+    - sensor.lillhagsskolan_lunch_tisdag
+    - sensor.lillhagsskolan_lunch_onsdag
+    - sensor.lillhagsskolan_lunch_torsdag
+    - sensor.lillhagsskolan_lunch_fredag
+    
+    
+  storhagensforskola_matsedel:
+    name: Storhagens förskola matsedel
+    entities:
+    - sensor.storhagensforskola_lunch_mandag
+    - sensor.storhagensforskola_lunch_tisdag
+    - sensor.storhagensforskola_lunch_onsdag
+    - sensor.storhagensforskola_lunch_torsdag
+    - sensor.storhagensforskola_lunch_fredag
+    
+  gastlage:
+    name: Gästläge
+    entities: 
+    - script.gast_mode
+    
+    

@@ -1,0 +1,372 @@
+- action:
+  - alias: Hemma
+    data:
+      message: Bella har kommit hem!
+    service: notify.telegram_oskar
+  alias: Bella (Hemma)
+  condition: []
+  id: '1507667731896'
+  trigger:
+  - entity_id: device_tracker.iphone_7
+    event: enter
+    platform: zone
+    zone: zone.home
+- action:
+  - alias: Bella Jobb
+    data:
+      message: Bella har kommit till jobbet!
+    service: notify.telegram_oskar
+  alias: Bella (Jobb)
+  condition: []
+  id: '1507668985074'
+  trigger:
+  - entity_id: device_tracker.iphone_7
+    event: enter
+    platform: zone
+    zone: zone.bellas_jobb
+- action:
+  - alias: Bella Anna
+    data:
+      message: Bella är hos Anna
+    service: notify.telegram_oskar
+  alias: Bella (Anna)
+  condition: []
+  id: '1507669073055'
+  trigger:
+  - entity_id: device_tracker.google_maps_103719873476746592925
+    event: enter
+    platform: zone
+    zone: zone.anna
+- action:
+  - alias: Bella ej hemma
+    data:
+      message: Bella har åkt hemifrån.
+    service: notify.telegram_oskar
+  alias: Bella (Ej hemma)
+  condition: []
+  id: '1507669167774'
+  trigger:
+  - entity_id: device_tracker.google_maps_103719873476746592925
+    event: leave
+    platform: zone
+    zone: zone.home
+  initial_state: 'on'
+- id: '1507978191001'
+  alias: Away mode
+  trigger:
+  - entity_id: group.devices_adults
+    from: home
+    platform: state
+    to: not_home
+  action:
+  - data:
+      entity_id: group.light_vardagsrum
+    service: light.turn_off
+  - data:
+      entity_id: group.light_hallen
+    service: light.turn_off
+  - data:
+      entity_id: group.light_tvattstugan
+    service: light.turn_off
+  - data:
+      entity_id: group.light_kallaren
+    service: light.turn_off
+  - data:
+      entity_id: media_player.livingroom
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.bedroom
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.entre_speaker
+    service: media_player.media_stop
+  - data:
+      entity_id: media_player.basement
+    service: media_player.turn_off
+  - data:
+      entity_id: media_player.livingroom_speaker
+    service: media_player.media_stop
+  - data:
+      entity_id: media_player.whole_house
+    service: media_player.media_stop
+  - data:
+      entity_id: media_player.kitchen_speaker
+    service: media_player.media_stop
+  - data:
+      entity_id: group.light_sovrummet
+    service: light.turn_off
+  - data:
+      entity_id: group.light_koket
+    service: light.turn_off
+  - data:
+      entity_id: group.theus_rum
+    service: light.turn_off
+  - data:
+      entity_id: group.evenice_rum
+    service: light.turn_off
+  initial_state: 'on'
+- action:
+  - data:
+      message: Luftfuktigheten har överstigit 50%!
+    service: notify.telegram_oskar
+  alias: Luftfuktighet överstigen 50 procent
+  initial_state: 'on'
+  condition: []
+  id: '1509992418765'
+  trigger:
+  - above: '50'
+    entity_id: sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_relative_humidity
+    platform: numeric_state
+- action:
+  - delay: 00:00:07
+  - data:
+      entity_id: media_player.entre_speaker
+      media_content_id: !secret content_silence_mp3
+      media_content_type: music
+    service: media_player.play_media
+  - data:
+      entity_id: media_player.entre_speaker
+      message: Välkommen, vad fin du är idag
+    service: tts.google_say
+  alias: Någon hemma
+  condition: []
+  id: '1510402582146'
+  trigger:
+  - entity_id: group.tryckmatta_sensor
+    from: 'on'
+    platform: state
+    to: 'off'
+- id: alarm_armed_away
+  alias: '[Alarm] Away Mode Armed'
+  initial_state: 'on'
+  trigger:
+  - entity_id: alarm_control_panel.kernehed_manison
+    platform: state
+    to: armed_away
+  action:
+  - data:
+      entity_id: media_player.whole_house
+      volume_level: '0.2'
+    service: media_player.volume_set
+  - data:
+      message: Bortaläge aktiverat
+    service: notify.adults
+  - data:
+      message: Larmet har aktiverats som borta läge. Hejdå.
+    entity_id: media_player.entre_speaker
+    service: tts.google_say
+  - data:
+      entity_id: lock.polycontrol_danalock_v3_btze_locked
+    service: lock.lock
+- id: alarm_armed_home
+  alias: '[Alarm] Home Mode Armed'
+  trigger:
+  - entity_id: alarm_control_panel.kernehed_manison
+    platform: state
+    to: armed_home
+  action:
+  - data:
+      entity_id: media_player.whole_house
+      volume_level: '0.2'
+    service: media_player.volume_set
+  - data:
+      message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma! Låser
+        och larmar på dörren bara. '
+    service: notify.adults
+  - data:
+      message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma. '
+    entity_id: media_player.entre_speaker
+    service: tts.google_say
+  - delay: 00:00:12
+  - data:
+      entity_id: lock.polycontrol_danalock_v3_btze_locked
+    service: lock.lock
+  initial_state: 'on'
+- id: alarm_arming_away
+  alias: '[Alarm] Away Mode Arming'
+  initial_state: 'on'
+  trigger:
+  - entity_id: alarm_control_panel.kernehed_manison
+    platform: state
+    to: pending
+  action:
+  - data:
+      entity_id: media_player.whole_house
+      volume_level: '0.2'
+    service: media_player.volume_set
+  - data:
+      message: Larmet har aktiverats. Se till så alla fönster och dörrar är stängda.
+    entity_id: media_player.entre_speaker
+    service: tts.google_say
+- id: alarm_disarmed
+  alias: '[Alarm] Disarmed'
+  trigger:
+  - entity_id: alarm_control_panel.kernehed_manison
+    platform: state
+    to: disarmed
+  action:
+  - data:
+      entity_id: media_player.whole_house
+      volume_level: '0.2'
+    service: media_player.volume_set
+  - data:
+      message: Larmet har avaktiverats
+    service: notify.adults
+  - data:
+      message: Larmet har avaktiverats.
+    entity_id: media_player.entre_speaker
+    service: tts.google_say
+  - data:
+      entity_id: script.flash_lights
+    service: homeassistant.turn_off
+  initial_state: 'on'
+- id: alarm_triggered
+  alias: '[Alarm] Triggered'
+  trigger:
+  - entity_id: alarm_control_panel.kernehed_manison
+    platform: state
+    to: triggered
+  action:
+  - data:
+      entity_id: script.flash_lights
+    service: script.turn_on
+  - data:
+      entity_id: media_player.entre_speaker
+      volume_level: '0.5'
+    service: media_player.volume_set
+  - data:
+      entity_id: media_player.entre_speaker
+      media_content_id: !secret content_alarm_mp3
+      media_content_type: audio/mp3
+    service: media_player.play_media
+  - data:
+      message: ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[0]][
+        states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[1]].name
+        }}
+    service: notify.adults
+  initial_state: 'on'
+- id: alarm_warning
+  alias: '[Alarm] Warning'
+  initial_state: 'on'
+  trigger:
+  - entity_id: alarm_control_panel.kernehed_manison
+    platform: state
+    to: warning
+  action:
+  - data:
+      entity_id: media_player.whole_house
+      volume_level: '0.2'
+    service: media_player.volume_set
+  - data:
+      message: ALARM varning {{ states[states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[0]][
+        states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[1]].name
+        }}
+    service: notify.adults
+  - data:
+      message: Hej, Larmet har utlösts. Var vänlig avaktivera!
+    entity_id: media_player.entre_speaker
+    service: tts.google_say
+- id: '1541001662547'
+  alias: Tänd lampor om någon är hemma solnedgång
+  trigger:
+  - entity_id: group.devices_adults
+    from: not_home
+    platform: state
+    to: home
+  condition:
+  - before: sunset
+    before_offset: -01:00:00
+    condition: sun
+  action:
+  - data:
+      entity_id: group.light_hallen
+    service: light.turn_on
+  - data:
+      brightness: '30'
+      entity_id: light.vardagsrum__spotlights
+    service: light.turn_on
+  - data:
+      entity_id: light.vardagsrum__trapp
+    service: light.turn_on
+  - data:
+      entity_id: light.vardagsrum__tak
+    service: light.turn_on
+  - data:
+      entity_id: switch.fibaro_wall_plug_2_switch
+    service: switch.turn_on
+  initial_state: true
+- id: '1543339017942'
+  alias: Bella Tempo
+  trigger:
+  - entity_id: device_tracker.google_maps_103719873476746592925
+    event: enter
+    platform: zone
+    zone: zone.tempo
+  condition: []
+  action:
+  - data:
+      message: Nu är Bella vid Tempo, behöver vi ha någonting?
+    service: notify.adults
+- id: '15433390171233'
+  alias: Bella fjällbacken
+  trigger:
+  - entity_id: device_tracker.google_maps_103719873476746592925
+    event: enter
+    platform: zone
+    zone: zone.ica_fjallbacken
+  condition: []
+  action:
+  - data:
+      message: Nu är Bella vid ICA Fjällbacken, behöver vi ha någonting?
+    service: notify.adults
+- id: '1543339013123133'
+  alias: Oskar Tempo
+  trigger:
+  - entity_id: device_tracker.google_maps_114170795730412573739
+    event: enter
+    platform: zone
+    zone: zone.tempo
+  condition: []
+  action:
+  - data:
+      message: Nu är Oskar vid ICA Fjällbacken, behöver vi ha någonting?
+    service: notify.adults
+- id: '1543339013979673'
+  alias: Oskar fjällbacken
+  trigger:
+  - entity_id: device_tracker.google_maps_114170795730412573739
+    event: enter
+    platform: zone
+    zone: zone.ica_fjallbacken
+  condition: []
+  action:
+  - data:
+      message: Nu är Oskar vid Tempo, behöver vi ha någonting?
+    service: notify.adults
+- id: '1545414121046'
+  alias: Brandvarnare
+  trigger:
+  - entity_id: group.brandvarnare
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: DET BRINNER, UTRYM!
+    service: tts.google_say
+  - data:
+      message: DET BRINNER, UTRYM!
+    service: notify.adults
+- id: '1545925758700'
+  alias: gastlage
+  trigger:
+  - entity_id: input_boolean.guest_mode
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      entity_id: automation.away_mode
+    service: automation.turn_off

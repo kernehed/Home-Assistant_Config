@@ -1,0 +1,29 @@
+
+  - platform: uvc
+    nvr: !secret nvr_ipadress
+    key: !secret nvr_key
+    password: !secret nvr_password
+  
+  - platform: generic
+    name: 'Åkersjöns webbkamera'
+    still_image_url: http://155.4.82.36:19231/record/current.jpg
+    
+  - platform: generic
+    name: 'Gördalens webbkamera'
+    still_image_url: http://www.gordalen.nu/webcam00.jpg
+    
+  - platform: generic
+    name: 'Gävle flytplats webbkamera'
+    still_image_url: http://www.essk-wx.com/camera01/image.jpg   
+    
+  - platform: generic
+    name: 'Jukkasjärvi ishotell webbkamera'
+    still_image_url: http://83.140.123.184/ImageHarvester/Images/2349-icehotel_live.jpg     
+    
+  - platform: generic
+    name: 'Jukkasjärvi ishotell webbkamera'
+    still_image_url: http://83.140.123.184/ImageHarvester/Images/2349-icehotel_live.jpg   
+    
+  - platform: generic
+    name: 'Tarnaby webbkamera'
+    still_image_url: http://www.storuman.se/webcams/tarnaby/tarnaby.jpg

@@ -14,7 +14,7 @@ resources:
 #    type: js
 #  - url: /local/custom-lovelace/kiosk-config.js
 #    type: js
-  - url: /local/custom-lovelace/fold-entity-row.js?v=5ab35c
+  - url: /local/custom-lovelace/fold-entity-row.js?v=6d11d3
     type: js
   - url: /local/custom-lovelace/swipe-card/swipe-card.js?v=2.0.0
     type: module
@@ -22,7 +22,7 @@ resources:
     type: js
   - url: /local/custom-lovelace/tracker-card.js?v=0.1.5
     type: js
-  - url: /local/custom-lovelace/card-tools.js?v=090958
+  - url: /local/custom-lovelace/card-tools.js?v=297fcc
     type: js
   - url: /local/custom-lovelace/krisinfo.js?=0.0.1
     type: js

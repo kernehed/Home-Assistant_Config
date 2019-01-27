@@ -121,7 +121,7 @@
   - delay: 00:00:07
   - data:
       entity_id: media_player.entre_speaker
-      media_content_id: !secret content_silence_mp3
+      media_content_id: https://kernehed.duckdns.org:8123/local/5-seconds-of-silence.mp3
       media_content_type: music
     service: media_player.play_media
   - data:
@@ -236,7 +236,7 @@
     service: media_player.volume_set
   - data:
       entity_id: media_player.entre_speaker
-      media_content_id: !secret content_alarm_mp3
+      media_content_id: https://kernehed.duckdns.org:8123/local/ALARMSOUND.mp3
       media_content_type: audio/mp3
     service: media_player.play_media
   - data:
@@ -274,8 +274,9 @@
     platform: state
     to: home
   condition:
-  - before: sunset
-    before_offset: -01:00:00
+  - after: sunset
+    before: sunset
+    before_offset: 01:00:00
     condition: sun
   action:
   - data:

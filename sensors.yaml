@@ -73,31 +73,31 @@
   - platform: scrape
     name: Lillhagsskolan lunch måndag
     resource: https://skolmaten.se/lillhagsskolan/
-    select: 'div:nth-of-type(6)'
+    select: 'div.row:nth-of-type(1) p:nth-of-type(2) span'
     scan_interval: 14400
    
   - platform: scrape
     name: Lillhagsskolan lunch tisdag
     resource: https://skolmaten.se/lillhagsskolan/
-    select: 'div:nth-of-type(9)'
+    select: 'div.row:nth-of-type(2) p:nth-of-type(2) span'
     scan_interval: 14400
    
   - platform: scrape
     name: Lillhagsskolan lunch onsdag
     resource: https://skolmaten.se/lillhagsskolan/
-    select: 'div:nth-of-type(12)'
+    select: 'div.row:nth-of-type(3) p:nth-of-type(2) span'
     scan_interval: 14400
    
   - platform: scrape
     name: Lillhagsskolan lunch torsdag
     resource: https://skolmaten.se/lillhagsskolan/
-    select: 'div:nth-of-type(15)'
+    select: 'div.row:nth-of-type(4) p:nth-of-type(2) span'
     scan_interval: 14400
    
   - platform: scrape
     name: Lillhagsskolan lunch fredag
     resource: https://skolmaten.se/lillhagsskolan/
-    select: 'div:nth-of-type(18)'
+    select: 'div.row:nth-of-type(5) p:nth-of-type(2) span'
     scan_interval: 14400
 
 # STORHAGENSFÖRSKOLA
@@ -105,31 +105,31 @@
   - platform: scrape
     name: Storhagensförskola lunch måndag
     resource: https://skolmaten.se/storhagens-forskola2/
-    select: 'div:nth-of-type(6)'
+    select: 'div.row:nth-of-type(1) p:nth-of-type(2) span:nth-of-type(1)'
     scan_interval: 14400
    
   - platform: scrape
     name: Storhagensförskola lunch tisdag
     resource: https://skolmaten.se/storhagens-forskola2/
-    select: 'div:nth-of-type(9)'
+    select: 'div.row:nth-of-type(2) p:nth-of-type(2) span:nth-of-type(1)'
     scan_interval: 14400
    
   - platform: scrape
     name: Storhagensförskola lunch onsdag
     resource: https://skolmaten.se/storhagens-forskola2/
-    select: 'div:nth-of-type(12)'
+    select: 'div.row:nth-of-type(3) p:nth-of-type(2) span:nth-of-type(1)'
     scan_interval: 14400
    
   - platform: scrape
     name: Storhagensförskola lunch torsdag
     resource: https://skolmaten.se/storhagens-forskola2/
-    select: 'div:nth-of-type(15)'
+    select: 'div.row:nth-of-type(4) p:nth-of-type(2) span:nth-of-type(1)'
     scan_interval: 14400
    
   - platform: scrape
     name: Storhagensförskola lunch fredag
     resource: https://skolmaten.se/storhagens-forskola2/
-    select: 'div:nth-of-type(18)'
+    select: 'div.row:nth-of-type(5) p:nth-of-type(2) span:nth-of-type(1)'
     scan_interval: 14400
       
 ##################

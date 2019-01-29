@@ -198,7 +198,6 @@
       message: Larmet har aktiverats. Se till så alla fönster och dörrar är stängda.
     entity_id: media_player.entre_speaker
     service: tts.google_say
-  initial_state: 'on'
 - id: alarm_disarmed
   alias: '[Alarm] Disarmed'
   trigger:
@@ -219,7 +218,10 @@
     service: tts.google_say
   - data:
       entity_id: script.flash_lights
-    service: homeassistant.turn_off
+    service: script.turn_off
+  - data:
+      entity_id: script.light_loop
+    service: script.turn_off
   initial_state: 'on'
 - id: alarm_triggered
   alias: '[Alarm] Triggered'
@@ -267,7 +269,6 @@
       message: Hej, Larmet har utlösts. Var vänlig avaktivera!
     entity_id: media_player.entre_speaker
     service: tts.google_say
-  initial_state: 'on'
 - id: '1541001662547'
   alias: Tänd lampor om någon är hemma solnedgång
   trigger:

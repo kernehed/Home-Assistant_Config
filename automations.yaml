@@ -198,6 +198,7 @@
       message: Larmet har aktiverats. Se till så alla fönster och dörrar är stängda.
     entity_id: media_player.entre_speaker
     service: tts.google_say
+  initial_state: 'on'
 - id: alarm_disarmed
   alias: '[Alarm] Disarmed'
   trigger:
@@ -266,6 +267,7 @@
       message: Hej, Larmet har utlösts. Var vänlig avaktivera!
     entity_id: media_player.entre_speaker
     service: tts.google_say
+  initial_state: 'on'
 - id: '1541001662547'
   alias: Tänd lampor om någon är hemma solnedgång
   trigger:
@@ -295,7 +297,7 @@
   - data:
       entity_id: switch.fibaro_wall_plug_2_switch
     service: switch.turn_on
-  initial_state: true
+  initial_state: 'on'
 - id: '1543339017942'
   alias: Bella Tempo
   trigger:
@@ -308,6 +310,7 @@
   - data:
       message: Nu är Bella vid Tempo, behöver vi ha någonting?
     service: notify.adults
+  initial_state: 'off'
 - id: '15433390171233'
   alias: Bella fjällbacken
   trigger:
@@ -320,6 +323,7 @@
   - data:
       message: Nu är Bella vid ICA Fjällbacken, behöver vi ha någonting?
     service: notify.adults
+  initial_state: 'off'
 - id: '1543339013123133'
   alias: Oskar Tempo
   trigger:
@@ -332,6 +336,7 @@
   - data:
       message: Nu är Oskar vid ICA Fjällbacken, behöver vi ha någonting?
     service: notify.adults
+  initial_state: 'off'
 - id: '1543339013979673'
   alias: Oskar fjällbacken
   trigger:
@@ -344,6 +349,7 @@
   - data:
       message: Nu är Oskar vid Tempo, behöver vi ha någonting?
     service: notify.adults
+  initial_state: 'off'
 - id: '1545414121046'
   alias: Brandvarnare
   trigger:

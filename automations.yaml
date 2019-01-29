@@ -269,36 +269,6 @@
       message: Hej, Larmet har utlösts. Var vänlig avaktivera!
     entity_id: media_player.entre_speaker
     service: tts.google_say
-- id: '1541001662547'
-  alias: Tänd lampor om någon är hemma solnedgång
-  trigger:
-  - entity_id: group.devices_adults
-    from: not_home
-    platform: state
-    to: home
-  condition:
-  - after: sunset
-    before: sunset
-    before_offset: 01:00:00
-    condition: sun
-  action:
-  - data:
-      entity_id: group.light_hallen
-    service: light.turn_on
-  - data:
-      brightness: '30'
-      entity_id: light.vardagsrum_spotlights
-    service: light.turn_on
-  - data:
-      entity_id: light.vardagsrum_trapp
-    service: light.turn_on
-  - data:
-      entity_id: light.vardagsrum_tak
-    service: light.turn_on
-  - data:
-      entity_id: switch.fibaro_wall_plug_2_switch
-    service: switch.turn_on
-  initial_state: 'on'
 - id: '1543339017942'
   alias: Bella Tempo
   trigger:

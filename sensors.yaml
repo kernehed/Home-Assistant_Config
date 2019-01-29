@@ -522,7 +522,12 @@
       - link
     exclusions:
       - language
-      
+
+#  - platform: feedparser
+#    name: Quote of the Day
+#    feed_url: 'https://www.brainyquote.com/link/quotebr.rss'
+#    date_format: '%a, %b %d %I:%M %p'
+
   - platform: template
     sensors:
       next_router_os_release:

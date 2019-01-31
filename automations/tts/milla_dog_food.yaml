@@ -1,0 +1,41 @@
+alias: Milla mat
+initial_state: 'on'
+trigger: 
+  - platform: time
+    at: "11:30:00"
+  - platform: time
+    at: "18:30:00"
+condition:
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+action:
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.hela_huset
+    data:
+      volume_level: 0.2
+  - service: media_player.play_media
+    data:
+      entity_id:
+        - media_player.hela_huset
+      media_content_id: !secret content_silence_mp3
+      media_content_type: music
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data:
+     message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
+  - service: tts.google_say
+    entity_id: media_player.kallare_mini
+    data:
+     message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
+  - service: notify.adults
+    data:
+      title: 'Milla'
+      message: 'Kom ihåg att Milla ska ha mat snart!'

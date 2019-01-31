@@ -1,0 +1,27 @@
+alias: 'tts lillhagsskolan mat'
+initial_state: 'on'
+trigger:
+  - platform: time
+    at: '06:48'
+action:
+  - service: media_player.volume_set
+    entity_id: media_player.entre_speaker
+    data:
+      volume_level: 0.2
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data_template:
+      message: >-
+        "På skolan idag får Evenice äta"
+        {% if now().weekday() == 0 %}
+          {{ states('sensor.lillhagsskolan_lunch_mandag') }}
+        {% elif now().weekday() == 1 %}
+          {{ states('sensor.lillhagsskolan_lunch_tisdag') }}
+        {% elif now().weekday() == 2 %}
+          {{ states('sensor.lillhagsskolan_lunch_onsdag') }}
+        {% elif now().weekday() == 3 %}
+          {{ states('sensor.lillhagsskolan_lunch_torsdag') }}
+        {% elif now().weekday() == 4 %}
+          {{ states('sensor.lillhagsskolan_lunch_fredag') }}  
+        {% endif %}
+      cache: false

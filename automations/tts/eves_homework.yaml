@@ -1,0 +1,19 @@
+alias: Eves läxa
+initial_state: 'on'
+trigger: 
+  - platform: time
+    at: "06:40:00"
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: group.devices_adults
+      state: 'home'
+    - condition: time
+      weekday:
+      - tue
+action:
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data:
+     message: " PÅMINNELSE! Kom ihåg att ta med läxan idag!"

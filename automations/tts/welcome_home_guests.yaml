@@ -1,0 +1,48 @@
+alias: People Greeting 2
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id:
+      - device_tracker.annasiphone
+      - device_tracker.iphone_2
+      - device_tracker.andreassiphone
+    from: 'not_home'
+    to: 'home'
+    for: '00:02:00'
+condition:
+  condition: time
+  after: '07:00:00'
+  before: '19:00:00'
+action:
+  - service: script.speech_engine_2
+    data_template:
+      personarriving: >-
+       {%- if trigger.entity_id == 'device_tracker.iphone_2' -%}
+         {%- set person = "Ingela" -%}
+       {%- elif trigger.entity_id == 'device_tracker.annasiphone' -%}
+         {%- set person = "Anna" -%}
+       {%- elif trigger.entity_id == 'device_tracker.andreassiphone' -%}
+         {%- set person = "Andreas" -%}
+       {%- else -%}
+         {%- set person = "Alla" -%}
+       {%- endif -%}
+        {%- macro greeting_sentence(person) -%}
+          {{ [
+             "Välkommen hem till oss" ~ person,
+             "Gissa vem som kommit hit?" ~ person +" har!",
+             "Men se här vad katten har släpat in?" ~ person +" är här!",
+             person + " är nu hos familjen Kernehed.",
+             "Välkommen hem till oss " ~ person + ".  Vi har saknat dig, eller åtminstone jag, Milla!",
+             "Hos oss kan du känna dig som hemma, välkommen hit " ~ person,
+             "Hej där " ~ person + " Välkommen till vårat hem!",
+             "Knack Knack. Vem där? "   ~ person +" är!",
+             person ~ "! Välkommen hem till oss",
+             "Jag vet en hemlighet! "  ~ person +" är här!",
+             "Hej "  ~ person +" du har blivit hittad av det smartaste huset på gatan!",
+             person + " är nu här.  Hash tag Välkommen hem.",
+             person + " är nu här.  Hash tag Hemma.",
+             person + " är nu här.  Hash tag Smart hem.",
+             person + " är nu här.  Välkommen till Kernehed Mansion, mi casa su casa."
+          ] | random }}
+        {%- endmacro -%}
+        {{- greeting_sentence(person) -}}

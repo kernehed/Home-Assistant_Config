@@ -1,0 +1,19 @@
+alias: Evenice fodelsedag
+initial_state: 'on'
+trigger: 
+  - platform: time_pattern
+    hours : '/3'
+    minutes: 00
+    seconds: 00
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '07:00:00'
+      before: '22:00:00'
+    - condition: template
+      value_template: '{{ now().strftime("%d") | int == 5 and now().strftime("%m") | int == 1 }}'
+action:
+#  - delay: '00:00:05'
+  - service: script.turn_on
+    entity_id: script.evenice_fodelsedag

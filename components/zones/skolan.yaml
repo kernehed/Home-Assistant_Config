@@ -1,0 +1,5 @@
+name: Skolan
+latitude: !secret skolan_lat
+longitude: !secret skolan_long 
+radius: 50
+icon: mdi:school

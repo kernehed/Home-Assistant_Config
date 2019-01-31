@@ -1,0 +1,9 @@
+alias: 'Set startup theme'
+initial_state: 'on'
+trigger:
+  - platform: time
+    at: '08:00'
+action:
+  - service: frontend.set_theme
+    data:
+      name: slate

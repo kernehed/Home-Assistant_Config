@@ -1,0 +1,4 @@
+platform: rest
+name: brightness_rest
+resource: http://192.168.2.15/brightness
+method: GET

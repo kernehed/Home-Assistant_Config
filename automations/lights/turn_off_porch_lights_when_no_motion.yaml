@@ -1,0 +1,12 @@
+alias: Släck bänkbelysningen efter 7 min vid sista rörelse
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.altan_motion_sensor
+  to: 'off'
+  for:
+    minutes: 7
+action:
+  service: light.turn_off
+  entity_id:
+  - light.altan_lampa

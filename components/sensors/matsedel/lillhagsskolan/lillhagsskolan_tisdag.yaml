@@ -1,0 +1,5 @@
+platform: scrape
+name: Lillhagsskolan lunch tisdag
+resource: https://skolmaten.se/lillhagsskolan/
+select: 'div.row:nth-of-type(2) p:nth-of-type(2) span'
+scan_interval: 14400

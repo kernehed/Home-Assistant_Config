@@ -1,0 +1,3 @@
+sensor.pollen_hassel:
+  friendly_name: Hassel
+  icon: mdi:flower

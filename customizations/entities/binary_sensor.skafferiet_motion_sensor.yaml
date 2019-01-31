@@ -1,0 +1,3 @@
+binary_sensor.skafferiet_motion_sensor:
+  friendly_name: Rörelsesensor skafferiet
+  icon: mdi:walk

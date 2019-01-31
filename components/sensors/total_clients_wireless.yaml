@@ -1,0 +1,6 @@
+platform: template
+sensors: 
+  total_clients_wireless:
+    value_template: >
+     {{ states.sensor.clients_ap2.state | int + states.sensor.clients_ap2_5ghz.state | int + states.sensor.clients_ap1.state | int + states.sensor.clients_ap1_5ghz.state| int}}
+    friendly_name: Total clients

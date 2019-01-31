@@ -1,0 +1,8 @@
+alias: p_lava
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_palette
+  to: "Lava"
+action:
+  - service: rest_command.palette_lava   

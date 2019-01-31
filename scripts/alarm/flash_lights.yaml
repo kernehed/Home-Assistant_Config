@@ -1,0 +1,30 @@
+flash_lights:
+  alias: Flash Lights
+  sequence:
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - light.evenice_lampa
+          - light.theus_lampa
+        brightness: 255
+        rgb_color: [255,0,0]
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - group.light_hallen
+          - group.light_koket
+        brightness: 255
+    - delay:
+        seconds: 1
+    - service: homeassistant.turn_off
+      data:
+        entity_id:
+          - light.evenice_lampa
+          - light.theus_lampa
+          - group.light_hallen
+          - group.light_koket
+    - service: script.turn_on
+      data:
+        entity_id: script.light_loop

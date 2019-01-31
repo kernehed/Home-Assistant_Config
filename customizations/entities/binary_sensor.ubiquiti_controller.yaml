@@ -1,0 +1,3 @@
+binary_sensor.ubiquiti_controller:
+  friendly_name: Ubiquiti controller
+  icon: mdi:server-network

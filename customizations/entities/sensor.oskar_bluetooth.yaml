@@ -1,0 +1,3 @@
+sensor.oskar_bluetooth:
+  friendly_name: Oskar
+  entity_picture: /local/Oskar-3.jpg

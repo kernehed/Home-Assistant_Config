@@ -1,0 +1,4 @@
+recorder:
+  db_url: sqlite:////config/home-assistant_v2.db
+  purge_interval: 2
+  purge_keep_days: 7

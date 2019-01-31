@@ -1,0 +1,3 @@
+sensor.pollen_bjork:
+  friendly_name: Björk
+  icon: mdi:leaf

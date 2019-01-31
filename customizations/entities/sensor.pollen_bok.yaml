@@ -1,0 +1,3 @@
+sensor.pollen_bok:
+  friendly_name: Bok
+  icon: mdi:leaf

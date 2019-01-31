@@ -1,0 +1,3 @@
+binary_sensor.server_1:
+  friendly_name: ESXIone server
+  icon: mdi:server-network

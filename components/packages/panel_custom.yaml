@@ -1,0 +1,1 @@
+panel_custom: !include_dir_merge_named ../../panels/custom

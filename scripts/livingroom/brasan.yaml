@@ -1,0 +1,7 @@
+brasan:
+  sequence:
+  - service: media_extractor.play_media
+    data:
+      entity_id: media_player.livingroom
+      media_content_id: https://www.youtube.com/watch?v=ZY3J3Y_OU0w
+      media_content_type: video

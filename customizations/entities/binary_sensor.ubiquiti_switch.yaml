@@ -1,0 +1,3 @@
+binary_sensor.ubiquiti_switch:
+  friendly_name: Switch
+  icon: mdi:nas

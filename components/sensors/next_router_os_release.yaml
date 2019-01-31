@@ -1,0 +1,11 @@
+platform: template
+sensors:
+  next_router_os_release:
+    value_template: >
+      {% set sorted_releases = states.sensor.engineering_feed.attributes | sort | reverse %}
+      {%- for release in sorted_releases if release | regex_match('.*\[Stable\].*') %}
+        {%- if loop.first %}
+          {{- release | replace('[Stable]','') }}
+        {%- endif %}
+      {%- endfor %}
+    friendly_name: Senaste mjukvaran

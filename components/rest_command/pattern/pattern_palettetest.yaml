@@ -1,0 +1,3 @@
+pattern_palettetest:
+  url: http://192.168.2.15/pattern?value=1
+  method: post

@@ -1,0 +1,10 @@
+alias: Hass Updater
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: updater.updater
+action:
+  - service: notify.telegram_oskar
+    data_template: 
+      title: 'Ny Home Assistant version ute!'
+      message: "Home Assistant  {{ states.updater.updater.state }}  är nu tillgänlig."

@@ -1,0 +1,31 @@
+alias: Kamera motion
+id: kamera_motion
+initial_state: 'on'
+trigger: 
+  - platform: state
+    entity_id: binary_sensor.unifi_camera
+    to: 'on'
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: group.devices_adults
+      state: 'not_home'
+    - condition: time
+      before: "05:00:00"
+      after: "00:15:00"
+action:
+  - service: script.turn_on
+    entity_id: script.entre_camera_snapshot #Snapshot 1
+  - delay: '00:00:02'
+  - service: script.turn_on
+    entity_id: script.entre_camera_snapshot #Snapshot 2
+  - delay: '00:00:02'
+  - service: script.turn_on
+    entity_id: script.entre_camera_snapshot #Snapshot 3
+  - delay: '00:00:02'
+  - service: script.turn_on
+    entity_id: script.entre_camera_snapshot #Snapshot 4
+  - delay: '00:00:02'
+  - service: script.turn_on
+    entity_id: script.entre_camera_snapshot #Snapshot 5

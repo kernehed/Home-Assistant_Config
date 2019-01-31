@@ -1,0 +1,9 @@
+chromecast_radio:
+  name: 'Välj högtalare:'
+  options:
+    - Entre
+    - Vardagsrum
+    - Köket
+    - Alla
+  initial: Entre
+  icon: mdi:speaker-wireless

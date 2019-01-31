@@ -251,12 +251,6 @@ views:
         entity: media_player.google_home
         artwork: cover
         show_source: true
-      - id: ced6f42d11814294ba9e5f8e75bc0a3d  # Automatically created id
-        type: entities
-        title: Temperatur uppe
-        show_header_toggle: false
-        entities:
-          - sensor.fibaro_system_unknown_type0c02_id1003_temperature_2
   - title: Hallen
     id: hallen
     cards:
@@ -286,12 +280,6 @@ views:
           - input_select.chromecast_radio
           - script.radio_p3
           - input_number.volume_radio
-      - id: 93369aa864ff47bea401e68cf16e8fbf  # Automatically created id
-        type: entities
-        title: Temperatur entré
-        show_header_toggle: false
-        entities:
-          - sensor.fibaro_system_unknown_type0c02_id1003_temperature
   - title: Källaren
     id: källaren
     cards:
@@ -708,7 +696,6 @@ views:
           - automation.bella_hemma
           - automation.bella_jobb
           - automation.bella_tempo
-          - automation.bortalage_input
           - automation.brandvarnare
           - automation.dorrklockan
           - automation.dorrklockan_halloween
@@ -716,14 +703,11 @@ views:
           - automation.eves_bokinlamning
           - automation.eves_gymnastik
           - automation.eves_laxa
-          - automation.gastelage_input
           - automation.hass_ready
           - automation.hass_started
           - automation.hass_stopped
           - automation.hass_updater
-          - automation.hemmalage_input
           - automation.isabelles_fodelsedag
-          - automation.jullage_input
           - automation.kamera_motion
           - automation.las_laset_kl_21_00
           - automation.las_upp_laset
@@ -732,7 +716,6 @@ views:
           - automation.milla_mat
           - automation.nagon_hemma
           - automation.new_device_tracked
-          - automation.norrsken_nara
           - automation.oskar_fjallbacken
           - automation.oskar_tempo
           - automation.oskars_fodelsedag
@@ -746,16 +729,13 @@ views:
           - automation.sla_pa_julbelysning_ute
           - automation.slack_bankbelysningen_efter_10_min_nar_sista_rorelse
           - automation.slack_bankbelysningen_efter_7_min_vid_sista_rorelse
-          - automation.slack_bankbelysningen_efter_7_min_vid_sista_rorelse_2
           - automation.slack_kallare_lamporna_efter_2_min_nar_sista_rorelse_i_kallaren
           - automation.slack_skafferiet_lampan_efter_2_min_nar_sista_rorelse_i_skafferiet
           - automation.slack_tvattstuge_lamporna_efter_10_min_nar_sista_rorelse
           - automation.stang_av_lamporna_vid_00_00
           - automation.tand_bankbelysningen_nar_rorelse
           - automation.tand_bankbelysningen_vid_rorelse
-          - automation.tand_bankbelysningen_vid_rorelse_2
           - automation.tand_kallare_lamporna_nar_rorelse_i_kallaren
-          - automation.tand_lampor_om_nagon_ar_hemma_solnedgang
           - automation.tand_lamporna_vid_07_00
           - automation.tand_lamporna_vid_08_00
           - automation.tand_skafferiet_lampan_nar_rorelse_i_skafferiet

@@ -1,0 +1,6 @@
+christmas_brightness:
+  name: Brightness
+  initial: 140
+  min: 0
+  max: 140
+  step: 1

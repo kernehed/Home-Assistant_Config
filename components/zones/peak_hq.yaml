@@ -1,0 +1,5 @@
+name: PEAK HQ
+latitude: !secret ojobb_lat
+longitude: !secret ojobb_long
+radius: 50
+icon: mdi:briefcase

@@ -1,0 +1,10 @@
+alias: 'Hass Ready'
+initial_state: 'on'
+trigger:
+  platform: event
+  event_type: zwave.network_ready
+action:
+  - service: notify.telegram_oskar
+    data:
+      title: 'Home Assistant'
+      message: 'Z-wave network är ready'

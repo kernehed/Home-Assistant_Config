@@ -1,0 +1,5 @@
+name: Bellas jobb
+latitude: !secret bjobb_lat
+longitude: !secret bjobb_long 
+radius: 50
+icon: mdi:briefcase

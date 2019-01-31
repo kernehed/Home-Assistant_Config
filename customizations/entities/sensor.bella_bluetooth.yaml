@@ -1,0 +1,3 @@
+sensor.bella_bluetooth:
+  friendly_name: Bella
+  entity_picture: /local/Bella.jpg

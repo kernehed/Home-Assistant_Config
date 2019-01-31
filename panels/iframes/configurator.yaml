@@ -1,0 +1,4 @@
+configurator:
+  title: Configurator
+  icon: mdi:wrench
+  url: !secret panel_configurator

@@ -1,0 +1,23 @@
+platform: template
+sensors:
+  bella_devices:
+    friendly_name: "Var är Bella?"
+    value_template: >-
+      {%- set device_state1 = states('device_tracker.google_maps_103719873476746592925') -%}
+      {%- set device_state2 = states('device_tracker.iphone_7') -%}
+      {%- set custom_state = {
+        'work': 'Work',
+        'Skolan': 'Skolan',
+        'home': 'Hemma',
+        'not_home': 'Ej hemma',
+        'PEAK HQ': 'PEAK HQ',
+        'GEAB': 'GEAB',
+        'Mamma': 'Mamma',
+        'away': 'Borta',
+        'Bellas jobb': 'Bellas jobb'
+      } -%}
+      {% if custom_state[device_state1] != '' and device_state2 == 'not_home' %}
+       {{custom_state[device_state1]}}
+      {% else %}
+       {{custom_state[device_state2]}}
+      {% endif%}

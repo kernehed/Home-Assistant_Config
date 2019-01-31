@@ -1,0 +1,9 @@
+alias: p_rainbow
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_pattern
+  to: "Rainbow"
+action:
+  - service: rest_command.pattern_rainbow    
+   

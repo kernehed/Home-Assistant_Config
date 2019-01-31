@@ -1,0 +1,3 @@
+sensor.fibaro_wall_plug_2_power:
+  friendly_name: Energiförbrukning
+  icon: mdi:power-socket-eu

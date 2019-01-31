@@ -1,0 +1,1 @@
+rest_command: !include_dir_list ../rest_command

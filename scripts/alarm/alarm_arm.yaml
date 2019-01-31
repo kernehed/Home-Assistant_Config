@@ -1,0 +1,10 @@
+alarm_arm:
+  sequence:
+    service: alarm_control_panel.alarm_arm_away
+    entity_id: alarm_control_panel.kernehed_manison
+alarm_disarm:
+  sequence:
+    service: alarm_control_panel.alarm_disarm
+    entity_id: alarm_control_panel.kernehed_manison
+    data:
+      code: !secret alarm_code

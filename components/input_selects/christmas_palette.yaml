@@ -1,0 +1,14 @@
+christmas_palette:
+  name: 'Välj palette:'
+  options:
+    - None
+    - Rainbow
+    - Rainbow Stripe
+    - Cloud
+    - Lava
+    - Ocean
+    - Forest
+    - Party
+    - Heat
+  initial: None
+  icon: mdi:vanish

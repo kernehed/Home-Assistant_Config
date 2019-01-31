@@ -1,0 +1,7 @@
+platform: google_travel_time
+name: Bella tid till hem
+api_key: !secret api_key_google_travel_time
+origin: device_tracker.google_maps_103719873476746592925
+destination: zone.home
+options:
+  mode: transit

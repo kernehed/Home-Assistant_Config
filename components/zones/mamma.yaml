@@ -1,0 +1,5 @@
+name: Mamma
+latitude: !secret mamma_lat
+longitude: !secret mamma_long 
+radius: 50
+icon: mdi:home-variant

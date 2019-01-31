@@ -1,0 +1,12 @@
+name: Livingroom dim
+entities:
+    light.vardagsrum_tak: off
+    light.vardagsrum_stativ:
+        state: on
+        transition: 3
+        brightness: 45
+    light.vardagsrum_spotlights:
+        state: on
+        transition: 3
+        brightness: 10    
+    light.vardagsrum_trapp: off

@@ -1,0 +1,14 @@
+platform: template
+sensors:
+  zwave_battery_front_door:
+    value_template: '{{ states.zwave.polycontrol_danalock_v3_btze.attributes.battery_level|default(0) }}'
+    icon_template: >
+      {% set battery_level = states.zwave.polycontrol_danalock_v3_btze.attributes.battery_level | default(0) | int %}
+      {% set battery_round = (battery_level / 10) |int * 10 %}
+      {% if battery_round >= 100 %}
+        mdi:battery
+      {% elif battery_round > 0 %}
+        mdi:battery-{{ battery_round }}
+      {% else %}
+        mdi:battery-alert
+      {% endif %}

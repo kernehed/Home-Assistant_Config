@@ -1,0 +1,3 @@
+script.dropbox_backup:
+  icon: mdi:cloud-upload
+  friendly_name: Backup till Dropbox

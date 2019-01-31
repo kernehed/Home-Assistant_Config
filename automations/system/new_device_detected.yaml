@@ -1,0 +1,13 @@
+alias: New Device Tracked
+initial_state: 'off'
+trigger:
+  platform: event
+  event_type: device_tracker_new_device
+action:
+  - service: notify.telegram_oskar
+    data_template:
+      message: >
+        New device:
+        {{trigger.event.data.host_name}} 
+        ({{trigger.event.data.entity_id}})
+      title: 'New device Detected'

@@ -1,0 +1,3 @@
+pattern_solid:
+  url: http://192.168.2.15/pattern?value=10
+  method: post

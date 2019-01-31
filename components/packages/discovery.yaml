@@ -1,0 +1,5 @@
+discovery:
+  ignore:
+    - songpal
+    - samsung_tv
+    - harmony

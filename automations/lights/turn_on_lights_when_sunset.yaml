@@ -1,0 +1,19 @@
+# Turn lights on when sun is set if we are home.
+alias: 'Light on when sun is down'
+id: 'lights when sun is set'
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: group.devices_adults
+  to: 'home'
+condition:
+  condition: sun
+  after: sunset
+  after_offset: "-00:30:00"
+action:
+  service: light.turn_on
+  entity_id:
+  - group.light_hallen
+  - light.vardagsrum_spotlights
+  - light.vardagsrum_trapp
+  - light.vardagsrum_tak

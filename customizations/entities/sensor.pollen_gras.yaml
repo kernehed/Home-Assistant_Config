@@ -1,0 +1,3 @@
+sensor.pollen_gras:
+  friendly_name: Gräs
+  icon: mdi:flower

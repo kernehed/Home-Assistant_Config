@@ -1,0 +1,5 @@
+name: GEAB
+latitude: !secret gjobb_lat
+longitude: !secret gjobb_long 
+radius: 50
+icon: mdi:briefcase

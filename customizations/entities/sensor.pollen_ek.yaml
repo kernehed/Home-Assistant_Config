@@ -1,0 +1,3 @@
+sensor.pollen_ek:
+  friendly_name: Ek
+  icon: mdi:flower

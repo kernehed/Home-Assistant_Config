@@ -1,0 +1,4 @@
+platform: uvc
+nvr: !secret nvr_ipadress
+key: !secret nvr_key
+password: !secret nvr_password

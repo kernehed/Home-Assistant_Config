@@ -1,0 +1,3 @@
+binary_sensor.harmony_hub:
+  friendly_name: Harmony hub
+  icon: mdi:remote

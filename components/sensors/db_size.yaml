@@ -1,0 +1,5 @@
+platform: command_line
+name: DB size
+command: "du -m /config/home-assistant_v2.db | cut -f1"
+unit_of_measurement: 'MB'
+value_template: '{{ value | int - 1 }}'

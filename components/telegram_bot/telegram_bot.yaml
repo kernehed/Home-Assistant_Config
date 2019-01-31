@@ -1,0 +1,5 @@
+platform: polling
+api_key: !secret telegram_api_key
+allowed_chat_ids:
+  - 543927188 # Oskar
+  - 535882719 # Bella

@@ -1,0 +1,3 @@
+script.radio_p3:
+  friendly_name: Start Playing
+  icon: mdi:play

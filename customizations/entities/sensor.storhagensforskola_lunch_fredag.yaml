@@ -1,0 +1,4 @@
+sensor.storhagensforskola_lunch_fredag:
+  friendly_name: Fredag
+  icon: mdi:food
+  

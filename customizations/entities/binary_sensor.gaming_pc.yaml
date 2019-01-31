@@ -1,0 +1,3 @@
+binary_sensor.gaming_pc:
+  friendly_name: Oskars dator
+  icon: mdi:laptop

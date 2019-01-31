@@ -1,0 +1,3 @@
+binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor:
+  friendly_name: Brandvarnare entréplan
+  icon: mdi:fire

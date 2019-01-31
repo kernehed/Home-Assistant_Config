@@ -1,0 +1,3 @@
+sensor.kwh_today:
+  friendly_name: Idag
+  icon: mdi:flash

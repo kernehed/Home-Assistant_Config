@@ -1,0 +1,10 @@
+alias: 'guest mode'
+id: 'guest mode'
+initial_state: on
+trigger:
+  platform: state
+  entity_id: input_boolean.guest_mode
+action:
+  service_template: >
+      homeassistant.toggle_{{ 'off' if is_state('input_boolean.guest_mode', 'on') else 'on' }}
+      entity_id: script.gast_mode_{{ states('input_boolean.guest_mode')}}

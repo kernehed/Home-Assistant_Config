@@ -1,0 +1,11 @@
+radio_station:
+  name: 'Välj Radiostation:'
+  options:
+    - SR P3
+    - SR P4 Gävleborg
+    - Mix Megapol
+    - NRJ
+    - RockKlassiker
+    - Vinyl FM
+    - Julradio P4
+    - Julradio P2

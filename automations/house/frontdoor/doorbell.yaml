@@ -1,0 +1,21 @@
+alias: Dorrklockan 
+id: dorrklockan
+initial_state: 'on'
+trigger: 
+  - platform: state
+    entity_id: binary_sensor.dorrklockan
+    to: 'off'
+action:
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data:
+     message: 'Någon ringer på dörren!'
+  - service: tts.google_say
+    entity_id: media_player.kallare_mini
+    data:
+     message: 'Någon ringer på dörren!'
+  - service: script.turn_on
+    entity_id: script.dorrklockan_snapshot #Snapshot 1
+  - delay: '00:00:02'
+  - service: script.turn_on
+    entity_id: script.dorrklockan_snapshot #Snapshot 2

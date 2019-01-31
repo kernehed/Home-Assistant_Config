@@ -1,0 +1,8 @@
+alias: p_party
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_palette
+  to: "Party"
+action:
+  - service: rest_command.palette_party   

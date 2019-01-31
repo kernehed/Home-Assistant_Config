@@ -1,0 +1,3 @@
+binary_sensor.ubiquiti_NVR:
+  friendly_name: NVR
+  icon: mdi:server-network

@@ -1,0 +1,3 @@
+binary_sensor.server_2:
+  friendly_name: ESXItwo server
+  icon: mdi:server-network

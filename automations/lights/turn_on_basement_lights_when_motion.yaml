@@ -1,0 +1,10 @@
+alias: Tänd källare lamporna när rörelse i källaren
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.kallaren_motion_sensor
+  to: 'on'
+action:
+  service: light.turn_on
+  entity_id: group.light_kallaren
+

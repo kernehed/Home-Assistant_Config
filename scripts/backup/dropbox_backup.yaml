@@ -1,0 +1,4 @@
+dropbox_backup:
+  alias: Backup HA Configuration To Dropbox
+  sequence:
+    - service: shell_command.dropbox_backup

@@ -1,0 +1,4 @@
+homeassistant:
+
+  # Lets me customize individual entities
+  customize: !include_dir_merge_named ../../customizations/entities

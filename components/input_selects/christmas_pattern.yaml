@@ -1,0 +1,17 @@
+christmas_pattern:
+  name: 'Välj pattern:'
+  options:
+    - None
+    - Color Waves
+    - Palette Test
+    - Pride
+    - Rainbow
+    - Rainbow Glitter
+    - Snow Glitter
+    - Confetti
+    - Juggle
+    - Sinelon
+    - BPM
+    - Solid
+  initial: None
+  icon: mdi:snowflake

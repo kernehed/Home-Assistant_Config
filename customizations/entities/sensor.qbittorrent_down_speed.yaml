@@ -1,0 +1,3 @@
+sensor.qbittorrent_down_speed:
+  friendly_name: Nedladdning
+  icon: mdi:file-download

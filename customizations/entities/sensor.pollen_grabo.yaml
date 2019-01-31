@@ -1,0 +1,3 @@
+sensor.pollen_grabo:
+  friendly_name: Gråbo
+  icon: mdi:flower

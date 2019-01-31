@@ -1,0 +1,3 @@
+binary_sensor.back_door_sensor:
+  friendly_name: Altandörren sensor
+  icon: mdi:door

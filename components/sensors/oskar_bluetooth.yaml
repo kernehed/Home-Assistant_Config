@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  oskar_bluetooth:
+    friendly_name: "oskar bluetooth"
+    value_template: "{% set map = {'Sovrummets Google Home': 'Sovrummet', 'Källare mini': 'Källaren', 'Evenice mini': 'Evenice rum','Vardagsrums Google Home': 'Vardagsrummet','Kökets Google Home': 'Köket','Theus mini': 'Theus rum','not_home': 'Ej hemma','Okänd': 'Ej tillgänglig'} %}{{ map[state_attr('device_tracker.64a2f984d997', 'ghunit')] }}"

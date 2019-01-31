@@ -1,0 +1,9 @@
+alias: Backup Local
+initial_state: 'on'
+trigger:
+- platform: time
+  at: "01:00:00"
+action:
+- service: hassio.snapshot_full
+  data_template:
+    name: Backup {{ now().strftime('%Y-%m-%d') }}

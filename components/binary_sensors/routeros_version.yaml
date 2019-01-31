@@ -1,0 +1,6 @@
+platform: template
+sensors:
+  new_routeros_available:
+    value_template: >-
+      {{ states.sensor.next_router_os_release != states.sensor.installed_routeros.state and next_router_os_release != 'unavailable' }}
+    friendly_name: Ny RouterOS tillgänglig

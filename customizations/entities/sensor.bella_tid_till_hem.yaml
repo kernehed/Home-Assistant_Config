@@ -1,0 +1,3 @@
+sensor.bella_tid_till_hem:
+  friendly_name: 'Antal minuter hem'
+  icon: mdi:timer

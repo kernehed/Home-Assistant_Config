@@ -1,0 +1,11 @@
+alias: 'Hass Started'
+initial_state: 'on'
+trigger:
+  platform: homeassistant
+  # Event can also be 'shutdown'
+  event: start
+action:
+  - service: notify.telegram_oskar
+    data:
+      title: 'Home Assistant'
+      message: 'Online'

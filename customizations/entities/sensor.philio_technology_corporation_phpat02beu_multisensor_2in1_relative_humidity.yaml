@@ -1,0 +1,3 @@
+sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_relative_humidity:
+  friendly_name: Luftfuktighet
+  icon: mdi:water-percent

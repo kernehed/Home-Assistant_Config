@@ -1,0 +1,14 @@
+dorrklockan_snapshot:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.entre
+      filename: '/config/snapshot/dorrklockan.jpg'
+  - service: notify.adults
+    data:
+      message: "Någon plingar på dörren"
+      title: "Dörrklockan - bild:"
+      data:
+        photo:
+          - file: '/config/snapshot/dorrklockan.jpg'
+            caption: Dörrklockan

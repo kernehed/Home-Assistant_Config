@@ -1,0 +1,8 @@
+alias: p_bpm
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_pattern
+  to: "BPM"
+action:
+  - service: rest_command.pattern_bpm

@@ -1,0 +1,13 @@
+alias: Släck källare lamporna efter 2 min när sista rörelse i källaren
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.trapp_motion_sensor
+  to: 'off'
+condition:
+  condition: state
+  entity_id: binary_sensor.kallaren_motion_sensor
+  state: 'off'
+action:
+  service: light.turn_off
+  entity_id: group.light_kallaren

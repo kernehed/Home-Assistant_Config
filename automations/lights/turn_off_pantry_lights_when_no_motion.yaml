@@ -1,0 +1,11 @@
+alias: Släck skafferiet lampan efter 2 min när sista rörelse i skafferiet
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.skafferiet_motion_sensor
+  to: 'off'
+  for:
+    minutes: 2
+action:
+  service: light.turn_off
+  entity_id: light.skafferiet

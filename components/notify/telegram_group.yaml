@@ -1,0 +1,5 @@
+platform: group  
+name: adults
+services:
+  - service: telegram_oskar
+  - service: telegram_bella

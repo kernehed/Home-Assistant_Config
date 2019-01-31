@@ -1,0 +1,39 @@
+  ##############################################
+  ####  Tänd kl 08.00 på helgerna [Lights]  ####
+  ##############################################
+alias: Tänd lamporna vid 08.00
+initial_state: 'on'
+trigger: 
+  - platform: time
+    at: "08:00:00"
+  - platform: state
+    entity_id: sun.sun
+    to: 'below_horizon'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: group.devices_adults
+      state: 'home'
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
+    - condition: time
+      weekday:
+      - sat
+      - sun
+action:
+  - service: light.turn_on
+    entity_id: light.vardagsrum_stativ
+  - service: light.turn_on
+    entity_id: light.vardagsrum_trapp
+  - service: light.turn_on
+    entity_id: group.light_hallen
+  - service: light.turn_on
+    data:
+      entity_id: light.vardagsrum_spotlights
+      brightness: 30
+#  - service: light.turn_on
+#    data:
+#      entity_id: light.fibaro_system_fgd212_dimmer_2_level
+#      brightness: 30

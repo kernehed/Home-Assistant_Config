@@ -1,0 +1,4 @@
+sensor.pollen_alm:
+  friendly_name: Alm
+  icon: mdi:leaf
+ 

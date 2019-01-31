@@ -1,0 +1,4 @@
+platform: rest
+name: palette_rest
+resource: http://192.168.2.15/palette
+method: GET

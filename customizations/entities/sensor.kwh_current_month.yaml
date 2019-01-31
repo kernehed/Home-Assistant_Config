@@ -1,0 +1,3 @@
+sensor.kwh_current_month:
+  friendly_name: Denna månad
+  icon: mdi:flash

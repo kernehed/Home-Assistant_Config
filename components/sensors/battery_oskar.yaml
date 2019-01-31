@@ -1,0 +1,12 @@
+platform: template
+sensors:
+  battery_oskar:
+    friendly_name: oskar batteri
+    unit_of_measurement: '%'
+    value_template: >-
+        {%- if states.device_tracker.google_maps_114170795730412573739.attributes.battery_level %}
+            {{ states.device_tracker.google_maps_114170795730412573739.attributes.battery_level|round }}
+        {% else %}
+            {{ states.sensor.battery_oskar.state }}
+        {%- endif %}
+    device_class: battery

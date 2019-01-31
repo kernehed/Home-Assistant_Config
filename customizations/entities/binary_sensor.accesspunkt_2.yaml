@@ -1,0 +1,3 @@
+binary_sensor.accesspunkt_2:
+  friendly_name: AP Entré
+  icon: mdi:access-point

@@ -1,0 +1,8 @@
+alias: p_forest
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_palette
+  to: "Forest"
+action:
+  - service: rest_command.palette_forest

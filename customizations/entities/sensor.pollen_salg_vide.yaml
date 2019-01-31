@@ -1,0 +1,3 @@
+sensor.pollen_salg_vide:
+  friendly_name: Sälg / vide
+  icon: mdi:leaf

@@ -1,0 +1,8 @@
+alias: p_pride
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_pattern
+  to: "Pride"
+action:
+  - service: rest_command.pattern_pride  

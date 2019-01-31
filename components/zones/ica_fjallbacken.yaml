@@ -1,0 +1,5 @@
+name: ICA Fjällbacken
+latitude: !secret fjallbacken_lat
+longitude: !secret fjallbacken_long
+radius: 50
+icon: mdi:cart

@@ -1,0 +1,11 @@
+alias: Släck tvättstuge lamporna efter 10 min när sista rörelse
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.tvattstugan_motion_sensor
+  to: 'off'
+  for:
+    minutes: 4
+action:
+  service: light.turn_off
+  entity_id: group.light_tvattstugan

@@ -1,0 +1,4 @@
+tautulli:
+  title: Tautulli
+  icon: mdi:filmstrip
+  url: !secret tautulli_configurator

@@ -1,0 +1,6 @@
+light_loop_kill:
+  alias: Kill flashing lights
+  sequence:
+    service: script.turn_off
+    data:
+      entity_id: script.light_loop

@@ -1,0 +1,8 @@
+platform: plex
+host: !secret plex_ip
+port: 32400
+name: Plex
+username: !secret plex_username
+password: !secret plex_password
+server: Plex Server
+token: !secret plex_token

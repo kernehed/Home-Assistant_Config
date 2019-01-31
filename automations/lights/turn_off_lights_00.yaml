@@ -1,0 +1,36 @@
+  #############################################
+  ####  Stäng av lampor kl 00.00 [Lights]  ####
+  #############################################
+alias: Stäng av lamporna vid 00.00
+initial_state: 'on'
+trigger: 
+  - platform: time
+    at: "23:59:00"
+condition:
+  - condition: or
+    conditions:
+      - condition: state
+        entity_id: media_player.livingroom
+        state: 'off'
+      - condition: state
+        entity_id: media_player.livingroom
+        state: 'unknown'
+action:
+  - service: light.turn_off
+    entity_id: light.vardagsrum_stativ
+  - service: light.turn_off
+    entity_id: light.vardagsrum_tak
+  - service: light.turn_off
+    entity_id: group.light_tvattstugan
+  - service: light.turn_off
+    entity_id: group.light_hallen
+  - service: light.turn_off
+    entity_id: group.light_kallaren
+  - service: light.turn_off
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level
+  - service: light.turn_off
+    entity_id: light.vardagsrum_spotlights
+  - service: light.turn_on
+    entity_id: light.vardagsrum_trapp
+  - service: light.turn_off
+    entity_id: group.light_kitchen 

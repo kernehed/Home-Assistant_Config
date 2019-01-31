@@ -1,0 +1,8 @@
+alias: p_cloud
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: input_select.christmas_palette
+  to: "Cloud"
+action:
+  - service: rest_command.palette_pride   

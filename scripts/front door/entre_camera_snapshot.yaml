@@ -1,0 +1,14 @@
+entre_camera_snapshot:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.entre
+      filename: '/config/snapshot/entre_camera.jpg'
+  - service: notify.adults
+    data:
+      message: "Entré kameran har fångat rörelse, skickar bild:"
+      title: "Entré kamera - bild:"
+      data:
+        photo:
+          - file: '/config/snapshot/entre_camera.jpg'
+            caption: Entré kamera

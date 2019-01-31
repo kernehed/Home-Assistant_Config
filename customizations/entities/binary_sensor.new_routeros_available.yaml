@@ -1,0 +1,2 @@
+binary_sensor.new_routeros_available:
+  icon: mdi:update

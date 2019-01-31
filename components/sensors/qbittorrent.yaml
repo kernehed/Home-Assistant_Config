@@ -1,0 +1,4 @@
+platform: qbittorrent
+url: !secret qbit_url
+username: !secret qbit_username
+password: !secret qbit_password

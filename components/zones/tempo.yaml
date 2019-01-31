@@ -1,0 +1,5 @@
+name: Tempo
+latitude: !secret tempo_lat
+longitude: !secret tempo_long 
+radius: 50
+icon: mdi:cart

@@ -1,0 +1,3 @@
+sensor.energiforbrukning:
+  friendly_name: Just nu
+  icon: mdi:flash

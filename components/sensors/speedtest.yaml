@@ -1,0 +1,8 @@
+platform: speedtest
+minute:
+  - 0
+  - 59
+monitored_conditions:
+  - ping
+  - download
+  - upload

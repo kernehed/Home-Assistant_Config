@@ -1,0 +1,3 @@
+sensor.bella_devices:
+  friendly_name: Bella
+  entity_picture: /local/Bella.jpg

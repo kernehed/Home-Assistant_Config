@@ -1,0 +1,3 @@
+binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor:
+  friendly_name: Tryckmatta
+  icon: mdi:transit-transfer

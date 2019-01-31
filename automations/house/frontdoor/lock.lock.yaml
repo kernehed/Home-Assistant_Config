@@ -1,0 +1,12 @@
+alias: 'Lås låset kl 21.00'
+initial_state: 'on'
+trigger:
+  - platform: time
+    at: "21:00:00"
+action:
+  - service: lock.lock
+    entity_id: lock.polycontrol_danalock_v3_btze_locked
+  - service: notify.adults
+    data:
+      title: 'Home Assistant'
+      message: 'Nu är klockan 21.00 nu är det låst!!!'

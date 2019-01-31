@@ -1,0 +1,3 @@
+binary_sensor.trapp_motion_sensor:
+  friendly_name: Rörelsesensor källaren 1
+  icon: mdi:walk

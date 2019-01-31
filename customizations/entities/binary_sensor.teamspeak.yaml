@@ -1,0 +1,3 @@
+binary_sensor.teamspeak:
+  friendly_name: Teamspeak server
+  icon: mdi:server-network

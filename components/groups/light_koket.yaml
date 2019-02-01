@@ -1,0 +1,6 @@
+light_koket:
+  name: Kökets lampor
+  entities:
+  - light.skafferiet
+  - group.light_fibaro_koket
+  - light.koket_bank

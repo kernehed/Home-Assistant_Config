@@ -1,0 +1,5 @@
+devices_bella:
+  name: Enheter bella
+  entities:
+  - device_tracker.iphone_7
+  - device_tracker.google_maps_103719873476746592925

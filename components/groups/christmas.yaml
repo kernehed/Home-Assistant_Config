@@ -1,0 +1,6 @@
+christmas:
+  name: Uteslingan
+  entities:
+  - input_select.christmas_pattern
+  - input_select.christmas_palette
+  - switch.rest_julbelysning

@@ -1,0 +1,9 @@
+motion_sensors:
+  name: Rörelsesensor
+  entities:
+  - binary_sensor.tvattstugan_motion_sensor
+  - binary_sensor.skafferiet_motion_sensor 
+  - binary_sensor.kallaren_motion_sensor
+  - binary_sensor.trapp_motion_sensor
+  - binary_sensor.banksensor
+  - binary_sensor.unifi_camera

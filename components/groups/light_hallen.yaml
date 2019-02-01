@@ -1,0 +1,5 @@
+light_hallen:
+  name: Hallens lampor
+  entities:
+  - light.hall_1
+  - light.hall_2

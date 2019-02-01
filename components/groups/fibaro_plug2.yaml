@@ -1,0 +1,5 @@
+fibaroplug_2:
+  name: Theus 
+  entities:
+  - switch.fibaro_wall_plug_2_switch
+  - sensor.fibaro_wall_plug_2_power

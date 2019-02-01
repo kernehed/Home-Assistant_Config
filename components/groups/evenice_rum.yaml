@@ -1,0 +1,4 @@
+evenice_rum:
+  name: Evenice
+  entities:
+  - light.evenice_lampa

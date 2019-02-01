@@ -1,0 +1,5 @@
+fibaroplug_1:
+  name: Fibaro
+  entities:
+  - switch.fibaro_wall_plug_1_switch
+  - sensor.fibaro_wall_plug_1_power

@@ -1,0 +1,5 @@
+light_fibaro_koket:
+  name: Köks spottar
+  icon: mdi:spotlight-beam
+  entities:
+  - light.fibaro_system_fgd212_dimmer_2_level

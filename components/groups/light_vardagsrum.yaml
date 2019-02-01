@@ -1,0 +1,7 @@
+light_vardagsrum:
+  name: Vardagsrums lampor
+  entities:
+  - light.vardagsrum_stativ
+  - light.vardagsrum_tak
+  - light.vardagsrum_trapp
+  - light.vardagsrum_spotlights

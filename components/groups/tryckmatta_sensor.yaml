@@ -1,0 +1,4 @@
+tryckmatta_sensor:
+  name: Tryckmatta
+  entities:
+  - binary_sensor.fibaro_system_fgk10x_door_opening_sensor_sensor

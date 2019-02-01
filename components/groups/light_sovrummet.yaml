@@ -1,0 +1,5 @@
+light_sovrummet:
+  name: Sovrumslampor
+  entities:
+  - light.sovrummet_1
+  - light.sovrummet_2  

@@ -1,0 +1,5 @@
+sensor_adults:
+  name: Oskar & Bella
+  entities:
+  - sensor.oskar
+  - sensor.bella

@@ -1,0 +1,5 @@
+light_tvattstugan:
+  name: Tvättstugans lampor
+  entities:
+  - light.tvattstugan_1
+  - light.tvattstugan_2

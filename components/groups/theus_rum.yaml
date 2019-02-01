@@ -1,0 +1,6 @@
+theus_rum:
+  name: Theus
+  entities:
+  - light.theus_lampa
+  - switch.fibaro_wall_plug_2_switch
+  - sensor.fibaro_wall_plug_2_power

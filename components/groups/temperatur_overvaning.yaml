@@ -1,0 +1,4 @@
+temperatur_overvaning:
+  name: Temperatur uppe
+  entities:
+  - sensor.fibaro_system_unknown_type0c02_id1003_temperature_3

@@ -1,0 +1,5 @@
+devices_oskar:
+  name: Enheter oskar
+  entities:
+  - device_tracker.oneplus_6
+  - device_tracker.google_maps_114170795730412573739

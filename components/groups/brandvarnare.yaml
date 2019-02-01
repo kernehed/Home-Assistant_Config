@@ -1,0 +1,5 @@
+brandvarnare:
+  name: Brandvarnare
+  entities:
+  - binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor
+  - binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_2

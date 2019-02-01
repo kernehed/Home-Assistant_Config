@@ -12,5 +12,4 @@ homeassistant:
 
 
   packages: !include_dir_named components/packages
-group: !include groups.yaml
 alarm_control_panel: !include alarm.yaml

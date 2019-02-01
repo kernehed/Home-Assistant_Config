@@ -1,4 +1,0 @@
-platform: yr
-name: Väder
-monitored_conditions:
-  - temperature 

@@ -1,4 +1,4 @@
-alias: Bella emma
+alias: Bella hemma
 initial_state: 'on'
 trigger:
   platform: zone

@@ -711,7 +711,6 @@ views:
           - automation.light_unavailable
           - automation.luftfuktighet_overstigen_50_procent
           - automation.milla_mat
-          - automation.nagon_hemma
           - automation.new_device_tracked
           - automation.oskars_fodelsedag
           - automation.people_greeting

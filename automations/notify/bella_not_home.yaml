@@ -1,0 +1,11 @@
+alias: Bella ej hemma
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: leave
+  zone: zone.home
+  entity_id: device_tracker.google_maps_103719873476746592925
+action:
+  - service: notify.telegram_oskar
+    data:
+      message: "Bella har åkt hemifrån!"

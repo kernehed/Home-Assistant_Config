@@ -1,0 +1,16 @@
+alias: '[Alarm] Away Mode Arming'
+id: alarm_arming_away
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: alarm_control_panel.kernehed_manison
+  to: pending 
+action:
+  - service: media_player.volume_set
+    entity_id: media_player.whole_house
+    data:
+      volume_level: '0.2'
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data:
+      message: Larmet har aktiverats. Se till så alla fönster och dörrar är stängda.

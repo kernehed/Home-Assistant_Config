@@ -1,0 +1,22 @@
+alias: '[Alarm] Home Mode Armed'
+id: alarm_armed_home
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: alarm_control_panel.kernehed_manison
+  to: 'armed_home'
+action:
+  - service: media_player.volume_set
+    entity_id: media_player.whole_house
+    data: 
+      volume_level: '0.2'
+  - service: notify.adults
+    data:
+      message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma! Låser och larmar på dörren bara.'
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data:
+      message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma. '
+  - delay: '00:00:12'
+  - service: lock.lock
+    entity_id: lock.polycontrol_danalock_v3_btze_locked

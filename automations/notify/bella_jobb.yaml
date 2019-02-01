@@ -1,0 +1,11 @@
+alias: Bella jobb
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.bellas_jobb
+  entity_id: device_tracker.iphone_7
+action:
+  - service: notify.telegram_oskar
+    data:
+      message: "Bella har kommit fram till jobbet!"

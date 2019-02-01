@@ -1,0 +1,11 @@
+alias: gastlage
+initial_state: 'on'
+id: '1545925758700'
+trigger:
+  platform: state
+  entity_id: input_boolean.guest_mode
+  from: 'off'
+  to: 'on'
+action:
+  - service: automation.turn_off
+    entity_id: automation.away_mode

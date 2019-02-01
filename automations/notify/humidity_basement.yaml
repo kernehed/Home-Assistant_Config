@@ -1,0 +1,16 @@
+alias: Luftfuktighet överstigen 50 procent
+initial_state: 'on'
+id: '1509992418765'
+trigger:
+  platform: numeric_state
+  entity_id: sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_relative_humidity
+  above: '50'
+action:
+  - service: notify.telegram_oskar
+    data:
+      message: Luftfuktigheten har överstigit 50%!
+
+
+
+
+

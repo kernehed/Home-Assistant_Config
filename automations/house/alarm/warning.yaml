@@ -1,0 +1,20 @@
+alias: '[Alarm] Warning'
+initial_state: 'on'
+id: alarm_warning
+trigger:
+  platform: state
+  entity_id: alarm_control_panel.kernehed_manison
+  to: warning
+action:
+  - service: media_player.volume_set
+    entity_id: media_player.whole_house
+    data:
+      volume_level: '0.2'
+  - service: notify.adults
+    data:
+      message: ALARM varning {{ states[states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[0]][  states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[1]].name }}
+  - service: tts.google_say
+    entity_id: media_player.entre_speaker
+    data:
+      message: Hej, Larmet har utlösts. Var vänlig avaktivera!
+

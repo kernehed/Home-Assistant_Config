@@ -1,0 +1,13 @@
+alias: Hemma
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.home
+  entity_id: device_tracker.iphone_7
+action:
+  - service: notify.telegram_oskar
+    data:
+      message: "Bella har kommit hem!"
+
+

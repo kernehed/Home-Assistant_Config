@@ -690,12 +690,9 @@ views:
           - automation.away_mode
           - automation.backup_dropbox
           - automation.backup_local
-          - automation.bella_anna
           - automation.bella_ej_hemma
-          - automation.bella_fjallbacken
           - automation.bella_hemma
           - automation.bella_jobb
-          - automation.bella_tempo
           - automation.brandvarnare
           - automation.dorrklockan
           - automation.dorrklockan_halloween
@@ -716,8 +713,6 @@ views:
           - automation.milla_mat
           - automation.nagon_hemma
           - automation.new_device_tracked
-          - automation.oskar_fjallbacken
-          - automation.oskar_tempo
           - automation.oskars_fodelsedag
           - automation.people_greeting
           - automation.people_greeting_2
@@ -728,13 +723,13 @@ views:
           - automation.sla_av_julbelysning_ute
           - automation.sla_pa_julbelysning_ute
           - automation.slack_bankbelysningen_efter_10_min_nar_sista_rorelse
-          - automation.slack_bankbelysningen_efter_7_min_vid_sista_rorelse
+          - automation.slack_altanbelysningen_efter_7_min_vid_sista_rorelse
           - automation.slack_kallare_lamporna_efter_2_min_nar_sista_rorelse_i_kallaren
           - automation.slack_skafferiet_lampan_efter_2_min_nar_sista_rorelse_i_skafferiet
           - automation.slack_tvattstuge_lamporna_efter_10_min_nar_sista_rorelse
           - automation.stang_av_lamporna_vid_00_00
           - automation.tand_bankbelysningen_nar_rorelse
-          - automation.tand_bankbelysningen_vid_rorelse
+          - automation.tand_altanbelysningen_vid_rorelse
           - automation.tand_kallare_lamporna_nar_rorelse_i_kallaren
           - automation.tand_lamporna_vid_07_00
           - automation.tand_lamporna_vid_08_00

@@ -1,4 +1,4 @@
-alias: Tänd bänkbelysningen vid rörelse
+alias: Tänd altanbelysningen vid rörelse
 initial_state: 'on'
 trigger:
   platform: state

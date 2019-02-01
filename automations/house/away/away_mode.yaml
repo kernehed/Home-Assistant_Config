@@ -1,0 +1,38 @@
+alias: Away mode
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: group.devices_adults
+  from: 'home'
+  to: 'not_home'
+action: 
+  - service: light.turn_off
+    entity_id: group.light_vardagsrum
+  - service: light.turn_off
+    entity_id: group.light_hallen
+  - service: light.turn_off
+    entity_id: group.light_tvattstugan
+  - service: light.turn_off
+    entity_id: group.light_kallaren
+  - service: light.turn_off
+    entity_id: group.light_sovrummet
+  - service: light.turn_off
+    entity_id: group.light_koket
+  - service: light.turn_off
+    entity_id: group.theus_rum
+  - service: light.turn_off
+    entity_id: group.evenice_rum
+  - service: media_player.turn_off
+    entity_id: media_player.livingroom
+  - service: media_player.turn_off
+    entity_id: media_player.bedroom
+  - service: media_player.media_stop
+    entity_id: media_player.entre_speaker
+  - service: media_player.turn_off
+    entity_id: media_player.basement
+  - service: media_player.turn_off
+    entity_id: media_player.livingroom_speaker
+  - service: media_player.media_stop
+    entity_id: media_player.whole_house
+  - service: media_player.media_stop
+    entity_id: media_player.kitchen_speaker

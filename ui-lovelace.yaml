@@ -150,8 +150,9 @@ views:
           - type: picture-glance
             title: Hall kamera
             entities:
-              - switch.ip_webcam_night_vision
-            camera_image: camera.ip_webcam
+              - switch.hall_night_vision
+              - switch.hall_overlay
+            camera_image: camera.hall
       - id: 3870fdc794274f17b84dd6ced631b737  # Automatically created id
         type: iframe
         url: https://embed.windy.com/embed2.html
@@ -239,6 +240,13 @@ views:
           - light.vardagsrum_trapp
           - light.vardagsrum_spotlights
           - switch.fibaro_wall_plug_1_switch
+      - id: Uttagen  # Automatically created id
+        type: entities
+        title: Uttag
+        show_header_toggle: false
+        entities:
+          - switch.uttag_1
+          - switch.uttag_2
       - id: a87ac6a51dd746bfb8c69124215215125  # Automatically created id
         type: entities
         title: Brasan

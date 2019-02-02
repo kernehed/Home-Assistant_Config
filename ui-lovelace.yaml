@@ -93,6 +93,24 @@ views:
             - entity_id: device_tracker.iphone_2
           exclude:
             - state: not_home
+      - id: fac4c51ac1914e3a897da643077e15f3  # Automatically created id
+        type: glance
+        show_state: false
+        entities:
+          - entity: binary_sensor.tvattstugan_motion_sensor
+            name: Tvättstugan
+          - entity: binary_sensor.skafferiet_motion_sensor
+            name: Skafferiet
+          - entity: binary_sensor.kallaren_motion_sensor
+            name: Källaren
+          - entity: binary_sensor.trapp_motion_sensor
+            name: Trappen
+          - entity: binary_sensor.banksensor
+            name: Bänksensor
+          - entity: binary_sensor.altan_motion_sensor
+            name: Altansensor
+          - entity: binary_sensor.badrumssensor
+            name: Badrum
       - id: 7ecee83212d340b0901f63ac9ec24328  # Automatically created id
         type: custom:monster-card
         show_empty: false
@@ -129,27 +147,14 @@ views:
             entities:
               - input_select.christmas_pattern
               - input_select.christmas_palette
+          - type: picture-glance
+            title: Hall kamera
+            entities:
+              - switch.ip_webcam_night_vision
+            camera_image: camera.ip_webcam
       - id: 3870fdc794274f17b84dd6ced631b737  # Automatically created id
         type: iframe
         url: https://embed.windy.com/embed2.html
-      - id: fac4c51ac1914e3a897da643077e15f3  # Automatically created id
-        type: glance
-        show_state: false
-        entities:
-          - entity: binary_sensor.tvattstugan_motion_sensor
-            name: Tvättstugan
-          - entity: binary_sensor.skafferiet_motion_sensor
-            name: Skafferiet
-          - entity: binary_sensor.kallaren_motion_sensor
-            name: Källaren
-          - entity: binary_sensor.trapp_motion_sensor
-            name: Trappen
-          - entity: binary_sensor.banksensor
-            name: Bänksensor
-          - entity: binary_sensor.altan_motion_sensor
-            name: Altansensor
-          - entity: binary_sensor.badrumssensor
-            name: Badrum
       - id: 37279816181f442eac853b132142141  # Automatically created id
         type: entities
         title: Rum lokalisering
@@ -157,28 +162,6 @@ views:
         entities:
           - sensor.oskar_bluetooth
 #          - sensor.bella_bluetooth
-      - id: 2a440c2701824fdb9d5ebc9827c0917b  # Automatically created id
-        type: custom:monster-card
-        show_empty: false
-        card:
-          type: entities
-          title: Brandvarnare
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_2
-            - entity_id: binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_3
-          exclude:
-            - state: off
-
-#      - id: 58c4d4103f2c41cf8f8a6bebe3b018d7  # Automatically created id
-#        type: entities
-#        title: Luftdata
-#        entities:
-#          - sensor.luftdaten_11773_p1
-#          - sensor.luftdaten_11773_p2
-#          - sensor.luftdaten_11774_humidity
-#          - sensor.luftdaten_11774_temperature
       - id: 2bf8ccbc1f664c23b10b6533ae82f7e2  # Automatically created id
         type: weather-forecast
         entity: weather.smhi_vader
@@ -201,6 +184,27 @@ views:
             entity: sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_temperature
             min: -50
             max: 50
+      - id: 2a440c2701824fdb9d5ebc9827c0917b  # Automatically created id
+        type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: Brandvarnare
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_2
+            - entity_id: binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_3
+          exclude:
+            - state: off
+#      - id: 58c4d4103f2c41cf8f8a6bebe3b018d7  # Automatically created id
+#        type: entities
+#        title: Luftdata
+#        entities:
+#          - sensor.luftdaten_11773_p1
+#          - sensor.luftdaten_11773_p2
+#          - sensor.luftdaten_11774_humidity
+#          - sensor.luftdaten_11774_temperature
   - title: Köket
     id: köket
     cards:

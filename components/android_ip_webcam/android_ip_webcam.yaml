@@ -1,0 +1,6 @@
+  host: !secret android_ip_webcam_ip
+  username: !secret android_ip_webcam_username
+  password: !secret android_ip_webcam_password
+  port: !secret android_ip_webcam_port
+  switches:
+    - night_vision

@@ -1,0 +1,3 @@
+platform: ffmpeg
+input: !secret ffmpeg_camera1
+name: vardagsrum

@@ -1,5 +1,6 @@
 alias: '[Alarm] Disarmed'
 id: alarm_disarmed
+initial_state: 'on'
 trigger:
   platform: state
   entity_id: alarm_control_panel.kernehed_manison

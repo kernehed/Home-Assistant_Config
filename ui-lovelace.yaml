@@ -1,5 +1,7 @@
 name: Hem
 resources:
+  - url: /local/custom-lovelace/text-element.js?v=0
+    type: js
   - url: /local/custom-lovelace/monster-card.js
     type: js
   - url: /local/custom-lovelace/mini-media-player-bundle.js?v=1.0.0
@@ -582,6 +584,106 @@ views:
     cards:
      - type: custom:krisinfo-card
        entity: sensor.krisinformation_gavle
+     - type: picture-elements
+       image: /local/vatten.jpg
+       elements:
+         - type: state-label
+           entity: sensor.gastrike_vatten_startdatum_1
+           style:
+             top: 52%
+             left: 2.5%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_startdatum_2
+           style:
+             top: 58%
+             left: 2.5%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_startdatum_3
+           style:
+             top: 64%
+             left: 2.5%
+             transform: none
+         - type: custom:text-element
+           text: "Startdatum:"
+           style:
+             top: 48%
+             left: 15%
+         - type: state-label
+           entity: sensor.gastrike_vatten_omrade_1
+           style:
+             top: 52%
+             left: 29%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_omrade_2
+           style:
+             top: 58%
+             left: 29%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_omrade_3
+           style:
+             top: 64%
+             left: 29%
+             transform: none
+         - type: custom:text-element
+           text: "Område:"
+           style:
+             top: 48%
+             left: 37%
+         - type: state-label
+           entity: sensor.gastrike_vatten_kommun_1
+           style:
+             top: 52%
+             left: 52%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_kommun_2
+           style:
+             top: 58%
+             left: 52%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_kommun_3
+           style:
+             top: 64%
+             left: 52%
+             transform: none
+         - type: custom:text-element
+           text: "Kommun:"
+           style:
+             top: 48%
+             left: 58%
+         - type: state-label
+           entity: sensor.gastrike_vatten_klardatum_1
+           style:
+             top: 52%
+             left: 68%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_klardatum_2
+           style:
+             top: 58%
+             left: 68%
+             transform: none
+         - type: state-label
+           entity: sensor.gastrike_vatten_klardatum_3
+           style:
+             top: 64%
+             left: 68%
+             transform: none
+         - type: custom:text-element
+           text: "Klardatum:"
+           style:
+             top: 48%
+             left: 79%
+         - type: custom:text-element
+           text: '<a href="http://www.gastrikevatten.se/ServiceInformation" target="_blank">Länk till driftinformationen</a>'
+           style:
+             top: 83.5%
+             left: 49%
   - title: Media
     id: media
     icon: mdi:play

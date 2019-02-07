@@ -1,0 +1,5 @@
+platform: scrape
+name: Gästrike vatten omrade 3
+resource: http://www.gastrikevatten.se/ServiceInformation
+select: 'tr:nth-of-type(4) td:nth-of-type(2)'
+scan_interval: 1800

@@ -1,0 +1,5 @@
+platform: scrape
+name: Gästrike vatten kommun 1
+resource: http://www.gastrikevatten.se/ServiceInformation
+select: 'tr:nth-of-type(2) td:nth-of-type(3)'
+scan_interval: 1800

@@ -2,7 +2,7 @@ alias: 'tts storhagensförskola mat'
 initial_state: 'on'
 trigger:
   - platform: time
-    at: '06:45'
+    at: '06:45:00'
 action:
   - service: media_player.volume_set
     entity_id: media_player.entre_speaker

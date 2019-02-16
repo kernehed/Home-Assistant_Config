@@ -16,7 +16,7 @@ resources:
     type: js
   - url: /local/custom-lovelace/tracker-card.js?v=0.3.2
     type: js
-  - url: /local/custom-lovelace/card-tools.js?v=97d985
+  - url: /local/custom-lovelace/card-tools.js?v=82f5e6
     type: js
   - url: /local/custom-lovelace/krisinfo.js?=0.0.1
     type: js

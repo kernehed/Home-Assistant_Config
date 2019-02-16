@@ -1,7 +1,7 @@
 platform: plex_recently_added
 token: Bq5p61wM5N69uDrcw9hn
 server_name: Plex Server
-ssl: true
+ssl: false
 ssl_cert: false
 download_images: false
 max: 5

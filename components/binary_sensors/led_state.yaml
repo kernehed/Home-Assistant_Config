@@ -1,5 +1,5 @@
 platform: rest
 name: LED State
-resource: http://192.168.2.15:80/power
+resource: http://192.168.1.20:80/power
 method: GET
 value_template: '{{ value_json }}'

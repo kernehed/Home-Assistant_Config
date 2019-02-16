@@ -1,6 +1,6 @@
 platform: pi_hole
 host: !secret pihole_host
-ssl: true
+ssl: false
 verify_ssl: false
 monitored_conditions:
   - ads_blocked_today

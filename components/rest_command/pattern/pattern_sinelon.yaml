@@ -1,3 +1,3 @@
 pattern_sinelon:
-  url: http://192.168.2.15/pattern?value=7
+  url: http://192.168.1.20/pattern?value=7
   method: post

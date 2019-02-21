@@ -26,12 +26,12 @@ action:
         {%- macro greeting_sentence(person) -%}
           {{ [
              "Välkommen hem " ~ person,
-             "Gissa vem som kommit hem?" ~ person +" har!",
+             "Gissa vem som kommit hem?"  ~ person +" har!",
              person + " är nu hemma.",
-             "Välkommen hem " ~ person + ".  Vi har saknat dig, eller åtminstone jag, Milla!",
+             "Välkommen hem "  ~ person +".  Vi har saknat dig, eller åtminstone jag, Milla!",
              "I världen är du bara någon men för någon är du hela världen! Välkommen hem! " ~ person,
              "Hej där " ~ person + " Välkommen hem!",
-             "Knack Knack. Vem där? "   ~ person +" är!",
+             "Knack Knack. Vem där? "  ~ person +" är!",
              person ~ "! Du är hemma!",
              "Jag vet en hemlighet! "  ~ person +" är hemma!",
              "Hej "  ~ person +" du har blivit hittad av det smartaste huset på gatan!",

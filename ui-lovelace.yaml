@@ -1,24 +1,24 @@
 name: Hem
 resources:
-  - url: /customcards/custom-lovelace/text-element.js?v=0.0.2
+  - url: /customcards/custom-lovelace/text-element.js
     type: js
   - url: /customcards/custom-lovelace/monster-card.js
     type: js
-  - url: /customcards/mini-media-player-bundle.js?v=1.0.1
+  - url: /local/custom-lovelace/mini-media-player-bundle.js
     type: module
   - url: /local/custom-lovelace/slideshow-card.js?=1.1.0
     type: js
-  - url: /customcards/custom-lovelace/fold-entity-row.js?v=6d11d3
+  - url: /customcards/custom-lovelace/fold-entity-row.js
     type: js
-  - url: /customcards/custom-lovelace/swipe-card/swipe-card.js?v=2.0.0
+  - url: /customcards/custom-lovelace/swipe-card/swipe-card.js
     type: module
   - url: /customcards/custom-lovelace/upcoming-media-card/upcoming-media-card.js
     type: js
-  - url: /customcards/custom-lovelace/tracker-card.js?v=0.3.2
+  - url: /customcards/custom-lovelace/tracker-card.js
     type: js
-  - url: /customcards/custom-lovelace/card-tools.js?v=82f5e6
+  - url: /customcards/custom-lovelace/card-tools.js
     type: js
-  - url: /customcards/custom-lovelace/krisinfo.js?=0.0.1
+  - url: /customcards/custom-lovelace/krisinfo.js
     type: js
 
 views:
@@ -676,6 +676,9 @@ views:
            style:
              top: 83.5%
              left: 49%
+     - type: iframe
+       url: https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSamVBomhus%2F&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId
+       aspect_ratio: 100%   
   - title: Media
     id: media
     icon: mdi:play

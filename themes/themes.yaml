@@ -1,562 +1,621 @@
-    PmxMononight:
+PmxMononight:
   # MyVariables
-      base-hue: '220' #Controls the base (and accent) color hue (0-360) | 0=Red 60=Yellow 120=Green 180=Cyan 240=Blue 300=Magenta 360=Red
-      base-sat: '16%' #Controls the saturation of the theme (0%-100%) | 0%=Grey 100%=Full Saturation
+  base-hue: '220' #Controls the base (and accent) color hue (0-360) | 0=Red 60=Yellow 120=Green 180=Cyan 240=Blue 300=Magenta 360=Red
+  base-sat: '16%' #Controls the saturation of the theme (0%-100%) | 0%=Grey 100%=Full Saturation
   # MyVar
-      huesat: 'var(--base-hue), var(--base-sat),'
+  huesat: 'var(--base-hue), var(--base-sat),'
   # Primary Color
-      primary-color: 'hsl(var(--huesat) 20%)'
+  primary-color: 'hsl(var(--huesat) 20%)'
   # Backgrounds
-      primary-background-color: 'var(--primary-color)'
-      secondary-background-color: 'hsl(var(--huesat) 16%)'
-      paper-listbox-background-color: 'var(--primary-color)'
-      paper-card-background-color: 'hsl(var(--huesat) 12%)'
-      paper-dialog-background-color: 'var(--paper-card-background-color)'
-      table-row-background-color: 'hsl(var(--huesat) 12%)'
-      table-row-alternative-background-color: 'hsl(var(--huesat) 10%)'
+  primary-background-color: 'var(--primary-color)'
+  secondary-background-color: 'hsl(var(--huesat) 16%)'
+  paper-listbox-background-color: 'var(--primary-color)'
+  paper-card-background-color: 'hsl(var(--huesat) 12%)'
+  paper-dialog-background-color: 'var(--paper-card-background-color)'
+  table-row-background-color: 'hsl(var(--huesat) 12%)'
+  table-row-alternative-background-color: 'hsl(var(--huesat) 10%)'
   # Devider
-      divider-color: 'hsla(0, 0%, 0%, 0)'
-      dark-divider-opacity: '0'
-      light-divider-opacity: '0'
+  divider-color: 'hsla(0, 0%, 0%, 0)'
+  dark-divider-opacity: '0'
+  light-divider-opacity: '0'
   # Text colors
-      primary-text-color: 'hsl(var(--huesat) 60%)'
-      text-primary-color: 'hsl(var(--huesat) 60%)'
-      secondary-text-color: 'hsl(var(--huesat) 60%)'
-      disabled-text-color: 'hsl(var(--huesat) 70%)'
-      sidebar-text_-_color: 'hsl(var(--huesat) 90%)'
-      sidebar-text-color: 'hsl(var(--huesat) 90%)'
-      paper-card-header-color: 'hsl(var(--base-hue), 90%, 50%)'
+  primary-text-color: 'hsl(var(--huesat) 60%)'
+  text-primary-color: 'hsl(var(--huesat) 60%)'
+  secondary-text-color: 'hsl(var(--huesat) 60%)'
+  disabled-text-color: 'hsl(var(--huesat) 70%)'
+  sidebar-text_-_color: 'hsl(var(--huesat) 90%)'
+  sidebar-text-color: 'hsl(var(--huesat) 90%)'
+  paper-card-header-color: 'hsl(var(--base-hue), 90%, 50%)'
   # Text Adjustments
-      paper-font-headline_-_letter-spacing: '-0.5px'
-      paper-font-headline_-_font-weight: '500'
-      paper-font-body1_-_font-weight: '500'
+  paper-font-headline_-_letter-spacing: '-0.5px'
+  paper-font-headline_-_font-weight: '500'
+  paper-font-body1_-_font-weight: '500'
   # Nav Menu
-      paper-listbox-color: 'hsl(var(--huesat) 50%)'
-      paper-grey-50: 'hsl(var(--huesat) 50%)'
-      paper-grey-200: 'hsla(var(--huesat) 26%)'
+  paper-listbox-color: 'hsl(var(--huesat) 50%)'
+  paper-grey-50: 'hsl(var(--huesat) 50%)'
+  paper-grey-200: 'hsla(var(--huesat) 26%)'
   # Paper card
-      paper-item-icon-color: 'hsl(var(--huesat) 30%)'
-      paper-item-icon-active-color: 'var(--paper-item-icon-color)'
-      paper-item-icon_-_color: 'var(--paper-item-icon-color)'
-      paper-item-selected_-_background-color: 'hsla(0, 0%, 0%, 0.2)'
-      paper-tabs-selection-bar-color: 'hsla(0, 0%, 0%, 0.2)'
+  paper-item-icon-color: 'hsl(var(--huesat) 30%)'
+  paper-item-icon-active-color: 'var(--paper-item-icon-color)'
+  paper-item-icon_-_color: 'var(--paper-item-icon-color)'
+  paper-item-selected_-_background-color: 'hsla(0, 0%, 0%, 0.2)'
+  paper-tabs-selection-bar-color: 'hsla(0, 0%, 0%, 0.2)'
   # Labels
-      label-badge-red: 'hsla(0, 0%, 0%, 0)'
-      label-badge-border-color: 'var(--label-badge-red)'
-      label-badge-background-color: 'var(--paper-card-background-color)'
-      label-badge-text-color: 'var(--primary-text-color)'
+  label-badge-red: 'hsla(0, 0%, 0%, 0)'
+  label-badge-border-color: 'var(--label-badge-red)'
+  label-badge-background-color: 'var(--paper-card-background-color)'
+  label-badge-text-color: 'var(--primary-text-color)'
   # Shadows
-      shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 18%)'
-      shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 28%)'
+  shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 18%)'
+  shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 28%)'
   # Switches
-      paper-toggle-button-checked-button-color: 'hsl(var(--base-hue), 90%, 50%)'
-      paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 25%)'
-      paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 25%)'
-      paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 5%)'
+  paper-toggle-button-checked-button-color: 'hsl(var(--base-hue), 90%, 50%)'
+  paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 25%)'
+  paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 25%)'
+  paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 5%)'
   # Sliders
-      paper-slider-knob-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-knob-start-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-slider-pin-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-active-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-container-color: 'hsl(var(--huesat) 28%)'
-      paper-slider-secondary-color: 'hsl(var(--huesat) 90%)'
-      paper-slider-disabled-active-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-slider-disabled-secondary-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-dialog-color: 'hsl(var(--base-hue), 20%, 80%)'
-    PmxMonolight:
+  paper-slider-knob-color:  'hsl(var(--base-hue), 90%, 50%)'
+  paper-slider-knob-start-color: 'hsl(var(--base-hue), 80%, 25%)'
+  paper-slider-pin-color:  'hsl(var(--base-hue), 90%, 50%)'
+  paper-slider-active-color:  'hsl(var(--base-hue), 90%, 50%)'
+  paper-slider-container-color: 'hsl(var(--huesat) 28%)'
+  paper-slider-secondary-color: 'hsl(var(--huesat) 90%)'
+  paper-slider-disabled-active-color: 'hsl(var(--base-hue), 80%, 25%)'
+  paper-slider-disabled-secondary-color: 'hsl(var(--base-hue), 80%, 25%)'
+  paper-dialog-color: 'hsl(var(--base-hue), 20%, 80%)'
+PmxMonolight:
   # MyVar
-      huesat: '0, 0%,'
+  huesat: '0, 0%,'
   # Primary Color
-      primary-color: 'hsl(var(--huesat) 80%)'
-      dark-primary-color: 'hsl(var(--huesat) 20%)'
-      light-primary-color: 'hsl(var(--huesat) 90%)'
-      accent-color: 'hsl(var(--huesat) 30%)'
+  primary-color: 'hsl(var(--huesat) 80%)'
+  dark-primary-color: 'hsl(var(--huesat) 20%)'
+  light-primary-color: 'hsl(var(--huesat) 90%)'
+  accent-color: 'hsl(var(--huesat) 30%)'
   # Backgrounds
-      primary-background-color: 'var(--primary-color)'
-      secondary-background-color: 'hsl(var(--huesat) 86%)'
-      paper-listbox-background-color: 'var(--primary-color)'
-      paper-card-background-color: 'hsl(var(--huesat) 90%)'
-      paper-dialog-background-color: 'var(--paper-card-background-color)'
-      table-row-background-color: 'hsl(var(--huesat) 88%)'
-      table-row-alternative-background-color: 'hsl(var(--huesat) 90%)'
+  primary-background-color: 'var(--primary-color)'
+  secondary-background-color: 'hsl(var(--huesat) 86%)'
+  paper-listbox-background-color: 'var(--primary-color)'
+  paper-card-background-color: 'hsl(var(--huesat) 90%)'
+  paper-dialog-background-color: 'var(--paper-card-background-color)'
+  table-row-background-color: 'hsl(var(--huesat) 88%)'
+  table-row-alternative-background-color: 'hsl(var(--huesat) 90%)'
   # Devider
-      divider-color: 'hsla(0, 0%, 0%, 0)'
-      dark-divider-opacity: '0'
-      light-divider-opacity: '0'
-      dark-secondary-opacity: '0.4'
+  divider-color: 'hsla(0, 0%, 0%, 0)'
+  dark-divider-opacity: '0'
+  light-divider-opacity: '0'
+  dark-secondary-opacity: '0.4'
   # Text colors
-      primary-text-color: 'hsl(var(--huesat) 46%)'
-      text-primary-color: 'hsl(var(--huesat) 46%)'
-      secondary-text-color: 'hsl(var(--huesat) 56%)'
-      disabled-text-color: 'hsl(var(--huesat) 30%)'
-      sidebar-text_-_color: 'hsl(var(--huesat) 5%)'
-      sidebar-text-color: 'hsl(var(--huesat) 5%)'
-      paper-card-header-color: 'hsl(hsl(var(--huesat) 50%)'
-      paper-button-ink-color: 'hsl(hsl(var(--huesat) 50%)'
+  primary-text-color: 'hsl(var(--huesat) 46%)'
+  text-primary-color: 'hsl(var(--huesat) 46%)'
+  secondary-text-color: 'hsl(var(--huesat) 56%)'
+  disabled-text-color: 'hsl(var(--huesat) 30%)'
+  sidebar-text_-_color: 'hsl(var(--huesat) 5%)'
+  sidebar-text-color: 'hsl(var(--huesat) 5%)'
+  paper-card-header-color: 'hsl(hsl(var(--huesat) 50%)'
+  paper-button-ink-color: 'hsl(hsl(var(--huesat) 50%)'
   # Text Adjustments
-      paper-font-headline_-_letter-spacing: '-0.5px'
-      paper-font-headline_-_font-weight: '500'
-      paper-font-body1_-_font-weight: '500'
+  paper-font-headline_-_letter-spacing: '-0.5px'
+  paper-font-headline_-_font-weight: '500'
+  paper-font-body1_-_font-weight: '500'
   # Nav Menu
-      paper-listbox-color: 'hsl(var(--huesat) 50%)'
-      paper-grey-50: 'hsl(var(--huesat) 40%)'
-      paper-grey-200: 'hsl(var(--huesat) 72%)'
+  paper-listbox-color: 'hsl(var(--huesat) 50%)'
+  paper-grey-50: 'hsl(var(--huesat) 40%)'
+  paper-grey-200: 'hsl(var(--huesat) 72%)'
   # Paper card
-      paper-item-icon-color: 'hsl(var(--huesat) 70%)'
-      paper-item-icon-active-color: 'var(--paper-item-icon-color)'
-      paper-item-icon_-_color: 'hsl(var(--huesat) 70%)'
-      paper-item-selected_-_background-color: 'hsla(0, 0%, 100%, 0.2)'
-      paper-item-selected_-_color: 'hsl(var(--huesat) 20%)'
-      paper-tabs-selection-bar-color: 'hsl(var(--huesat) 70%)'
-      paper-tab-ink: 'hsl(var(--huesat) 70%)'
-      paper-input-container-color: 'hsl(var(--huesat) 66%)'
+  paper-item-icon-color: 'hsl(var(--huesat) 70%)'
+  paper-item-icon-active-color: 'var(--paper-item-icon-color)'
+  paper-item-icon_-_color: 'hsl(var(--huesat) 70%)'
+  paper-item-selected_-_background-color: 'hsla(0, 0%, 100%, 0.2)'
+  paper-item-selected_-_color: 'hsl(var(--huesat) 20%)'
+  paper-tabs-selection-bar-color: 'hsl(var(--huesat) 70%)'
+  paper-tab-ink: 'hsl(var(--huesat) 70%)'
+  paper-input-container-color: 'hsl(var(--huesat) 66%)'
   # Labels
-      label-badge-red: 'hsl(var(--huesat) 80%)'
-      label-badge-border-color: 'var(--label-badge-red)'
-      label-badge-background-color: 'hsl(var(--huesat) 82%)'
-      label-badge-text-color: 'var(--primary-text-color)'
+  label-badge-red: 'hsl(var(--huesat) 80%)'
+  label-badge-border-color: 'var(--label-badge-red)'
+  label-badge-background-color: 'hsl(var(--huesat) 82%)'
+  label-badge-text-color: 'var(--primary-text-color)'
   # Shadows
-      shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 3px hsla(var(--huesat) 91%, 0.2)'
-      shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 3px hsla(var(--huesat) 91%, 0.2)'
-      paper-input-container-shared-input-style_-_background: '#000'
+  shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 3px hsla(var(--huesat) 91%, 0.2)'
+  shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 3px hsla(var(--huesat) 91%, 0.2)'
+  paper-input-container-shared-input-style_-_background: '#000'
   # Switches
-      paper-toggle-button-checked-button-color: 'hsl(var(--huesat) 50%)'
-      paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 66%)'
-      paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 85%)'
-      paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 80%)'
+  paper-toggle-button-checked-button-color: 'hsl(var(--huesat) 50%)'
+  paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 66%)'
+  paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 85%)'
+  paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 80%)'
   # Sliders
-      paper-slider-knob-color:  'hsl(var(--huesat) 45%)'
-      paper-slider-knob-start-color: 'hsl(var(--huesat) 60%)'
-      paper-slider-pin-color:  'hsl(var(--huesat) 60%)'
-      paper-slider-active-color:  'hsl(var(--huesat) 60%)'
-      paper-slider-container-color: 'hsl(var(--huesat) 76%)'
-      paper-slider-secondary-color: 'hsl(var(--huesat) 10%)'
-      paper-slider-disabled-active-color: 'hsl(var(--huesat) 75%)'
-      paper-slider-disabled-secondary-color: 'hsl(var(--huesat) 75%)'
+  paper-slider-knob-color:  'hsl(var(--huesat) 45%)'
+  paper-slider-knob-start-color: 'hsl(var(--huesat) 60%)'
+  paper-slider-pin-color:  'hsl(var(--huesat) 60%)'
+  paper-slider-active-color:  'hsl(var(--huesat) 60%)'
+  paper-slider-container-color: 'hsl(var(--huesat) 76%)'
+  paper-slider-secondary-color: 'hsl(var(--huesat) 10%)'
+  paper-slider-disabled-active-color: 'hsl(var(--huesat) 75%)'
+  paper-slider-disabled-secondary-color: 'hsl(var(--huesat) 75%)'
   #Toast
-      paper-toast-color: 'hsl(var(--huesat) 45%)'
-      paper-toast-background-color: 'hsl(var(--huesat) 90%)'
-    wood:
-      primary-color: "#6B3A1F"
-      disabled-text-color: "#A58456"
-      divider-color: "#EDE4D8" #"rgba(255, 255, 255, 0.15)"
-      dark-primary-color: "#592A13"
+  paper-toast-color: 'hsl(var(--huesat) 45%)'
+  paper-toast-background-color: 'hsl(var(--huesat) 90%)'
+wood:
+  primary-color: "#6B3A1F"
+  disabled-text-color: "#A58456"
+  divider-color: "#EDE4D8" #"rgba(255, 255, 255, 0.15)"
+  dark-primary-color: "#592A13"
 
-      primary-background-color: "#C4AD92"
-      primary-text-color: "#FFFFFF"
-      secondary-background-color: "#675335"
-      secondary-text-color: "#6B3A1F"
-      text-primary-color: "#693A23"
+  primary-background-color: "#C4AD92"
+  primary-text-color: "#FFFFFF"
+  secondary-background-color: "#675335"
+  secondary-text-color: "#6B3A1F"
+  text-primary-color: "#693A23"
 
-      label-badge-background-color: "var(--primary-background-color)"
-      label-badge-text-color: "var(--text-primary-color)"
+  label-badge-background-color: "var(--primary-background-color)"
+  label-badge-text-color: "var(--text-primary-color)"
 
-      paper-card-background-color: "#A58456"
-      paper-grey-50: "var(--text-primary-color)"
-      paper-grey-200: "#DDD4C8"
-      paper-item-icon-color: "#6B3A1F"
-      paper-listbox-background-color: "#A58456"
-      paper-listbox-color: "#6B3A1F"
+  paper-card-background-color: "#A58456"
+  paper-grey-50: "var(--text-primary-color)"
+  paper-grey-200: "#DDD4C8"
+  paper-item-icon-color: "#6B3A1F"
+  paper-listbox-background-color: "#A58456"
+  paper-listbox-color: "#6B3A1F"
 
-      paper-card-header-color: "#EDE4D8"
-    #  paper-grey-50: "#6B3A1F"
+  paper-card-header-color: "#EDE4D8"
+#  paper-grey-50: "#6B3A1F"
 
-      paper-item-icon-active-color: "#F7C02A"
-      paper-item-icon_-_color: "#FF00FF"
+  paper-item-icon-active-color: "#F7C02A"
+  paper-item-icon_-_color: "#FF00FF"
 
-      paper-slider-active-color: "#A56521"
-      paper-slider-knob-color: "#A56521"
-      paper-slider-knob-start-color: "#6B3A1F"
-      paper-slider-pin-color: "#FF00FF"
-      paper-slider-secondary-color: "#A06020"
+  paper-slider-active-color: "#A56521"
+  paper-slider-knob-color: "#A56521"
+  paper-slider-knob-start-color: "#6B3A1F"
+  paper-slider-pin-color: "#FF00FF"
+  paper-slider-secondary-color: "#A06020"
 
-      paper-toggle-button-checked-ink-color: "#A56521"
-      paper-toggle-button-checked-button-color: "#A56521"
-      paper-toggle-button-checked-bar-color: "#EDE4D8"
-      paper-toggle-button-unchecked-bar-color: "#EDE4D8"
+  paper-toggle-button-checked-ink-color: "#A56521"
+  paper-toggle-button-checked-button-color: "#A56521"
+  paper-toggle-button-checked-bar-color: "#EDE4D8"
+  paper-toggle-button-unchecked-bar-color: "#EDE4D8"
 
-      table-row-background-color: "#A58456"
-      table-row-alternative-background-color: "#C67A2E"
+  table-row-background-color: "#A58456"
+  table-row-alternative-background-color: "#C67A2E"
 
-      google-red: "#A56521"
-      google-green: "#A58456"
-      google-blue: "#268BD2"
-      google-yellow: "#6B3A1F"
-      accent-color: "#EDE4D8"
-      paper-green: "#A58456"
-      paper-blue: "#268BD2"
-      paper-orange: "#EDE4D8"
-    happy:
-      primary-color: pink
-    sad:
-      primary-color: blue
-    minimal:
-      dark-primary-color: "#192231"
-      primary-color: "#98878f"
-      light-primary-color: "#98878f"
-      paper-toggle-button-checked-ink-color: "#494e6b"
-      paper-toggle-button-checked-button-color: "#494e6b"
-      paper-toggle-button-checked-bar-color: "#494e6b"
-      paper-slider-knob-color: "#494e6b"
-      paper-slider-knob-start-color: "#494e6b"
-      paper-slider-pin-color: "#494e6b"
-      paper-slider-active-color: "#494e6b"
-    stormy_hues:
-      dark-primary-color: "#192231"
-      primary-color: "#98878f"
-      light-primary-color: "#98878f"
-      paper-toggle-button-checked-ink-color: "#494e6b"
-      paper-toggle-button-checked-button-color: "#494e6b"
-      paper-toggle-button-checked-bar-color: "#494e6b"
-      paper-slider-knob-color: "#494e6b"
-      paper-slider-knob-start-color: "#494e6b"
-      paper-slider-pin-color: "#494e6b"
-      paper-slider-active-color: "#494e6b"
-    vintage:
-      dark-primary-color: "#373f27"
-      primary-color: "#636b46"
-      light-primary-color: "#e9e7da"
-      paper-toggle-button-checked-ink-color: "#cda34f"
-      paper-toggle-button-checked-button-color: "#cda34f"
-      paper-toggle-button-checked-bar-color: "#cda34f"
-      paper-slider-knob-color: "#cda34f"
-      paper-slider-knob-start-color: "#cda34f"
-      paper-slider-pin-color: "#cda34f"
-      paper-slider-active-color: "#cda34f"
-    done1:
-      dark-primary-color: "#565656"
-      primary-color: "#C09F80"
-      light-primary-color: "#D7CEC7"
-      paper-toggle-button-checked-ink-color: "#76323F"
-      paper-toggle-button-checked-button-color: "#76323F"
-      paper-toggle-button-checked-bar-color: "#76323F"
-      paper-slider-knob-color: "#76323F"
-      paper-slider-knob-start-color: "#76323F"
-      paper-slider-pin-color: "#76323F"
-      paper-slider-active-color: "#76323F"
-      paper-slider-secondary-color: "#FFE0B2"
-    teal:
+  google-red: "#A56521"
+  google-green: "#A58456"
+  google-blue: "#268BD2"
+  google-yellow: "#6B3A1F"
+  accent-color: "#EDE4D8"
+  paper-green: "#A58456"
+  paper-blue: "#268BD2"
+  paper-orange: "#EDE4D8"
+happy:
+  primary-color: pink
+sad:
+  primary-color: blue
+minimal:
+  dark-primary-color: "#192231"
+  primary-color: "#98878f"
+  light-primary-color: "#98878f"
+  paper-toggle-button-checked-ink-color: "#494e6b"
+  paper-toggle-button-checked-button-color: "#494e6b"
+  paper-toggle-button-checked-bar-color: "#494e6b"
+  paper-slider-knob-color: "#494e6b"
+  paper-slider-knob-start-color: "#494e6b"
+  paper-slider-pin-color: "#494e6b"
+  paper-slider-active-color: "#494e6b"
+stormy_hues:
+  dark-primary-color: "#192231"
+  primary-color: "#98878f"
+  light-primary-color: "#98878f"
+  paper-toggle-button-checked-ink-color: "#494e6b"
+  paper-toggle-button-checked-button-color: "#494e6b"
+  paper-toggle-button-checked-bar-color: "#494e6b"
+  paper-slider-knob-color: "#494e6b"
+  paper-slider-knob-start-color: "#494e6b"
+  paper-slider-pin-color: "#494e6b"
+  paper-slider-active-color: "#494e6b"
+vintage:
+  dark-primary-color: "#373f27"
+  primary-color: "#636b46"
+  light-primary-color: "#e9e7da"
+  paper-toggle-button-checked-ink-color: "#cda34f"
+  paper-toggle-button-checked-button-color: "#cda34f"
+  paper-toggle-button-checked-bar-color: "#cda34f"
+  paper-slider-knob-color: "#cda34f"
+  paper-slider-knob-start-color: "#cda34f"
+  paper-slider-pin-color: "#cda34f"
+  paper-slider-active-color: "#cda34f"
+done1:
+  dark-primary-color: "#565656"
+  primary-color: "#C09F80"
+  light-primary-color: "#D7CEC7"
+  paper-toggle-button-checked-ink-color: "#76323F"
+  paper-toggle-button-checked-button-color: "#76323F"
+  paper-toggle-button-checked-bar-color: "#76323F"
+  paper-slider-knob-color: "#76323F"
+  paper-slider-knob-start-color: "#76323F"
+  paper-slider-pin-color: "#76323F"
+  paper-slider-active-color: "#76323F"
+  paper-slider-secondary-color: "#FFE0B2"
+teal:
   # Main Stuff #
-      primary-color: "#1DE9B6" # Primary (most of the UI)
-      primary-background-color: "#303030" # Primary background colour (dialogs, e.t.c)
-      secondary-background-color: "#303030" # Secondary background colour (main UI background)
-      paper-card-background-color: "#424242" # Card background colour
-      paper-item-icon-color: "#1DE9B6" # Icon colour
-      primary-text-color: "#FFFFFF" # Primary text colour
-      secondary-text-color: "rgba(255, 255, 255, 0.7)" # Secondary text colour
-      disabled-text-color: "rgba(255, 255, 255, 0.5)" # Disabled text colour
-      divider-color: "rgba(255, 255, 255, 0.12)" # Divider colour
-      paper-card-header-color: "#FFFFFF" # Card header text colour
+  primary-color: "#1DE9B6" # Primary (most of the UI)
+  primary-background-color: "#303030" # Primary background colour (dialogs, e.t.c)
+  secondary-background-color: "#303030" # Secondary background colour (main UI background)
+  paper-card-background-color: "#424242" # Card background colour
+  paper-item-icon-color: "#1DE9B6" # Icon colour
+  primary-text-color: "#FFFFFF" # Primary text colour
+  secondary-text-color: "rgba(255, 255, 255, 0.7)" # Secondary text colour
+  disabled-text-color: "rgba(255, 255, 255, 0.5)" # Disabled text colour
+  divider-color: "rgba(255, 255, 255, 0.12)" # Divider colour
+  paper-card-header-color: "#FFFFFF" # Card header text colour
 
   # Nav Menu #
-      paper-listbox-background-color: "#424242" # Listbox background colour
-      paper-listbox-color: "#FFFFFF" # Listbox text colour
-      paper-grey-200: "#616161" # Listbox selected item background colour
+  paper-listbox-background-color: "#424242" # Listbox background colour
+  paper-listbox-color: "#FFFFFF" # Listbox text colour
+  paper-grey-200: "#616161" # Listbox selected item background colour
 
   # Switches #
-      paper-toggle-button-checked-ink-color: "#1DE9B6"
-      paper-toggle-button-checked-button-color: "#1DE9B6"
-      paper-toggle-button-checked-bar-color: "#1DE9B6"
-      table-row-alternative-background-color: "#303030"
-      paper-toggle-button-unchecked-bar-color: "#505050"
+  paper-toggle-button-checked-ink-color: "#1DE9B6"
+  paper-toggle-button-checked-button-color: "#1DE9B6"
+  paper-toggle-button-checked-bar-color: "#1DE9B6"
+  table-row-alternative-background-color: "#303030"
+  paper-toggle-button-unchecked-bar-color: "#505050"
 
   # Sliders #
-      paper-slider-knob-color: "#1DE9B6"
-      paper-slider-knob-start-color: "#1DE9B6"
-      paper-slider-pin-color: "#1DE9B6"
-      paper-slider-active-color: "#1DE9B6"
-      paper-slider-secondary-color: "#33F2D8"
-    darkorange:
-      primary-color: "#ff9800"
-      light-primary-color: "#ffc947"
-      dark-primary-color: "#c66900"
-      text-primary-color: "#ffffff"
-      primary-background-color: "#37464f"
-      sidebar-text_-_background: "#62717b"
-      paper-card-background-color: "#263137"
-      paper-card-header-color: "var(--text-primary-color)"
-      secondary-background-color: "var(--primary-background-color)"
-      primary-text-color: "var(--text-primary-color)"
-      secondary-text-color: "var(--primary-color)"
-      paper-listbox-background-color: "var(--sidebar-text_-_background)"
-      paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
-      paper-toggle-button-checked-button-color: "var(--dark-primary-color)"
-      paper-toggle-button-checked-bar-color: "var(--dark-primary-color)"
-      paper-slider-knob-color: "var(--primary-color)"
-      paper-slider-knob-start-color: "var(--primary-color)"
-      paper-slider-pin-color: "var(--primary-color)"
-      paper-slider-active-color: "var(--primary-color)"
-      paper-slider-secondary-color: "var(--light-primary-color)"
-      paper-slider-container-color: "var(--sidebar-text_-_background)"
-      paper-progress-secondary-color: "var(--sidebar-text_-_background)"
-      paper-item-selected_-_background-color: "var(--primary-color)"
-      paper-item-icon_-_color: "var(--text-primary-color)"
-      paper-item-icon-color: "var(--sidebar-text_-_background)"
-      paper-item-icon-active-color: "var(--primary-color)"
-      paper-grey-50: "var(--sidebar-text_-_background)"
-      paper-grey-200: "var(--primary-background-color)"
-      label-badge-background-color: "var(--sidebar-text_-_background)"
-      label-badge-text-color: "var(--text-primary-color)"
-      label-badge-red: "var(--primary-color)"
-      label-badge-blue: "var(--light-primary-color)"
-      label-badge-green: "var(--dark-primary-color)"
-      label-badge-yellow: "var(--text-primary-color)"
-      label-badge-grey: "var(--paper-grey-500)"
-      table-row-background-color: "var(--paper-card-background-color)"
-      table-row-alternative-background-color: "var(--sidebar-text_-_background)"
-    darkblue:
-      primary-color: "#396FB6"
-      light-primary-color: "#77a0d4"
-      dark-primary-color: "#3539ce"
-      text-primary-color: "#ffffff"
-      primary-background-color: "#37464f"
-      sidebar-text_-_background: "#3c4348"
-      paper-card-background-color: "#263137"
-      paper-card-header-color: "var(--text-primary-color)"
-      secondary-background-color: "var(--primary-background-color)"
-      primary-text-color: "var(--text-primary-color)"
-      secondary-text-color: "var(--primary-color)"
-      paper-listbox-background-color: "var(--sidebar-text_-_background)"
-      paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
-      paper-toggle-button-checked-button-color: "var(--dark-primary-color)"
-      paper-toggle-button-checked-bar-color: "var(--dark-primary-color)"
-      paper-slider-knob-color: "var(--primary-color)"
-      paper-slider-knob-start-color: "var(--primary-color)"
-      paper-slider-pin-color: "var(--primary-color)"
-      paper-slider-active-color: "var(--primary-color)"
-      paper-slider-secondary-color: "var(--light-primary-color)"
-      paper-slider-container-color: "var(--sidebar-text_-_background)"
-      paper-progress-secondary-color: "var(--sidebar-text_-_background)"
-      paper-item-selected_-_background-color: "var(--primary-color)"
-      paper-item-icon_-_color: "var(--text-primary-color)"
-      paper-item-icon-color: "var(--sidebar-text_-_background)"
-      paper-item-icon-active-color: "var(--primary-color)"
-      paper-grey-50: "var(--sidebar-text_-_background)"
-      paper-grey-200: "var(--primary-background-color)"
-      label-badge-background-color: "var(--sidebar-text_-_background)"
-      label-badge-text-color: "var(--text-primary-color)"
-      label-badge-red: "var(--primary-color)"
-      label-badge-blue: "var(--light-primary-color)"
-      label-badge-green: "var(--dark-primary-color)"
-      label-badge-yellow: "var(--text-primary-color)"
-      label-badge-grey: "var(--paper-grey-500)"
-      table-row-background-color: "var(--paper-card-background-color)"
-      table-row-alternative-background-color: "var(--sidebar-text_-_background)"
-    darkred:
+  paper-slider-knob-color: "#1DE9B6"
+  paper-slider-knob-start-color: "#1DE9B6"
+  paper-slider-pin-color: "#1DE9B6"
+  paper-slider-active-color: "#1DE9B6"
+  paper-slider-secondary-color: "#33F2D8"
+darkorange:
+  primary-color: "#ff9800"
+  light-primary-color: "#ffc947"
+  dark-primary-color: "#c66900"
+  text-primary-color: "#ffffff"
+  primary-background-color: "#37464f"
+  sidebar-text_-_background: "#62717b"
+  paper-card-background-color: "#263137"
+  paper-card-header-color: "var(--text-primary-color)"
+  secondary-background-color: "var(--primary-background-color)"
+  primary-text-color: "var(--text-primary-color)"
+  secondary-text-color: "var(--primary-color)"
+  paper-listbox-background-color: "var(--sidebar-text_-_background)"
+  paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-button-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-bar-color: "var(--dark-primary-color)"
+  paper-slider-knob-color: "var(--primary-color)"
+  paper-slider-knob-start-color: "var(--primary-color)"
+  paper-slider-pin-color: "var(--primary-color)"
+  paper-slider-active-color: "var(--primary-color)"
+  paper-slider-secondary-color: "var(--light-primary-color)"
+  paper-slider-container-color: "var(--sidebar-text_-_background)"
+  paper-progress-secondary-color: "var(--sidebar-text_-_background)"
+  paper-item-selected_-_background-color: "var(--primary-color)"
+  paper-item-icon_-_color: "var(--text-primary-color)"
+  paper-item-icon-color: "var(--sidebar-text_-_background)"
+  paper-item-icon-active-color: "var(--primary-color)"
+  paper-grey-50: "var(--sidebar-text_-_background)"
+  paper-grey-200: "var(--primary-background-color)"
+  label-badge-background-color: "var(--sidebar-text_-_background)"
+  label-badge-text-color: "var(--text-primary-color)"
+  label-badge-red: "var(--primary-color)"
+  label-badge-blue: "var(--light-primary-color)"
+  label-badge-green: "var(--dark-primary-color)"
+  label-badge-yellow: "var(--text-primary-color)"
+  label-badge-grey: "var(--paper-grey-500)"
+  table-row-background-color: "var(--paper-card-background-color)"
+  table-row-alternative-background-color: "var(--sidebar-text_-_background)"
+darkblue:
+  primary-color: "#396FB6"
+  light-primary-color: "#77a0d4"
+  dark-primary-color: "#3539ce"
+  text-primary-color: "#ffffff"
+  primary-background-color: "#37464f"
+  sidebar-text_-_background: "#3c4348"
+  paper-card-background-color: "#263137"
+  paper-card-header-color: "var(--text-primary-color)"
+  secondary-background-color: "var(--primary-background-color)"
+  primary-text-color: "var(--text-primary-color)"
+  secondary-text-color: "var(--primary-color)"
+  paper-listbox-background-color: "var(--sidebar-text_-_background)"
+  paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-button-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-bar-color: "var(--dark-primary-color)"
+  paper-slider-knob-color: "var(--primary-color)"
+  paper-slider-knob-start-color: "var(--primary-color)"
+  paper-slider-pin-color: "var(--primary-color)"
+  paper-slider-active-color: "var(--primary-color)"
+  paper-slider-secondary-color: "var(--light-primary-color)"
+  paper-slider-container-color: "var(--sidebar-text_-_background)"
+  paper-progress-secondary-color: "var(--sidebar-text_-_background)"
+  paper-item-selected_-_background-color: "var(--primary-color)"
+  paper-item-icon_-_color: "var(--text-primary-color)"
+  paper-item-icon-color: "var(--sidebar-text_-_background)"
+  paper-item-icon-active-color: "var(--primary-color)"
+  paper-grey-50: "var(--sidebar-text_-_background)"
+  paper-grey-200: "var(--primary-background-color)"
+  label-badge-background-color: "var(--sidebar-text_-_background)"
+  label-badge-text-color: "var(--text-primary-color)"
+  label-badge-red: "var(--primary-color)"
+  label-badge-blue: "var(--light-primary-color)"
+  label-badge-green: "var(--dark-primary-color)"
+  label-badge-yellow: "var(--text-primary-color)"
+  label-badge-grey: "var(--paper-grey-500)"
+  table-row-background-color: "var(--paper-card-background-color)"
+  table-row-alternative-background-color: "var(--sidebar-text_-_background)"
+darkred:
 # Main colors that can be changed
-      dark-primary-color: "#c66900"
-      disabled-text-color: "#545454"
-      divider-color: "rgba(255, 255, 255, 0.12)"
-      light-primary-color: "#e06c6c"
-      paper-card-background-color: "#1d1d1d"
-      paper-grey-200: "#191919"
-      paper-item-icon-color: "#d3d3d3"
-      paper-listbox-background-color: "#202020"
-      primary-background-color: "#303030"
-      primary-color: "#d32f2f"
-      primary-text-color: "#cfcfcf"
-      secondary-background-color: "#131313"
-      sidebar-text_-_background: "#62717b" 
+  dark-primary-color: "#c66900"
+  disabled-text-color: "#545454"
+  divider-color: "rgba(255, 255, 255, 0.12)"
+  light-primary-color: "#e06c6c"
+  paper-card-background-color: "#1d1d1d"
+  paper-grey-200: "#191919"
+  paper-item-icon-color: "#d3d3d3"
+  paper-listbox-background-color: "#202020"
+  primary-background-color: "#303030"
+  primary-color: "#d32f2f"
+  primary-text-color: "#cfcfcf"
+  secondary-background-color: "#131313"
+  sidebar-text_-_background: "#62717b" 
 # Colors based on variables, see above
-      paper-card-header-color: "var(--paper-item-icon-color)" 
-      paper-item-icon-active-color: "var(--primary-color)"
-      paper-item-icon_-_color: "var(--primary-text-color)"
-      paper-listbox-color: "var(--primary-text-color)"
-      paper-grey-50: "var(--primary-text-color)"
-      paper-slider-active-color: "var(--primary-color)"
-      paper-slider-knob-color: "var(--primary-color)"
-      paper-slider-knob-start-color: "var(--primary-color)"
-      paper-slider-pin-color: "var(--primary-color)"
-      paper-slider-secondary-color: "var(--light-primary-color)"
-      paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
-      paper-toggle-button-checked-button-color: "var(--primary-color)"
-      paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
-      paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
-      secondary-text-color: "var(--primary-color)"
-      table-row-background-color: "var(--paper-card-background-color)"
-      table-row-alternative-background-color: "var(--sidebar-text_-_background)"
-      
-    dark_theme:
+  paper-card-header-color: "var(--paper-item-icon-color)" 
+  paper-item-icon-active-color: "var(--primary-color)"
+  paper-item-icon_-_color: "var(--primary-text-color)"
+  paper-listbox-color: "var(--primary-text-color)"
+  paper-grey-50: "var(--primary-text-color)"
+  paper-slider-active-color: "var(--primary-color)"
+  paper-slider-knob-color: "var(--primary-color)"
+  paper-slider-knob-start-color: "var(--primary-color)"
+  paper-slider-pin-color: "var(--primary-color)"
+  paper-slider-secondary-color: "var(--light-primary-color)"
+  paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-button-color: "var(--primary-color)"
+  paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
+  paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+  secondary-text-color: "var(--primary-color)"
+  table-row-background-color: "var(--paper-card-background-color)"
+  table-row-alternative-background-color: "var(--sidebar-text_-_background)"
+  
+dark_theme:
   # Main Stuff #
-      primary-color: "#1ABA92" # Primary (most of the UI)
-      primary-background-color: "#303030" # Primary background colour (dialogs, e.t.c)
-      secondary-background-color: "#303030" # Secondary background colour (main UI background)
-      paper-card-background-color: "#424242" # Card background colour
-      paper-item-icon-color: "#1ABA92" # Icon colour
-      primary-text-color: "#FFFFFF" # Primary text colour
-      secondary-text-color: "rgba(255, 255, 255, 0.7)" # Secondary text colour
-      disabled-text-color: "rgba(255, 255, 255, 0.5)" # Disabled text colour
-      divider-color: "rgba(255, 255, 255, 0.12)" # Divider colour
-      paper-card-header-color: "#FFFFFF" # Card header text colour
+  primary-color: "#1ABA92" # Primary (most of the UI)
+  primary-background-color: "#303030" # Primary background colour (dialogs, e.t.c)
+  secondary-background-color: "#303030" # Secondary background colour (main UI background)
+  paper-card-background-color: "#424242" # Card background colour
+  paper-item-icon-color: "#1ABA92" # Icon colour
+  primary-text-color: "#FFFFFF" # Primary text colour
+  secondary-text-color: "rgba(255, 255, 255, 0.7)" # Secondary text colour
+  disabled-text-color: "rgba(255, 255, 255, 0.5)" # Disabled text colour
+  divider-color: "rgba(255, 255, 255, 0.12)" # Divider colour
+  paper-card-header-color: "#FFFFFF" # Card header text colour
 
   # Nav Menu #
-      paper-listbox-background-color: "#424242" # Listbox background colour
-      paper-listbox-color: "#FFFFFF" # Listbox text colour
-      paper-grey-200: "#616161" # Listbox selected item background colour
+  paper-listbox-background-color: "#424242" # Listbox background colour
+  paper-listbox-color: "#FFFFFF" # Listbox text colour
+  paper-grey-200: "#616161" # Listbox selected item background colour
 
   # Switches #
-      paper-toggle-button-checked-ink-color: "#1ABA92"
-      paper-toggle-button-checked-button-color: "#1ABA92"
-      paper-toggle-button-checked-bar-color: "#1ABA92"
+  paper-toggle-button-checked-ink-color: "#1ABA92"
+  paper-toggle-button-checked-button-color: "#1ABA92"
+  paper-toggle-button-checked-bar-color: "#1ABA92"
 
   # Sliders #
-      paper-slider-knob-color: "#1ABA92"
-      paper-slider-knob-start-color: "#1ABA92"
-      paper-slider-pin-color: "#1ABA92"
-      paper-slider-active-color: "#1ABA92"
-      paper-slider-secondary-color: "#33F2D8"
-    darkcyan:
+  paper-slider-knob-color: "#1ABA92"
+  paper-slider-knob-start-color: "#1ABA92"
+  paper-slider-pin-color: "#1ABA92"
+  paper-slider-active-color: "#1ABA92"
+  paper-slider-secondary-color: "#33F2D8"
+darkcyan:
 # Main colors that can be changed
-      primary-color: "#00bcd4"
-      disabled-text-color: "#545454"
-      divider-color: "rgba(255, 255, 255, 0.12)"
-      paper-card-background-color: "#4e4e4e"
-      paper-grey-200: "#191919"
-      paper-item-icon-color: "#d3d3d3"
-      paper-listbox-background-color: "#202020"
-      paper-listbox-color: "#FFFFFF"      
-      primary-background-color: "#303030"
-      primary-text-color: "#cfcfcf"      
-      secondary-background-color: "#2b2b2b"
-      secondary-text-color: "#04a7bc"
+  primary-color: "#00bcd4"
+  disabled-text-color: "#545454"
+  divider-color: "rgba(255, 255, 255, 0.12)"
+  paper-card-background-color: "#4e4e4e"
+  paper-grey-200: "#191919"
+  paper-item-icon-color: "#d3d3d3"
+  paper-listbox-background-color: "#202020"
+  paper-listbox-color: "#FFFFFF"  
+  primary-background-color: "#303030"
+  primary-text-color: "#cfcfcf"  
+  secondary-background-color: "#2b2b2b"
+  secondary-text-color: "#04a7bc"
 # Colors based on variables, see above
-      label-badge-background-color: "var(--secondary-background-color)"
-      label-badge-text-color: "var(--text-primary-color)"
-      paper-card-header-color: "#var(--paper-item-icon-color)"
-      paper-grey-50: "var(--primary-text-color)"
-      paper-item-icon-active-color: "var(--primary-color)"
-      paper-item-icon_-_color: "var(--primary-text-color)"
-      paper-slider-active-color: "var(--primary-color)"
-      paper-slider-knob-color: "var(--primary-color)"
-      paper-slider-knob-start-color: "var(--primary-color)"
-      paper-slider-pin-color: "var(--primary-color)"
-      paper-slider-secondary-color: "var(--light-primary-color)"     
-      paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
-      paper-toggle-button-checked-button-color: "var(--primary-color)"
-      paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
-      paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
-      
-    PmxMooonight:
-      # MyVariables
-      base-hue: '220' #Controls the base (and accent) color hue (0-360) | 0=Red 60=Yellow 120=Green 180=Cyan 240=Blue 300=Magenta 360=Red
-      base-sat: '16%' #Controls the saturation of the theme (0%-100%) | 0%=Grey 100%=Full Saturation
-      # MyVar
-      huesat: 'var(--base-hue), var(--base-sat),'
-      # Primary Color
-      primary-color: 'hsl(var(--huesat) 20%)'
-      # Backgrounds
-      primary-background-color: 'var(--primary-color)'
-      secondary-background-color: 'hsl(var(--huesat) 16%)'
-      paper-listbox-background-color: 'var(--primary-color)'
-      paper-card-background-color: 'hsl(var(--huesat) 12%)'
-      paper-dialog-background-color: 'var(--paper-card-background-color)'
-      table-row-background-color: 'hsl(var(--huesat) 12%)'
-      table-row-alternative-background-color: 'hsl(var(--huesat) 10%)'
-      # Devider
-      divider-color: 'hsla(0, 0%, 0%, 0)'
-      dark-divider-opacity: '0'
-      light-divider-opacity: '0'
-      # Text colors
-      primary-text-color: 'hsl(var(--huesat) 60%)'
-      text-primary-color: 'hsl(var(--huesat) 60%)'
-      secondary-text-color: 'hsl(var(--huesat) 60%)'
-      disabled-text-color: 'hsl(var(--huesat) 70%)'
-      sidebar-text_-_color: 'hsl(var(--huesat) 90%)'
-      sidebar-text-color: 'hsl(var(--huesat) 90%)'
-      paper-card-header-color: 'hsl(var(--base-hue), 90%, 50%)'
-      # Text Adjustments
-      paper-font-headline_-_letter-spacing: '-0.5px'
-      paper-font-headline_-_font-weight: '500'
-      paper-font-body1_-_font-weight: '500'
-      # Nav Menu
-      paper-listbox-color: 'hsl(var(--huesat) 50%)'
-      paper-grey-50: 'hsl(var(--huesat) 50%)'
-      paper-grey-200: 'hsla(var(--huesat) 26%)'
-      # Paper card
-      paper-item-icon-color: 'hsl(var(--huesat) 30%)'
-      paper-item-icon-active-color: 'var(--paper-item-icon-color)'
-      paper-item-icon_-_color: 'var(--paper-item-icon-color)'
-      paper-item-selected_-_background-color: 'hsla(0, 0%, 0%, 0.2)'
-      paper-tabs-selection-bar-color: 'hsla(0, 0%, 0%, 0.2)'
-      # Labels
-      label-badge-red: 'hsla(0, 0%, 0%, 0)'
-      label-badge-border-color: 'var(--label-badge-red)'
-      label-badge-background-color: 'var(--paper-card-background-color)'
-      label-badge-text-color: 'var(--primary-text-color)'
-      # Shadows
-      shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 18%)'
-      shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 28%)'
-      # Switches
-      paper-toggle-button-checked-button-color: 'hsl(var(--base-hue), 90%, 50%)'
-      paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 25%)'
-      paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 25%)'
-      paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 5%)'
-      # Sliders
-      paper-slider-knob-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-knob-start-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-slider-pin-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-active-color:  'hsl(var(--base-hue), 90%, 50%)'
-      paper-slider-container-color: 'hsl(var(--huesat) 28%)'
-      paper-slider-secondary-color: 'hsl(var(--huesat) 90%)'
-      paper-slider-disabled-active-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-slider-disabled-secondary-color: 'hsl(var(--base-hue), 80%, 25%)'
-      paper-dialog-color: 'hsl(var(--base-hue), 20%, 80%)'
-      
-      
-    slate:
-      # Main colors
-      primary-color: '#2980b9'
-      accent-color: '#2980b9'
-      dark-primary-color: 'var(--accent-color)'
-      light-primary-color: 'var(--accent-color)'
-      # Text colors
-      primary-text-color: '#FFFFFF'
-      text-primary-color: 'var(--primary-text-color)'
-      secondary-text-color: '#b58e31'
-      disabled-text-color: '#777777'
-      label-badge-border-color: 'green'
-      # Sidebar
-      sidebar-icon-color: '#777777'
-      # Background colors
-      primary-background-color: '#222222'
-      secondary-background-color: '#222222'
-      divider-color: 'rgba(0, 0, 0, .12)'
-      table-row-background-color: '#292929'
-      table-row-alternative-background-color: '#292929'
-      # Nav Menu
-      paper-listbox-color: '#777777'
-      paper-listbox-background-color: '#141414'
-      paper-grey-50: 'var(--primary-text-color)'
-      paper-grey-200: '#222222'
-      # Paper card
-      paper-card-header-color: 'var(--accent-color)'
-      paper-card-background-color: '#292929'
-      paper-dialog-background-color: '#292929'
-      paper-item-icon-color: 'var(--primary-text-color)'
-      paper-item-icon-active-color: '#b58e31'
-      paper-item-icon_-_color: 'green'
-      paper-item-selected_-_background-color: '#292929'
-      paper-tabs-selection-bar-color: 'green'
-      # Labels
-      label-badge-red: 'var(--accent-color)'
-      label-badge-text-color: 'var(--primary-text-color)'
-      label-badge-background-color: '#222222'
-      # Switches
-      paper-toggle-button-checked-button-color: 'var(--accent-color)'
-      paper-toggle-button-checked-bar-color: 'var(--accent-color)'
-      paper-toggle-button-checked-ink-color: 'var(--accent-color)'
-      paper-toggle-button-unchecked-button-color: 'var(--disabled-text-color)'
-      paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)'
-      paper-toggle-button-unchecked-ink-color: 'var(--disabled-text-color)'
-      # Sliders
-      paper-slider-knob-color: 'var(--accent-color)'
-      paper-slider-knob-start-color: 'var(--accent-color)'
-      paper-slider-pin-color: 'var(--accent-color)'
-      paper-slider-active-color: 'var(--accent-color)'
-      paper-slider-container-color: 'linear-gradient(var(--primary-background-color), var(--secondary-background-color)) no-repeat'
-      paper-slider-secondary-color: 'var(--secondary-background-color)'
-      paper-slider-disabled-active-color: 'var(--disabled-text-color)'
-      paper-slider-disabled-secondary-color: 'var(--disabled-text-color)'
-      # Google colors
-      google-red-500: '#b58e31'
-      google-green-500: '#2980b9'
+  label-badge-background-color: "var(--secondary-background-color)"
+  label-badge-text-color: "var(--text-primary-color)"
+  paper-card-header-color: "#var(--paper-item-icon-color)"
+  paper-grey-50: "var(--primary-text-color)"
+  paper-item-icon-active-color: "var(--primary-color)"
+  paper-item-icon_-_color: "var(--primary-text-color)"
+  paper-slider-active-color: "var(--primary-color)"
+  paper-slider-knob-color: "var(--primary-color)"
+  paper-slider-knob-start-color: "var(--primary-color)"
+  paper-slider-pin-color: "var(--primary-color)"
+  paper-slider-secondary-color: "var(--light-primary-color)" 
+  paper-toggle-button-checked-ink-color: "var(--dark-primary-color)"
+  paper-toggle-button-checked-button-color: "var(--primary-color)"
+  paper-toggle-button-checked-bar-color: "var(--light-primary-color)"
+  paper-toggle-button-unchecked-bar-color: "var(--primary-text-color)"
+  
+PmxMooonight:
+  # MyVariables
+  base-hue: '220' #Controls the base (and accent) color hue (0-360) | 0=Red 60=Yellow 120=Green 180=Cyan 240=Blue 300=Magenta 360=Red
+  base-sat: '16%' #Controls the saturation of the theme (0%-100%) | 0%=Grey 100%=Full Saturation
+  # MyVar
+  huesat: 'var(--base-hue), var(--base-sat),'
+  # Primary Color
+  primary-color: 'hsl(var(--huesat) 20%)'
+  # Backgrounds
+  primary-background-color: 'var(--primary-color)'
+  secondary-background-color: 'hsl(var(--huesat) 16%)'
+  paper-listbox-background-color: 'var(--primary-color)'
+  paper-card-background-color: 'hsl(var(--huesat) 12%)'
+  paper-dialog-background-color: 'var(--paper-card-background-color)'
+  table-row-background-color: 'hsl(var(--huesat) 12%)'
+  table-row-alternative-background-color: 'hsl(var(--huesat) 10%)'
+  # Devider
+  divider-color: 'hsla(0, 0%, 0%, 0)'
+  dark-divider-opacity: '0'
+  light-divider-opacity: '0'
+  # Text colors
+  primary-text-color: 'hsl(var(--huesat) 60%)'
+  text-primary-color: 'hsl(var(--huesat) 60%)'
+  secondary-text-color: 'hsl(var(--huesat) 60%)'
+  disabled-text-color: 'hsl(var(--huesat) 70%)'
+  sidebar-text_-_color: 'hsl(var(--huesat) 90%)'
+  sidebar-text-color: 'hsl(var(--huesat) 90%)'
+  paper-card-header-color: 'hsl(var(--base-hue), 90%, 50%)'
+  # Text Adjustments
+  paper-font-headline_-_letter-spacing: '-0.5px'
+  paper-font-headline_-_font-weight: '500'
+  paper-font-body1_-_font-weight: '500'
+  # Nav Menu
+  paper-listbox-color: 'hsl(var(--huesat) 50%)'
+  paper-grey-50: 'hsl(var(--huesat) 50%)'
+  paper-grey-200: 'hsla(var(--huesat) 26%)'
+  # Paper card
+  paper-item-icon-color: 'hsl(var(--huesat) 30%)'
+  paper-item-icon-active-color: 'var(--paper-item-icon-color)'
+  paper-item-icon_-_color: 'var(--paper-item-icon-color)'
+  paper-item-selected_-_background-color: 'hsla(0, 0%, 0%, 0.2)'
+  paper-tabs-selection-bar-color: 'hsla(0, 0%, 0%, 0.2)'
+  # Labels
+  label-badge-red: 'hsla(0, 0%, 0%, 0)'
+  label-badge-border-color: 'var(--label-badge-red)'
+  label-badge-background-color: 'var(--paper-card-background-color)'
+  label-badge-text-color: 'var(--primary-text-color)'
+  # Shadows
+  shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 18%)'
+  shadow-elevation-16dp_-_box-shadow: 'inset 0px 0px 0px 4px hsl(var(--huesat) 28%)'
+  # Switches
+  paper-toggle-button-checked-button-color: 'hsl(var(--base-hue), 90%, 50%)'
+  paper-toggle-button-checked-bar-color: 'hsl(var(--huesat) 25%)'
+  paper-toggle-button-unchecked-button-color: 'hsl(var(--huesat) 25%)'
+  paper-toggle-button-unchecked-bar-color: 'hsl(var(--huesat) 5%)'
+  # Sliders
+  paper-slider-knob-color:  'hsl(var(--base-hue), 90%, 50%)'
+  paper-slider-knob-start-color: 'hsl(var(--base-hue), 80%, 25%)'
+  paper-slider-pin-color:  'hsl(var(--base-hue), 90%, 50%)'
+  paper-slider-active-color:  'hsl(var(--base-hue), 90%, 50%)'
+  paper-slider-container-color: 'hsl(var(--huesat) 28%)'
+  paper-slider-secondary-color: 'hsl(var(--huesat) 90%)'
+  paper-slider-disabled-active-color: 'hsl(var(--base-hue), 80%, 25%)'
+  paper-slider-disabled-secondary-color: 'hsl(var(--base-hue), 80%, 25%)'
+  paper-dialog-color: 'hsl(var(--base-hue), 20%, 80%)'
+  
+  
+slate:
+  # Main colors
+  primary-color: '#2980b9'
+  accent-color: '#2980b9'
+  dark-primary-color: 'var(--accent-color)'
+  light-primary-color: 'var(--accent-color)'
+  # Text colors
+  primary-text-color: '#FFFFFF'
+  text-primary-color: 'var(--primary-text-color)'
+  secondary-text-color: '#b58e31'
+  disabled-text-color: '#777777'
+  label-badge-border-color: 'green'
+  # Sidebar
+  sidebar-icon-color: '#777777'
+  # Background colors
+  primary-background-color: '#222222'
+  secondary-background-color: '#222222'
+  divider-color: 'rgba(0, 0, 0, .12)'
+  table-row-background-color: '#292929'
+  table-row-alternative-background-color: '#292929'
+  # Nav Menu
+  paper-listbox-color: '#777777'
+  paper-listbox-background-color: '#141414'
+  paper-grey-50: 'var(--primary-text-color)'
+  paper-grey-200: '#222222'
+  # Paper card
+  paper-card-header-color: 'var(--accent-color)'
+  paper-card-background-color: '#292929'
+  paper-dialog-background-color: '#292929'
+  paper-item-icon-color: 'var(--primary-text-color)'
+  paper-item-icon-active-color: '#b58e31'
+  paper-item-icon_-_color: 'green'
+  paper-item-selected_-_background-color: '#292929'
+  paper-tabs-selection-bar-color: 'green'
+  # Labels
+  label-badge-red: 'var(--accent-color)'
+  label-badge-text-color: 'var(--primary-text-color)'
+  label-badge-background-color: '#222222'
+  # Switches
+  paper-toggle-button-checked-button-color: 'var(--accent-color)'
+  paper-toggle-button-checked-bar-color: 'var(--accent-color)'
+  paper-toggle-button-checked-ink-color: 'var(--accent-color)'
+  paper-toggle-button-unchecked-button-color: 'var(--disabled-text-color)'
+  paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)'
+  paper-toggle-button-unchecked-ink-color: 'var(--disabled-text-color)'
+  # Sliders
+  paper-slider-knob-color: 'var(--accent-color)'
+  paper-slider-knob-start-color: 'var(--accent-color)'
+  paper-slider-pin-color: 'var(--accent-color)'
+  paper-slider-active-color: 'var(--accent-color)'
+  paper-slider-container-color: 'linear-gradient(var(--primary-background-color), var(--secondary-background-color)) no-repeat'
+  paper-slider-secondary-color: 'var(--secondary-background-color)'
+  paper-slider-disabled-active-color: 'var(--disabled-text-color)'
+  paper-slider-disabled-secondary-color: 'var(--disabled-text-color)'
+  # Google colors
+  google-red-500: '#b58e31'
+  google-green-500: '#2980b9'
+  
+clean_dark:
+  # Colors
+  text-color: '#DADADB'   # Grey text
+  text-medium-light-color: '#A0A2A8'  # Medium-light grey text
+  text-medium-color: '#80828A'# Medium grey text
+  text-dark-color: '#6A6B74'  # Dark grey text
+  accent-color: '#008bef' # Blue
+  accent-medium-color: '#2686c1'  # Decent blue
+  background-color: '#3b4049' # Dark grey background
+  background-color-2: '#484E59'   # Light grey background
+  background-card-color: '#434952'# Grey background
+  border-color: '#383C46' # Grey border
+
+  # Header
+  primary-color: '#363941'# Background
+  text-primary-color: 'var(--text-color)' # Text
+  
+  # Left Menu
+  paper-listbox-background-color: 'var(--background-color)'   # Background
+  sidebar-icon-color: 'var(--text-medium-color)'  # icons
+  sidebar-selected-icon-color: 'var(--text-medium-light-color)'   # Selected row icon and background (15%)
+  sidebar-selected-text-color: 'var(--text-color)'# Selected row label
+
+  # UI
+  paper-card-header-color: 'var(--text-color)'# Title in settings
+  primary-background-color: 'var(--background-color)' # Background (also title background in left menu)
+  mdc-theme-primary: 'var(--accent-medium-color)' # Action Buttons (save, restart etc.)
+  
+  # Card
+  paper-card-background-color: 'var(--background-card-color)' # Background
+  dark-primary-color: 'var(--text-color)'
+  primary-text-color: 'var(--text-color)'
+  paper-listbox-color: 'var(--text-color)'
+  light-primary-color: 'var(--text-dark-color)'
+  secondary-text-color: 'var(--text-medium-color)'
+  disabled-text-color: 'var(--text-dark-color)'
+  paper-dialog-button-color: 'var(--text-color)'
+  secondary-background-color: 'var(--background-color-2)' # Background more info title
+
+  # Icons
+  paper-item-icon-color: 'var(--text-dark-color)' # Off
+  paper-item-icon-active-color: 'var(--accent-color)' # On
+  
+  # Switches
+  paper-toggle-button-checked-button-color: 'var(--text-medium-light-color)'  # Knob On
+  paper-toggle-button-checked-bar-color: '#009FFF'# Background On
+  paper-toggle-button-unchecked-button-color: 'var(--text-medium-light-color)'# Knob Off
+  paper-toggle-button-unchecked-bar-color: '#767682'  # Background Off
+  
+  # Shadows
+  shadow-elevation-2dp_-_box-shadow: 'inset 0px 0px 0px 1px var(--border-color)'
+  shadow-elevation-4dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-6dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-8dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-10dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-12dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-14dp_-_box-shadow: 'var(--shadow-elevation-2dp_-_box-shadow)'
+  shadow-elevation-16dp_-_box-shadow: '0px 0px 0px 3px var(--text-dark-color)'

@@ -20,12 +20,20 @@ resources:
     type: js
   - url: /customcards/custom-lovelace/krisinfo.js
     type: js
-
+  - url: /customcards/github/maykar/compact-custom-header.js?track=true
+    type: module
 views:
   - title: Hem
     id: hem
     icon: mdi:home
+    background: center / cover no-repeat url("/local/background.jpeg")
     cards:
+      - type: 'custom:compact-custom-header'
+        main_config: true
+        menu: overflow
+        options: clock
+        voice: hide
+        clock_format: 24
       - id: 4db5c4664f0a4458949aec3651e4d7a6  # Automatically created id
         type: vertical-stack
         cards:

@@ -1,0 +1,12 @@
+alias: "Update Google Travel Time Oskar"
+initial_state: 'on'
+trigger:
+  - platform: time_pattern
+    minutes: '/8'
+condition:
+  - condition: time
+    after: '08:00:00'
+    before: '19:00:00'
+action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.oskar_tid_till_hem

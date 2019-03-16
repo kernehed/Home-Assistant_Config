@@ -1,0 +1,13 @@
+alias: "PowerOff started from harmony hub"
+initial_state: "on"
+trigger:
+  platform: state
+  entity_id: remote.harmony_hub
+condition:
+  condition: template
+  value_template: '{{ trigger.to_state.attributes.current_activity == "PowerOff" }}'
+action:
+  service: input_boolean.turn_off
+  entity_id: input_boolean.notify
+  service: light.turn_on
+  entity_id: group.light_kallaren

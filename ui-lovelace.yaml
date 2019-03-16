@@ -171,12 +171,12 @@ views:
       - id: 3870fdc794274f17b84dd6ced631b737  # Automatically created id
         type: iframe
         url: https://embed.windy.com/embed2.html
-      - id: 37279816181f442eac853b132142141  # Automatically created id
-        type: entities
-        title: Rum lokalisering
-        show_header_toggle: false
-        entities:
-          - sensor.oskar_bluetooth
+#      - id: 37279816181f442eac853b132142141  # Automatically created id
+#        type: entities
+#        title: Rum lokalisering
+#        show_header_toggle: false
+#        entities:
+#          - sensor.oskar_bluetooth
 #          - sensor.bella_bluetooth
       - id: 2bf8ccbc1f664c23b10b6533ae82f7e2  # Automatically created id
         type: weather-forecast
@@ -322,9 +322,9 @@ views:
         entities:
           - light.kallarspot_1
           - light.kallarspot_2
+          - light.kallarspot_3
           - light.kallarspot_4
           - light.kallarspot_5
-          - light.kallarspot_6
       - id: 7c48a166049140669482640307d81a98  # Automatically created id
         type: custom:mini-media-player
         entity: media_player.basement

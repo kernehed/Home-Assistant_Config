@@ -1,4 +1,0 @@
-platform: googlehome
-interval_seconds: 60
-new_device_defaults:
-  track_new_devices: false

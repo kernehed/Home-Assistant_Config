@@ -1,5 +1,5 @@
 alias: Tänd källare lamporna när rörelse i källaren
-initial_state: 'on'
+initial_state: 'off'
 trigger:
   platform: state
   entity_id: binary_sensor.kallaren_motion_sensor

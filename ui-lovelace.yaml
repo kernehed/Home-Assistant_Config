@@ -132,13 +132,15 @@ views:
           include:
             - entity_id: sensor.pollen_al
             - entity_id: sensor.pollen_alm
-            - entity_id: sensor.pollen_salg_vide
+#            - entity_id: sensor.pollen_asp
+#            - entity_id: sensor.pollen_salg_vide
             - entity_id: sensor.pollen_bjork
             - entity_id: sensor.pollen_bok
             - entity_id: sensor.pollen_ek
             - entity_id: sensor.pollen_grabo
             - entity_id: sensor.pollen_gras
             - entity_id: sensor.pollen_hassel
+            - entity_id: sensor.pollen_ambrosia
           exclude:
             - state: Inget
             - state: i.u.
@@ -608,8 +610,14 @@ views:
         show_source: true
       - id: 854b2c6c0e42429eb59efe9a7ac23fdb  # Automatically created id
         type: custom:mini-media-player
-        entity: media_player.basement
-        name: Källarens TV
+        entity: media_player.bio
+        name: Bion
+        artwork: cover
+        show_source: true
+      - id: 854b2c6c0e42429eb59efe9a7ac23fdb  # Automatically created id
+        type: custom:mini-media-player
+        entity: media_player.playstation_4
+        name: Playstation 4
         artwork: cover
         show_source: true
       - id: 1d4c980bb8114842bce1f7822f7a3fbf  # Automatically created id

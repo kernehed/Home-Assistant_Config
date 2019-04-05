@@ -1,0 +1,222 @@
+platform: template
+sensors:
+  pollen_gras:
+    friendly_name: "Pollen: gräs"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_gras_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_hassel:
+    friendly_name: "Pollen: hassel"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'L-M') -%}
+       Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_hassel_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_al:
+    friendly_name: "Pollen: al"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_al_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_asp:
+    friendly_name: "Pollen: asp"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_asp_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_salg_vide:
+    friendly_name: "Pollen: sälg /vide"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_salg_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_grabo:
+    friendly_name: "Pollen: grabo"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_grabo_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_bok:
+    friendly_name: "Pollen: bok"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bok_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_alm:
+    friendly_name: "Pollen: alm"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_alm_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_bjork:
+    friendly_name: "Pollen: björk"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_bjork_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_ek:
+    friendly_name: "Pollen: ek"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ek_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}
+  pollen_ambrosia:
+    friendly_name: "Pollen: ambrosia"
+    value_template: >-
+      {% if is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'i.h.') -%}
+        Inga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'L') -%}
+        Låga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'L-M') -%}
+        Låga-måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'M') -%}
+        Måttliga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'M-H') -%}
+        Måttliga-Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'H') -%}
+        Höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'H-H+') -%}
+        Mycket höga halter
+      {%- elif is_state_attr('sensor.pollenniva_gavle_ambrosia_day_0', 'level', 'i.u.') -%}
+        Inget
+      {%- endif %}

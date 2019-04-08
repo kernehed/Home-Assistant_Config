@@ -1,0 +1,3 @@
+sensor.pollen_asp:
+  friendly_name: Asp
+  icon: mdi:leaf

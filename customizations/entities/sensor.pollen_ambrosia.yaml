@@ -1,0 +1,3 @@
+sensor.pollen_ambrosia:
+  friendly_name: Ambrosia
+  icon: mdi:leaf

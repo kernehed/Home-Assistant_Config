@@ -13,7 +13,7 @@ condition:
       state: 'not_home'
     - condition: time
       before: "05:00:00"
-      after: "00:15:00"
+      after: "23:15:00"
 action:
   - service: script.turn_on
     entity_id: script.entre_camera_snapshot #Snapshot 1

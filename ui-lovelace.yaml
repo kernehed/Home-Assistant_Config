@@ -22,18 +22,20 @@ resources:
     type: js
   - url: /customcards/github/maykar/compact-custom-header.js?track=true
     type: module
+  - url: /local/custom-lovelace/pollenkoll-card.js
+    type: js
 views:
   - title: Hem
     id: hem
     icon: mdi:home
     background: center / cover no-repeat url("/local/background.jpeg")
     cards:
-      - type: 'custom:compact-custom-header'
-        main_config: true
-        menu: overflow
-        options: clock
-        voice: hide
-        clock_format: 24
+#      - type: custom:compact-custom-header
+#        main_config: true
+#        menu: overflow
+#        options: clock
+#        voice: hide
+#        clock_format: 24
       - id: 4db5c4664f0a4458949aec3651e4d7a6  # Automatically created id
         type: vertical-stack
         cards:
@@ -121,29 +123,28 @@ views:
             name: Altansensor
           - entity: binary_sensor.badrumssensor
             name: Badrum
-      - id: 7ecee83212d340b0901f63ac9ec24328  # Automatically created id
-        type: custom:monster-card
-        show_empty: false
-        card:
-          type: entities
-          title: Pollennivåer
-          show_header_toggle: false
-        filter:
-          include:
-            - entity_id: sensor.pollen_al
-            - entity_id: sensor.pollen_alm
-#            - entity_id: sensor.pollen_asp
-#            - entity_id: sensor.pollen_salg_vide
-            - entity_id: sensor.pollen_bjork
-            - entity_id: sensor.pollen_bok
-            - entity_id: sensor.pollen_ek
-            - entity_id: sensor.pollen_grabo
-            - entity_id: sensor.pollen_gras
-            - entity_id: sensor.pollen_hassel
-            - entity_id: sensor.pollen_ambrosia
-          exclude:
-            - state: Inget
-            - state: i.u.
+#        type: custom:monster-card
+#        show_empty: false
+#        card:
+#          type: entities
+#          title: Pollennivåer
+#          show_header_toggle: false
+#        filter:
+#          include:
+#            - entity_id: sensor.pollen_al
+#            - entity_id: sensor.pollen_alm
+##            - entity_id: sensor.pollen_asp
+##            - entity_id: sensor.pollen_salg_vide
+#            - entity_id: sensor.pollen_bjork
+#            - entity_id: sensor.pollen_bok
+#            - entity_id: sensor.pollen_ek
+#            - entity_id: sensor.pollen_grabo
+#            - entity_id: sensor.pollen_gras
+#            - entity_id: sensor.pollen_hassel
+#            - entity_id: sensor.pollen_ambrosia
+#          exclude:
+#            - state: Inget
+#            - state: i.u.
       - id: fc8abcaade0e4087a10a5602f3bdb4d4  # Automatically created id
         type: vertical-stack
         cards:
@@ -588,6 +589,20 @@ views:
      - type: iframe
        url: https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSamVBomhus%2F&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId
        aspect_ratio: 100%
+     - type: custom:pollenkoll-card
+       title: false
+       city: gävle
+       compact: true
+       allergens:
+         - al
+         - alm
+         - björk
+         - ek
+         - gråbo
+         - gräs
+         - hassel
+         - Sälg / Vide
+         - Ambrosia
   - title: Media
     id: media
     icon: mdi:play

@@ -1,13 +1,13 @@
 platform: pollenniva
 sensors:
   - city: Gävle
-    days_to_track: 1
+    days_to_track: 3
     allergens:
       - Al
       - Alm
       - Ambrosia
-      - Asp
-      - Sälg
+#      - Asp
+      - Sälg / Vide
       - Björk
       - Bok
       - Ek

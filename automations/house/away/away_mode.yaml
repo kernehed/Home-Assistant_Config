@@ -22,13 +22,17 @@ action:
     entity_id: group.theus_rum
   - service: light.turn_off
     entity_id: group.evenice_rum
-  - service: media_player.turn_off
+  - service: group.theus_rum
     entity_id: media_player.livingroom
   - service: media_player.turn_off
     entity_id: media_player.bedroom
   - service: media_player.media_stop
+    entity_id: media_player.evenice_mini
+  - service: media_player.media_stop
+    entity_id: media_player.theus_mini
+  - service: media_player.media_stop
     entity_id: media_player.entre_speaker
-  - service: media_player.turn_off
+  - service: media_player.media_stop
     entity_id: media_player.basement
   - service: media_player.turn_off
     entity_id: media_player.livingroom_speaker

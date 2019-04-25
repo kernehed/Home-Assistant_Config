@@ -1,0 +1,1 @@
+"""Krisinformation Custom Component"""

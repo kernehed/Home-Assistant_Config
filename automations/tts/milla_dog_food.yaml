@@ -2,9 +2,7 @@ alias: Milla mat
 initial_state: 'on'
 trigger: 
   - platform: time
-    at: "11:30:00"
-  - platform: time
-    at: "18:30:00"
+    at: "17:30:00"
 condition:
     - condition: time
       weekday:
@@ -27,11 +25,11 @@ action:
         - media_player.hela_huset
       media_content_id: !secret content_silence_mp3
       media_content_type: music
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data:
      message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.kallare_mini
     data:
      message: 'Notera! Kom ihåg att Milla ska ha mat snart!'

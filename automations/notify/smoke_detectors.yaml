@@ -7,7 +7,7 @@ trigger:
   from: 'off'
   to: 'on'
 action:
-  - service: tts.google_say
+  - service: tts.google_translate_say
     data:
       message: DET BRINNER, UTRYM!
   - service: notify.adults

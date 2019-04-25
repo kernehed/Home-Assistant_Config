@@ -15,7 +15,7 @@ oskars_fodelsedag:
         media_content_id: !secret content_silence_mp3
         media_content_type: music
     - delay: '00:00:05'
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id:
         - media_player.entre_speaker
         - media_player.kitchen_speaker

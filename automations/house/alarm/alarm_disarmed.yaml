@@ -13,7 +13,7 @@ action:
   - service: notify.adults    
     data:
       message: Larmet har avaktiverats
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data:
       message: Larmet har avaktiverats.

@@ -6,7 +6,7 @@ trigger:
   entity_id: alarm_control_panel.kernehed_manison
   to: 'armed_away'
 action:
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data:
       message: Larmet har aktiverats som borta läge. Hejdå.

@@ -31,7 +31,7 @@ action:
         - media_player.kitchen_speaker
       media_content_id: !secret content_silence_mp3
       media_content_type: music
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data:
      message: Godmorgon, hoppas ni får en trevlig dag.

@@ -11,7 +11,7 @@ speech_processing_2:
         media_content_id: !secret content_silence_mp3
         media_content_type: music
     - delay: '00:00:05'
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: '{{ media_player }}'
         message: '{{ speech_message }}'

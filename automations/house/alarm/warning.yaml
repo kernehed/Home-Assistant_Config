@@ -10,7 +10,7 @@ action:
     entity_id: media_player.whole_house
     data:
       volume_level: '0.2'
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data:
       message: Hej, Larmet har utlösts. Var vänlig avaktivera!

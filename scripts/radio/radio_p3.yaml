@@ -16,7 +16,7 @@ radio_p3:
       - media_player.kitchen_speaker
       data:
         volume_level: 0.05
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: >
          {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.entre_speaker

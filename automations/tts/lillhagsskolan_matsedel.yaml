@@ -8,7 +8,7 @@ action:
     entity_id: media_player.entre_speaker
     data:
       volume_level: 0.3
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data_template:
       message: >-

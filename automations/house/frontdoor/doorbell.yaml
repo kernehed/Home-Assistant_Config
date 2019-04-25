@@ -6,11 +6,11 @@ trigger:
     entity_id: binary_sensor.dorrklockan
     to: 'off'
 action:
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.entre_speaker
     data:
      message: 'Någon ringer på dörren!'
-  - service: tts.google_say
+  - service: tts.google_translate_say
     entity_id: media_player.kallare_mini
     data:
      message: 'Någon ringer på dörren!'

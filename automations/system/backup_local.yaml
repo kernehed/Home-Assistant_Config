@@ -1,5 +1,5 @@
 alias: Backup Local
-initial_state: 'on'
+initial_state: 'off'
 trigger:
 - platform: time
   at: "01:00:00"

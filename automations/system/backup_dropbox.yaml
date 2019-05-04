@@ -1,5 +1,5 @@
 alias: Backup Dropbox
-initial_state: 'on'
+initial_state: 'off'
 trigger:
 - platform: time
   at: "02:00:00"

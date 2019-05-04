@@ -1,0 +1,13 @@
+alias: Snapshots went stale
+initial_state: 'on'
+id: 'snapshots_went_stale'
+trigger:
+  platform: state
+  entity_id: binary_sensor.snapshots_stale
+  from: 'False'
+  to: 'True'
+action:
+  - service: notify.telegram_oskar
+    data:
+      title: "HASSIO BACKUP!"
+      message: "Något står inte rätt till med backupsen. Kolla felmeddelande i HA!"

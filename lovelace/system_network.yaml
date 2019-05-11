@@ -1,0 +1,106 @@
+title: System & Nätverk
+id: system_natverk
+icon: mdi:server-network
+cards:
+  - id: 7c92cd52219548b6a6a6d5ee6088e071  # Automatically created id
+    type: entities
+    title: System
+    show_header_toggle: false
+    entities:
+      - sensor.processor_use
+      - sensor.memory_free
+      - sensor.disk_free_home
+      - sensor.last_boot
+      - sensor.db_size
+  - id: 123123123123213123 
+    type: entities
+    title: Pi-Hole
+    show_header_toggle: false
+    entities:
+      - sensor.pi_hole_dns_queries_today
+      - sensor.pi_hole_ads_blocked_today
+      - sensor.pi_hole_dns_unique_clients
+  - id: 3e18f63e2c6640d185bf0486a9c4c03f  # Automatically created id
+    type: entities
+    title: Nätverk
+    show_header_toggle: false
+    entities:
+      - sensor.plex
+      - binary_sensor.gaming_pc
+      - binary_sensor.server_1
+      - binary_sensor.server_2
+      - binary_sensor.windows_server
+      - binary_sensor.teamspeak
+      - binary_sensor.harmony_hub
+      - type: divider
+        style:
+          height: 1px
+          width: 85%
+          margin-left: auto
+          margin-right: auto
+          background: '#62717b'
+      - type: custom:fold-entity-row
+        head:
+          entity: binary_sensor.router
+        group_config:
+          icon: mdi:router
+        items:
+          - sensor.uptime_router
+          - sensor.installerad_routeros
+  - id: b8e18e8750224f58b404d0f2e644529a  # Automatically created id
+    type: entities
+    title: Ubiquiti
+    show_header_toggle: false
+    entities:
+      - binary_sensor.ubiquiti_controller
+      - binary_sensor.ubiquiti_switch
+      - binary_sensor.ubiquiti_nvr
+      - binary_sensor.entre_kamera
+      - type: custom:fold-entity-row
+        head:
+          entity: binary_sensor.accesspunkt_1
+        group_config:
+          icon: router-wireless
+        items:
+          - sensor.uptime_ap_1
+      - type: custom:fold-entity-row
+        head:
+          entity: binary_sensor.accesspunkt_2
+        group_config:
+          icon: router-wireless
+        items:
+          - sensor.uptime_ap_2
+          - sensor.total_clients_wireless
+  - id: af8fb9251ce7453ca90c710722b4625b  # Automatically created id
+    type: entities
+    title: Bittorrent
+    show_header_toggle: false
+    entities:
+      - sensor.qbittorrent_up_speed
+      - sensor.qbittorrent_down_speed
+      - sensor.qbittorrent_status
+  - type: custom:tracker-card
+    title: Updater
+    trackers:
+      - sensor.custom_card_tracker
+      - sensor.custom_component_tracker
+#type: horizontal-stack
+#cards:
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.speedtest_download
+    line_color: blue
+    line_width: 8
+    font_size: 75
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.speedtest_upload
+    line_color: '#e74c3c'
+    line_width: 8
+    font_size: 75
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.speedtest_ping
+    line_color: var(--accent-color)
+    line_width: 8
+    font_size: 75

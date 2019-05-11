@@ -1,0 +1,51 @@
+title: Sovrummet
+id: sovrummet
+cards:
+  - id: 0c14e757b52243d49496e3869365598d  # Automatically created id
+    type: picture-elements
+    image: /local/bedroom_light_off.jpg
+    elements:
+      - type: image
+        image: /local/light_on.png
+        entity: light.sovrummet_2
+        tap_action:
+          action: toggle
+        hold_action: 
+          action: more-info
+        state_image:
+          "on": /local/light_on.png
+          "off": /local/light_off.png
+        filter: saturate(.8)
+        state_filter:
+          on: brightness(120%) saturate(1.2)
+        style:
+          width: 6.3%
+          top: 52.7%
+          left: 63.7%
+      - type: image
+        image: /local/light_on.png
+        entity: light.sovrummet_1
+        tap_action:
+          action: toggle
+        hold_action: 
+          action: more-info
+        state_image:
+          "on": /local/light_on.png
+          "off": /local/light_off.png
+        filter: saturate(.8)
+        state_filter:
+          on: brightness(120%) saturate(1.2)
+        style:
+          width: 6.3%
+          top: 52.7%
+          left: 23.3%
+  - id: dd36d9c8c6fa4e72a1c6ecbf9602dc9d  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.bedroom
+    artwork: cover
+    show_source: true
+  - id: 9528eeb9852341218123736923761057  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.bedroom_mini
+    artwork: cover
+    show_source: true

@@ -1,0 +1,36 @@
+title: Vardagsrum
+id: vardagsrum
+cards:
+  - id: a87ac6a51dd746bfb8c6998eb6e1b499  # Automatically created id
+    type: entities
+    title: Vardagsrums lampor
+    show_header_toggle: false
+    entities:
+      - light.vardagsrum_stativ
+      - light.vardagsrum_tak
+      - light.vardagsrum_trapp
+      - light.vardagsrum_spotlights
+      - switch.fibaro_wall_plug_1_switch
+  - id: Uttagen  # Automatically created id
+    type: entities
+    title: Uttag
+    show_header_toggle: false
+    entities:
+      - switch.uttag_1
+      - switch.uttag_2
+  - id: a87ac6a51dd746bfb8c69124215215125  # Automatically created id
+    type: entities
+    title: Brasan
+    show_header_toggle: false
+    entities:
+      - script.brasan
+  - id: 69153975192f441e94a6ab24f37d1f6b  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.livingroom
+    artwork: cover
+    show_source: true
+  - id: ba402eb2a7214ed193145c924195caaa  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.google_home
+    artwork: cover
+    show_source: true

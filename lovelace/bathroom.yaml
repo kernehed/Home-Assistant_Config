@@ -1,0 +1,10 @@
+title: Badrummet
+id: Badrummet
+cards:
+  - id: 5254a5fd07d240678269b434ea46e948  # Automatically created id
+    type: entities
+    title: Badrummet nere
+    show_header_toggle: false
+    entities:
+      - light.badrumslampa_1
+      - light.badrumslampa_2

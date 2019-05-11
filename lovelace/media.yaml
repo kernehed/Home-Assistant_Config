@@ -1,0 +1,113 @@
+title: Media
+id: media
+icon: mdi:play
+cards:
+  - id: 1234566213123 # Manually created id
+    type: custom:upcoming-media-card
+    entity: sensor.plex_recently_added
+    image_style: fanart
+  - id: 3f5a3830d6c0478eb14097fe41d15373  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.livingroom
+    name: Vardagsrummet TV
+    artwork: cover
+    show_source: true
+  - id: 00c0c71deaf5498e99f2a335d25ff2aa  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.bedroom
+    name: Sovrummets TV
+    artwork: cover
+    show_source: true
+  - id: 854b2c6c0e42429eb59efe9a7ac23fdb  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.bio
+    name: Bion
+    artwork: cover
+    show_source: true
+  - id: 854b2c6c0e42429eb59efe9a7ac23fdb  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.playstation_4
+    name: Playstation 4
+    artwork: cover
+    show_source: true
+  - id: 1d4c980bb8114842bce1f7822f7a3fbf  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.entre_speaker
+    name: Entré högtalare
+    artwork: cover
+    show_source: true
+  - id: a90ab13d4d8141b1bc43c4b88c682911  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.livingroom_speaker
+    name: Vardagsrums högtalare
+    artwork: cover
+    show_source: true
+  - id: 917e5f304d474b21be8736529de769b8  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.kitchen_speaker
+    artwork: cover
+    show_source: true
+  - id: 564e1e778a6644548b6adae5c99889fd  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.hela_huset
+    artwork: cover
+    show_source: true
+  - id: f91b0b8dacc147cd9796d1fb0683bb73  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.bedroom_mini
+    artwork: cover
+    show_source: true
+  - id: 483b1b73651c4208a1ca910c16723cce  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.kitchen_mini
+    artwork: cover
+    show_source: true
+  - id: d71203c7f0b449e189348073be9e7593  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.koket
+    artwork: cover
+    show_source: true
+  - id: bcd4e7011ba14acea5d3e62f53780543  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.uppe
+    artwork: cover
+    show_source: true
+  - id: 4ff95e93693048168b32cb5282508135  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.google_home
+    artwork: cover
+    show_source: true
+  - id: 1e663b9ebd114d03a6405a9ad6f1dd7a  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.nere
+    artwork: cover
+    show_source: true
+  - id: b6d1d14878a94d60beb00990140836e0  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.evenice_mini
+    artwork: cover
+    show_source: true
+  - id: d1ee16d749534c5e93597d94a018a545  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.theus_mini
+    artwork: cover
+    show_source: true
+  - id: d1ee16d7492312321321321 # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.kallare_mini
+    artwork: cover
+    show_source: true
+  - id: d1ee16d7492312321321232131321 # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.barnens_rum
+    artwork: cover
+    show_source: true
+  - id: d73cebc946f448fbbf8678d128daab07  # Automatically created id
+    type: entities
+    title: Radio
+    show_header_toggle: false
+    entities:
+      - input_select.radio_station
+      - input_select.chromecast_radio
+      - script.radio_p3
+      - input_number.volume_radio

@@ -22,7 +22,7 @@ action:
     entity_id: group.theus_rum
   - service: light.turn_off
     entity_id: group.evenice_rum
-  - service: group.theus_rum
+  - service: light.turn_off
     entity_id: media_player.livingroom
   - service: media_player.turn_off
     entity_id: media_player.bedroom

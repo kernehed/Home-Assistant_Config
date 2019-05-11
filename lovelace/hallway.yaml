@@ -1,0 +1,29 @@
+title: Hallen
+id: hallen
+cards:
+  - id: 4a85e352e6094377b0a2d297aca96a64  # Automatically created id
+    type: entities
+    title: Hallens lampor
+    entities:
+      - light.hall_1
+      - light.hall_2
+  - id: 890b620d2fc946d18e6eb74bca7c729b  # Automatically created id
+    type: entities
+    title: Altan lampor
+    show_header_toggle: false
+    entities:
+      - light.altan_lampa
+  - id: 8e5a9f7fc6f44795b1c43ecb296d71d6  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.entre_speaker
+    artwork: cover
+    show_source: true
+  - id: a0c2db43a44d4863bca6ef7196e86680  # Automatically created id
+    type: entities
+    title: Radio
+    show_header_toggle: false
+    entities:
+      - input_select.radio_station
+      - input_select.chromecast_radio
+      - script.radio_p3
+      - input_number.volume_radio

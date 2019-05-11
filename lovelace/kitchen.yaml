@@ -1,0 +1,21 @@
+title: Köket
+id: köket
+cards:
+  - id: a7baefd20bb84d528272753c29185d2e  # Automatically created id
+    type: entities
+    title: Kökets lampor
+    show_header_toggle: false
+    entities:
+      - light.skafferiet
+      - light.koket_bank
+      - light.fibaro_system_fgd212_dimmer_2_level
+  - id: c6d2a2551aac4a26a0ae2d356efee413  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.kitchen_speaker
+    artwork: cover
+    show_source: true
+  - id: 83d5bb57e66b4e1785d7f8d170c7147b  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.kitchen_mini
+    artwork: cover
+    show_source: true

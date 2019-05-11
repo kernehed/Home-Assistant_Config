@@ -1,0 +1,40 @@
+title: Theus rum
+id: theus rum
+cards:
+  - id: 77ceb0eb4d494a2488cd27a42accc740  # Automatically created id
+    type: picture-elements
+    image: /local/Theusbajen.jpg
+    elements:
+      - type: state-icon
+        entity: light.theus_lampa
+        tap_action:
+          action: toggle
+        hold_action: 
+          action: more-info
+        style:
+          top: 95%
+          left: 93%
+      - type: state-icon
+        entity: switch.fibaro_wall_plug_2_switch
+        tap_action:
+          action: toggle
+        hold_action: 
+          action: more-info
+        style:
+          top: 95%
+          left: 85%
+  - id: 0261237d1f4c44dba577043899c145a9  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.theus_mini
+    artwork: cover
+    show_source: true
+  - id: 5cc13ddac32941c8bffc5f6dfae6c8d3  # Automatically created id
+    type: entities
+    title: Storhagens förskola matsedel
+    show_header_toggle: false
+    entities:
+      - sensor.storhagensforskola_lunch_mandag
+      - sensor.storhagensforskola_lunch_tisdag
+      - sensor.storhagensforskola_lunch_onsdag
+      - sensor.storhagensforskola_lunch_torsdag
+      - sensor.storhagensforskola_lunch_fredag

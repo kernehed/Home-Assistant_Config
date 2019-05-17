@@ -12,14 +12,6 @@ cards:
       - sensor.disk_free_home
       - sensor.last_boot
       - sensor.db_size
-  - id: 123123123123213123 
-    type: entities
-    title: Pi-Hole
-    show_header_toggle: false
-    entities:
-      - sensor.pi_hole_dns_queries_today
-      - sensor.pi_hole_ads_blocked_today
-      - sensor.pi_hole_dns_unique_clients
   - id: 3e18f63e2c6640d185bf0486a9c4c03f  # Automatically created id
     type: entities
     title: Nätverk
@@ -47,6 +39,14 @@ cards:
         items:
           - sensor.uptime_router
           - sensor.installerad_routeros
+  - id: 123123123123213123 
+    type: entities
+    title: Pi-Hole
+    show_header_toggle: false
+    entities:
+      - sensor.pi_hole_dns_queries_today
+      - sensor.pi_hole_ads_blocked_today
+      - sensor.pi_hole_dns_unique_clients
   - id: b8e18e8750224f58b404d0f2e644529a  # Automatically created id
     type: entities
     title: Ubiquiti
@@ -63,6 +63,7 @@ cards:
           icon: router-wireless
         items:
           - sensor.uptime_ap_1
+          - sensor.total_clients_wireless
       - type: custom:fold-entity-row
         head:
           entity: binary_sensor.accesspunkt_2
@@ -71,36 +72,45 @@ cards:
         items:
           - sensor.uptime_ap_2
           - sensor.total_clients_wireless
-  - id: af8fb9251ce7453ca90c710722b4625b  # Automatically created id
-    type: entities
-    title: Bittorrent
-    show_header_toggle: false
+  - type: custom:mini-graph-card
+    name: Bittorrent
+    align_state: center
+    icon: mdi:speedometer
+    show:
+      extrema: true
+      labels: true
+      points: true
     entities:
-      - sensor.qbittorrent_up_speed
-      - sensor.qbittorrent_down_speed
-      - sensor.qbittorrent_status
+      - entity: sensor.qbittorrent_down_speed
+        name: Download
+        color: green
+      - entity: sensor.qbittorrent_up_speed
+        name: Upload
+        color: red
+      - entity: sensor.qbittorrent_status
+        name: Ping
+        color: blue
+  - type: custom:mini-graph-card
+    name: Speedtest
+    align_state: center
+    icon: mdi:speedometer
+    show:
+      extrema: true
+      labels: true
+      points: true
+    entities:
+      - entity: sensor.speedtest_download
+        name: Download
+        color: green
+      - entity: sensor.speedtest_upload
+        name: Upload
+        color: red
+      - entity: sensor.speedtest_ping
+        name: Ping
+        color: yellow
   - type: custom:tracker-card
     title: Updater
     trackers:
       - sensor.custom_card_tracker
       - sensor.custom_component_tracker
-#type: horizontal-stack
-#cards:
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.speedtest_download
-    line_color: blue
-    line_width: 8
-    font_size: 75
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.speedtest_upload
-    line_color: '#e74c3c'
-    line_width: 8
-    font_size: 75
-  - type: custom:mini-graph-card
-    entities:
-      - sensor.speedtest_ping
-    line_color: var(--accent-color)
-    line_width: 8
-    font_size: 75
+

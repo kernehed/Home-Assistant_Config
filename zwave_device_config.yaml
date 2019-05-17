@@ -1,0 +1,3 @@
+sensor.fibaro_system_unknown_type0c02_id1003_temperature:
+  ignored: false
+  polling_intensity: 1

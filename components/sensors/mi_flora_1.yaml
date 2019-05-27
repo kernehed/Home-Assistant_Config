@@ -1,0 +1,11 @@
+platform: miflora
+mac: 'c4:7c:8d:6a:c5:4e'
+name: Flower 1
+force_update: false
+median: 3
+monitored_conditions:
+  - moisture
+  - light
+  - temperature
+  - conductivity
+  - battery

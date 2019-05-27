@@ -18,12 +18,3 @@ cards:
     entity: media_player.entre_speaker
     artwork: cover
     show_source: true
-  - id: a0c2db43a44d4863bca6ef7196e86680  # Automatically created id
-    type: entities
-    title: Radio
-    show_header_toggle: false
-    entities:
-      - input_select.radio_station
-      - input_select.chromecast_radio
-      - script.radio_p3
-      - input_number.volume_radio

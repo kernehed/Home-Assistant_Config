@@ -1,29 +1,34 @@
+
 resources:
-  - url: /customcards/custom-lovelace/text-element.js
+  - url: /community_plugin/text-element/text-element.js
     type: js
-  - url: /customcards/custom-lovelace/monster-card.js
+  - url: /community_plugin/monster-card/monster-card.js
     type: js
-  - url: /local/custom-lovelace/mini-media-player-bundle.js
+  - url: /community_plugin/mini-media-player/mini-media-player.js
     type: module
-  - url: /local/custom-lovelace/slideshow-card.js?=1.1.0
+  - url: /community_plugin/slideshow-card/slideshow-card.js
     type: js
-  - url: /customcards/custom-lovelace/fold-entity-row.js
+  - url: /community_plugin/lovelace-fold-entity-row/fold-entity-row.js
     type: js
   - url: /customcards/custom-lovelace/swipe-card/swipe-card.js
     type: module
-  - url: /customcards/custom-lovelace/upcoming-media-card/upcoming-media-card.js
+  - url: /community_plugin/upcoming-media-card/upcoming-media-card.js
     type: js
-  - url: /customcards/custom-lovelace/tracker-card.js
+  - url: /community_plugin/tracker-card/tracker-card.js
     type: js
-  - url: /customcards/custom-lovelace/card-tools.js
+  - url: /community_plugin/lovelace-card-tools/card-tools.js
     type: js
-  - url: /customcards/custom-lovelace/krisinfo.js
+  - url: /community_plugin/krisinfo-card/krisinfo-card.js
     type: js
-  - url: /customcards/github/maykar/compact-custom-header.js?track=true
+  - url: /community_plugin/compact-custom-header/compact-custom-header.js
     type: module
   - url: /local/custom-lovelace/pollenkoll-card.js
     type: js
-  - url: /local/custom-lovelace/mini-graph-card-bundle.js?v=0.3.3
+  - url: /community_plugin/mini-graph-card/mini-graph-card.js
+    type: module
+  - url: /community_plugin/surveillance-card/surveillance-card.js
+    type: module
+  - url: /community_plugin/lovelace-flower-card/flower-card.js
     type: module
 
 title: Kernehed Manison
@@ -40,6 +45,8 @@ views:
   - !include lovelace/system_network.yaml
   - !include lovelace/information.yaml
   - !include lovelace/media.yaml
+  - !include lovelace/flowers.yaml
+  - !include lovelace/cameras.yaml
   - !include lovelace/automations.yaml
   - !include lovelace/alarm.yaml
 

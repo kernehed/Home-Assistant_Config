@@ -1,0 +1,1 @@
+plant: !include_dir_merge_named ../plants

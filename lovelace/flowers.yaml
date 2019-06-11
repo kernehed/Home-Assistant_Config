@@ -1,0 +1,12 @@
+title: Blommor
+icon: mdi:flower
+id: Flowers
+cards:
+  - id: flowers1  
+    type: custom:flower-card
+    entity: plant.snack_chilin
+    species: "capsicum salsa red"
+  - id: flowers2 
+    type: custom:flower-card
+    entity: plant.stora_chilin
+    species: "capsicum favorit purple red 'gt58'"

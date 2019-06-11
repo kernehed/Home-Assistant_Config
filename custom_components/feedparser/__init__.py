@@ -1,1 +1,1 @@
-"""Feedparser custom component"""
+

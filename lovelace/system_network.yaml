@@ -39,6 +39,7 @@ cards:
         items:
           - sensor.uptime_router
           - sensor.installerad_routeros
+          - sensor.next_router_os_release
   - id: 123123123123213123 
     type: entities
     title: Pi-Hole
@@ -108,9 +109,4 @@ cards:
       - entity: sensor.speedtest_ping
         name: Ping
         color: yellow
-  - type: custom:tracker-card
-    title: Updater
-    trackers:
-      - sensor.custom_card_tracker
-      - sensor.custom_component_tracker
 

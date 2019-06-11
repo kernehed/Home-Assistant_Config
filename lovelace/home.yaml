@@ -141,12 +141,12 @@ cards:
     cards:
       - type: gauge
         title: Övervåning
-        entity: sensor.fibaro_system_unknown_type0c02_id1003_temperature
+        entity: sensor.fibaro_system_fgsd002_smoke_sensor_temperature
         min: -50
         max: 50
       - type: gauge
         title: Entrén
-        entity: sensor.fibaro_system_unknown_type0c02_id1003_temperature_2
+        entity: sensor.fibaro_system_fgsd002_smoke_sensor_temperature_2
         min: -50
         max: 50
       - type: gauge
@@ -163,15 +163,16 @@ cards:
       show_header_toggle: false
     filter:
       include:
-        - entity_id: binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_2
-        - entity_id: binary_sensor.fibaro_system_unknown_type0c02_id1003_sensor_3
+        - entity_id: binary_sensor.fibaro_system_fgsd002_smoke_sensor_sensor
+        - entity_id: binary_sensor.fibaro_system_fgsd002_smoke_sensor_sensor_2
       exclude:
         - state: off
-#      - id: 58c4d4103f2c41cf8f8a6bebe3b018d7  # Automatically created id
-#        type: entities
-#        title: Luftdata
-#        entities:
-#          - sensor.luftdaten_11773_p1
-#          - sensor.luftdaten_11773_p2
-#          - sensor.luftdaten_11774_humidity
-#          - sensor.luftdaten_11774_temperature
+  - id: 58c4d4103f2c41cf8f8a6bebe3b018d7  # Automatically created id
+    show_header_toggle: false
+    type: entities
+    title: Luftdata
+    entities:
+      - sensor.luftdaten_11773_p1
+      - sensor.luftdaten_11773_p2
+      - sensor.luftdaten_11774_humidity
+      - sensor.luftdaten_11774_temperature

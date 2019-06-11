@@ -1,0 +1,46 @@
+esphome:
+  name: mi_flora_gw
+  platform: ESP32
+  board: esp-wrover-kit
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+
+esp32_ble_tracker:
+
+sensor:
+  - platform: xiaomi_miflora
+    mac_address: 'c4:7c:8d:6a:c5:4e'
+    temperature:
+      name: "Stora Chili temperatur"
+    moisture:
+      name: "Stora Chili fuktighet"
+    illuminance:
+      name: "Stora Chili ljus"
+    conductivity:
+      name: "Stora Chili Conductivity"
+#    battery_level:
+#      name: "Stora Chili batteri"
+
+  - platform: xiaomi_miflora
+    mac_address: 'c4:7c:8d:6a:c5:13'
+    temperature:
+      name: "Snack Chili temperatur"
+    moisture:
+      name: "Snack Chili fuktighet"
+    illuminance:
+      name: "Snack Chili ljus"
+    conductivity:
+      name: "Snack Chili Conductivity"
+ #   battery_level:
+#      name: "Snack Chili batteri"

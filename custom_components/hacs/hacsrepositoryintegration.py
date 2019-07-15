@@ -6,7 +6,7 @@ import json
 from .blueprints import HacsRepositoryBase
 from .exceptions import HacsRequirement
 
-_LOGGER = logging.getLogger('custom_components.hacs.repository')
+_LOGGER = logging.getLogger("custom_components.hacs.repository")
 
 
 class HacsRepositoryIntegration(HacsRepositoryBase):
@@ -25,6 +25,7 @@ class HacsRepositoryIntegration(HacsRepositoryBase):
         self.repository_type = "integration"
         self.manifest_content = None
         self.domain = None
+        self.name = repository_name.split("/")[-1]
 
     async def update(self):
         """Run update tasks."""
@@ -43,7 +44,8 @@ class HacsRepositoryIntegration(HacsRepositoryBase):
             self.content_path = first[0].path
 
         self.content_objects = await self.repository.get_contents(
-            self.content_path, self.ref)
+            self.content_path, self.ref
+        )
 
         if not isinstance(self.content_objects, list):
             raise HacsRequirement("Repository structure does not meet the requirements")
@@ -70,6 +72,7 @@ class HacsRepositoryIntegration(HacsRepositoryBase):
             self.authors = manifest["codeowners"]
             self.name = manifest["name"]
             self.domain = manifest["domain"]
+            self.homeassistant_version = manifest.get("homeassistant")
             return
 
         raise HacsRequirement("manifest.json does not contain expected values.")

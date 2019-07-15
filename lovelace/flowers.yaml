@@ -10,3 +10,11 @@ cards:
     type: custom:flower-card
     entity: plant.stora_chilin
     species: "capsicum favorit purple red 'gt58'"
+  - id: flowers3 
+    type: custom:flower-card
+    entity: plant.jalapeno
+    species: "capsicum annuum"
+  - id: flowers4
+    type: custom:flower-card
+    entity: plant.basilika
+    species: "ocimum basilicum"

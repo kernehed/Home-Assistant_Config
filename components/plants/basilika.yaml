@@ -1,0 +1,6 @@
+basilika:
+  sensors:
+    moisture: sensor.basilika_fuktighet
+    temperature: sensor.basilika_temperatur
+    conductivity: sensor.basilika_conductivity
+    brightness: sensor.basilika_ljus

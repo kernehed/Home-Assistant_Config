@@ -44,3 +44,25 @@ sensor:
       name: "Snack Chili Conductivity"
  #   battery_level:
 #      name: "Snack Chili batteri"
+
+  - platform: xiaomi_miflora
+    mac_address: 'c4:7c:8d:6a:67:93'
+    temperature:
+      name: "Basilika temperatur"
+    moisture:
+      name: "Basilika fuktighet"
+    illuminance:
+      name: "Basilika ljus"
+    conductivity:
+      name: "Basilika Conductivity"
+      
+  - platform: xiaomi_miflora
+    mac_address: 'c4:7c:8d:6a:f9:0b'
+    temperature:
+      name: "Jalapeno temperatur"
+    moisture:
+      name: "Jalapeno fuktighet"
+    illuminance:
+      name: "Jalapeno ljus"
+    conductivity:
+      name: "Jalapeno Conductivity"

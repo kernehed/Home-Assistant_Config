@@ -1,1 +1,1 @@
-"""Yet Another Alarm Control Panel"""
+# empty #

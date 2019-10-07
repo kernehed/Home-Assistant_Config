@@ -1,0 +1,16 @@
+esphome:
+  name: koket
+  platform: ESP32
+  board: esp-wrover-kit
+
+wifi:
+  ssid: "Kernehed WiFi"
+  password: "Evenice12"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:

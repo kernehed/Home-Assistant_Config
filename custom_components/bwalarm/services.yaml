@@ -1,0 +1,8 @@
+# Describes the format for available alarm control panel services
+
+alarm_set_ignore_open_sensors:
+  description: Set value of ```ignore_open_sensors`` attribute
+  fields:
+    value:
+      description: Boolean. If False, does not allow to set alarm if there is open sensors detected.
+      example: 'False'

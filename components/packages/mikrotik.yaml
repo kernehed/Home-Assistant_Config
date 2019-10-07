@@ -1,0 +1,7 @@
+mikrotik:
+  - host: !secret mikrotik_ip
+    username: !secret mikrotik_un
+    password: !secret router_password
+    method: dhcp
+    track_devices: true
+    

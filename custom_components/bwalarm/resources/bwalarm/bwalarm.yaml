@@ -1,0 +1,44 @@
+platform: bwalarm
+panel:
+  panel_title: Kernehed Manison
+  enable_sensors_panel: true
+  enable_night_mode: false
+states:
+  armed_away:
+    immediate: []
+    delayed:
+    - binary_sensor.back_door_sensor
+    - binary_sensor.front_door_sensor
+    override: []
+    pending_time: 0
+    warning_time: 0
+    trigger_time: 600
+  armed_home:
+    immediate: []
+    delayed:
+    - binary_sensor.back_door_sensor
+    - binary_sensor.front_door_sensor
+    override: []
+    pending_time: 0
+    warning_time: 0
+    trigger_time: 600
+users:
+- id: 3e84584273bb45b39597eeca75c61ed3
+  name: Hass.io
+  enabled: false
+  code: 3e84584273bb45b39597eeca75c61ed3
+  picture: ha.png
+- id: 559b6d8184d2461cb326a5da9e235222
+  name: Kernehed Manison
+  enabled: false
+  code: 559b6d8184d2461cb326a5da9e235222
+  picture: ha.png
+- id: 49352990fa5d4ebfa1709746ba16c277
+  name: Home Assistant Cloud
+  enabled: false
+  code: 49352990fa5d4ebfa1709746ba16c277
+  picture: ha.png
+code: !secret alarm_code
+enable_persistence: true
+admin_password: !secret alarm_pw
+name: 'Kernehed Manison'

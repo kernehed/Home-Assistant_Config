@@ -63,7 +63,7 @@ cards:
     entities:
       - lock.polycontrol_danalock_v3_btze_locked
       - sensor.zwave_battery_front_door
-      - alarm_control_panel.kernehed_manison
+      - alarm_control_panel.house
       - binary_sensor.dorrklockan
   - id: 6d4744d14a7c42668633cedbe655ba08  # Automatically created id
     type: custom:monster-card

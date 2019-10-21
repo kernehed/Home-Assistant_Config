@@ -3,7 +3,7 @@ id: alarm_armed_home
 initial_state: 'on'
 trigger:
   platform: state
-  entity_id: alarm_control_panel.kernehed_manison
+  entity_id: alarm_control_panel.house
   to: 'armed_home'
 action:
   - service: media_player.volume_set

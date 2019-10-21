@@ -1,8 +1,11 @@
 platform: bwalarm
 panel:
+  name: Kernehed Manison
+  enable_sensors_panel: 'True'
+  enable_night_mode: 'False'
+  cameras: []
   panel_title: Kernehed Manison
-  enable_sensors_panel: true
-  enable_night_mode: false
+  camera_update_interval: ''
 states:
   armed_away:
     immediate: []
@@ -38,7 +41,12 @@ users:
   enabled: false
   code: 49352990fa5d4ebfa1709746ba16c277
   picture: ha.png
+- id: 224bca1f6bc74aa7a2f6a8a6edaf4c26
+  name: Home Assistant Cast
+  enabled: false
+  code: 224bca1f6bc74aa7a2f6a8a6edaf4c26
+  picture: ha.png
 code: !secret alarm_code
 enable_persistence: true
 admin_password: !secret alarm_pw
-name: 'Kernehed Manison'
+enable_night_mode: false

@@ -3,7 +3,7 @@ initial_state: 'on'
 id: alarm_triggered
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.kernehed_manison
+    entity_id: alarm_control_panel.house
     to: triggered
 action:
   - service: script.turn_on
@@ -19,4 +19,4 @@ action:
       media_content_type: audio/mp3
   - service: notify.adults
     data:
-      message: ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[1]].name }}
+      message: ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}

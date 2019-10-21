@@ -122,9 +122,21 @@ class HacsOptionsFlowHandler(config_entries.OptionsFlow):
 
         data_schema = OrderedDict()
         data_schema[
-            vol.Required(
+            vol.Optional(
                 "country", default=self.config_entry.options.get("country", "ALL")
             )
         ] = vol.In(LOCALE)
+        data_schema[
+            vol.Optional(
+                "release_limit",
+                default=self.config_entry.options.get("release_limit", 5),
+            )
+        ] = int
+        data_schema[
+            vol.Optional(
+                "experimental",
+                default=self.config_entry.options.get("experimental", False),
+            )
+        ] = bool
 
         return self.async_show_form(step_id="user", data_schema=vol.Schema(data_schema))

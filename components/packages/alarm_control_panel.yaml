@@ -1,1 +1,1 @@
-#alarm_control_panel: !include resources/bwalarm.yaml
+alarm_control_panel: !include /config/resources/bwalarm/bwalarm.yaml

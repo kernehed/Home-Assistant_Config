@@ -175,7 +175,9 @@ class HacsData(Hacs):
                     repository.status.selected_tag = repo["selected_tag"]
 
                 if repo.get("repository_manifest") is not None:
-                    repository.repository_manifest = HacsManifest(repo["repository_manifest"])
+                    repository.repository_manifest = HacsManifest(
+                        repo["repository_manifest"]
+                    )
 
                 if repo.get("show_beta") is not None:
                     repository.status.show_beta = repo["show_beta"]
@@ -251,7 +253,9 @@ class HacsData(Hacs):
 
             self.logger.info("Restore done")
         except Exception as exception:
-            self.logger.critical(f"[{exception}] Restore Failed!")
+            self.logger.critical(
+                f"[{exception}] Restore Failed! see https://github.com/custom-components/hacs/issues/639 for more details."
+            )
             return False
         return True
 

@@ -92,7 +92,23 @@ class Configuration:
     @property
     def option_country(self):
         """Return the country filter (or None if blank)"""
+        if self.options is None:
+            return None
         country = self.options.get("country")
         if country == "ALL" or country is None:
             return None
         return country
+
+    @property
+    def release_limit(self):
+        """Return release limit"""
+        if self.options is None:
+            return 5
+        return self.options.get("release_limit", 5)
+
+    @property
+    def experimental(self):
+        """Return experimental"""
+        if self.options is None:
+            return False
+        return self.options.get("experimental", False)

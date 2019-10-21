@@ -3,7 +3,7 @@ initial_state: 'on'
 id: alarm_warning
 trigger:
   platform: state
-  entity_id: alarm_control_panel.kernehed_manison
+  entity_id: alarm_control_panel.house
   to: warning
 action:
   - service: media_player.volume_set
@@ -16,6 +16,6 @@ action:
       message: Hej, Larmet har utlösts. Var vänlig avaktivera!
   - service: notify.adults
     data:
-      message: ALARM varning {{ states[states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[0]][  states.alarm_control_panel.kernehed_manison.attributes.changed_by.split(".")[1]].name }}
+      message: ALARM varning {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][  states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}
 
 

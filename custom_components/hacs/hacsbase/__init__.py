@@ -11,7 +11,7 @@ from integrationhelper import Logger
 
 
 from ..handler.logger import HacsLogger
-from .const import ELEMENT_TYPES
+from ..const import ELEMENT_TYPES
 
 
 class HacsStatus:
@@ -65,6 +65,7 @@ class Hacs:
     hacsapi = f"/hacsapi/{token}"
     repositories = []
     repo = None
+    data_repo = None
     developer = Developer()
     data = None
     configuration = None
@@ -144,6 +145,14 @@ class Hacs:
                         f"Validation for {full_name} failed with {exception}."
                     )
                 return
+        self.hass.bus.async_fire(
+            "hacs/repository",
+            {
+                "id": 1337,
+                "action": "registration",
+                "repository": repository.information.full_name,
+            },
+        )
         self.repositories.append(repository)
 
     async def startup_tasks(self):
@@ -211,6 +220,7 @@ class Hacs:
         self.clear_out_blacklisted_repositories()
         self.system.status.background_task = False
         self.data.write()
+        self.hass.bus.async_fire("hacs/repository", {"action": "reload"})
         self.logger.debug("Recuring background task for all repositories done")
 
     def clear_out_blacklisted_repositories(self):
@@ -244,9 +254,7 @@ class Hacs:
                 }
         else:
             for category in self.common.categories:
-                remote = await self.repo.get_contents(
-                    f"repositories/{category}", "data"
-                )
+                remote = await self.data_repo.get_contents(category)
                 repositories[category] = json.loads(remote.content)
                 if category == "plugin":
                     org = await self.github.get_org_repos("custom-cards")
@@ -254,6 +262,12 @@ class Hacs:
                         repositories[category].append(repo.full_name)
                 if category == "integration":
                     org = await self.github.get_org_repos("custom-components")
+                    for repo in org:
+                        repositories[category].append(repo.full_name)
+                if category == "theme":
+                    org = await self.github.get_org_repos(
+                        "home-assistant-community-themes"
+                    )
                     for repo in org:
                         repositories[category].append(repo.full_name)
 
@@ -266,7 +280,7 @@ class Hacs:
     async def load_known_repositories(self):
         """Load known repositories."""
         self.logger.info("Loading known repositories")
-        blacklist = await self.repo.get_contents("repositories/blacklist", "data")
+        blacklist = await self.data_repo.get_contents("blacklist")
         repositories = await self.get_repositories()
 
         for item in json.loads(blacklist.content):

@@ -1,7 +1,7 @@
 title: Hem
 id: hem
 icon: mdi:home
-background: center / cover no-repeat url("/local/background.jpeg")
+background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
 #      - type: custom:compact-custom-header
 #        main_config: true
@@ -107,6 +107,7 @@ cards:
           - binary_sensor.unifi_camera
           - binary_sensor.back_door_sensor
         camera_image: camera.entre
+        camera_view: live
       - type: entities
         entities:
           - input_select.christmas_pattern
@@ -117,11 +118,13 @@ cards:
           - switch.hall_night_vision
           - switch.hall_overlay
         camera_image: camera.hall
+        camera_view: live
       - type: picture-glance
         title: Vardagsrums kamera
         entities: 
           - light.vardagsrum_tak
         camera_image: camera.vardagsrum
+        camera_view: live
   - id: 3870fdc794274f17b84dd6ced631b737  # Automatically created id
     type: iframe
     url: https://embed.windy.com/embed2.html

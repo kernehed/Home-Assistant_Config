@@ -1,6 +1,7 @@
 title: Blommor
 icon: mdi:flower
 id: Flowers
+background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
   - id: flowers1  
     type: custom:flower-card

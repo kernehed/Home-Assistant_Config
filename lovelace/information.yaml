@@ -1,7 +1,15 @@
 title: Information
 id: information
 icon: mdi:information
+background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
+ - type: custom:google-keep-card
+   entity: sensor.google_keep_6632ccac8a
+   theme: dark
+   alpha: 0.7
+   show:
+     - checked
+     - unchecked
  - type: custom:krisinfo-card
    entity: sensor.krisinformation_gavle
  - type: iframe

@@ -1,6 +1,7 @@
 title: Automationer
 id: automationer
 icon: mdi:settings
+background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
   - id: fd67f6f6dd834fc3a7e9a0212e306f69  # Automatically created id
     type: entities
@@ -23,9 +24,7 @@ cards:
       - automation.dorrklockan
       - automation.dorrklockan_halloween
       - automation.evenice_fodelsedag
-      - automation.eves_bokinlamning
       - automation.eves_gymnastik
-      - automation.eves_laxa
       - automation.hass_ready
       - automation.hass_started
       - automation.hass_stopped

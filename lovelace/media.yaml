@@ -1,7 +1,10 @@
 title: Media
 id: media
 icon: mdi:play
+background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
+  - type: 'custom:spotify-card'
+    client_id: !secret spotify_client_id
   - id: 1234566213123 # Manually created id
     type: custom:upcoming-media-card
     entity: sensor.plex_recently_added

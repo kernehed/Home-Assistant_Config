@@ -30,7 +30,10 @@ resources:
     type: module
   - url: /community_plugin/lovelace-flower-card/flower-card.js
     type: module
-
+  - url: /community_plugin/spotify-card/spotify-card.js
+    type: module
+  - url: /community_plugin/lovelace-google-keep-card/google-keep-card.js
+    type: module
 title: Kernehed Manison
 views:
   - !include lovelace/home.yaml

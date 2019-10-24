@@ -1,5 +1,6 @@
 title: Köket
 id: köket
+background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
   - id: a7baefd20bb84d528272753c29185d2e  # Automatically created id
     type: entities

@@ -19,4 +19,10 @@ action:
       media_content_type: audio/mp3
   - service: notify.adults
     data:
-      message: ALARM TRIGGERED!!! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(".")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(".")[1]].name }}
+      message: 'ALARM TRIGGERED!!!'
+  - service: script.turn_on
+    entity_id: script.alarm_snapshot
+  - delay: '00:00:02'
+  - service: notify.adults
+    data:
+      message: !secret camera_url_ingress

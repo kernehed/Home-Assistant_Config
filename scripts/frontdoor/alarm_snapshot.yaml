@@ -1,0 +1,50 @@
+alarm_snapshot:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.entre
+      filename: '/config/snapshot/entre.jpg'
+  - service: notify.adults
+    data:
+      message: "Entre kameran"
+      title: "Entré - bild:"
+      data:
+        photo:
+          - file: '/config/snapshot/entre.jpg'
+            caption: Entré
+  - service: camera.snapshot
+    data:
+      entity_id: camera.entre
+      filename: '/config/snapshot/entre.jpg'
+  - service: notify.adults
+    data:
+      message: "Entre kameran"
+      title: "Entré - bild:"
+      data:
+        photo:
+          - file: '/config/snapshot/entre.jpg'
+            caption: Entré
+  - service: camera.snapshot
+    data:
+      entity_id: camera.hall
+      filename: '/config/snapshot/hall.jpg'
+  - service: notify.adults
+    data:
+      message: "Hallkameran"
+      title: "Hallkameran - bild:"
+      data:
+        photo:
+          - file: '/config/snapshot/hall.jpg'
+            caption: Hallkameran
+  - service: camera.snapshot
+    data:
+      entity_id: camera.hall
+      filename: '/config/snapshot/hall.jpg'
+  - service: notify.adults
+    data:
+      message: "Hallkameran"
+      title: "Hallkameran - bild:"
+      data:
+        photo:
+          - file: '/config/snapshot/hall.jpg'
+            caption: Hallkameran

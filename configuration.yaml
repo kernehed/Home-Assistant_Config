@@ -10,9 +10,6 @@ homeassistant:
   whitelist_external_dirs:
   - /config/snapshot
 
-
-  
   packages: !include_dir_named components/packages
-#alarm_control_panel: !include resources/bwalarm/bwalarm.yaml
 hacs:
   token: !secret github_access_token

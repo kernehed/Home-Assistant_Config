@@ -13,8 +13,8 @@ states:
     - binary_sensor.back_door_sensor
     - binary_sensor.front_door_sensor
     override: []
-    pending_time: 0
-    warning_time: 0
+    pending_time: '25'
+    warning_time: '25'
     trigger_time: 600
   armed_home:
     immediate: []
@@ -22,8 +22,8 @@ states:
     - binary_sensor.back_door_sensor
     - binary_sensor.front_door_sensor
     override: []
-    pending_time: 0
-    warning_time: 0
+    pending_time: '25'
+    warning_time: '25'
     trigger_time: 600
 users:
 - id: 3e84584273bb45b39597eeca75c61ed3

@@ -1,0 +1,6 @@
+platform: sonarr
+api_key: !secret sonarr_api
+host: !secret windows_pc_ip
+monitored_conditions:
+  - upcoming
+days: 2

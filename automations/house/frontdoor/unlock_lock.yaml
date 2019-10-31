@@ -12,4 +12,4 @@ action:
   - service: notify.adults
     data:
       title: 'Home Assistant'
-      message: 'Nu är det upplåst!!!'
+      message: 'Nu är det upplåst!'

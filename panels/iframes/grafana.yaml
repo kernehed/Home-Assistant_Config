@@ -1,0 +1,4 @@
+grafana:
+  title: Grafana
+  icon: mdi:chart-timeline
+  url: !secret grafana_ip

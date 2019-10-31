@@ -1,0 +1,4 @@
+sonarr:
+  title: Sonarr
+  icon: mdi:television
+  url: !secret sonarr_ip_port

@@ -1,0 +1,6 @@
+platform: radarr
+api_key: !secret radarr_api
+host: !secret windows_pc_ip
+monitored_conditions:
+  - upcoming
+days: 7

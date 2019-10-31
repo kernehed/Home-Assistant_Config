@@ -48,8 +48,9 @@ views:
   - !include lovelace/system_network.yaml
   - !include lovelace/information.yaml
   - !include lovelace/media.yaml
+  - !include lovelace/chromecasts.yaml
   - !include lovelace/flowers.yaml
-  - !include lovelace/cameras.yaml
+#  - !include lovelace/cameras.yaml
   - !include lovelace/automations.yaml
   - !include lovelace/alarm.yaml
 

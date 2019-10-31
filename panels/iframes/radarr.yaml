@@ -1,0 +1,4 @@
+radarr:
+  title: Radarr
+  icon: mdi:movie
+  url: !secret radarr_ip_port

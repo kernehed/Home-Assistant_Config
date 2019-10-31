@@ -9,4 +9,4 @@ action:
   - service: notify.adults
     data:
       title: 'Home Assistant'
-      message: 'Nu är klockan 21.00 nu är det låst!!!'
+      message: 'Nu är klockan 21.00 nu är det låst!'

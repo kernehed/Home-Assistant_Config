@@ -11,7 +11,7 @@ ifttt_alarm_clock:
 #  - delay: '00:20:30'
 #  - service: media_player.volume_set
 #    entity_id:
-#      - media_player.entre_speaker
+#      - media_player.hallen
 #      - media_player.koket
 #      - media_player.bedroom_mini
 #    data:
@@ -19,6 +19,6 @@ ifttt_alarm_clock:
 #  - service: media_player.play_media
 #    data:
 #      entity_id:
-#      - media_player.entre_speaker
+#      - media_player.hallen
 #      media_content_id: !secret content_motivation_mp3
 #      media_content_type: music

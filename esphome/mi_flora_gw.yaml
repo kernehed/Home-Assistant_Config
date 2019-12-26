@@ -1,5 +1,5 @@
 esphome:
-  name: mi_flora_gw
+  name: kallaren_esp32
   platform: ESP32
   board: esp-wrover-kit
 
@@ -7,62 +7,26 @@ wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
 
+esp32_ble_beacon:
+  type: iBeacon
+  uuid: '52f29bcc-461d-3e35-88c0-2965ac904acd'
+  
+  
+mqtt:
+  broker: 192.168.1.203
+  username: sparsnas
+  password: Evenice2923!
+  topic_prefix: kallaren/topic
+  birth_message:
+    topic: kallaren/topic
+    payload: online
+  will_message:
+    topic: kallaren/topic
+    payload: offline
+
+
 # Enable logging
 logger:
 
 # Enable Home Assistant API
-api:
-
 ota:
-
-
-esp32_ble_tracker:
-
-sensor:
-  - platform: xiaomi_miflora
-    mac_address: 'c4:7c:8d:6a:c5:4e'
-    temperature:
-      name: "Stora Chili temperatur"
-    moisture:
-      name: "Stora Chili fuktighet"
-    illuminance:
-      name: "Stora Chili ljus"
-    conductivity:
-      name: "Stora Chili Conductivity"
-#    battery_level:
-#      name: "Stora Chili batteri"
-
-  - platform: xiaomi_miflora
-    mac_address: 'c4:7c:8d:6a:c5:13'
-    temperature:
-      name: "Snack Chili temperatur"
-    moisture:
-      name: "Snack Chili fuktighet"
-    illuminance:
-      name: "Snack Chili ljus"
-    conductivity:
-      name: "Snack Chili Conductivity"
- #   battery_level:
-#      name: "Snack Chili batteri"
-
-  - platform: xiaomi_miflora
-    mac_address: 'c4:7c:8d:6a:67:93'
-    temperature:
-      name: "Basilika temperatur"
-    moisture:
-      name: "Basilika fuktighet"
-    illuminance:
-      name: "Basilika ljus"
-    conductivity:
-      name: "Basilika Conductivity"
-      
-  - platform: xiaomi_miflora
-    mac_address: 'c4:7c:8d:6a:f9:0b'
-    temperature:
-      name: "Jalapeno temperatur"
-    moisture:
-      name: "Jalapeno fuktighet"
-    illuminance:
-      name: "Jalapeno ljus"
-    conductivity:
-      name: "Jalapeno Conductivity"

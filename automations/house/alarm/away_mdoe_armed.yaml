@@ -7,7 +7,7 @@ trigger:
   to: 'armed_away'
 action:
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
       message: Larmet har aktiverats som borta läge. Hejdå.
   - service: media_player.volume_set

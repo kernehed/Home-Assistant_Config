@@ -14,7 +14,7 @@ action:
     data:
       message: Larmet har avaktiverats
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
       message: Larmet har avaktiverats. Välkommen hem, kul att du är tillbaks
   - service: script.turn_off

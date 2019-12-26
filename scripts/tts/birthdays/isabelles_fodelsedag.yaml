@@ -3,21 +3,21 @@ isabelles_fodelsedag:
   sequence:
     - service: media_player.volume_set
       entity_id:
-        - media_player.entre_speaker
+        - media_player.hallen
         - media_player.kitchen_speaker
       data:
         volume_level: 0.3
     - service: media_player.play_media
       data:
         entity_id:
-          - media_player.entre_speaker
+          - media_player.hallen
           - media_player.kitchen_speaker
         media_content_id: !secret content_silence_mp3
         media_content_type: music
     - delay: '00:00:05'
     - service: tts.google_translate_say
       entity_id:
-        - media_player.entre_speaker
+        - media_player.hallen
         - media_player.kitchen_speaker
       data_template:
         message: >

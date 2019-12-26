@@ -1,0 +1,7 @@
+platform: mqtt
+name: ESP32 2
+state_topic: "presence_nodes/Köket"
+json_attributes_topic: "presence_nodes/esp32_2/tele"
+payload_on: "CONNECTED"
+payload_off: "DISCONNECTED"
+device_class: connectivity

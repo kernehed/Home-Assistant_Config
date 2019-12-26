@@ -3,3 +3,4 @@ devices_oskar:
   entities:
   - device_tracker.oneplus_6
   - device_tracker.google_maps_114170795730412573739
+  - device_tracker.oskar_mobil

@@ -1,0 +1,7 @@
+platform: mqtt
+name: ESP32 1
+state_topic: "presence_nodes/Sovrummet"
+json_attributes_topic: "presence_nodes/esp32_1/tele"
+payload_on: "CONNECTED"
+payload_off: "DISCONNECTED"
+device_class: connectivity

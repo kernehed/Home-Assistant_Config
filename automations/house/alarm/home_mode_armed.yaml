@@ -14,7 +14,7 @@ action:
     data:
       message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma! Låser och larmar på dörren bara.'
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
       message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma. '
   - delay: '00:00:12'

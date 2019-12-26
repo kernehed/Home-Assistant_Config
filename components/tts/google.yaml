@@ -1,5 +1,6 @@
 platform: google_translate
 language: sv
 cache: true
+base_url: https://kernehed.duckdns.org:8123
 cache_dir: /tmp/tts
 time_memory: 300

@@ -1,0 +1,9 @@
+alias: 'släck julgrans belysning'
+initial_state: 'on'
+trigger:
+  platform: sun
+  event: sunset
+  offset: "-00:45:00"
+action:
+  service: switch.turn_on
+  entity_id: switch.uttag_2

@@ -31,8 +31,8 @@ cards:
     show_source: true
   - id: 1d4c980bb8114842bce1f7822f7a3fbf  # Automatically created id
     type: custom:mini-media-player
-    entity: media_player.entre_speaker
-    name: Entré högtalare
+    entity: media_player.hallen
+    name: Hallen
     artwork: cover
     show_source: true
   - id: a90ab13d4d8141b1bc43c4b88c682911  # Automatically created id

@@ -1,0 +1,6 @@
+platform: mqtt_room
+device_id: 2F234454CF6D4A0FADF2F4911BA9FFA6-1-0
+name: 'Oskars_bt_mqtt'
+state_topic: 'room_presence'
+timeout: 10
+away_timeout: 15

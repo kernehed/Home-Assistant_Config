@@ -46,6 +46,16 @@ users:
   enabled: false
   code: 224bca1f6bc74aa7a2f6a8a6edaf4c26
   picture: ha.png
+- id: 0f774a0b921a44e2958f24f923b6b76f
+  name: Evenice
+  enabled: false
+  code: 0f774a0b921a44e2958f24f923b6b76f
+  picture: ha.png
+- id: 3339a1a36b6742d6926c25626400572f
+  name: sparsnas
+  enabled: false
+  code: 3339a1a36b6742d6926c25626400572f
+  picture: ha.png
 code: !secret alarm_code
 enable_persistence: true
 admin_password: !secret alarm_pw

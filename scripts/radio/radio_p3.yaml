@@ -4,7 +4,7 @@ radio_p3:
     - service: media_player.volume_set
       data_template:
         entity_id: >
-         {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.entre_speaker
+         {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.hallen
          {% elif is_state("input_select.chromecast_radio", "Vardagsrum") %} media_player.livingroom_speaker
          {% elif is_state("input_select.chromecast_radio", "Köket") %} media_player.kitchen_speaker
          {% elif is_state("input_select.chromecast_radio", "Alla") %} media_player.hela_huset
@@ -12,14 +12,14 @@ radio_p3:
         volume_level: '{{  states.input_number.volume_radio.state  }}'
     - service: media_player.volume_set
       entity_id:
-      - media_player.entre_speaker
+      - media_player.hallen
       - media_player.kitchen_speaker
       data:
         volume_level: 0.05
     - service: tts.google_translate_say
       data_template:
         entity_id: >
-         {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.entre_speaker
+         {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.hallen
          {% elif is_state("input_select.chromecast_radio", "Vardagsrum") %} media_player.livingroom_speaker
          {% elif is_state("input_select.chromecast_radio", "Köket") %} media_player.kitchen_speaker
          {% elif is_state("input_select.chromecast_radio", "Alla") %} media_player.hela_huset
@@ -29,7 +29,7 @@ radio_p3:
     - service: media_player.play_media
       data_template:
         entity_id: >
-         {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.entre_speaker
+         {% if is_state("input_select.chromecast_radio", "Entre") %} media_player.hallen
          {% elif is_state("input_select.chromecast_radio", "Vardagsrum") %} media_player.livingroom_speaker
          {% elif is_state("input_select.chromecast_radio", "Köket") %} media_player.kitchen_speaker
          {% elif is_state("input_select.chromecast_radio", "Alla") %} media_player.hela_huset

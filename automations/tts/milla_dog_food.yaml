@@ -26,7 +26,7 @@ action:
       media_content_id: !secret content_silence_mp3
       media_content_type: music
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
      message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
   - service: tts.google_translate_say

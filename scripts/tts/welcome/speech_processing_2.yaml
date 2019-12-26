@@ -2,7 +2,7 @@ speech_processing_2:
   sequence:
     - service: media_player.volume_set
       entity_id:
-        - media_player.entre_speaker
+        - media_player.hallen
       data:
         volume_level: 0.3
     - service: media_player.play_media

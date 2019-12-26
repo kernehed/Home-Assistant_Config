@@ -1,0 +1,3 @@
+sensor.oskars_bt_mqtt:
+  friendly_name: Oskar
+  entity_picture: /local/Oskar-3.jpg

@@ -3,8 +3,9 @@ initial_state: 'on'
 trigger:
   - platform: state
     entity_id:
-      - device_tracker.oneplus_6
-      - group.devices_bella
+      - person.oskar
+      - person.bella
+      - person.evenice
     from: 'not_home'
     to: 'home'
     for: '00:02:00'
@@ -16,10 +17,12 @@ action:
   - service: script.speech_engine
     data_template:
       personarriving: >-
-       {%- if trigger.entity_id == 'group.devices_bella' -%}
+       {%- if trigger.entity_id == 'person.bella' -%}
          {%- set person = "Bella" -%}
-       {%- elif trigger.entity_id == 'device_tracker.oneplus_6' -%}
+       {%- elif trigger.entity_id == 'person.oskar' -%}
          {%- set person = "Oskar" -%}
+       {%- elif trigger.entity_id == 'person.evenice' -%}
+         {%- set person = "Evenice" -%}
        {%- else -%}
          {%- set person = "Alla" -%}
        {%- endif -%}
@@ -28,7 +31,7 @@ action:
              "Välkommen hem " ~ person,
              "Gissa vem som kommit hem?"  ~ person +" har!",
              person + " är nu hemma.",
-             "Välkommen hem "  ~ person +".  Vi har saknat dig, eller åtminstone jag, Milla!",
+             "Välkommen hem "  ~ person +".  Vi har saknat dig, eller åtminstone Milla!",
              "I världen är du bara någon men för någon är du hela världen! Välkommen hem! " ~ person,
              "Hej där " ~ person + " Välkommen hem!",
              "Knack Knack. Vem där? "  ~ person +" är!",

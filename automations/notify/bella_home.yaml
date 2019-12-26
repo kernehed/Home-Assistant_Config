@@ -4,7 +4,7 @@ trigger:
   platform: zone
   event: enter
   zone: zone.home
-  entity_id: device_tracker.iphone_7
+  entity_id: device_tracker.google_maps_103719873476746592925
 action:
   - service: notify.telegram_oskar
     data:

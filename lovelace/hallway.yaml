@@ -16,6 +16,6 @@ cards:
       - light.altan_lampa
   - id: 8e5a9f7fc6f44795b1c43ecb296d71d6  # Automatically created id
     type: custom:mini-media-player
-    entity: media_player.entre_speaker
+    entity: media_player.hallen
     artwork: cover
     show_source: true

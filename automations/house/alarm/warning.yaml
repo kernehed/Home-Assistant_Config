@@ -11,7 +11,7 @@ action:
     data:
       volume_level: '0.2'
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
       message: Hej, Larmet har utlösts. Var vänlig avaktivera!
   - service: notify.adults

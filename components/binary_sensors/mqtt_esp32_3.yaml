@@ -1,0 +1,7 @@
+platform: mqtt
+name: ESP32 3
+state_topic: "presence_nodes/Biorummet"
+json_attributes_topic: "presence_nodes/esp32_3/tele"
+payload_on: "CONNECTED"
+payload_off: "DISCONNECTED"
+device_class: connectivity

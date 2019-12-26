@@ -11,17 +11,17 @@ action:
   - service: light.turn_off
     entity_id: 
     - group.theus_rum
-    - group.hallen
+    - group.light_hallen
     - light.vardagsrum_trapp
   - service: media_player.volume_set
     entity_id:
-    - media_player.entre_speaker
+    - media_player.hallen
     data:
       volume_level: 0.8
   - service: media_player.play_media
     data:
       entity_id:
-        - media_player.entre_speaker
+        - media_player.hallen
       media_content_id: !secret content_halloween_mp3
       media_content_type: music
   - service: script.turn_on
@@ -38,7 +38,7 @@ action:
   - service: light.turn_on
     entity_id:
     - group.theus_rum
-    - group.hallen
+    - group.light_hallen
     - light.vardagsrum_trapp
   - service: switch.turn_on
     entity_id: switch.rest_julbelysning

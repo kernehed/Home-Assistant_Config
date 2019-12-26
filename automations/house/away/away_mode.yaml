@@ -31,7 +31,7 @@ action:
   - service: media_player.media_stop
     entity_id: media_player.theus_mini
   - service: media_player.media_stop
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
   - service: media_player.media_stop
     entity_id: media_player.basement
   - service: media_player.turn_off

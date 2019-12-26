@@ -7,7 +7,7 @@ trigger:
     to: 'off'
 action:
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
      message: 'Någon ringer på dörren!'
   - service: tts.google_translate_say

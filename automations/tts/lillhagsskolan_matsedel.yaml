@@ -5,11 +5,11 @@ trigger:
     at: '06:48:00'
 action:
   - service: media_player.volume_set
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data:
       volume_level: 0.3
   - service: tts.google_translate_say
-    entity_id: media_player.entre_speaker
+    entity_id: media_player.hallen
     data_template:
       message: >-
         "På skolan idag får Evenice äta"

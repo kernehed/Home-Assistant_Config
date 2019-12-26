@@ -1,0 +1,9 @@
+platform: template
+sensors:
+  oskar_bluetooth:
+    value_template: >-
+      {% if is_state('sensor.oskars_bt_mqtt','not_home') %}
+        Borta
+      {% else %}
+        {{ states('sensor.oskars_bt_mqtt') }}
+      {% endif %}

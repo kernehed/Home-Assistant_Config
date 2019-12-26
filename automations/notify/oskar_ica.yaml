@@ -1,0 +1,11 @@
+alias: Oskar ICA
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.ica_fjallbacken
+  entity_id: device_tracker.google_maps_114170795730412573739
+action:
+  - service: notify.telegram_oskar
+    data:
+      message: "Oskar är vid ICA Fjällbacken, handla?"

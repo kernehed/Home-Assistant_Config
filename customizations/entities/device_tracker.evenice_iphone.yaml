@@ -1,0 +1,3 @@
+device_tracker.evenice_iphone:
+  friendly_name: Evenice
+  entity_picture: /local/Evenice.jpg

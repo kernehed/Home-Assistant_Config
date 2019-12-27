@@ -1,0 +1,11 @@
+alias: Evenice ej hemma
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: leave
+  zone: zone.home
+  entity_id: group.devices_evenice
+action:
+  - service: notify.adults
+    data:
+      message: "Evenice har gått hemifrån!"

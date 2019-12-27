@@ -1,0 +1,11 @@
+alias: Evenice är hemma
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.home
+  entity_id: group.devices_evenice
+action:
+  - service: notify.adults
+    data:
+      message: "Evenice är hemma!"

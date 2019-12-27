@@ -1,8 +1,8 @@
 devices_adults:
   name: Enheter
   entities:
-  - device_tracker.oneplus_6
+  - device_tracker.oskarstelefon
   - device_tracker.iphone_7
-  - device_tracker.iphone_2
-  - device_tracker.2400ba681267
+  - device_tracker.google_maps_103719873476746592925
+  - device_trackker.bellas_telefon
   - device_tracker.google_maps_103719873476746592925

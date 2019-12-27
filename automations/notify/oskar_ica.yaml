@@ -6,6 +6,6 @@ trigger:
   zone: zone.ica_fjallbacken
   entity_id: device_tracker.google_maps_114170795730412573739
 action:
-  - service: notify.telegram_oskar
+  - service: notify.adults
     data:
       message: "Oskar är vid ICA Fjällbacken, handla?"

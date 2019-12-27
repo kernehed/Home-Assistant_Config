@@ -1,0 +1,11 @@
+alias: Evenice hos mamma
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.mamma
+  entity_id: group.devices_evenice
+action:
+  - service: notify.adults
+    data:
+      message: "Evenice är hos mamma!"

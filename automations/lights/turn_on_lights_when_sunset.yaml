@@ -4,7 +4,10 @@ id: 'lights when sun is set'
 initial_state: 'on'
 trigger:
   platform: state
-  entity_id: group.devices_adults
+  entity_id:
+   - device_tracker.evenice_iphone
+   - group.bella_devices
+   - device_tracker.oskarstelefon
   to: 'home'
 condition:
   condition: sun

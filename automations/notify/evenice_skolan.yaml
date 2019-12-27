@@ -1,0 +1,11 @@
+alias: Evenice i skolan
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.skolan
+  entity_id: group.devices_evenice
+action:
+  - service: notify.adults
+    data:
+      message: "Evenice är i skolan!"

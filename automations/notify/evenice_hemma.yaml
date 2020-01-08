@@ -4,8 +4,8 @@ trigger:
   platform: zone
   event: enter
   zone: zone.home
-  entity_id: group.devices_evenice
+  entity_id: device_tracker.evenice_iphone
 action:
   - service: notify.adults
     data:
-      message: "Evenice är hemma!"
+      message: "Evenice är hemma eller väldigt nära!"

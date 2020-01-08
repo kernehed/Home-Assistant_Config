@@ -5,11 +5,12 @@ speech_engine:
         media_player: >-
             {% if media_player | length == 0 %}
               {% set media_player = [
-                'media_player.hallen'
+                'media_player.hallen',
+                 'media_player.kitchen_mini'
               ] %}
             {% endif %}
             {% if media_player is not string and media_player is sequence %}
               {% set media_player = media_player|join(', ') %}
             {% endif %}
             {{ media_player }}
-        speech_message: '{{ personarriving }}'
+        speech_message: !include /config/templates/speech/macros.yaml

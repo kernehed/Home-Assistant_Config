@@ -12,6 +12,7 @@ evenice_fodelsedag:
         entity_id:
           - media_player.hallen
           - media_player.kitchen_speaker
+          - media_player.kitchen_mini
         media_content_id: !secret content_silence_mp3
         media_content_type: music
     - delay: '00:00:05'
@@ -21,14 +22,14 @@ evenice_fodelsedag:
         - media_player.kitchen_speaker
       data_template:
         message: >
-          {% if now().strftime("%b") == "Jan" and now().strftime("%-d") == "4" %}
-            {% set yearDiff = now().strftime("%Y") | int - 2014 %}
+          {% if now().strftime("%b") == "Jan" and now().strftime("%-d") == "5" %}
+            {% set yearDiff = now().strftime("%Y") | int - 2012 %}
             {% set monthDiff = now().strftime("%m") | int - 01 %}
-            {% set dayDiff = now().strftime("%d") | int - 05%}
+            {% set dayDiff = now().strftime("%d") | int - 05 %}
             {% if dayDiff < 0 or monthDiff < 0 %}
               {% set age = yearDiff %}
             {% else %}
               {% set age = yearDiff %}
             {% endif %}
-            Grattis idag fyller du {{ age }} år Lillis!
+            Grattis idag fyller du {{ age }} år Evenice!
             {% endif %}

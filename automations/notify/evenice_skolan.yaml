@@ -4,8 +4,12 @@ trigger:
   platform: zone
   event: enter
   zone: zone.skolan
-  entity_id: group.devices_evenice
+  entity_id: device_tracker.evenice_iphone
 action:
   - service: notify.adults
     data:
       message: "Evenice är i skolan!"
+  - service: tts.google_translate_say
+    entity_id: media_player.hallen
+    data:
+     message: "Evenice är i skolan!"

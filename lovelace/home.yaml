@@ -44,12 +44,12 @@ cards:
                   top: 8%
                   left: 15%
                   color: white
-              - type: state-label
-                entity: sensor.bella_tid_till_hem
-                style:
-                  top: 8%
-                  left: 85%
-                  color: white
+#              - type: state-label
+#                entity: sensor.bella_tid_till_hem
+#                style:
+#                  top: 8%
+#                  left: 85%
+#                  color: white
               - type: state-label
                 entity: sensor.bella_devices
                 style:
@@ -65,12 +65,12 @@ cards:
                   top: 8%
                   left: 15%
                   color: white
-              - type: state-label
-                entity: sensor.evenice_tid_till_hem
-                style:
-                  top: 8%
-                  left: 82%
-                  color: white
+#              - type: state-label
+#                entity: sensor.evenice_tid_till_hem
+#                style:
+#                  top: 8%
+#                  left: 82%
+#                  color: white
               - type: state-label
                 entity: sensor.evenice_devices
                 style:

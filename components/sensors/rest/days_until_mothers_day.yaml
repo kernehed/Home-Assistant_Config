@@ -1,0 +1,6 @@
+platform: rest
+name: Mother's day Countdown
+resource: !secret wolfram_alpha_mothers_day_api
+value_template: "{{ (value|replace(' days', '')) | int }}"
+unit_of_measurement: Days
+scan_interval: 43200

@@ -1,0 +1,3 @@
+device_tracker.bellas_telefon:
+  friendly_name: Bella
+  entity_picture: /local/Bella.jpg

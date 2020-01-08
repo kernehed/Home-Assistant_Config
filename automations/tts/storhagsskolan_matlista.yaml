@@ -4,14 +4,9 @@ trigger:
   - platform: time
     at: '06:45:00'
 action:
-  - service: media_player.volume_set
-    entity_id: media_player.hallen
-    data:
-      volume_level: 0.2
-  - service: tts.google_translate_say
-    entity_id: media_player.hallen
+  - service: script.speech_engine
     data_template:
-      message: >-
+      value1: >-
         "På förskolan idag får Theus äta"
         {% if now().weekday() == 0 %}
           {{ states('sensor.storhagensforskola_lunch_mandag') }}
@@ -24,4 +19,3 @@ action:
         {% elif now().weekday() == 4 %}
           {{ states('sensor.storhagensforskola_lunch_fredag') }}  
         {% endif %}
-      cache: false

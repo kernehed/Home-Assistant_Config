@@ -1,0 +1,99 @@
+  >- 
+  {%- macro inspirational_quote() %}
+  {% set inspirational_quote = [
+      "och en sak till, Självförtroende är framgångens första hemlighet. ",
+      "och en sak till, Du missar 100% av de gånger du inte försöker. ",
+      "och en sak till, Den som inte gör misstag försöker inte tillräckligt. ",
+      "och en sak till, Om du inte kämpar för det du vill ha, gråt då inte för det du har förlorat. ",
+      "och en sak till, Du kan inte ha ett positivt liv och ett negativt sinne. ",
+      "och en sak till, Innovation skiljer mellan en ledare och en följare. ",
+      "och en sak till, En ledare är en person som känner till vägen, går vägen och visar vägen. ",
+      "och en sak till, Din positiva handling kombinerat med positivt tänkande mynnar ut i framgång. ",
+      "och en sak till, Svårigheter är egentligen bara saker att överkomma."
+      ] %}
+      {{inspirational_quote|random}}
+  {%- endmacro -%}
+
+  {%- macro bedtime_kids() %}
+  {% set bedtime_kids = [
+      "Nu ringer sovklockan! Ding ding. Glöm inte att borsta tänderna.  ",
+      "Nu väntar en god natts sömn! Glöm inte att borsta tänderna. ",
+      "Dags att göra sig i ordning för sängen, john blund är här. Glöm inte att borsta tänderna.  ",
+      "Sängen kallar, den är varm och mysig! Glöm inte att borsta tänderna. ",
+      "Sover man inte så orkar man inte, läggdags!  Glöm inte att borsta tänderna. "
+      ] %}
+      {{bedtime_kids|random}}
+  {%- endmacro -%}
+
+ {%- macro responsibilities() -%}
+ {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
+    {% set day_of_the_week = weekday[now().isoweekday() ] %}
+   
+ {% if day_of_the_week == 'Onsdag' or day_of_the_week == 'Söndag' %}
+      Idag är det {{ day_of_the_week }} och {{ day_of_the_week }} är hjälpa till dagen.
+  {% endif %}
+  {% if day_of_the_week == 'Onsdag' %}
+     Idag ska soporna ut. Se till att ni får med er alla sopor
+  {% endif %}
+ {% if now().strftime('%j')|int % 2 != 0 %}
+      Idag är det Theus tur att hjälpa till.
+  {% else %}
+      Idag är det Evenice tur att hjälpa till.
+  {% endif %}
+  {%- endmacro -%}
+
+  {%- macro iss() -%}
+  {% if is_state('binary_sensor.iss', 'on') -%}
+      Här kommer något intressant. Internationella rymd stationen är precis ovanför oss. Det är {{ states.binary_sensor.iss.attributes['number_of_people_in_space'] }} personer i rymden just nu.
+  {% endif -%}
+  {%- endmacro -%}
+
+  {%- macro moon() -%}
+    {%- if states.sensor.moon.state == 'full_moon' -%}
+      {{ [
+           "Kolla in fullmånen ikväll!",
+           "Nämen kolla, där är fullmånen!. ",
+           "Månen är enorm. Och det är full måne. ",
+           "Om du vill se en fullmåne, då ska du kolla ikväll."
+           ] | random }}
+    {%- endif -%}
+  {%- endmacro -%}
+  
+  {%- macro days_until() -%}
+  {% set month=states("sensor.date").split('-')[1] | int %}
+  {%- if month == 4 or month == 5 -%}
+      och glöm inte bort, det är {{ states.sensor.mother_s_day_countdown.state }} dagar till Mors dag!
+  {%- elif month == 9 or month == 10 -%}
+      och glöm inte bort, det är {{ states.sensor.halloween_countdown.state }} dagar till Halloween!
+  {%- elif month == 11 -%}
+      och glöm inte bort, det är {{ states.sensor.father_s_day_countdown.state }} dagar till Fars dag!
+  {%- elif month == 11 or month == 12 -%}
+      och glöm inte bort, det är {{ states.sensor.christmas_countdown.state }} dagar till Julafton!
+  {% endif %}
+  {%- endmacro -%}
+
+  {# ********************************************* #}
+  {#  ******** Start the Speech routines ********  #}
+  {# ********************************************* #}
+  
+  {# Called from welcome_home #}
+  {{ personarriving }}
+
+  {% if call_bedtime_kids == 1 %}
+  {{ bedtime_kids() }}
+  {% endif %}
+  
+  {% if call_inspirational_quote == 1 %}
+  {{ inspirational_quote() }}
+  {% endif %}
+  
+  {% if call_responsibilities == 1 %}
+  {{ responsibilities() }}
+  {% endif %}
+  
+  {% if value1 is not none %}
+  {{ value1 }}
+  {% endif %}
+  
+  {# call a Random fact #}
+  {{ ([iss, moon, days_until]|random)() }}

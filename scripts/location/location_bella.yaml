@@ -1,0 +1,5 @@
+location_bella:
+  sequence:
+  - service: notify.mobile_app_iphone
+    data:
+      message: "request_location_update"

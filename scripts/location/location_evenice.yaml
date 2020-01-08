@@ -1,0 +1,5 @@
+location_evenice:
+  sequence:
+  - service: notify.mobile_app_evenice_iphone
+    data:
+      message: "request_location_update"

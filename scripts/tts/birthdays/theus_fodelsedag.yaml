@@ -12,6 +12,7 @@ theus_fodelsedag:
         entity_id:
           - media_player.hallen
           - media_player.kitchen_speaker
+          - media_player.kitchen_mini
         media_content_id: !secret content_silence_mp3
         media_content_type: music
     - delay: '00:00:05'

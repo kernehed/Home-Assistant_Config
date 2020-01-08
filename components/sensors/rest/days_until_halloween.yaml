@@ -1,0 +1,6 @@
+platform: rest
+name: Halloween Countdown
+resource: !secret wolfram_alpha_halloween_api
+value_template: "{{ (value|replace(' days', '')) | int }}"
+unit_of_measurement: Days
+scan_interval: 43200

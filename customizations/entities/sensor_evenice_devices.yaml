@@ -1,4 +1,4 @@
 sensor.evenice_devices:
-  friendly_name: Oskar
+  friendly_name: Evenice
   entity_picture: /local/Evenice.jpg
 

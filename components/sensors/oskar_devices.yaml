@@ -4,7 +4,7 @@ sensors:
     friendly_name: "Var är Oskar?"
     value_template: >-
       {%- set device_state1 = states('device_tracker.google_maps_114170795730412573739') -%}
-      {%- set device_state2 = states('device_tracker.oskar_mobil') -%}
+      {%- set device_state2 = states('device_tracker.oskarstelefon') -%}
       {%- set custom_state = {
         'work': 'Work',
         'Skolan': 'Skolan',

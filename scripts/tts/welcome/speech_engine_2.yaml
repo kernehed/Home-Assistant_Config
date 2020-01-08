@@ -1,20 +1,16 @@
 speech_engine_2:
   sequence:
-#    - condition: or
-#      conditions:
-#        - condition: state
-#          entity_id: group.devices_adults
-#          state: 'home'
     - service: script.speech_processing_2
       data_template:
         media_player: >-
             {% if media_player | length == 0 %}
               {% set media_player = [
-                'media_player.hallen'
+                'media_player.hallen',
+                 'media_player.kitchen_mini'
               ] %}
             {% endif %}
             {% if media_player is not string and media_player is sequence %}
               {% set media_player = media_player|join(', ') %}
             {% endif %}
             {{ media_player }}
-        speech_message: '{{ personarriving }}'
+        speech_message: !include /config/templates/speech/macros.yaml

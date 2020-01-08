@@ -25,17 +25,16 @@
       {{bedtime_kids|random}}
   {%- endmacro -%}
 
- {%- macro responsibilities() -%}
- {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
-    {% set day_of_the_week = weekday[now().isoweekday() ] %}
-   
- {% if day_of_the_week == 'Onsdag' or day_of_the_week == 'Söndag' %}
+  {%- macro responsibilities() -%}
+  {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
+  {% set day_of_the_week = weekday[now().isoweekday() ] %}
+  {% if day_of_the_week == 'Onsdag' or day_of_the_week == 'Söndag' %}
       Idag är det {{ day_of_the_week }} och {{ day_of_the_week }} är hjälpa till dagen.
   {% endif %}
   {% if day_of_the_week == 'Onsdag' %}
      Idag ska soporna ut. Se till att ni får med er alla sopor
   {% endif %}
- {% if now().strftime('%j')|int % 2 != 0 %}
+  {% if now().strftime('%j')|int % 2 != 0 %}
       Idag är det Theus tur att hjälpa till.
   {% else %}
       Idag är det Evenice tur att hjälpa till.

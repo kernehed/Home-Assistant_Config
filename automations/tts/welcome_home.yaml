@@ -45,5 +45,5 @@ action:
           ] | random }}
         {%- endmacro -%}
         {{greeting_sentence(person)}}
-      call_inspirational_quote: 1
       call_responsibilities: 1
+      call_inspirational_quote: 1

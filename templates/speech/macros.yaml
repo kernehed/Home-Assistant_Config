@@ -9,7 +9,12 @@
       "och en sak till, Innovation skiljer mellan en ledare och en följare. ",
       "och en sak till, En ledare är en person som känner till vägen, går vägen och visar vägen. ",
       "och en sak till, Din positiva handling kombinerat med positivt tänkande mynnar ut i framgång. ",
-      "och en sak till, Svårigheter är egentligen bara saker att överkomma."
+      "och en sak till, Svårigheter är egentligen bara saker att överkomma.",
+      "och en sak till, Påstå inte att världen är skyldig dig någonting. Det är den inte. Världen var här först.",
+      "och en sak till, Det första steget mot att få det du vill ha ut av livet är att bestämma vad du vill ha. ",
+      "och en sak till, Man är inte modig för att man söker efter faror. ",
+      "och en sak till, Att vara modig är inte att inte vara rädd, att vara modig är att göra något trots att man är rädd. ",
+      "och en sak till, Det är ditt liv, var kärleksfull. "
       ] %}
       {{inspirational_quote|random}}
   {%- endmacro -%}

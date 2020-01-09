@@ -4,7 +4,7 @@ trigger:
   platform: zone
   event: enter
   zone: zone.bellas_jobb
-  entity_id: device_tracker.google_maps_103719873476746592925
+  entity_id: device_tracker.bellas_telefon
 action:
   - service: notify.telegram_oskar
     data:

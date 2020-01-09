@@ -4,11 +4,11 @@ trigger:
   - platform: state
     entity_id:
       - device_tracker.oskarstelefon
-      - group.bella_devices
+      - device_tracker.iphone_7
       - group.devices_evenice
     from: 'not_home'
     to: 'home'
-    for: '00:00:10'
+    for: '00:02:00'
 condition:
   condition: time
   after: '07:00:00'
@@ -17,7 +17,7 @@ action:
   - service: script.speech_engine
     data_template:
       personarriving: >-
-       {%- if trigger.entity_id == 'group.bella_devices' -%}
+       {%- if trigger.entity_id == 'device_tracker.iphone_7' -%}
          {%- set person = "Bella" -%}
        {%- elif trigger.entity_id == 'device_tracker.oskarstelefon' -%}
          {%- set person = "Oskar" -%}

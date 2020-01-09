@@ -19,6 +19,15 @@
       {{inspirational_quote|random}}
   {%- endmacro -%}
 
+  {%- macro dark_outside() -%}
+  {{ [
+      'Det börjar bli mörkt ute. Jag tänder några lampor nu.',
+      'Solen är officiellt nere. Kameran ute har rörelsesensorn igång',
+      'Solen har gått ner från scen. Aktiverar rörelsesensorn på kameran ute..',
+      'Det är en liten stund efter solnedgången. Dags att tända några lampor. Jag är på det.'
+  ]|random }}
+  {%- endmacro -%}
+
   {%- macro bedtime_kids() %}
   {% set bedtime_kids = [
       "Nu ringer sovklockan! Ding ding. Glöm inte att borsta tänderna.  ",
@@ -34,7 +43,7 @@
   {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
   {% set day_of_the_week = weekday[now().isoweekday() ] %}
   {% if day_of_the_week == 'Onsdag' or day_of_the_week == 'Söndag' %}
-      Idag är det {{ day_of_the_week }} och {{ day_of_the_week }} är hjälpa till dagen.
+      Idag är det {{ day_of_the_week }} och {{ day_of_the_week }} är hjälpa-till-dagen.
   {% endif %}
   {% if day_of_the_week == 'Onsdag' %}
      Idag ska soporna ut. Se till att ni får med er alla sopor
@@ -83,8 +92,15 @@
   {# Called from welcome_home #}
   {{ personarriving }}
 
+  {# Called from welcome_home_guests #}
+  {{ personarriving_guests }}
+
   {% if call_bedtime_kids == 1 %}
   {{ bedtime_kids() }}
+  {% endif %}
+
+  {% if call_dark_outside == 1 %}
+  {{ dark_outisde() }}
   {% endif %}
   
   {% if call_inspirational_quote == 1 %}
@@ -95,6 +111,10 @@
   {{ responsibilities() }}
   {% endif %}
   
+  {{ NewDevice }}
+ 
+  {{ NewPlexTitle }}
+   
   {% if value1 is not none %}
   {{ value1 }}
   {% endif %}

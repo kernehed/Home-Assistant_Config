@@ -5,5 +5,8 @@ trigger:
   event: sunset
   offset: "-00:45:00"
 action:
-  service: switch.turn_on
-  entity_id: switch.rest_julbelysning
+  - service: switch.turn_on
+    entity_id: switch.rest_julbelysning
+  - service: script.speech_engine
+    data:
+      call_dark_outside: 1

@@ -14,9 +14,9 @@ condition:
   after: '07:00:00'
   before: '19:00:00'
 action:
-  - service: script.speech_engine_2
+  - service: script.speech_engine
     data_template:
-      personarriving: >-
+      personarriving_guests: >-
        {%- if trigger.entity_id == 'device_tracker.iphone_2' -%}
          {%- set person = "Ingela" -%}
        {%- elif trigger.entity_id == 'device_tracker.annasiphone' -%}
@@ -25,7 +25,7 @@ action:
          {%- set person = "Andreas" -%}
        {%- else -%}
          {%- set person = "Alla" -%}
-       {%- endif -%}
+       {%- endif -%}    
         {%- macro greeting_sentence(person) -%}
           {{ [
              "Välkommen hem till oss" ~ person,

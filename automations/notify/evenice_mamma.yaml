@@ -12,4 +12,4 @@ action:
   - service: tts.google_translate_say
     entity_id: media_player.hallen
     data:
-     message: "Evenice är hos mamma!"
+      message: "Evenice är hos mamma!"

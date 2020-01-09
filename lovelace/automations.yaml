@@ -3,62 +3,21 @@ id: automationer
 icon: mdi:settings
 background: center / cover no-repeat url("/local/habakgrounds.jpg")
 cards:
-  - id: fd67f6f6dd834fc3a7e9a0212e306f69  # Automatically created id
-    type: entities
-    title: Automationer
-    show_header_toggle: false
-    entities:
-      - automation.alarm_away_mode_armed
-      - automation.alarm_away_mode_arming
-      - automation.alarm_disarmed
-      - automation.alarm_home_mode_armed
-      - automation.alarm_triggered
-      - automation.alarm_warning
-      - automation.away_mode
-      - automation.backup_dropbox
-      - automation.backup_local
-      - automation.bella_ej_hemma
-      - automation.bella_hemma
-      - automation.bella_jobb
-      - automation.brandvarnare
-      - automation.dorrklockan
-      - automation.dorrklockan_halloween
-      - automation.evenice_fodelsedag
-      - automation.eves_gymnastik
-      - automation.hass_ready
-      - automation.hass_started
-      - automation.hass_stopped
-      - automation.hass_updater
-      - automation.isabelles_fodelsedag
-      - automation.kamera_motion
-      - automation.las_laset_kl_21_00
-      - automation.las_upp_laset
-      - automation.light_unavailable
-      - automation.luftfuktighet_overstigen_50_procent
-      - automation.milla_mat
-      - automation.new_device_tracked
-      - automation.oskars_fodelsedag
-      - automation.people_greeting
-      - automation.people_greeting_2
-      - automation.radio_helgerna
-      - automation.radio_weekdays
-      - automation.set_radio_volume
-      - automation.set_startup_theme
-      - automation.sla_av_julbelysning_ute
-      - automation.sla_pa_julbelysning_ute
-      - automation.slack_bankbelysningen_efter_10_min_nar_sista_rorelse
-      - automation.slack_altanbelysningen_efter_7_min_vid_sista_rorelse
-      - automation.slack_kallare_lamporna_efter_2_min_nar_sista_rorelse_i_kallaren
-      - automation.slack_skafferiet_lampan_efter_2_min_nar_sista_rorelse_i_skafferiet
-      - automation.slack_tvattstuge_lamporna_efter_10_min_nar_sista_rorelse
-      - automation.stang_av_lamporna_vid_00_00
-      - automation.tand_bankbelysningen_nar_rorelse
-      - automation.tand_altanbelysningen_vid_rorelse
-      - automation.tand_kallare_lamporna_nar_rorelse_i_kallaren
-      - automation.tand_lamporna_vid_07_00
-      - automation.tand_lamporna_vid_08_00
-      - automation.tand_skafferiet_lampan_nar_rorelse_i_skafferiet
-      - automation.tand_tvattstuge_lamporna_nar_rorelse
-      - automation.theus_fodelsedag
-      - automation.tts_lillhagsskolan_mat
-      - automation.tts_storhagensforskola_mat
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: 'On'
+    filter:
+      include:
+        - entity_id: "automation.*"
+          state: "on"
+  - type: custom:monster-card
+    show_empty: false
+    card:
+      type: entities
+      title: 'Off'
+    filter:
+      include:
+        - entity_id: "automation.*"
+          state: "off"

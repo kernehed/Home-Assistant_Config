@@ -1,12 +1,12 @@
-platform: template
-sensors:
-  battery_bella:
-    friendly_name: bella batteri
-    unit_of_measurement: '%'
-    value_template: >-
-        {%- if states.device_tracker.google_maps_103719873476746592925.attributes.battery_level %}
-            {{ states.device_tracker.google_maps_103719873476746592925.attributes.battery_level|round }}
-        {% else %}
-            {{ states.sensor.battery_bella.state }}
-        {%- endif %}
-    device_class: battery
+#platform: template
+#sensors:
+#  battery_bella:
+#    friendly_name: bella batteri
+#    unit_of_measurement: '%'
+#    value_template: >-
+#        {%- if states.device_tracker.google_maps_103719873476746592925.attributes.battery_level %}
+#            {{ states.device_tracker.google_maps_103719873476746592925.attributes.battery_level|round }}
+#        {% else %}
+#            {{ states.sensor.battery_bella.state }}
+#        {%- endif %}
+#    device_class: battery

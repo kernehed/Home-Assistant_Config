@@ -49,9 +49,9 @@
      Idag ska soporna ut. Se till att ni får med er alla sopor
   {% endif %}
   {% if now().strftime('%j')|int % 2 != 0 %}
-      Idag är det Theus tur att hjälpa till.
+      Idag är det Theus tur att hjälpa till med sysslorna.
   {% else %}
-      Idag är det Evenice tur att hjälpa till.
+      Idag är det Evenice tur att hjälpa till med sysslorna.
   {% endif %}
   {%- endmacro -%}
 
@@ -71,6 +71,20 @@
            ] | random }}
     {%- endif -%}
   {%- endmacro -%}
+  
+  {%- macro goodnight_line() -%}
+    {{ [
+      "Godnatt, vi pratar mer imorgon. ",
+      "Godnatt, älskling. ",
+      "Godnatt sömntuta! ",
+      "Natti natti dröm sött. ",
+      "Ses imorgon, hoppas du är utvilad. ",
+      "Jag kommer vara precis här imorgon när du vaknar. moo ahh .. ha .. ha ",
+      "Du är den bästa jag vet, godnatt! ",
+      "Hör du det där? Det är din varma mjuka säng som ropar. Godnatt. ",
+      "Du har så mycket att vara tacksam över... godnatt."
+    ]|random }}
+  {%- endmacro -%}  
   
   {%- macro days_until() -%}
   {% set month=states("sensor.date").split('-')[1] | int %}
@@ -95,6 +109,10 @@
   {# Called from welcome_home_guests #}
   {{ personarriving_guests }}
 
+  {% if value1 is not none %}
+  {{ value1 }}
+  {% endif %}
+
   {% if call_bedtime_kids == 1 %}
   {{ bedtime_kids() }}
   {% endif %}
@@ -102,7 +120,11 @@
   {% if call_dark_outside == 1 %}
   {{ dark_outisde() }}
   {% endif %}
-  
+
+  {% if call_goodnight_line == 1 %}
+  {{ goodnight_line() }}
+  {% endif %}
+
   {% if call_inspirational_quote == 1 %}
   {{ inspirational_quote() }}
   {% endif %}
@@ -115,9 +137,7 @@
  
   {{ NewPlexTitle }}
    
-  {% if value1 is not none %}
-  {{ value1 }}
-  {% endif %}
+
   
   {# call a Random fact #}
   {{ ([iss, moon, days_until]|random)() }}

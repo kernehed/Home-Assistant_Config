@@ -19,3 +19,4 @@ action:
         {% elif now().weekday() == 4 %}
           {{ states('sensor.storhagensforskola_lunch_fredag') }}  
         {% endif %}
+      call_inspirational_quote: 1

@@ -62,7 +62,7 @@ cards:
         head:
           entity: binary_sensor.accesspunkt_1
         group_config:
-          icon: router-wireless
+          icon: mdi:router-wireless
         items:
           - sensor.uptime_ap_1
           - sensor.total_clients_wireless

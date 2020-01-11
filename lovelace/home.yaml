@@ -85,7 +85,13 @@ cards:
       - lock.polycontrol_danalock_v3_btze_locked
       - sensor.zwave_battery_front_door
       - alarm_control_panel.house
-      - binary_sensor.dorrklockan
+      - type: custom:fold-entity-row
+        head:
+          entity: binary_sensor.dorrklockan
+        group_config:
+          icon: mdi:account-heart
+        items:
+          - input_boolean.guest_mode
   - id: 6d4744d14a7c42668633cedbe655ba08  # Automatically created id
     type: custom:monster-card
     show_empty: false

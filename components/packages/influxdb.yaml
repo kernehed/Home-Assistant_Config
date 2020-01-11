@@ -1,8 +1,8 @@
-influxdb:
-  host: !secret influx_db_grafana
-  port: 8086
-  database: homeassistant
-  username: homeassistant
-  password: !secret influx_password
-  max_retries: 3
-  default_measurement: state
+#influxdb:
+#  host: !secret influx_db_grafana
+#  port: 8086
+#  database: homeassistant
+#  username: homeassistant
+#  password: !secret influx_password
+#  max_retries: 3
+#  default_measurement: state

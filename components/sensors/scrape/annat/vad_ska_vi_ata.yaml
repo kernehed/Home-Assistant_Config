@@ -1,0 +1,5 @@
+platform: scrape
+name: vad ska vi ata
+resource: https://vadfanskajaglagatillmiddag.nu/
+select: 'font a'
+scan_interval: 3600

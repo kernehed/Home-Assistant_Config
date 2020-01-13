@@ -5,7 +5,7 @@ speech_processing:
         - media_player.hallen
         - media_player.kitchen_mini
       data:
-        volume_level: 0.2
+        volume_level: 0.5
     - service: media_player.play_media
       data_template:
         entity_id: '{{ media_player }}'

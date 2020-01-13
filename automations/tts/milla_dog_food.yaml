@@ -16,13 +16,13 @@ condition:
 action:
   - service: media_player.volume_set
     entity_id:
-    - media_player.hela_huset
+    - media_player.hallen
     data:
-      volume_level: 0.2
+      volume_level: 0.5
   - service: media_player.play_media
     data:
       entity_id:
-        - media_player.hela_huset
+        - media_player.hallen
       media_content_id: !secret content_silence_mp3
       media_content_type: music
   - service: tts.google_translate_say
@@ -30,7 +30,7 @@ action:
     data:
      message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
   - service: tts.google_translate_say
-    entity_id: media_player.kallare_mini
+    entity_id: media_player.hallen
     data:
      message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
   - service: notify.adults

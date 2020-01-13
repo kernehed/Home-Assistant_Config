@@ -3,5 +3,5 @@ devices_adults:
   entities:
   - device_tracker.oskarstelefon
   - device_tracker.iphone_7
-  - device_tracker.google_maps_103719873476746592925
+  - device_tracker.google_maps_114170795730412573739
   - device_tracker.bellas_telefon

@@ -3,9 +3,7 @@ initial_state: 'on'
 trigger:
   platform: state
   entity_id: 
-    - group.devices_bella
-    - device_tracker.oskarstelefon
-    - group.devices_evenice
+    - group.devices_adults
   from: 'not_home'
   to: 'home'
 action:

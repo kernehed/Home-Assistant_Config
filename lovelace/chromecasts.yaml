@@ -73,7 +73,7 @@ cards:
     show_source: true
   - id: 4ff95e93693048168b32cb5282508135  # Automatically created id
     type: custom:mini-media-player
-    entity: media_player.google_home
+    entity: media_player.marshall
     artwork: cover
     show_source: true
   - id: 1e663b9ebd114d03a6405a9ad6f1dd7a  # Automatically created id

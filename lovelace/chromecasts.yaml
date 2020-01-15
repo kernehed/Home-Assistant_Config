@@ -1,7 +1,7 @@
 title: Chromecasts
 id: chromecasts
 icon: mdi:cast
-background: center / cover no-repeat url("/local/habakgrounds.jpg")
+background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - type: 'custom:spotify-card'
     client_id: !secret spotify_client_id

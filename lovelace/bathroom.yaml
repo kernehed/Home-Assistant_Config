@@ -1,6 +1,6 @@
 title: Badrummet
 id: Badrummet
-background: center / cover no-repeat url("/local/habakgrounds.jpg")
+background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 5254a5fd07d240678269b434ea46e948  # Automatically created id
     type: entities

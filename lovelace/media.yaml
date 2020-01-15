@@ -1,7 +1,7 @@
 title: Media
 id: media
 icon: mdi:play
-background: center / cover no-repeat url("/local/habakgrounds.jpg")
+background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 1234566213123 # Manually created id
     type: custom:upcoming-media-card

@@ -1,6 +1,6 @@
 title: Sovrummet
 id: sovrummet
-background: center / cover no-repeat url("/local/habakgrounds.jpg")
+background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 0c14e757b52243d49496e3869365598d  # Automatically created id
     type: picture-elements

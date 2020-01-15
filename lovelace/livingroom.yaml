@@ -1,6 +1,6 @@
 title: Vardagsrum
 id: vardagsrum
-background: center / cover no-repeat url("/local/habakgrounds.jpg")
+background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: a87ac6a51dd746bfb8c6998eb6e1b499  # Automatically created id
     type: entities

@@ -1,6 +1,6 @@
 title: Theus rum
 id: theus rum
-background: center / cover no-repeat url("/local/habakgrounds.jpg")
+background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 77ceb0eb4d494a2488cd27a42accc740  # Automatically created id
     type: picture-elements

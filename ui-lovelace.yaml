@@ -1,4 +1,5 @@
-
+custom_header:
+  compact_mode: true
 resources:
   - url: /community_plugin/text-element/text-element.js
     type: js
@@ -20,7 +21,7 @@ resources:
     type: js
   - url: /community_plugin/krisinfo-card/krisinfo-card.js
     type: js
-  - url: /community_plugin/compact-custom-header/compact-custom-header.js
+  - url: /community_plugin/custom-header/custom-header.js
     type: module
   - url: /local/custom-lovelace/pollenkoll-card.js
     type: js

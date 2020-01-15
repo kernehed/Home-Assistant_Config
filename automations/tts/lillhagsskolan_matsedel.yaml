@@ -20,3 +20,5 @@ action:
           {{ states('sensor.lillhagsskolan_lunch_fredag') }}  
         {% endif %}
       call_inspirational_quote: 1
+      call_time_with_screen: 1
+      call_fodelsedag: 1

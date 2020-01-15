@@ -5,8 +5,7 @@ speech_engine:
         media_player: >-
             {% if media_player | length == 0 %}
               {% set media_player = [
-                'media_player.hallen',
-                 'media_player.kitchen_mini'
+                'media_player.tts'
               ] %}
             {% endif %}
             {% if media_player is not string and media_player is sequence %}
@@ -14,3 +13,15 @@ speech_engine:
             {% endif %}
             {{ media_player }}
         speech_message: !include /config/templates/speech/macros.yaml
+        
+    - service: input_boolean.turn_off
+      data:
+        entity_id:
+          - input_boolean.responsibilities
+          - input_boolean.skarmtid
+          - input_boolean.idesprutan
+          - input_boolean.evenice_fodelsedag
+          - input_boolean.theus_fodelsedag
+          - input_boolean.millas_fodelsedag
+          - input_boolean.oskars_fodelsedag
+          - input_boolean.bellas_fodelsedag

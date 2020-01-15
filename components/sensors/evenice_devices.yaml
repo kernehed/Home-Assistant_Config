@@ -14,6 +14,8 @@ sensors:
         'GEAB': 'GEAB',
         'Mamma': 'Farmor',
         'away': 'Borta',
+        'Tempo': 'Tempo',
+        'ICA Fjällbacken': 'ICA Fjällbacken',
         'Bellas jobb': 'Bellas jobb'
       } -%}
       {% if custom_state[device_state1] != '' and device_state2 == 'not_home' %}

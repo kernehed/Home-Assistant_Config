@@ -1,0 +1,16 @@
+anniversaries:
+  sensors:
+  - name: Vi blev ett par
+    date: '2007-07-03'
+  - name: Vår årsdag
+    date: '2015-04-25'
+  - name: Theus födelsedag
+    date: '2014-09-02'
+  - name: Evenice födelsedag
+    date: '2012-01-05'
+  - name: Millas födelsedag
+    date: '2017-05-17'
+  - name: Oskars födelsedag
+    date: '1992-06-11'
+  - name: Bellas födelsedag
+    date: '1992-02-11'

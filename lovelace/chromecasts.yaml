@@ -101,3 +101,8 @@ cards:
     entity: media_player.barnens_rum
     artwork: cover
     show_source: true
+  - id: d1ee16d7492312321321232131321 # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.tts
+    artwork: cover
+    show_source: true

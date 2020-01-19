@@ -1,0 +1,197 @@
+type: picture-elements
+image: /local/entreplan.png
+elements:
+
+
+  # Lighting Overlays_hallen
+  - type: image
+    entity: group.light_hallen
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/hallen_off.png
+    style:
+      width: 45.29%
+      top: 61.90%
+      left: 46.60%
+
+  # Lighting Overlays_köket
+  - type: image
+    entity: light.fibaro_system_fgd212_dimmer_2_level
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/kitchen_off.png
+    style:
+      width: 40.8%
+      top: 39.1%
+      left: 58.3%
+      
+  # Lighting Overlays_skafferiet
+  - type: image
+    entity: light.skafferiet
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/skafferiet_off.png
+    style:
+      width: 6.84%
+      top: 36.89%
+      left: 39.86%
+      
+      
+  # Lighting Overlays_Theus
+  - type: image
+    entity: light.theus_lampa
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/theus_off.png
+    style:
+      width: 18%
+      top: 43.14%
+      left: 31.1%
+
+  # Lighting Overlays_Evenice
+  - type: image
+    entity: light.evenice_lampa
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/evenice_off.png
+    style:
+      width: 31.80%
+      top: 54.9%
+      left: 75.37%
+
+  # Lighting Overlays_badrummet
+  - type: image
+    entity: group.light_badrummet
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/toilet_off.png
+    style:
+      width: 7.9%
+      top: 44%
+      left: 43.5%
+
+
+
+  # Light Toggle_1_hallen
+  - type: image
+    entity: group.light_hallen
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 58%
+      left: 35.7%
+      
+  # Light Toggle_2_hallen
+  - type: image
+    entity: group.light_hallen
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 53%
+      left: 51%
+
+  # Light Toggle_1_köket
+  - type: image
+    entity: light.fibaro_system_fgd212_dimmer_2_level
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 38%
+      left: 49%
+      
+  # Light Toggle_1_skafferiet
+  - type: image
+    entity: light.skafferiet
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 38%
+      left: 40%    
+
+  # Light Toggle_1_theus
+  - type: image
+    entity: light.theus_lampa
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 42%
+      left: 36%
+      
+  # Light Toggle_1_evenice
+  - type: image
+    entity: light.evenice_lampa
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 48.5%
+      left: 76.5%
+      
+  # Light Toggle_1_badrummet
+  - type: image
+    entity: group.light_badrummet
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 44.5%
+      left: 43.5%
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  # Floor Toggle
+  - type: service-button
+    title: Övreplan
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.floorplan_floor
+      option: Övervåning
+    style:
+      top: 5%
+      left: 10%
+      background: "#d8d7d9"
+      border-radius: 5%
+      border: 2px solid black
+      
+  - type: service-button
+    title: Källarplan
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.floorplan_floor
+      option: Källarplan
+    style:
+      top: 10%
+      left: 10%
+      background: "#d8d7d9"
+      border-radius: 5%
+      border: 2px solid black
+
+
+
+

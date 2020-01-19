@@ -215,7 +215,7 @@
     Det är bara tjugo dagar kvar tills Theus fyller {{ states.sensor.theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
    {% if states.sensor.millas_fodelsedag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills Milla fyller {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+    Det är bara hundra tjugo dagar kvar tills Milla fyller {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
    {% endif %}
    {% if states.sensor.millas_fodelsedag.state | int ==60 %}
     Det är bara sextio dagar kvar tills Milla fyller {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
@@ -333,8 +333,8 @@
   {{ oskars_fodelsedag() }}
   {% endif %} 
 
-  {% if call_bellas_fodelsdag == 1 %}
-  {{ bellas_fodelsdag() }}
+  {% if call_bellas_fodelsedag == 1 %}
+  {{ bellas_fodelsedag() }}
   {% endif %} 
 
   {{ NewDevice }}
@@ -344,4 +344,4 @@
 
   
   {# call a Random fact #}
-  {{ ([iss, moon, days_until]|random)() }}
+  {{ ([iss, moon, fodelsedag, arsdag, days_until]|random)() }}

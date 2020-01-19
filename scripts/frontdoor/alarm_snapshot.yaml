@@ -26,25 +26,25 @@ alarm_snapshot:
             caption: Entré
   - service: camera.snapshot
     data:
-      entity_id: camera.hall
-      filename: '/config/snapshot/hall.jpg'
+      entity_id: camera.vardagsrum
+      filename: '/config/snapshot/vardagsrum.jpg'
   - service: notify.adults
     data:
       message: "Hallkameran"
       title: "Hallkameran - bild:"
       data:
         photo:
-          - file: '/config/snapshot/hall.jpg'
+          - file: '/config/snapshot/vardagsrum.jpg'
             caption: Hallkameran
   - service: camera.snapshot
     data:
-      entity_id: camera.hall
-      filename: '/config/snapshot/hall.jpg'
+      entity_id: camera.vardagsrum
+      filename: '/config/snapshot/vardagsrum.jpg'
   - service: notify.adults
     data:
       message: "Hallkameran"
       title: "Hallkameran - bild:"
       data:
         photo:
-          - file: '/config/snapshot/hall.jpg'
+          - file: '/config/snapshot/vardagsrum.jpg'
             caption: Hallkameran

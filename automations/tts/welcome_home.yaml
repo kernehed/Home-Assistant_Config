@@ -47,5 +47,3 @@ action:
         {{greeting_sentence(person)}}
       call_responsibilities: 1
       call_inspirational_quote: 1
-      call_arsdag: 1
-      call_fodelsedag: 1

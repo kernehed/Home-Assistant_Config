@@ -42,4 +42,3 @@ action:
         {%- endmacro -%}
         {{- greeting_sentence(person) -}}
       call_inspirational_quote: 1
-      call_fodelsedag: 1

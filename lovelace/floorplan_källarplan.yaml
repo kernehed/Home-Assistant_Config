@@ -1,0 +1,135 @@
+type: picture-elements
+image: /local/nedreplan.png
+elements:
+  # Lighting Overlays_Bio
+  - type: image
+    entity: group.light_kallaren
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/biorummet_off.png
+    style:
+      width: 37.2%
+      top: 62.72%
+      left: 35.45%
+
+  # Lighting Overlays_Tvatt
+  - type: image
+    entity: group.light_tvattstugan
+    tap_action: none
+    hold_action: none
+    state_image:
+      "on": /local/transparent_square.png
+      "off": /local/tvattstugan_off.png
+    style:
+      width: 24.7%
+      top: 60.4%
+      left: 55.35%
+
+
+
+
+  # Light Toggle_1_Bio
+  - type: image
+    entity: group.light_kallaren
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 75%
+      left: 43.7%
+
+    # Light Toggle_2_Bio
+  - type: image
+    entity: group.light_kallaren
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 80%
+      left: 32.3%
+
+   # Light Toggle_3_Bio
+  - type: image
+    entity: group.light_kallaren
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 74.3%
+      left: 24.1%
+
+  # Light Toggle_4_Bio
+  - type: image
+    entity: group.light_kallaren
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 60.3%
+      left: 21.3%
+
+  # Light Toggle_5_Bio
+  - type: image
+    entity: group.light_kallaren
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 47.3%
+      left: 19.3%
+
+  # Light Toggle_1_tvatt
+  - type: image
+    entity: group.light_tvattstugan
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 55.6%
+      left: 50.7%
+
+   # Light Toggle_2_tvatt   
+  - type: image
+    entity: group.light_tvattstugan
+    tap_action:
+      action: toggle
+    image: /local/transparent_square.png
+    style:
+      top: 64.6%
+      left: 55.3%
+      
+      
+      
+      
+
+
+  # Floor Toggle
+  - type: service-button
+    title: Entréplan
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.floorplan_floor
+      option: Entréplan
+    style:
+      top: 5%
+      left: 10%
+      background: "#d8d7d9"
+      border-radius: 5%
+      border: 2px solid black
+      
+  - type: service-button
+    title: Övervåning
+    service: input_select.select_option
+    service_data:
+      entity_id: input_select.floorplan_floor
+      option: Övreplan
+    style:
+      top: 10%
+      left: 10%
+      background: "#d8d7d9"
+      border-radius: 5%
+      border: 2px solid black
+
+

@@ -10,6 +10,6 @@ action:
     data:
       message: "Evenice är i skolan!"
   - service: tts.google_translate_say
-    entity_id: media_player.hallen
+    entity_id: media_player.tts
     data:
      message: "Evenice är i skolan!"

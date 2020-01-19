@@ -10,6 +10,6 @@ action:
   - service: automation.turn_on
     entity_id: automation.away_mode
   - service: tts.google_translate_say
-    entity_id: media_player.hallen
+    entity_id: media_player.tts
     data:
       message: "Gästläget har inaktiverats, sätter på de funktioner ni inte kan leva utan. Äntligen är jag tillbaka!"

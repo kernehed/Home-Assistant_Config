@@ -1,0 +1,8 @@
+floorplan_floor:
+  name: vilken våning floorplan.
+  options:
+    - "Entréplan"
+    - "Källarplan"
+    - "Övreplan"
+  initial: "Entréplan"
+  icon: mdi:floor-plan

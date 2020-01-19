@@ -7,14 +7,14 @@ trigger:
   to: 'armed_home'
 action:
   - service: media_player.volume_set
-    entity_id: media_player.whole_house
+    entity_id: media_player.tts
     data: 
-      volume_level: '0.2'
+      volume_level: '0.5'
   - service: notify.adults
     data:
       message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma! Låser och larmar på dörren bara.'
   - service: tts.google_translate_say
-    entity_id: media_player.hallen
+    entity_id: media_player.tts
     data:
       message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma. '
   - delay: '00:00:12'

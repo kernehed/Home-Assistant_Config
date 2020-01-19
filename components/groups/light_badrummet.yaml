@@ -1,0 +1,5 @@
+light_badrummet:
+  name: Badrummet
+  entities:
+  - light.badrumslampa_1
+  - light.badrumslampa_2  

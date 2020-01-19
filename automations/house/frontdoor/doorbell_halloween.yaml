@@ -21,7 +21,7 @@ action:
   - service: media_player.play_media
     data:
       entity_id:
-        - media_player.hallen
+        - media_player.tts
       media_content_id: !secret content_halloween_mp3
       media_content_type: music
   - service: script.turn_on

@@ -1,0 +1,32 @@
+title: Floorplan
+path: floorplan
+panel: true
+icon: mdi:floor-plan
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: conditional
+        conditions:
+          - entity: input_select.floorplan_floor
+            state: "Entréplan"
+        card: !include floorplan_entreplan.yaml
+
+      - type: conditional
+        conditions:
+          - entity: input_select.floorplan_floor
+            state: "Källarplan"
+        card: !include floorplan_källarplan.yaml
+
+#      - type: conditional
+#        conditions:
+#          - entity: input_select.floorplan_floor
+#            state: "Övreplan"
+#        card: !include floorplan_ovreplan.yaml
+
+
+
+
+
+
+
+         

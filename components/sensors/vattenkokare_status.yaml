@@ -1,0 +1,24 @@
+platform: template
+sensors:
+  vattenkokare_status:
+    value_template: >
+       {% if is_state('switch.fibaro_wall_plug_2_switch', 'off') %}
+        Av
+       {% elif state_attr('sensor.fibaro_wall_plug_2_power', 'power_consumption')|int < 1500 %}
+        Standby
+       {% elif state_attr('sensor.fibaro_wall_plug_2_power', 'power_consumption')|int > 1500 %}
+        Kokar
+       {% else %}
+        error
+       {% endif %}
+    
+    icon_template: >
+       {% if is_state('switch.fibaro_wall_plug_2_switch', 'off') %}
+         mdi:kettle-off
+       {% elif states.sensor.fibaro_wall_plug_2_power.attributes.power_consumption | int  < 1500 %}
+         mdi:kettle
+       {% elif states.sensor.fibaro_wall_plug_2_power.attributes.power_consumption | int  > 1500 %}
+         mdi:kettle-steam
+       {% else %}
+         mdi:kettle-off
+       {% endif %}

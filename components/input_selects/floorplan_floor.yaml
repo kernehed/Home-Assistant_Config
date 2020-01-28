@@ -3,6 +3,6 @@ floorplan_floor:
   options:
     - "Entréplan"
     - "Källarplan"
-    - "Övreplan"
+    - "Övervåning"
   initial: "Entréplan"
   icon: mdi:floor-plan

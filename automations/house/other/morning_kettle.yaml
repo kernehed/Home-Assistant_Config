@@ -1,0 +1,30 @@
+id: morning_kettle_id 
+alias: Vattenkokaren morgon
+trigger: 
+  platform: state 
+  entity_id: binary_sensor.banksensor
+  from: 'off' 
+  to: 'on' 
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: group.devices_adults
+      state: 'home'
+    - condition: time
+      after: '05:45:00'
+      before: '07:00:00'
+action:
+  - service: script.speech_engine
+    data_template:
+      value1: >-
+          {{ [
+             "Godmorgon! Vattenkokaren är nu påslagen, ditt te kommer serveras rykande varmt. Stänger av den om 20 minuter för säkerhetsskull!",
+             "Godmorgon! Vattenkokaren är nu påslagen och kommer värma ditt vatten. Du får dock hämta det själv. Stänger av den om 20 minuter för säkerhetsskull!!",
+          ] | random }}
+  - service: switch.turn_on
+    entity_id: switch.fibaro_wall_plug_2_switch
+  - delay:
+      minutes: 45
+  - service: switch.turn_off
+    entity_id: switch.fibaro_wall_plug_2_switch

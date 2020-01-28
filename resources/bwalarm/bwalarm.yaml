@@ -56,6 +56,11 @@ users:
   enabled: false
   code: 3339a1a36b6742d6926c25626400572f
   picture: ha.png
+- id: 0baaba3c0bfb49589998b91e061a812b
+  name: Theus
+  enabled: false
+  code: 0baaba3c0bfb49589998b91e061a812b
+  picture: ha.png
 code: !secret alarm_code
 enable_persistence: true
 admin_password: !secret alarm_pw

@@ -81,8 +81,10 @@ elements:
       width: 7.9%
       top: 44%
       left: 43.5%
-
-
+      
+      
+      
+    
 
   # Light Toggle_1_hallen
   - type: image
@@ -157,24 +159,16 @@ elements:
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
   # Floor Toggle
   - type: service-button
-    title: Övreplan
+    title: Övervåning
     service: input_select.select_option
     service_data:
       entity_id: input_select.floorplan_floor
       option: Övervåning
     style:
-      top: 5%
-      left: 10%
+      top: 20%
+      left: 50%
       background: "#d8d7d9"
       border-radius: 5%
       border: 2px solid black
@@ -186,8 +180,8 @@ elements:
       entity_id: input_select.floorplan_floor
       option: Källarplan
     style:
-      top: 10%
-      left: 10%
+      top: 20%
+      left: 56%
       background: "#d8d7d9"
       border-radius: 5%
       border: 2px solid black

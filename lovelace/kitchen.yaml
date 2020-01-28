@@ -10,6 +10,13 @@ cards:
       - light.skafferiet
       - light.koket_bank
       - light.fibaro_system_fgd212_dimmer_2_level
+  - id: a7baefd20bb84d5282727531233123d2e  # Automatically created id
+    type: entities
+    title: Vattenkokaren
+    show_header_toggle: false
+    entities:
+      - switch.fibaro_wall_plug_2_switch
+      - sensor.vattenkokare_status
   - id: c6d2a2551aac4a26a0ae2d356efee413  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.kitchen_speaker

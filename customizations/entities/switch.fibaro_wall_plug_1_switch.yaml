@@ -1,3 +1,3 @@
 switch.fibaro_wall_plug_1_switch:
-  friendly_name: Pluggen
-  icon: mdi:lightbulb
+  friendly_name: "Theus ljusslinga"
+  icon: mdi:led-strip-variant

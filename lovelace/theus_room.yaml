@@ -16,7 +16,7 @@ cards:
           top: 95%
           left: 93%
       - type: state-icon
-        entity: switch.fibaro_wall_plug_2_switch
+        entity: switch.fibaro_wall_plug_1_switch
         tap_action:
           action: toggle
         hold_action: 

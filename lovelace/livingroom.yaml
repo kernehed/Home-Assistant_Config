@@ -11,7 +11,6 @@ cards:
       - light.vardagsrum_tak
       - light.vardagsrum_trapp
       - light.vardagsrum_spotlights
-      - switch.fibaro_wall_plug_1_switch
   - id: Uttagen  # Automatically created id
     type: entities
     title: Uttag

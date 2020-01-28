@@ -14,6 +14,16 @@
       "och en sak till, Det första steget mot att få det du vill ha ut av livet är att bestämma vad du vill ha. ",
       "och en sak till, Man är inte modig för att man söker efter faror. ",
       "och en sak till, Att vara modig är inte att inte vara rädd, att vara modig är att göra något trots att man är rädd. ",
+      "och en sak till, Det första steget mot att få det du vill ha ut av livet är att bestämma vad du vill ha. ",
+      "och en sak till, Du lever bara en gång, men om du lever det på rätt sätt så är det tillräckligt. ",
+      "och en sak till, Ge aldrig upp – ge aldrig, aldrig, aldrig, aldrig upp, oavsett om det gäller små eller stora, mer eller mindre betydelsefulla saker. ",
+      "och en sak till, Det spelar ingen roll var du är, du är ingenstans jämfört med vart du kan komma. ",
+      "och en sak till, Det är aldrig för sent att bli det du kunde ha blivit.",
+      "och en sak till, Du är aldrig för gammal för att sätta ett nytt mål eller drömma en ny dröm.",
+      "och en sak till, Det enda skälet till att vi inte har vad vi vill ha i livet är skälen vi skapar för att inte ha dem..",
+      "och en sak till, Om du inte själv designar din egen livsplan är sannolikheten stor att du hamnar i någon annans plan och gissa vad de har planerat för dig? Inte mycket.",
+      "och en sak till, Varför jämföra dig med andra? Ingen i hela världen kan göra ett bättre jobb att vara du – än du.",
+      "och en sak till, Om du inte är villig att ta risker, så kan du inte växa. Om du inte kan växa, så kan du inte bli det bästa du kan bli. Om du inte kan bli det bästa, så kan du inte bli lycklig. Om du inte kan bli lycklig, så vad mer finns det?",
       "och en sak till, Det är ditt liv, var kärleksfull. "
       ] %}
       {{inspirational_quote|random}}
@@ -30,11 +40,11 @@
 
   {%- macro bedtime_kids() %}
   {% set bedtime_kids = [
-      "Nu ringer sovklockan! Ding ding. Glöm inte att borsta tänderna.  ",
+      "Nu ringer sovklockan! Ding ding. Glöm inte att borsta tänderna och håret.  ",
       "Nu väntar en god natts sömn! Glöm inte att borsta tänderna. ",
-      "Dags att göra sig i ordning för sängen, john blund är här. Glöm inte att borsta tänderna.  ",
-      "Sängen kallar, den är varm och mysig! Glöm inte att borsta tänderna. ",
-      "Sover man inte så orkar man inte, läggdags!  Glöm inte att borsta tänderna. "
+      "Dags att göra sig i ordning för sängen, john blund är här. Glöm inte att borsta tänderna och håret.  ",
+      "Sängen kallar, den är varm och mysig! Glöm inte att borsta tänderna och håret. ",
+      "Sover man inte så orkar man inte, läggdags!  Glöm inte att borsta tänderna och håret. "
       ] %}
       {{bedtime_kids|random}}
   {%- endmacro -%}

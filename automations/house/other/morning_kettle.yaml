@@ -2,9 +2,8 @@ id: morning_kettle_id
 alias: Vattenkokaren morgon
 trigger: 
   platform: state 
-  entity_id: binary_sensor.banksensor
-  from: 'off' 
-  to: 'on' 
+  entity_id: sensor.oskars_bt_mqtt 
+  to: 'Köket' 
 condition:
   condition: and
   conditions:
@@ -23,8 +22,8 @@ action:
              "Godmorgon! Vattenkokaren är nu påslagen och kommer värma ditt vatten. Du får dock hämta det själv. Stänger av den om 20 minuter för säkerhetsskull!!",
           ] | random }}
   - service: switch.turn_on
-    entity_id: switch.fibaro_wall_plug_2_switch
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch
   - delay:
       minutes: 45
   - service: switch.turn_off
-    entity_id: switch.fibaro_wall_plug_2_switch
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch

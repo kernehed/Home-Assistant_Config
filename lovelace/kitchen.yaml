@@ -15,7 +15,7 @@ cards:
     title: Vattenkokaren
     show_header_toggle: false
     entities:
-      - switch.fibaro_wall_plug_2_switch
+      - switch.fibaro_system_fgwpe_f_wall_plug_switch
       - sensor.vattenkokare_status
   - id: c6d2a2551aac4a26a0ae2d356efee413  # Automatically created id
     type: custom:mini-media-player

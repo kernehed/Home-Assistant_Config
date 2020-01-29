@@ -29,3 +29,15 @@ cards:
      - hassel
      - Sälg / vide
      - Ambrosia
+     
+ - type: custom:calendar-card
+   title: "Kalender"
+   progressBar: true
+   entities:
+    - calendar.familjenkernehed_gmail_com
+    - calendar.f2012_ik_huge_fb
+    - calendar.isabelle_kernehed_gmail_com
+    - calendar.jobb_kalendern
+    - calendar.oskarkernehed_gmail_com
+    - calendar.spelschema_hammarby_if
+    - calendar.hockeyskola_ik_huge_ih

@@ -37,6 +37,8 @@ resources:
     type: module
   - url: /community_plugin/lovelace-google-keep-card/google-keep-card.js
     type: module
+  - url: /community_plugin/calendar-card/calendar-card.js
+    type: js
 title: Kernehed Manison
 views:
   - !include lovelace/home.yaml

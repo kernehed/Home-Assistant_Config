@@ -307,7 +307,7 @@
   {% endif %}
 
   {% if call_dark_outside == 1 %}
-  {{ dark_outisde() }}
+  {{ dark_outside() }}
   {% endif %}
 
   {% if call_goodnight_line == 1 %}

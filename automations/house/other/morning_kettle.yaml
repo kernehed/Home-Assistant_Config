@@ -1,9 +1,10 @@
 id: morning_kettle_id 
 alias: Vattenkokaren morgon
+initial_state: 'on'
 trigger: 
   platform: state 
   entity_id: sensor.oskars_bt_mqtt 
-  to: 'Köket' 
+  to: Köket
 condition:
   condition: and
   conditions:

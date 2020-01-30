@@ -4,7 +4,7 @@ trigger:
   - platform: state
     entity_id:
       - device_tracker.oskarstelefon
-      - device_tracker.iphone_7
+      - device_tracker.devices_bella
       - group.devices_evenice
     from: 'not_home'
     to: 'home'
@@ -17,7 +17,7 @@ action:
   - service: script.speech_engine
     data_template:
       personarriving: >-
-       {%- if trigger.entity_id == 'device_tracker.iphone_7' -%}
+       {%- if trigger.entity_id == 'device_tracker.devices_bella' -%}
          {%- set person = "Bella" -%}
        {%- elif trigger.entity_id == 'device_tracker.oskarstelefon' -%}
          {%- set person = "Oskar" -%}
@@ -47,3 +47,4 @@ action:
         {{greeting_sentence(person)}}
       call_responsibilities: 1
       call_inspirational_quote: 1
+      call_evenice_skola: 1

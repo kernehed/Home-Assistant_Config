@@ -124,7 +124,7 @@ elements:
     service: input_select.select_option
     service_data:
       entity_id: input_select.floorplan_floor
-      option: Övervåning
+      option: Entréplan
     style:
       top: 20%
       left: 56%

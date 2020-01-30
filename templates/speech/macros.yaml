@@ -213,7 +213,7 @@
    {% if states.sensor.oskars_fodelsedag.state | int == 1 %}
     Imorgon fyller Oskar {{ states.sensor.oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
     {% elif states.sensor.oskars_fodelsedag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.oskars_fodelsedag.state }} dagar tills Oskar fyller {{ states.sensor.oskar_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+    Se där, det är bara {{ states.sensor.oskars_fodelsedag.state }} dagar tills Oskar fyller {{ states.sensor.oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %} 
 
    {% if states.sensor.evenice_fodelsedag.state | int == 120 %}
@@ -253,7 +253,7 @@
   {% set day_of_the_week = weekday[now().isoweekday() ] %}
   {% if day_of_the_week == 'Söndag' or day_of_the_week == 'Torsdag' %}
       Imorgon skall Evenice ha gymnastik på skolan.
-      Glöm inte Handduk, t-shirt, gympabyxor, trosor, strumpor, gymnastikskor och vattenflaska.
+      Glöm inte handduk, t-shirt, gympabyxor, trosor, strumpor, gymnastikskor och vattenflaska.
   {% endif %}
   {% if day_of_the_week == 'Måndag' %}
      Glöm inte att läsa i böckerna som Evenice fått i läxa.

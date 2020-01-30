@@ -252,7 +252,7 @@
   {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
   {% set day_of_the_week = weekday[now().isoweekday() ] %}
   {% if day_of_the_week == 'Söndag' or day_of_the_week == 'Torsdag' %}
-      Imorgon skall Evenice ha gymnastik på skolan.
+      Imorgon ska Evenice ha gymnastik på skolan.
       Glöm inte handduk, t-shirt, gympabyxor, trosor, strumpor, gymnastikskor och vattenflaska.
   {% endif %}
   {% if day_of_the_week == 'Måndag' %}

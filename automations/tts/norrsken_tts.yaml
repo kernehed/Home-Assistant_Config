@@ -1,0 +1,14 @@
+alias: Norrsken notify
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.aurora_visibility
+  to: 'on'
+action:
+  - service: notify.adults
+    data:
+      message: "Gå ut och ta med kameran! Man kan få se Norrsken idag!"
+  - service: tts.google_translate_say
+    entity_id: media_player.tts
+    data:
+      message: "Gå ut och ta med kameran! Man kan få se Norrsken idag!"

@@ -1,0 +1,11 @@
+alias: 'evenice fodelsedag'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.evenice_fodelsedag
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_evenice_fodelsedag: 1

@@ -1,0 +1,11 @@
+alias: 'skarmtid'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.idesprutan
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_idesprutan: 1

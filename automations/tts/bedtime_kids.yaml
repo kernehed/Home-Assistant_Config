@@ -1,0 +1,12 @@
+alias: 'läggdags barnen'
+initial_state: 'on'
+trigger:
+  - platform: time
+    at: '18:33:00'
+action:
+  - service: script.speech_engine
+    data_template:
+      call_bedtime_kids: 1
+      delay: '00:00:03'
+      call_inspirational_quote: 1
+      call_evenice_skola: 1

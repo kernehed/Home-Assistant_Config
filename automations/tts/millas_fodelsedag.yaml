@@ -1,0 +1,11 @@
+alias: 'millas fodelsedag'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.millas_fodelsedag
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_millas_fodelsedag: 1

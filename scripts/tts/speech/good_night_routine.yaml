@@ -1,0 +1,28 @@
+goodnight_routine:
+  alias: Godnatt rutin
+  sequence:
+  - service: light.turn_off
+    entity_id: light.vardagsrum_stativ
+  - service: light.turn_off
+    entity_id: light.vardagsrum_tak
+  - service: light.turn_off
+    entity_id: group.light_tvattstugan
+  - service: light.turn_off
+    entity_id: group.light_hallen
+  - service: light.turn_off
+    entity_id: group.light_kallaren
+  - service: light.turn_off
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level
+  - service: light.turn_off
+    entity_id: light.vardagsrum_spotlights
+  - service: light.turn_off
+    entity_id: light.vardagsrum_trapp
+  - service: light.turn_off
+    entity_id: group.light_kitchen 
+  - service: light.turn_off
+    entity_id: group.light_sovrummet
+  - service: script.speech_engine
+    data_template:
+      call_inspirational_quote: 1
+      delay: '00:00:03'
+      call_goodnight_line: 1

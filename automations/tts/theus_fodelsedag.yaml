@@ -1,0 +1,11 @@
+alias: 'theus fodelsdag'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.theus_fodelsedag
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_theus_fodelsedag: 1

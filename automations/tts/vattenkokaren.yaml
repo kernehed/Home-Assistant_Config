@@ -1,0 +1,22 @@
+id: kettle boolean
+alias: Vattenkokaren_boolean
+trigger: 
+  platform: state
+  entity_id: input_boolean.vattenkokaren
+  from: 'off'
+  to: 'on'
+action:
+
+  - service: switch.turn_on
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch
+  - service: script.speech_engine
+    data_template:
+      value1: >-
+          {{ [
+             "Vattenkokaren är nu påslagen, ditt te kommer serveras rykande varmt. Stänger av den om 20 minuter för säkerhetsskull!",
+             "Vattenkokaren är nu påslagen och kommer värma ditt vatten. Du får dock hämta det själv. Stänger av den om 20 minuter för säkerhetsskull!!",
+          ] | random }}
+  - delay:
+      minutes: 20
+  - service: switch.turn_off
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch

@@ -1,0 +1,11 @@
+alias: Plex Recently Added Webhook
+trigger:
+  platform: webhook
+  webhook_id: recently_added
+condition:
+  - condition: template
+    value_template: '{{ as_timestamp(now()) - as_timestamp(states.automation.plex_recently_added_webhook.attributes.last_triggered) | int > 60 }}'  
+action:
+  - service: script.speech_engine
+    data_template:
+      NewPlexTitle: 'Ett nytt objekt med namn {{trigger.json["title"]}} har lagts till i Plex, är du sugen på film?'

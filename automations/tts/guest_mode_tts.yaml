@@ -1,0 +1,19 @@
+alias: Guest Mode TTS Feed back
+initial_state: 'on'
+id: '1545925758700'
+trigger:
+  platform: state
+  entity_id: input_boolean.guest_mode
+  from: 'off'
+  to: 'on'
+action:
+  - service: script.speech_engine
+    data_template:
+      value1: >-
+          {{ [
+             "Gästläget har aktiverats, jag avaktiverar några funktioner som underlättar för gästerna.",
+             "Gästläget har aktiverats, kul med gäster. Tråkigt att jag får gå i ide en stund.",
+          ] | random }}
+      call_inspirational_quote: 1
+      call_responsibilities: 1
+      call_evenice_skola: 1

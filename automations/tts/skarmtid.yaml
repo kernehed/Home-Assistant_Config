@@ -1,0 +1,11 @@
+alias: 'skarmtid'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.skarmtid
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_time_with_screen: 1

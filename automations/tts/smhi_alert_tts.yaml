@@ -1,0 +1,26 @@
+alias: 'SMHI Alert'
+initial_state: 'on'
+trigger:
+  - platform: time_pattern
+    hours : '/3'
+    minutes: 00
+    seconds: 00
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '06:00:00'
+      before: '20:00:00'
+    - condition: state
+      entity_id: sensor.smhialert
+      state: 'Alert'
+action:
+  - service: notify.adults
+    data_template:
+      title: 'SMHI Varning'
+      message: "{{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['event'] }}  {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['description'] | regex_replace('Intensitet: |När:.*|Var:.*|Kommentar:.*', '') }}"
+  - service: tts.google_translate_say
+    entity_id:
+      - media_player.tts
+    data_template:
+      message: "Lyssna, det är en varning utfärdad av SMHI, Meddelandet kommer här, {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['event'] }} {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['description'] | regex_replace('Intensitet: |När:*|Var:*|Kommentar:*', '') }}"

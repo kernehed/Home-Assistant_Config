@@ -1,0 +1,11 @@
+alias: 'oskars fodelsedag'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.oskars_fodelsedag
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_oskars_fodelsedag: 1

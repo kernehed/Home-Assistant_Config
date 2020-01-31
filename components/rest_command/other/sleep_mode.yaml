@@ -1,0 +1,3 @@
+sleep_mode:
+  url: !secret sleep_mode_tasker
+  method: post

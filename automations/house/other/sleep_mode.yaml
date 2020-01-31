@@ -1,0 +1,19 @@
+id: good_night_id
+alias: sleep_mode_on
+initial_state: 'on'
+trigger: 
+  platform: state 
+  entity_id: sensor.oskars_bt_mqtt 
+  to: Sovrummet
+  for: '00:15:00'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: group.devices_adults
+      state: 'home'
+    - condition: time
+      after: '20:00:00'
+      before: '04:00:00'
+action:
+  - service: rest_command.sleep_mode

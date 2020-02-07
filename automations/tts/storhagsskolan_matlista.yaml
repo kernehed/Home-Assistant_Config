@@ -3,6 +3,14 @@ initial_state: 'on'
 trigger:
   - platform: time
     at: '06:45:00'
+condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
 action:
   - service: script.speech_engine
     data_template:

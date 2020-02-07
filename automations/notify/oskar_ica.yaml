@@ -4,7 +4,7 @@ trigger:
   platform: zone
   event: enter
   zone: zone.ica_fjallbacken
-  entity_id: device_tracker.google_maps_114170795730412573739
+  entity_id: person.oskar
 action:
   - service: notify.adults
     data:

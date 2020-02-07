@@ -4,7 +4,7 @@ trigger:
   platform: zone
   event: leave
   zone: zone.home
-  entity_id: device_tracker.evenice_iphone
+  entity_id: person.evenice
 action:
   - service: notify.adults
     data:

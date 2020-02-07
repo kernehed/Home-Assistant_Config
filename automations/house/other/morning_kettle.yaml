@@ -25,6 +25,7 @@ action:
   - service: switch.turn_on
     entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch
   - delay:
-      minutes: 45
+      minutes: 20
   - service: switch.turn_off
     entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch
+  

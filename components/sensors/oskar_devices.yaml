@@ -16,7 +16,8 @@ sensors:
         'away': 'Borta',
         'Tempo': 'Tempo',
         'ICA Fjällbacken': 'ICA Fjällbacken',
-        'Bellas jobb': 'Bellas jobb'
+        'Bellas jobb': 'Bellas jobb',
+        'SEAB': 'SEAB'
       } -%}
       {% if custom_state[device_state1] != '' and device_state2 == 'not_home' %}
        {{custom_state[device_state1]}}

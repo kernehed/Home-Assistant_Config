@@ -18,5 +18,7 @@ action:
           ] | random }}
   - delay:
       minutes: 20
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.vattenkokaren
   - service: switch.turn_off
     entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch

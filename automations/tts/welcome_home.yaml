@@ -3,9 +3,9 @@ initial_state: 'on'
 trigger:
   - platform: state
     entity_id:
-      - device_tracker.oskarstelefon
-      - device_tracker.devices_bella
-      - group.devices_evenice
+      - person.oskar
+      - person.bella
+      - person.evenice
     from: 'not_home'
     to: 'home'
     for: '00:02:00'
@@ -17,11 +17,11 @@ action:
   - service: script.speech_engine
     data_template:
       personarriving: >-
-       {%- if trigger.entity_id == 'device_tracker.devices_bella' -%}
+       {%- if trigger.entity_id == 'person.bella' -%}
          {%- set person = "Bella" -%}
-       {%- elif trigger.entity_id == 'device_tracker.oskarstelefon' -%}
+       {%- elif trigger.entity_id == 'person.oskar' -%}
          {%- set person = "Oskar" -%}
-       {%- elif trigger.entity_id == 'group.devices_evenice' -%}
+       {%- elif trigger.entity_id == 'person.evenice' -%}
          {%- set person = "Evenice" -%}
        {%- else -%}
          {%- set person = "Alla" -%}

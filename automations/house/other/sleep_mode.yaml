@@ -5,7 +5,7 @@ trigger:
   platform: state 
   entity_id: sensor.oskars_bt_mqtt 
   to: Sovrummet
-  for: '00:15:00'
+  for: '00:05:00'
 condition:
   condition: and
   conditions:

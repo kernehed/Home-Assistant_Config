@@ -1,5 +1,5 @@
 devices_bella:
   name: Enheter bella
   entities:
-  - device_tracker.iphone_7
+  - device_tracker.iphone
   - device_trackker.bellas_telefon

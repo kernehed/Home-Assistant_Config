@@ -262,7 +262,7 @@
      Glöm inte att läsa i böckerna som Evenice fått i läxa.
   {% endif %}
   {% if day_of_the_week == 'Onsdag' %}
-     Imorgon ska Evenice läsläxa in. Glöm inte att ta med boken.
+     Imorgon ska Evenice läsa för fröken. Har hon läst?
   {% endif %}
   {%- endmacro -%}
 

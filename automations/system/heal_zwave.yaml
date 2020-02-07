@@ -1,5 +1,4 @@
 alias: Heal zwave network
-hide_entity: True
 trigger:
   platform: time
   at: '2:31:00'

@@ -4,12 +4,12 @@ trigger:
   platform: zone
   event: enter
   zone: zone.mamma
-  entity_id: device_tracker.evenice_iphone
+  entity_id: person.evenice
 action:
   - service: notify.adults
     data:
-      message: "Evenice är hos mamma!"
+      message: "Evenice är hos farmor!"
   - service: tts.google_translate_say
     entity_id: media_player.tts
     data:
-      message: "Evenice är hos mamma!"
+      message: "Evenice är hos farmor!"

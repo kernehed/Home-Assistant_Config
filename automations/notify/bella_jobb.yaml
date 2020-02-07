@@ -4,7 +4,7 @@ trigger:
   platform: zone
   event: enter
   zone: zone.bellas_jobb
-  entity_id: device_tracker.bellas_telefon
+  entity_id: person.bella
 action:
   - service: notify.telegram_oskar
     data:

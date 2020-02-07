@@ -1,0 +1,17 @@
+id: kettle boolean
+alias: vattenkokaren_klart
+trigger: 
+  platform: state
+  entity_id: sensor.vattenkokare_status
+  from: 'Kokar'
+  to: 'Standby'
+action:
+
+  - service: script.speech_engine
+    data_template:
+      value1: >-
+          {{ [
+             "Tevattnet är nu klart, var försiktig när du dricker det kan vara varmt!!",
+             "Nu kan du hälla vattnet i koppen för att göra lite te.!",
+             "Nu är tevattnet klart, varsegod!!",
+          ] | random }}

@@ -24,7 +24,7 @@ cards:
                   left: 85%
                   color: white
               - type: state-label
-                entity: sensor.oskar_devices
+                entity: person.oskar
                 style:
                   top: 93%
                   left: 50%
@@ -45,7 +45,7 @@ cards:
 #                  left: 85%
 #                  color: white
               - type: state-label
-                entity: sensor.bella_devices
+                entity: person.bella
                 style:
                   top: 92%
                   left: 50%
@@ -66,7 +66,7 @@ cards:
 #                  left: 82%
 #                  color: white
               - type: state-label
-                entity: sensor.evenice_devices
+                entity: person.evenice
                 style:
                   top: 92%
                   left: 50%

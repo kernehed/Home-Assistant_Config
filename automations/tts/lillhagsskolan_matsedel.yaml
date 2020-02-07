@@ -3,6 +3,14 @@ initial_state: 'on'
 trigger:
   - platform: time
     at: '06:48:00'
+condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
 action:
   - service: script.speech_engine
     data_template:
@@ -20,4 +28,3 @@ action:
           {{ states('sensor.lillhagsskolan_lunch_fredag') }}  
         {% endif %}
       call_inspirational_quote: 1
-      call_evenice_skola: 1

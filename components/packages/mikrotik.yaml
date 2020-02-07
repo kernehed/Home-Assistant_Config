@@ -1,7 +1,8 @@
-mikrotik:
-  - host: !secret mikrotik_ip
-    username: !secret mikrotik_un
-    password: !secret router_password
-    method: dhcp
-    track_devices: true
-    
+#mikrotik:
+#  - name: Mikrotik
+#    host: !secret mikrotik_ip
+#    username: !secret mikrotik_un
+#    password: !secret router_password
+#    arp_ping: true
+#    force_dhcp: true
+#    detection_time: 30

@@ -3,8 +3,8 @@ initial_state: 'on'
 trigger:
   - platform: state
     entity_id:
-      - person.oskar
       - person.bella
+      - person.oskar
       - person.evenice
     from: 'not_home'
     to: 'home'

@@ -4,6 +4,6 @@ feed_url: 'https://mikrotik.com/download.rss'
 date_format: '%a, %b %d %I:%M %p'
 inclusions:
   - title
-  - link
+#  - link
 exclusions:
   - language

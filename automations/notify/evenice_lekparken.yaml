@@ -1,0 +1,15 @@
+alias: Evenice i skolan
+initial_state: 'on'
+trigger:
+  platform: zone
+  event: enter
+  zone: zone.lekparken
+  entity_id: person.evenice
+action:
+  - service: notify.adults
+    data:
+      message: "Evenice är i lekparken!"
+  - service: tts.google_translate_say
+    entity_id: media_player.tts
+    data:
+     message: "Evenice är i lekparken!"

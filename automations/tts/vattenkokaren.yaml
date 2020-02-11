@@ -5,6 +5,7 @@ trigger:
   entity_id: input_boolean.vattenkokaren
   from: 'off'
   to: 'on'
+
 action:
 
   - service: switch.turn_on

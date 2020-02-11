@@ -14,6 +14,8 @@ condition:
     - condition: time
       after: '05:45:00'
       before: '07:00:00'
+    - condition: template
+      value_template: '{{ as_timestamp(now()) - as_timestamp(states.automation.vattenkokaren_morgon.attributes.last_triggered) | int > 3600 }}'
 action:
   - service: script.speech_engine
     data_template:

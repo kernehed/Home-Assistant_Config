@@ -2,4 +2,5 @@ devices_evenice:
   name: Enheter Evenice
   entities:
   - device_tracker.evenice_iphone
+  - device_tracker.evenice_iphone_3
   - device_tracker.evenice_iphone_2

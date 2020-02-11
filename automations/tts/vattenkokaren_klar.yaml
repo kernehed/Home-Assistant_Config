@@ -1,4 +1,4 @@
-id: kettle boolean
+id: kettle_boolean
 alias: vattenkokaren_klart
 trigger: 
   platform: state

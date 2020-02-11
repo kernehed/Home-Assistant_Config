@@ -1,0 +1,9 @@
+#platform: icloud3
+#username: !secret icloud_username_oskar
+#password: !secret icloud_password_oskar
+#group: family
+#tracking_method: famshr
+#track_devices:
+#  - iphone
+#  - evenice_iphone
+#log_level: debug, eventlog

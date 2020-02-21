@@ -93,7 +93,7 @@
       "Du är den bästa jag vet, godnatt! ",
       "Hör du det där? Det är din varma mjuka säng som ropar. Godnatt. ",
       "Du har så mycket att vara tacksam över... godnatt."
-    ]|random }}
+    ] | random }}
   {%- endmacro -%}  
   
   {%- macro days_until() -%}

@@ -3,9 +3,10 @@ initial_state: 'on'
 trigger:
   - platform: state
     entity_id:
-      - device_tracker.annasiphone
       - device_tracker.ingelas_iphone
       - device_tracker.andreass_iphone
+      - device_tracker.matildas_iphone
+      - device_tracker.daniels_iphone
     from: 'not_home'
     to: 'home'
     for: '00:02:00'
@@ -17,10 +18,12 @@ action:
   - service: script.speech_engine
     data_template:
       personarriving_guests: >-
-       {%- if trigger.entity_id == 'device_tracker.annasiphone' -%}
-         {%- set person = "Anna" -%}
+       {%- if trigger.entity_id == 'device_tracker.matildas_iphone' -%}
+         {%- set person = "Matilda" -%}
        {%- elif trigger.entity_id == 'device_tracker.ingelas_iphone' -%}
          {%- set person = "Ingela" -%}
+       {%- elif trigger.entity_id == 'device_tracker.daniels_iphone' -%}
+         {%- set person = "Daniel" -%}
        {%- elif trigger.entity_id == 'device_tracker.andreass_iphone' -%}
          {%- set person = "Andreas" -%}
        {%- else -%}

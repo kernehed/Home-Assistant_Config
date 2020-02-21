@@ -6,8 +6,13 @@ ifttt_alarm_clock:
   - service: light.turn_on
     data:
       entity_id: group.light_sovrummet
+      brightness: 1
+  - delay: '00:00:01'
+  - service: light.turn_on
+    data:
+      entity_id: group.light_sovrummet
       brightness: 255
-      transition: 600
+      transition: 180
   - service: tv4_play.play_suggested
     entity_id: media_player.bedroom
     data:

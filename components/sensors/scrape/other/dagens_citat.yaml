@@ -1,0 +1,6 @@
+platform: scrape
+name: dagens citat
+resource: https://www.dagenscitat.nu/rss.xml
+select: 'description'
+index: 1
+scan_interval: 3600

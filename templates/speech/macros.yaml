@@ -24,7 +24,10 @@
       "och en sak till, Om du inte själv designar din egen livsplan är sannolikheten stor att du hamnar i någon annans plan och gissa vad de har planerat för dig? Inte mycket.",
       "och en sak till, Varför jämföra dig med andra? Ingen i hela världen kan göra ett bättre jobb att vara du – än du.",
       "och en sak till, Om du inte är villig att ta risker, så kan du inte växa. Om du inte kan växa, så kan du inte bli det bästa du kan bli. Om du inte kan bli det bästa, så kan du inte bli lycklig. Om du inte kan bli lycklig, så vad mer finns det?",
-      "och en sak till, Det är ditt liv, var kärleksfull. "
+      "och en sak till, Det är ditt liv, var kärleksfull. ",
+      "och en sak till, Ta dig tid för återhämtning, du behöver inte bevisa någon någonting. ",
+      "och en sak till, Kom ihåg att återhämta dig, det behöver inte ta många minuter. ",
+      "och en sak till, Snälla, ta några minuter till återhämtning, till exempel meditation. "
       ] %}
       {{inspirational_quote|random}}
   {%- endmacro -%}

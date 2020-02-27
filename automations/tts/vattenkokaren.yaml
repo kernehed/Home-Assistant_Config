@@ -14,11 +14,11 @@ action:
     data_template:
       value1: >-
           {{ [
-             "Vattenkokaren är nu påslagen, ditt te kommer serveras rykande varmt. Stänger av den om 20 minuter för säkerhetsskull!",
-             "Vattenkokaren är nu påslagen och kommer värma ditt vatten. Du får dock hämta det själv. Stänger av den om 20 minuter för säkerhetsskull!!",
+             "Vattenkokaren är nu påslagen, ditt te kommer serveras rykande varmt. Stänger av den om 5 minuter för säkerhetsskull!",
+             "Vattenkokaren är nu påslagen och kommer värma ditt vatten. Du får dock hämta det själv. Stänger av den om 5 minuter för säkerhetsskull!!",
           ] | random }}
   - delay:
-      minutes: 20
+      minutes: 5
   - service: input_boolean.turn_off
     entity_id: input_boolean.vattenkokaren
   - service: switch.turn_off

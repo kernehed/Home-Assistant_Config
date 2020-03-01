@@ -61,6 +61,11 @@ users:
   enabled: false
   code: 0baaba3c0bfb49589998b91e061a812b
   picture: ha.png
+- id: d9cb27b0787b4e45b8b1b4cee03a42a4
+  name: guest
+  enabled: true
+  code: !secret alarm_code_guest
+  picture: ''
 code: !secret alarm_code
 enable_persistence: true
 admin_password: !secret alarm_pw

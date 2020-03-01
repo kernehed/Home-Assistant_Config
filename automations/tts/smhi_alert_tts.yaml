@@ -19,8 +19,6 @@ action:
     data_template:
       title: 'SMHI Varning'
       message: "{{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['event'] }}  {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['description'] | regex_replace('Intensitet: |När:.*|Var:.*|Kommentar:.*', '') }}"
-  - service: tts.google_translate_say
-    entity_id:
-      - media_player.tts
-    data_template:
-      message: "Lyssna, det är en varning utfärdad av SMHI, Meddelandet kommer här, {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['event'] }} {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['description'] | regex_replace('Intensitet: |När:*|Var:*|Kommentar:*', '') }}"
+  - service: script.speech_engine
+    data:
+      call_smhi_alert: 1

@@ -288,8 +288,11 @@
   
   {%- macro bellas_fodelsedag() -%}
    Idag är det {{ states.sensor.bellas_fodelsedag.state }} dagar tills Bella fyller år!
-  {%- endmacro -%}  
+  {%- endmacro -%}
   
+  {%- macro smhi_alert() -%}
+   Lyssna, det är en varning utfärdad av SMHI, Meddelandet kommer här, {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['event'] }} {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['description'] | regex_replace('Intensitet: |När:*|Var:*|Kommentar:*', '') }}
+  {%- endmacro -%}
   {# ********************************************* #}
   {#  ******** Start the Speech routines ********  #}
   {# ********************************************* #}
@@ -363,7 +366,11 @@
   {% if call_bellas_fodelsedag == 1 %}
   {{ bellas_fodelsedag() }}
   {% endif %} 
-
+  
+  {% if call_smhi_alert == 1 %}
+  {{ smhi_alert() }}
+  {% endif %} 
+  
   {{ NewDevice }}
  
   {{ NewPlexTitle }}
@@ -371,4 +378,4 @@
 
   
   {# call a Random fact #}
-  {{ ([iss, moon, fodelsedag, arsdag, days_until]|random)() }}
+  {{ ([iss, moon, fodelsedag, arsdag, days_until, smhi_alert]|random)() }}

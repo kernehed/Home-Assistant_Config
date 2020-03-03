@@ -295,7 +295,7 @@
   {%- endmacro -%}
 
   {%- macro coronavirus() -%}
-   Och för er information, Det är just nu {{ states.sensor.sweden_coronavirus_confirmed.state }} personer smittade av coronaviruset i Sverige. 
+   Och för er information, Det är just nu {{ states.sensor.sweden_coronavirus_confirmed.state }} personer smittade av coronaviruset i Sverige och {{states.sensor.worldwide_coronavirus_confirmed.state}} personer i världen. 
   {%- endmacro -%}
    
   {# ********************************************* #}

@@ -1,0 +1,17 @@
+id: 'turn_off_boiler_command'
+alias: 'turn_off_boiler_command'
+trigger:
+- platform: event
+  event_type: telegram_callback
+  event_data:
+    command: '/turn_off_boiler'
+action:
+- service: switch.turn_off
+  data:
+    entity_id:
+      - switch.fibaro_system_fgwpe_f_wall_plug_switch
+- service: telegram_bot.send_message
+  data_template:
+    callback_query_id: '{{ trigger.event.data.id }}'
+    target: -1001200237113
+    message: 'Okej, {{ trigger.event.data["from_first"] }} har nu stängt av vattenkokaren.'

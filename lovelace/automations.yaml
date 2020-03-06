@@ -3,7 +3,7 @@ id: automationer
 icon: mdi:settings
 background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -12,7 +12,7 @@ cards:
       include:
         - entity_id: "automation.*"
           state: "on"
-  - type: custom:monster-card
+  - type: custom:auto-entities
     show_empty: false
     card:
       type: entities

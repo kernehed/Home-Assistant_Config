@@ -1,0 +1,25 @@
+id: 'house disarmed not home_notify'
+alias: 'house disarmed or not locked not home_notify'
+trigger:
+- platform: state
+  entity_id: group.devices_adults
+  to: 'not_home'
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: lock.polycontrol_danalock_v3_btze_locked
+      state: 'unlocked'
+    - condition: state
+      entity_id: alarm_control_panel.house
+      state: 'disarmed'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Dörren är inte låst eller larmad, ska jag låsa den?'
+    inline_keyboard:
+      - "Lås bara dörren:/lock_door"
+      - "Larma på bortaläget:/alarm_arm_away"
+      - "Larma på hemmaläget:/alarm_arm_home"
+      - "Ta bort tangentbordet:/removekeyboard"

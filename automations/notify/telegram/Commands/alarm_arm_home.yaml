@@ -1,0 +1,17 @@
+id: alarm_is_not_armed_home_command
+alias: 'alarm_is_not_armed_home_command'
+trigger:
+- platform: event
+  event_type: telegram_callback
+  event_data:
+    command: '/alarm_arm_home'
+action:
+- service: alarm_control_panel.alarm_arm_home
+  data:
+    entity_id:
+      - alarm_control_panel.house
+- service: telegram_bot.send_message
+  data_template:
+    callback_query_id: '{{ trigger.event.data.id }}'
+    target: -1001200237113
+    message: 'Okej, {{ trigger.event.data["from_first"] }} har nu larmat hemmaläget.'

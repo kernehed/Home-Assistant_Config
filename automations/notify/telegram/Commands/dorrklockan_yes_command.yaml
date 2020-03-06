@@ -1,0 +1,13 @@
+id: 'dorrklockan_yes_command'
+alias: 'dorrklockan_yes_command'
+trigger:
+- platform: event
+  event_type: telegram_callback
+  event_data:
+    command: '/dorrklockan_yes'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    callback_query_id: '{{ trigger.event.data.id }}'
+    target: -1001200237113
+    message: '{{ trigger.event.data["from_first"] }} öppnar dörren.'

@@ -1,5 +1,3 @@
-platform: group  
+platform: telegram  
 name: adults
-services:
-  - service: telegram_oskar
-  - service: telegram_bella
+chat_id: -1001200237113

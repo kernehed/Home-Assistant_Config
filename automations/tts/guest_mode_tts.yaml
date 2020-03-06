@@ -1,6 +1,6 @@
 alias: Guest Mode TTS Feed back
 initial_state: 'on'
-id: '1545925758700'
+id: '1545925758712312300'
 trigger:
   platform: state
   entity_id: input_boolean.guest_mode

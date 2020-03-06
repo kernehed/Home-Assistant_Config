@@ -1,14 +1,11 @@
   ##############################################
   ####  Tänd kl 06.00 på veckorna [Lights]  ####
   ##############################################   
-alias: Tänd lamporna vid 07.00
+alias: Tänd lamporna vid 06.00
 initial_state: 'on'
 trigger: 
   - platform: time
     at: "06:00:00"
-  - platform: state
-    entity_id: sun.sun
-    to: 'below_horizon'
 condition:
   condition: and
   conditions:
@@ -36,7 +33,3 @@ action:
     data:
       entity_id: light.vardagsrum_spotlights
       brightness: 30
-#  - service: light.turn_on
-#    data:
-#      entity_id: light.fibaro_system_fgd212_dimmer_2_level
-#      brightness: 30

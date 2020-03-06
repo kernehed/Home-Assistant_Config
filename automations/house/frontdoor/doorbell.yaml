@@ -23,3 +23,11 @@ action:
   - service: notify.adults
     data:
       message: !secret camera_url_ingress
+  - service: telegram_bot.send_message
+    data_template:
+      target: -1001200237113
+      message: 'Någon ringer på dörren, kan du öppna?'
+      inline_keyboard:
+        - "Öppnar:/dorrklockan_yes"
+        - "Upptagen:/dorrklockan_no"
+        - "Ta bort tangentbordet:/removekeyboard"

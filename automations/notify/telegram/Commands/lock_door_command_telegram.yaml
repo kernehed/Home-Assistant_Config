@@ -1,0 +1,19 @@
+id: lock_door_if_open_after_21_00_command
+alias: 'lock_door_command'
+trigger:
+- platform: event
+  event_type: telegram_callback
+  event_data:
+    command: '/lock_door'
+action:
+- service: lock.lock
+  data:
+    entity_id:
+      - lock.polycontrol_danalock_v3_btze_locked
+- delay: '00:00:11'
+- service: telegram_bot.send_message
+  data_template:
+    callback_query_id: '{{ trigger.event.data.id }}'
+    target: -1001200237113
+    message: 'Okej, {{ trigger.event.data["from_first"] }} låser dörren. Status: {states.lock.polycontrol_danalock_v3_btze_locked.state}'
+

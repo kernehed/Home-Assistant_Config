@@ -4,3 +4,4 @@ parse_mode: html
 allowed_chat_ids:
   - 543927188 # Oskar
   - 535882719 # Bella
+  - -1001200237113 # Grupp

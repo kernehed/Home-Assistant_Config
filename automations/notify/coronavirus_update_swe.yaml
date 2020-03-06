@@ -1,0 +1,11 @@
+id: Coronavirus Update SWE
+alias: Coronavirus Confirmed Cases Increase in SWE
+trigger:
+- platform: numeric_state
+  above: 0
+  entity_id: sensor.sweden_coronavirus_confirmed
+action:
+- service: notify.adults
+  data_template:
+    title: Coronavirus uppdatering.
+    message: "Det är just nu {{ states('sensor.sweden_coronavirus_confirmed') }} personer smittade med Corona i Sverige. Personer som avlidit: {{ states('sensor.sweden_coronavirus_deaths') }}."

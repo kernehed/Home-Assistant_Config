@@ -1,0 +1,22 @@
+id: 'milla_dog_food_yes_command'
+alias: 'milla_dog_food_yes_command'
+trigger:
+- platform: event
+  event_type: telegram_callback
+  event_data:
+    command: '/milla_food_yes'
+action:
+#- service: telegram_bot.answer_callback_query
+#  data_template:
+#    callback_query_id: '{{ trigger.event.data.id }}'
+#    message: 'Okej, {{ trigger.event.data["from_first"] }} har fått informationen.'
+#    show_alert: true
+- service: telegram_bot.send_message
+  data_template:
+    callback_query_id: '{{ trigger.event.data.id }}'
+    target: -1001200237113
+    message: 'Okej, {{ trigger.event.data["from_first"] }} fixar det.'
+- service: tts.google_translate_say
+  entity_id: media_player.tts
+  data:
+   message: 'Okej, jag ser att någon har sett informationen!'

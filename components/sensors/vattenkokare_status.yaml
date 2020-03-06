@@ -15,9 +15,9 @@ sensors:
     icon_template: >
        {% if is_state('switch.fibaro_system_fgwpe_f_wall_plug_switch', 'off') %}
         mdi:kettle-off
-       {% elif states.sensor.fibaro_system_fgwpe_f_wall_plug_power.attributes.power_consumption | int  < 1500 %}
+       {% elif state_attr('sensor.fibaro_system_fgwpe_f_wall_plug_power', 'power_consumption')| int  < 1500 %}
         mdi:kettle
-       {% elif states.sensor.fibaro_system_fgwpe_f_wall_plug_power.attributes.power_consumption | int  > 1500 %}
+       {% elif state_attr('sensor.fibaro_system_fgwpe_f_wall_plug_power', 'power_consumption')| int  > 1500 %}
         mdi:kettle-steam
        {% else %}
         mdi:kettle-off

@@ -29,11 +29,11 @@ action:
     entity_id: media_player.tts
     data:
      message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
-  - service: tts.google_translate_say
-    entity_id: media_player.tts
-    data:
-     message: 'Notera! Kom ihåg att Milla ska ha mat snart!'
-  - service: notify.adults
-    data:
-      title: 'Milla'
-      message: 'Kom ihåg att Milla ska ha mat snart!'
+  - service: telegram_bot.send_message
+    data_template:
+      target: -1001200237113
+      message: 'Har milla fått mat, det är dags nu?'
+      inline_keyboard:
+        - "Fixar det:/milla_food_yes"
+        - "Redan fått:/milla_food_no"
+        - "Ta bort tangentbordet:/removekeyboard"

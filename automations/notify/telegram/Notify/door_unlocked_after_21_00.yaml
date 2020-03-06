@@ -1,0 +1,17 @@
+id: 'door_unlocked_after_21_00_notify'
+alias: 'door unlocked after 21_00_notify'
+trigger:
+- platform: state
+  entity_id: lock.polycontrol_danalock_v3_btze_locked
+  to: 'unlocked'
+condition:
+    - condition: time
+      after: '21:05:00'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Dörren är inte låst och klockan är mycket, ska jag låsa den?'
+    inline_keyboard:
+      - "Lås dörren:/lock_door"
+      - "Ta bort tangentbordet:/removekeyboard"

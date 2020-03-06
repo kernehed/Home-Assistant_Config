@@ -1,0 +1,17 @@
+id: 'milla_dog_food_no_command'
+alias: 'milla_dog_food_no_command'
+trigger:
+- platform: event
+  event_type: telegram_callback
+  event_data:
+    command: '/milla_food_no'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    callback_query_id: '{{ trigger.event.data.id }}'
+    target: -1001200237113
+    message: 'Men, enligt {{ trigger.event.data["from_first"] }} har milla redan fått mat.'
+- service: tts.google_translate_say
+  entity_id: media_player.tts
+  data:
+   message: 'Men! Milla har redan fått mat!'

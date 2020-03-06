@@ -87,7 +87,7 @@ cards:
         items:
           - input_boolean.guest_mode
   - id: 6d4744d14a7c42668633cedbe655ba08  # Automatically created id
-    type: custom:monster-card
+    type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -124,7 +124,7 @@ cards:
           - binary_sensor.front_door_sensor
           - binary_sensor.unifi_camera
           - binary_sensor.back_door_sensor
-        camera_image: camera.entre
+        camera_image: camera.entre_2
         camera_view: live
       - type: entities
         entities:
@@ -162,7 +162,7 @@ cards:
         min: -50
         max: 50
   - id: 2a440c2701824fdb9d5ebc9827c0917b  # Automatically created id
-    type: custom:monster-card
+    type: custom:auto-entities
     show_empty: false
     card:
       type: entities
@@ -173,4 +173,4 @@ cards:
         - entity_id: binary_sensor.fibaro_system_fgsd002_smoke_sensor_sensor
         - entity_id: binary_sensor.fibaro_system_fgsd002_smoke_sensor_sensor_2
       exclude:
-        - state: off
+        - state: "off"

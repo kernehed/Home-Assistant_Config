@@ -1,0 +1,20 @@
+id: 'turn_off_boiler_notify'
+alias: 'turn_off_boiler_notify'
+trigger:
+- platform: state
+  entity_id: group.devices_adults
+  to: 'not_home'
+- platform: time
+  at: '21:05:00'
+condition:
+    - condition: state
+      entity_id: switch.fibaro_system_fgwpe_f_wall_plug_switch
+      state: 'on'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Vattenkokaren är inte avstängd, ska jag stänga av den?'
+    inline_keyboard:
+      - "Ja:/turn_off_boiler"
+      - "Ta bort tangentbordet:/removekeyboard"

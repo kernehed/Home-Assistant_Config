@@ -1,5 +1,5 @@
 id: 'telegramremoveinline_command'
-alias: 'Telegram remove keyboard command'
+alias: 'telegram_remove_keyboard_command'
 trigger:
   platform: event
   event_type: telegram_callback

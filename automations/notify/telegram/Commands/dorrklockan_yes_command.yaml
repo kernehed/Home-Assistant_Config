@@ -1,13 +1,18 @@
 id: 'dorrklockan_yes_command'
 alias: 'dorrklockan_yes_command'
 trigger:
-- platform: event
+- platform: event # this is the command
   event_type: telegram_callback
   event_data:
     command: '/dorrklockan_yes'
 action:
-- service: telegram_bot.send_message
+- service: telegram_bot.send_message # Sends message to group that "person" opens the door
   data_template:
     callback_query_id: '{{ trigger.event.data.id }}'
     target: -1001200237113
     message: '{{ trigger.event.data["from_first"] }} öppnar dörren.'
+- service: telegram_bot.edit_replymarkup
+  data_template:
+    message_id: '{{ trigger.event.data.message.message_id }}'
+    chat_id: -1001200237113
+    inline_keyboard: 

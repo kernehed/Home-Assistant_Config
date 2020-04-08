@@ -1,0 +1,23 @@
+id: 'turn_off_alarm_notify'
+alias: 'turn_off_alarm_notify'
+trigger:
+- platform: state
+  entity_id: group.devices_adults
+  to: 'home'
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: alarm_control_panel.house
+      state: 'armed_away'
+    - condition: state
+      entity_id: alarm_control_panel.house
+      state: 'armed_home'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Välkommen hem, jag ser att det är larmat. Ska det larmas av?'
+    inline_keyboard:
+      - "Ja:/disarm_alarm"
+      - "Nej:/removekeyboard"

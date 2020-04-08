@@ -5,17 +5,17 @@ background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: flowers1  
     type: custom:flower-card
-    entity: plant.snack_chilin
-    species: "capsicum salsa red"
+    entity: plant.citronfikus
+    species: "ficus microcarpa"
   - id: flowers2 
     type: custom:flower-card
-    entity: plant.stora_chilin
-    species: "capsicum favorit purple red 'gt58'"
+    entity: plant.aloevera_theus
+    species: "aloe vera"
   - id: flowers3 
     type: custom:flower-card
-    entity: plant.jalapeno
-    species: "capsicum annuum"
+    entity: plant.aloevera_evenice
+    species: "aloe vera"
   - id: flowers4
     type: custom:flower-card
-    entity: plant.basilika
-    species: "ocimum basilicum"
+    entity: plant.dionaea_theus
+    species: "dionaea muscipula"

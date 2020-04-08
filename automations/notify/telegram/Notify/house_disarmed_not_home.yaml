@@ -22,4 +22,4 @@ action:
       - "Lås bara dörren:/lock_door"
       - "Larma på bortaläget:/alarm_arm_away"
       - "Larma på hemmaläget:/alarm_arm_home"
-      - "Ta bort tangentbordet:/removekeyboard"
+      - "Ignorera:/removekeyboard"

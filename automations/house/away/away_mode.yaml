@@ -23,9 +23,9 @@ action:
   - service: light.turn_off
     entity_id: group.evenice_rum
   - service: light.turn_off
-    entity_id: media_player.livingroom
+    entity_id: media_player.sovrummets_tv
   - service: media_player.turn_off
-    entity_id: media_player.bedroom
+    entity_id: media_player.evenice_tv
   - service: media_player.media_stop
     entity_id: media_player.evenice_mini
   - service: media_player.media_stop
@@ -35,7 +35,7 @@ action:
   - service: media_player.media_stop
     entity_id: media_player.basement
   - service: media_player.turn_off
-    entity_id: media_player.livingroom_speaker
+    entity_id: media_player.sovrummets_hogtalare
   - service: media_player.media_stop
     entity_id: media_player.whole_house
   - service: media_player.media_stop

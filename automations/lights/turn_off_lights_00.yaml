@@ -17,9 +17,9 @@ condition:
         state: 'unknown'
 action:
   - service: light.turn_off
-    entity_id: light.vardagsrum_stativ
+    entity_id: light.sovrum_stativ
   - service: light.turn_off
-    entity_id: light.vardagsrum_tak
+    entity_id: light.sovrum_tak
   - service: light.turn_off
     entity_id: group.light_tvattstugan
   - service: light.turn_off
@@ -29,8 +29,8 @@ action:
   - service: light.turn_off
     entity_id: light.fibaro_system_fgd212_dimmer_2_level
   - service: light.turn_off
-    entity_id: light.vardagsrum_spotlights
+    entity_id: light.sovrum_spotlights
   - service: light.turn_on
-    entity_id: light.vardagsrum_trapp
+    entity_id: light.hall_trapp
   - service: light.turn_off
     entity_id: group.light_kitchen 

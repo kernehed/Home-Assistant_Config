@@ -1,0 +1,6 @@
+citronfikus:
+  sensors:
+    moisture: sensor.flower_1_moisture
+    temperature: sensor.flower_1_temperature
+    conductivity: sensor.flower_1_conductivity
+    brightness: sensor.flower_1_illuminance

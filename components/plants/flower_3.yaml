@@ -1,0 +1,6 @@
+aloevera_evenice:
+  sensors:
+    moisture: sensor.flower_3_moisture
+    temperature: sensor.flower_3_temperature
+    conductivity: sensor.flower_3_conductivity
+    brightness: sensor.flower_3_illuminance

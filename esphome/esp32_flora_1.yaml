@@ -1,0 +1,66 @@
+esphome:
+  name: esp32_flora_1
+  platform: ESP32
+  board: esp-wrover-kit
+
+esp32_ble_tracker:
+
+sensor:
+  - platform: xiaomi_hhccjcy01
+    mac_address: 'C4:7C:8D:6A:67:93'
+    temperature:
+      name: "Flower 1 Temperature"
+    moisture:
+      name: "Flower 1 Moisture"
+    illuminance:
+      name: "Flower 1 Illuminance"
+    conductivity:
+      name: "Flower 1 Conductivity"
+  - platform: xiaomi_hhccjcy01
+    mac_address: 'C4:7C:8D:6A:C5:13'
+    temperature:
+      name: "Flower 2 Temperature"
+    moisture:
+      name: "Flower 2 Moisture"
+    illuminance:
+      name: "Flower 2 Illuminance"
+    conductivity:
+      name: "Flower 2 Conductivity"
+  - platform: xiaomi_hhccjcy01
+    mac_address: 'C4:7C:8D:6A:F9:0B'
+    temperature:
+      name: "Flower 3 Temperature"
+    moisture:
+      name: "Flower 3 Moisture"
+    illuminance:
+      name: "Flower 3 Illuminance"
+    conductivity:
+      name: "Flower 3 Conductivity"
+  - platform: xiaomi_hhccjcy01
+    mac_address: 'C4:7C:8D:6A:C5:4E'
+    temperature:
+      name: "Flower 4 Temperature"
+    moisture:
+      name: "Flower 4 Moisture"
+    illuminance:
+      name: "Flower 4 Illuminance"
+    conductivity:
+      name: "Flower 4 Conductivity"
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp32 Flora 1 Fallback Hotspot"
+    password: "fZz0M6BVqOhz"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:

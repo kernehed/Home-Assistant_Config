@@ -133,7 +133,7 @@ cards:
       - type: picture-glance
         title: Vardagsrums kamera
         entities: 
-          - light.vardagsrum_tak
+          - light.hall_trapp
         camera_image: camera.vardagsrum
         camera_view: live
   - id: 2bf8ccbc1f664c23b10b6533ae82f7e2  # Automatically created id
@@ -142,25 +142,6 @@ cards:
   - id: 3870fdc794274f17b84dd6ced631b737  # Automatically created id
     type: iframe
     url: https://embed.windy.com/embed2.html
-  - type: custom:slideshow-card
-    arrow_color: var(--primary-text-color)
-    arrow_opacity: .7
-    cards:
-      - type: gauge
-        title: Övervåning
-        entity: sensor.fibaro_system_fgsd002_smoke_sensor_temperature
-        min: -50
-        max: 50
-      - type: gauge
-        title: Entrén
-        entity: sensor.fibaro_system_fgsd002_smoke_sensor_temperature_2
-        min: -50
-        max: 50
-      - type: gauge
-        title: Källaren
-        entity: sensor.philio_technology_corporation_phpat02beu_multisensor_2in1_temperature
-        min: -50
-        max: 50
   - id: 2a440c2701824fdb9d5ebc9827c0917b  # Automatically created id
     type: custom:auto-entities
     show_empty: false

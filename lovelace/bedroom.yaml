@@ -45,8 +45,38 @@ cards:
     entity: media_player.bedroom
     artwork: cover
     show_source: true
+  - id: dd36d9c8c6fa4e72a1c6ecbf9602dc9d  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.sovrummets_hogtalare
+    artwork: cover
+    show_source: true
   - id: 9528eeb9852341218123736923761057  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.bedroom_mini
     artwork: cover
     show_source: true
+  - type: sensor
+    entity: sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+    name: Övervåning
+    graph: line
+  - id: a87ac6a51dd746bfb8c6998eb6e1b499  # Automatically created id
+    type: entities
+    title: Vardagsrums lampor
+    show_header_toggle: false
+    entities:
+      - light.sovrum_stativ
+      - light.sovrum_tak
+      - light.sovrum_spotlights
+  - id: Uttagen  # Automatically created id
+    type: entities
+    title: Uttag
+    show_header_toggle: false
+    entities:
+      - switch.uttag_1
+      - switch.uttag_2
+  - id: a87ac6a51dd746bfb8c69124215215125  # Automatically created id
+    type: entities
+    title: Brasan
+    show_header_toggle: false
+    entities:
+      - script.brasan

@@ -3,19 +3,19 @@ alias: 'Light on when sun is down'
 id: 'lights when sun is set'
 initial_state: 'on'
 trigger:
-  platform: state
-  entity_id: group.devices_adults
-  to: 'home'
+  platform: sun
+  event: sunset
+  offset: "-00:45:00"
 condition:
-  condition: sun
-  after: sunset
-  after_offset: "-00:45:00"
+  condition: state
+  entity_id: group.devices_adults
+  state: 'home'
 action:
   - service: light.turn_on
     entity_id:
     - group.light_hallen
-    - light.vardagsrum_spotlights
-    - light.vardagsrum_trapp
+    - light.sovrum_spotlights
+    - light.hall_trapp
   - service: switch.turn_on
     entity_id: switch.rest_julbelysning
   - service: script.speech_engine

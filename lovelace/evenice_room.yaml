@@ -22,6 +22,11 @@ cards:
     entity: media_player.evenice_mini
     artwork: cover
     show_source: true
+  - id: b4f5c03bd4264c5498911f000312312331231237  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.evenice_tv
+    artwork: cover
+    show_source: true   
   - id: 10c27600180845edb2449137667602b7  # Automatically created id
     type: entities
     title: Lillhagsskolans matsedel

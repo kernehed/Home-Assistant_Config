@@ -1,6 +1,0 @@
-snack_chilin:
-  sensors:
-    moisture: sensor.snack_chili_fuktighet
-    temperature: sensor.snack_chili_temperatur
-    conductivity: sensor.snack_chili_conductivity
-    brightness: sensor.snack_chili_ljus

@@ -1,5 +1,0 @@
-name: Anna
-latitude: !secret anna_lat
-longitude: !secret anna_long
-radius: 50
-icon: mdi:home-variant

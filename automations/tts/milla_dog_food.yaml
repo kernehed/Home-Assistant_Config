@@ -36,4 +36,4 @@ action:
       inline_keyboard:
         - "Fixar det:/milla_food_yes"
         - "Redan fått:/milla_food_no"
-        - "Ta bort tangentbordet:/removekeyboard"
+        - "Ignorera:/removekeyboard"

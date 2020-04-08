@@ -1,6 +1,0 @@
-jalapeno:
-  sensors:
-    moisture: sensor.jalapeno_fuktighet
-    temperature: sensor.jalapeno_temperatur
-    conductivity: sensor.jalapeno_conductivity
-    brightness: sensor.jalapeno_ljus

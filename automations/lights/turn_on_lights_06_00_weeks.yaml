@@ -31,5 +31,5 @@ action:
     entity_id: group.light_hallen
   - service: light.turn_on
     data:
-      entity_id: light.vardagsrum_spotlights
+      entity_id: light.sovrum_spotlights
       brightness: 30

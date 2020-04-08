@@ -21,4 +21,7 @@ action:
     entity_id: script.flash_lights
   - service: script.turn_off
     entity_id: script.light_loop
+  - delay: '00:00:01'
+  - service: lock.unlock
+    entity_id: lock.polycontrol_danalock_v3_btze_locked
 

@@ -17,4 +17,4 @@ action:
     message: 'Vattenkokaren är inte avstängd, ska jag stänga av den?'
     inline_keyboard:
       - "Ja:/turn_off_boiler"
-      - "Ta bort tangentbordet:/removekeyboard"
+      - "Ignorera:/removekeyboard"

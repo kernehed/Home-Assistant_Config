@@ -37,8 +37,8 @@ cards:
     show_source: true
   - id: a90ab13d4d8141b1bc43c4b88c682911  # Automatically created id
     type: custom:mini-media-player
-    entity: media_player.livingroom_speaker
-    name: Vardagsrums högtalare
+    entity: media_player.sovrummets_hogtalare
+    name: Sovrummets högtalare
     artwork: cover
     show_source: true
   - id: 917e5f304d474b21be8736529de769b8  # Automatically created id
@@ -86,6 +86,11 @@ cards:
     entity: media_player.evenice_mini
     artwork: cover
     show_source: true
+  - id: b6d1d14878a94d60beb00990140836e0  # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.evenice_tv
+    artwork: cover
+    show_source: true
   - id: d1ee16d749534c5e93597d94a018a545  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.theus_mini
@@ -99,6 +104,10 @@ cards:
   - id: d1ee16d7492312321321232131321 # Automatically created id
     type: custom:mini-media-player
     entity: media_player.barnens_rum
+    artwork: cover
+  - id: d1ee16d7492312321321232131321 # Automatically created id
+    type: custom:mini-media-player
+    entity: media_player.sovrummet
     artwork: cover
     show_source: true
   - id: d1ee16d7492312321321232131321 # Automatically created id

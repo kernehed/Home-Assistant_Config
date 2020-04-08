@@ -387,12 +387,12 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
     hass.http.register_view(BwResources(str(hass.config.path())))
 
     # Register the panel
-    url = "/api/panel_custom/alarm"
+    url = "/api/panel_custom/custom-alarm"
     resources = os.path.join(_resources_folder(hass), PANEL_FNAME)
     hass.http.register_static_path(url, resources)
     await hass.components.panel_custom.async_register_panel(
         webcomponent_name='alarm',
-        frontend_url_path="alarm",
+        frontend_url_path="custom-alarm",
         html_url=url,
         sidebar_title='Alarm',
         sidebar_icon='mdi:shield-home',

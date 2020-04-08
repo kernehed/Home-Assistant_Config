@@ -1,0 +1,8 @@
+id: script_evenice_location
+alias: script_evenice_location
+initial_state: 'on'
+trigger: 
+  platform: time_pattern
+  minutes: "/60"
+action:
+  - service: script.location_evenice

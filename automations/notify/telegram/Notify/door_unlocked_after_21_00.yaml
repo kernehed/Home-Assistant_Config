@@ -14,4 +14,4 @@ action:
     message: 'Dörren är inte låst och klockan är mycket, ska jag låsa den?'
     inline_keyboard:
       - "Lås dörren:/lock_door"
-      - "Ta bort tangentbordet:/removekeyboard"
+      - "Nej:/removekeyboard"

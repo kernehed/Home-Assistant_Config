@@ -101,12 +101,12 @@
   
   {%- macro days_until() -%}
   {% set month=states("sensor.date").split('-')[1] | int %}
-  {%- if month == 4 or month == 5 -%}
-      och glöm inte bort, det är {{ states.sensor.mother_s_day_countdown.state }} dagar till Mors dag!
-  {%- elif month == 9 or month == 10 -%}
+  {%- if month == 9 or month == 10 -%}
       och glöm inte bort, det är {{ states.sensor.halloween_countdown.state }} dagar till Halloween!
   {%- elif month == 11 -%}
-      och glöm inte bort, det är {{ states.sensor.father_s_day_countdown.state }} dagar till Fars dag!
+     och glöm inte bort, det är {{ states.sensor.father_s_day_countdown.state }} dagar till Fars dag!
+  {%- elif month == 3 or month == 4 -%}
+      och glöm inte bort, det är {{ states.sensor.easter_countdown.state }} dagar till Påskafton!
   {%- elif month == 11 or month == 12 -%}
       och glöm inte bort, det är {{ states.sensor.christmas_countdown.state }} dagar till Julafton!
   {% endif %}

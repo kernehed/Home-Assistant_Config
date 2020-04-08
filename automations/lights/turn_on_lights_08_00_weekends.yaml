@@ -24,14 +24,14 @@ condition:
       - sun
 action:
   - service: light.turn_on
-    entity_id: light.vardagsrum_stativ
+    entity_id: light.sovrum_stativ
   - service: light.turn_on
-    entity_id: light.vardagsrum_trapp
+    entity_id: light.hall_trapp
   - service: light.turn_on
     entity_id: group.light_hallen
   - service: light.turn_on
     data:
-      entity_id: light.vardagsrum_spotlights
+      entity_id: light.sovrum_spotlights
       brightness: 30
 #  - service: light.turn_on
 #    data:

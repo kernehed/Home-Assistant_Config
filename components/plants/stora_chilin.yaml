@@ -1,6 +1,0 @@
-stora_chilin:
-  sensors:
-    moisture: sensor.stora_chili_fuktighet
-    temperature: sensor.stora_chili_temperatur
-    conductivity: sensor.stora_chili_conductivity
-    brightness: sensor.stora_chili_ljus

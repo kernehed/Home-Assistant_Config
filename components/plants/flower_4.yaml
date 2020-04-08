@@ -1,0 +1,6 @@
+dionaea_theus:
+  sensors:
+    moisture: sensor.flower_4_moisture
+    temperature: sensor.flower_4_temperature
+    conductivity: sensor.flower_4_conductivity
+    brightness: sensor.flower_4_illuminance

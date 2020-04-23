@@ -14,6 +14,6 @@ ifttt_alarm_clock:
       brightness: 255
       transition: 180
   - service: tv4_play.play_suggested
-    entity_id: media_player.bedroom
+    entity_id: media_player.sovrummets_tv
     data:
       program_name: nyhetsmorgon

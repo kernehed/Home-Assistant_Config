@@ -105,8 +105,6 @@
       och glöm inte bort, det är {{ states.sensor.halloween_countdown.state }} dagar till Halloween!
   {%- elif month == 11 -%}
      och glöm inte bort, det är {{ states.sensor.father_s_day_countdown.state }} dagar till Fars dag!
-  {%- elif month == 3 or month == 4 -%}
-      och glöm inte bort, det är {{ states.sensor.easter_countdown.state }} dagar till Påskafton!
   {%- elif month == 11 or month == 12 -%}
       och glöm inte bort, det är {{ states.sensor.christmas_countdown.state }} dagar till Julafton!
   {% endif %}
@@ -146,32 +144,20 @@
 
    {%- macro arsdag() -%}
    {% if is_state('sensor.var_arsdag','0') %}
-    Grattis på årsdagen! Nu har vi varit gifta i {{ states.sensor.var_arsdag.attributes.current_years }} år! Hoppas det blir många fler!
-   {% endif %}
-   {% if is_state('sensor.vi_blev_ett_par','0') %}
-    Grattis på årsdagen! Nu har vi varit ett par i {{ states.sensor.vi_blev_ett_par.attributes.current_years }} år! Det har varit de bästa åren i mitt liv!
-   {% endif %}
-   
-   {% if states.sensor.var_arsdag.state | int == 1 %}
+    Grattis på årsdagen! Nu har vi varit gifta i {{ states.sensor.var_arsdag.attributes.current_years }} år! Hoppas det blir många fler! 
+   {% elif states.sensor.var_arsdag.state | int == 1 %}
     Imorgon har vi varit gifta i {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år! 
-   {% endif %} 
-   {% if states.sensor.vi_blev_ett_par.state | int == 1 %}
-    Imorgon har vi varit tillsammans i {{ states.sensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år! 
-   {% endif %} 
+   {% elif states.sensor.var_arsdag.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.var_arsdag.state }} dagar kvar tills vi firar {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år! Kärlek!
+   {% endif %}
    
-   {% if states.sensor.var_arsdag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills vi varit gifta i {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år!
-   {% endif %}
-   {% if states.sensor.var_arsdag.state | int ==60 %}
-    Det är bara sextio dagar kvar tills vi varit gifta i {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år!
-   {% endif %}
-
-   {% if states.sensor.vi_blev_ett_par.state | int == 120 %}
-    Det är bara hundra tjugo dagar tills vi varit ett par i {{ states.sensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år! 
-   {% endif %}
-   {% if states.sensor.vi_blev_ett_par.state | int ==60 %}
-    Det är bara sextio dagar kvar tills vi varit ett par i {{ states.sensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år! 
-   {% endif %} 
+   {% if is_state('sensor.vi_blev_ett_par','0') %}
+    Grattis på årsdagen! Nu har vi varit ett par i {{ states.sensor.vi_blev_ett_par.attributes.current_years }} år! Det har varit de bästa åren i mitt liv! 
+   {% elif states.sensor.vi_blev_ett_par.state | int == 1 %}
+    Imorgon har vi varit ett par i {{ states.ssensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år! 
+   {% elif states.sensor.vi_blev_ett_par.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.vi_blev_ett_par.state }} dagar kvar tills vi firar {{ states.sensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år tillsammans! Kärlek!
+   {% endif %}  
   {%- endmacro -%}
   
  
@@ -268,7 +254,18 @@
   {% endif %}
   {%- endmacro -%}
 
-
+  {%- macro plants() -%}
+  {% if is_state_attr('sensor.plant_problems','water_number',0) %}
+    Inga plantor behöver vattnas.
+  {% elif states.sensor.plant_problems.attributes.water_number | float > 0 %}
+    {{ states.sensor.plant_problems.attributes.water }} behöver få vatten.
+  {% endif %}
+  {% if is_state_attr('sensor.plant_problems','fertilize_number',0) %}
+    Inga plantor behöver gödningsmedel.
+  {% elif states.sensor.plant_problems.attributes.fertilize_number | float > 0 %}
+    Dessa plantor {{ states.sensor.plant_problems.attributes.fertilize }} behöver gödsel.
+  {% endif %}
+  {%- endmacro -%}
  
   {%- macro evenice_fodelsedag() -%}
    Idag är det {{ states.sensor.evenice_fodelsedag.state }} dagar tills Evenice fyller år!
@@ -375,7 +372,11 @@
   {% if call_smhi_alert == 1 %}
   {{ smhi_alert() }}
   {% endif %} 
-  
+
+  {% if call_plants == 1 %}
+  {{ plants() }}
+  {% endif %}
+ 
   {{ NewDevice }}
  
   {{ NewPlexTitle }}
@@ -383,4 +384,4 @@
 
   
   {# call a Random fact #}
-  {{ ([iss, moon, fodelsedag, arsdag, days_until, smhi_alert, coronavirus]|random)() }}
+  {{ ([iss, moon, fodelsedag, arsdag, days_until, smhi_alert, coronavirus, plants]|random)() }}

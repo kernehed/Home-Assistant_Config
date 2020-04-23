@@ -4,3 +4,4 @@ aloevera_evenice:
     temperature: sensor.flower_3_temperature
     conductivity: sensor.flower_3_conductivity
     brightness: sensor.flower_3_illuminance
+  min_conductivity: 200

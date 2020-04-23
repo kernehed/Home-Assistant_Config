@@ -1,0 +1,10 @@
+alias: 'Update Plant Problems'
+trigger:
+  - platform: state
+    entity_id: 
+    - plant.flower_1
+    - plant.flower_2
+    - plant.flower_3
+    - plant.flower_4
+action:
+  - service: python_script.plant_problems

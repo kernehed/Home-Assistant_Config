@@ -130,12 +130,6 @@ cards:
         entities:
           - input_select.christmas_pattern
           - input_select.christmas_palette
-      - type: picture-glance
-        title: Vardagsrums kamera
-        entities: 
-          - light.hall_trapp
-        camera_image: camera.vardagsrum
-        camera_view: live
   - id: 2bf8ccbc1f664c23b10b6533ae82f7e2  # Automatically created id
     type: weather-forecast
     entity: weather.smhi_vader

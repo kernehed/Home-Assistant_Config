@@ -42,7 +42,7 @@ cards:
           left: 23.3%
   - id: dd36d9c8c6fa4e72a1c6ecbf9602dc9d  # Automatically created id
     type: custom:mini-media-player
-    entity: media_player.bedroom
+    entity:  media_player.sovrummets_tv
     artwork: cover
     show_source: true
   - id: dd36d9c8c6fa4e72a1c6ecbf9602dc9d  # Automatically created id
@@ -61,7 +61,7 @@ cards:
     graph: line
   - id: a87ac6a51dd746bfb8c6998eb6e1b499  # Automatically created id
     type: entities
-    title: Vardagsrums lampor
+    title: Sovrumslampor
     show_header_toggle: false
     entities:
       - light.sovrum_stativ

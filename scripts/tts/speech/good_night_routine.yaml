@@ -25,4 +25,6 @@ goodnight_routine:
     data_template:
       call_inspirational_quote: 1
       delay: '00:00:03'
+      call_arsdag: 1
+      delay: '00:00:03'
       call_goodnight_line: 1

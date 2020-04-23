@@ -1,11 +1,11 @@
-alias: 'idesprutan'
+alias: 'plantorna'
 
 trigger:
   - platform: state
-    entity_id: input_boolean.idesprutan
+    entity_id: input_boolean.plantorna
     to: 'on'
 
 action:
   - service: script.speech_engine
     data:
-      call_idesprutan: 1
+      call_plants: 1

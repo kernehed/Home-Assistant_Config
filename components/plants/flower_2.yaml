@@ -4,3 +4,4 @@ aloevera_theus:
     temperature: sensor.flower_2_temperature
     conductivity: sensor.flower_2_conductivity
     brightness: sensor.flower_2_illuminance
+  min_conductivity: 200

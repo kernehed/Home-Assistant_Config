@@ -43,12 +43,15 @@ cards:
           - sensor.next_router_os_release
   - id: 123123123123213123 
     type: entities
-    title: Pi-Hole
+    title: AdGuard
     show_header_toggle: false
     entities:
-      - sensor.pi_hole_dns_queries_today
-      - sensor.pi_hole_ads_blocked_today
-      - sensor.pi_hole_dns_unique_clients
+      - sensor.adguard_dns_queries
+      - sensor.adguard_dns_queries_blocked_ratio
+      - sensor.adguard_average_processing_speed
+      - switch.adguard_parental_control
+      - switch.adguard_safe_browsing
+      - switch.adguard_safe_search
   - id: b8e18e8750224f58b404d0f2e644529a  # Automatically created id
     type: entities
     title: Ubiquiti

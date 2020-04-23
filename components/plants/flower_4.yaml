@@ -4,3 +4,4 @@ dionaea_theus:
     temperature: sensor.flower_4_temperature
     conductivity: sensor.flower_4_conductivity
     brightness: sensor.flower_4_illuminance
+  min_conductivity: 200

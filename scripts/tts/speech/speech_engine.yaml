@@ -26,3 +26,4 @@ speech_engine:
           - input_boolean.oskars_fodelsedag
           - input_boolean.bellas_fodelsedag
           - input_boolean.vattenkokaren
+          - input_boolean.plantorna

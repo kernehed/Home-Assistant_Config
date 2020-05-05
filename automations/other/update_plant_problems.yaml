@@ -8,3 +8,6 @@ trigger:
     - plant.flower_4
 action:
   - service: python_script.plant_problems
+  - service: script.speech_engine
+    data_template:
+      call_plants: 1

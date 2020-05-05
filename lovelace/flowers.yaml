@@ -17,5 +17,5 @@ cards:
     species: "aloe vera"
   - id: flowers4
     type: custom:flower-card
-    entity: plant.dionaea_theus
-    species: "dionaea muscipula"
+    entity: plant.garderobsblomma
+    species: "zamioculcas zamiifolia"

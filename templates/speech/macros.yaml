@@ -146,9 +146,9 @@
    {% if is_state('sensor.var_arsdag','0') %}
     Grattis på årsdagen! Nu har vi varit gifta i {{ states.sensor.var_arsdag.attributes.current_years }} år! Hoppas det blir många fler! 
    {% elif states.sensor.var_arsdag.state | int == 1 %}
-    Imorgon har vi varit gifta i {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år! 
+    Imorgon har vi varit gifta i {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år! Underbart!
    {% elif states.sensor.var_arsdag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.var_arsdag.state }} dagar kvar tills vi firar {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år! Kärlek!
+    Se där, det är bara {{ states.sensor.var_arsdag.state }} dagar kvar tills vi firar {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år som gifta! Kärlek!
    {% endif %}
    
    {% if is_state('sensor.vi_blev_ett_par','0') %}

@@ -14,6 +14,18 @@ wifi:
     ssid: "Esp32 Flora 2 Fallback Hotspot"
     password: "8z27YIXssitu"
 
+sensor:
+  - platform: xiaomi_hhccjcy01
+    mac_address: 'C4:7C:8D:6A:C5:4E'
+    temperature:
+      name: "Flower 4 Temperature"
+    moisture:
+      name: "Flower 4 Moisture"
+    illuminance:
+      name: "Flower 4 Illuminance"
+    conductivity:
+      name: "Flower 4 Conductivity"
+
 captive_portal:
 
 # Enable logging

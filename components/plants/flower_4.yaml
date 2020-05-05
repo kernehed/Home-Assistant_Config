@@ -1,4 +1,4 @@
-dionaea_theus:
+garderobsblomma:
   sensors:
     moisture: sensor.flower_4_moisture
     temperature: sensor.flower_4_temperature

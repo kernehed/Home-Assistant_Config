@@ -34,8 +34,6 @@ action:
     entity_id: media_player.hallen
   - service: media_player.media_stop
     entity_id: media_player.basement
-  - service: media_player.turn_off
-    entity_id: media_player.sovrummets_hogtalare
   - service: media_player.media_stop
     entity_id: media_player.whole_house
   - service: media_player.media_stop

@@ -36,16 +36,7 @@ sensor:
       name: "Flower 3 Illuminance"
     conductivity:
       name: "Flower 3 Conductivity"
-#  - platform: xiaomi_hhccjcy01
-#    mac_address: 'C4:7C:8D:6A:C5:4E'
-#    temperature:
-#      name: "Flower 4 Temperature"
-#    moisture:
-#      name: "Flower 4 Moisture"
-#    illuminance:
-#      name: "Flower 4 Illuminance"
-#    conductivity:
-#      name: "Flower 4 Conductivity"
+
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password

@@ -1,15 +1,3 @@
-#
-# DIYFUTURISM.COM
-# PLANT_PROBLEMS.PY
-# Make a list of all plants that need to be water and fertilized and combine into readable lists.
-#
-# Creates:
-# sensor.water_plants_number
-# sensor.fertilize_plants_number
-# sensor.plant_problems
-#
-#  http://www.diyfuturism.com/making-houseplants-talk
-
 problemPlants = 0
 allproblemPlants = []
 waterPlants = []

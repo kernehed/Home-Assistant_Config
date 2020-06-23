@@ -7,6 +7,8 @@ trigger:
 condition:
     - condition: time
       after: '21:05:00'
+    - condition: time
+      before: '06:30:00'
 action:
 - service: telegram_bot.send_message
   data_template:

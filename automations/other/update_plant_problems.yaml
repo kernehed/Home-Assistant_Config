@@ -6,8 +6,12 @@ trigger:
     - plant.flower_2
     - plant.flower_3
     - plant.flower_4
+    - plant.flower_5
+    - plant.flower_6
+    - plant.flower_7
+    - plant.flower_8
 action:
   - service: python_script.plant_problems
   - service: script.speech_engine
-    data_template:
+    data:
       call_plants: 1

@@ -1,6 +1,6 @@
 alias: Guest Mode TTS Feed back
 initial_state: 'on'
-id: 'guest_mode_tts_feed_back'
+id: 'guest_mode_tts_feed_back_1'
 trigger:
   platform: state
   entity_id: input_boolean.guest_mode
@@ -16,4 +16,4 @@ action:
           ] | random }}
       call_inspirational_quote: 1
       call_responsibilities: 1
-      call_evenice_skola: 1
+      call_fotbolls_traning: 1

@@ -1,0 +1,8 @@
+alias: Sommarlov
+trigger:
+  - platform: state
+    entity_id: calendar.sommarlov
+    to: 'on'
+action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.sommarlov

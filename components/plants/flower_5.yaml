@@ -1,0 +1,7 @@
+Basilika:
+  sensors:
+    moisture: sensor.flower_5_moisture
+    temperature: sensor.flower_5_temperature
+    conductivity: sensor.flower_5_conductivity
+    brightness: sensor.flower_5_illuminance
+  min_conductivity: 200

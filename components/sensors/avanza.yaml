@@ -1,0 +1,8 @@
+platform: avanza_stock
+stock:
+  - id: 5353
+    name: Castellum
+    shares: 15
+  - id: 742236
+    name: XACT Högutdelande Fond
+    shares: 50

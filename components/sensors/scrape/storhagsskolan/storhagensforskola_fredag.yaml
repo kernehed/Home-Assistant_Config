@@ -1,5 +1,0 @@
-platform: scrape
-name: Storhagensförskola lunch fredag
-resource: https://skolmaten.se/storhagens-forskola2/
-select: 'div.row:nth-of-type(5) p:nth-of-type(2) span:nth-of-type(1)'
-scan_interval: 14400

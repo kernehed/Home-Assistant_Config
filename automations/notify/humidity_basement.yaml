@@ -9,8 +9,3 @@ action:
   - service: notify.adults
     data:
       message: Luftfuktigheten har överstigit 50%!
-
-
-
-
-

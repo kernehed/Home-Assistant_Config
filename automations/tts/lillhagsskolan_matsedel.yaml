@@ -4,18 +4,23 @@ trigger:
   - platform: time
     at: '06:48:00'
 condition:
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: input_boolean.sommarlov
+      state: 'off'
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
 action:
   - service: script.speech_engine
     data_template:
       value1: >-
-        "På skolan idag får Evenice äta"
+        "På skolan idag får barnen äta"
         {% if now().weekday() == 0 %}
           {{ states('sensor.lillhagsskolan_lunch_mandag') }}
         {% elif now().weekday() == 1 %}

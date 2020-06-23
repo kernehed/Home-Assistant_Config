@@ -1,0 +1,7 @@
+oregano:
+  sensors:
+    moisture: sensor.flower_7_moisture
+    temperature: sensor.flower_7_temperature
+    conductivity: sensor.flower_7_conductivity
+    brightness: sensor.flower_7_illuminance
+  min_conductivity: 200

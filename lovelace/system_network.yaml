@@ -113,3 +113,12 @@ cards:
       - entity: sensor.speedtest_ping
         name: Ping
         color: yellow
+  - id: 123123123123213123 
+    type: entities
+    title: Klienter
+    show_header_toggle: false
+    entities:
+      - switch.ipad
+      - switch.iphone
+      - switch.oskarstelefon
+      - switch.evenice_iphone

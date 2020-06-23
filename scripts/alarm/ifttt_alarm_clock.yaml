@@ -1,7 +1,7 @@
 ifttt_alarm_clock:
   sequence:
   - condition: state
-    entity_id: 'group.devices_oskar'
+    entity_id: 'person.oskar'
     state: 'home'
   - service: light.turn_on
     data:

@@ -86,16 +86,16 @@ cards:
           icon: mdi:account-heart
         items:
           - input_boolean.guest_mode
-  - id: 6d4744d14a7c42668633cedbe655ba08  # Automatically created id
-    type: custom:auto-entities
-    show_empty: false
-    card:
-      type: entities
-      title: Rumsnärvaro
-      show_header_toggle: false
-    filter:
-      include:
-        - entity_id: sensor.oskar_bluetooth
+#  - id: 6d4744d14a7c42668633cedbe655ba08  # Automatically created id
+#    type: custom:auto-entities
+#    show_empty: false
+#    card:
+#      type: entities
+#      title: Rumsnärvaro
+#      show_header_toggle: false
+#    filter:
+#      include:
+#        - entity_id: sensor.oskar_bluetooth
   - id: fac4c51ac1914e3a897da643077e15f3  # Automatically created id
     type: glance
     show_state: false
@@ -130,6 +130,13 @@ cards:
         entities:
           - input_select.christmas_pattern
           - input_select.christmas_palette
+  - id: 37279816181f442eac123123c0473101  # Automatically created id
+    type: entities
+    title: Balkongen
+    show_header_toggle: false
+    entities:
+      - sensor.luftdaten_11774_temperature
+      - sensor.luftdaten_11774_humidity
   - id: 2bf8ccbc1f664c23b10b6533ae82f7e2  # Automatically created id
     type: weather-forecast
     entity: weather.smhi_vader

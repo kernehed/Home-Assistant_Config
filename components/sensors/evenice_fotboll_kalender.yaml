@@ -1,0 +1,11 @@
+platform: template
+sensors:
+  evenicefotboll:
+    friendly_name: Evenice Fotboll Kalender
+    entity_id: sensor.time
+    value_template: >-
+      {% if states.calendar.f2012_ik_huge_fb.attributes.start_time %}
+       {{((as_timestamp(states.calendar.f2012_ik_huge_fb.attributes.start_time) - as_timestamp(now())) / 60) | default(99) | int }}
+      {%- else -%}
+        0
+      {%- endif %}

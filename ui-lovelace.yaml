@@ -41,7 +41,6 @@ title: Kernehed Manison
 views:
   - !include lovelace/home.yaml
   - !include lovelace/kitchen.yaml
-#  - !include lovelace/livingroom.yaml
   - !include lovelace/hallway.yaml
   - !include lovelace/basement.yaml
   - !include lovelace/bedroom.yaml
@@ -53,7 +52,6 @@ views:
   - !include lovelace/media.yaml
   - !include lovelace/chromecasts.yaml
   - !include lovelace/flowers.yaml
-#  - !include lovelace/cameras.yaml
   - !include lovelace/automations.yaml
   - !include lovelace/alarm.yaml
   - !include lovelace/floorplan.yaml

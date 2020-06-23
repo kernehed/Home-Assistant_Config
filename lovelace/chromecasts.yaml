@@ -13,7 +13,7 @@ cards:
     show_source: true
   - id: 00c0c71deaf5498e99f2a335d25ff2aa  # Automatically created id
     type: custom:mini-media-player
-    entity: media_player.bedroom
+    entity: media_player.sovrummets_tv
     name: Sovrummets TV
     artwork: cover
     show_source: true

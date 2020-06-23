@@ -8,5 +8,5 @@ action:
   - service: switch.turn_on
     entity_id: switch.rest_julbelysning
   - service: script.speech_engine
-    data:
+    data_template:
       call_dark_outside: 1 

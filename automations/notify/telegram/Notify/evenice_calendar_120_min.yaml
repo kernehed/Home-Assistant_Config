@@ -1,0 +1,18 @@
+id: 'evenice_calendar_120_min_notify'
+alias: 'evenice_calendar_120_min_notify'
+trigger:
+- platform: state
+  entity_id: sensor.evenicefotboll
+  to: '120'
+action:
+- service: script.speech_engine
+  data_template:
+    value1: >-
+        "Nu är det något som händer i kalendern om 120 minuter, kolla telefonen."
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Nu är det bara 120 minuter kvar till {{ states.calendar.f2012_ik_huge_fb.attributes.message }} börjar.'
+    inline_keyboard:
+      - "Okej:/okej_event"
+      - "Ta bort tangentbordet:/removekeyboard"

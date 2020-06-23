@@ -1,0 +1,9 @@
+alias: turn off calendar booleans
+trigger:
+  - platform: time
+    at: '00:00:01'
+action:
+  - service: input_boolean.turn_off
+    entity_id:
+    - input_boolean.sommarlov
+    - input_boolean.semester

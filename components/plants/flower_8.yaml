@@ -1,0 +1,7 @@
+persilja:
+  sensors:
+    moisture: sensor.flower_8_moisture
+    temperature: sensor.flower_8_temperature
+    conductivity: sensor.flower_8_conductivity
+    brightness: sensor.flower_8_illuminance
+  min_conductivity: 200

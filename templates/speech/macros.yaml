@@ -143,114 +143,113 @@
 
 
    {%- macro arsdag() -%}
-   {% if is_state('sensor.var_arsdag','0') %}
-    Grattis på årsdagen! Nu har vi varit gifta i {{ states.sensor.var_arsdag.attributes.current_years }} år! Hoppas det blir många fler! 
-   {% elif states.sensor.var_arsdag.state | int == 1 %}
-    Imorgon har vi varit gifta i {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år! Underbart!
-   {% elif states.sensor.var_arsdag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.var_arsdag.state }} dagar kvar tills vi firar {{ states.sensor.var_arsdag.attributes.years_at_next_anniversary }} år som gifta! Kärlek!
+   {% if is_state('sensor.anniversary_var_arsdag','0') %}
+    Grattis på årsdagen! Nu har vi varit gifta i {{ states.sensor.anniversary_var_arsdag.attributes.current_years }} år! Hoppas det blir många fler! 
+   {% elif states.sensor.anniversary_var_arsdag.state | int == 1 %}
+    Imorgon har vi varit gifta i {{ states.sensor.anniversary_var_arsdag.attributes.years_at_next_anniversary }} år! Underbart!
+   {% elif states.sensor.anniversary_var_arsdag.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.anniversary_var_arsdag.state }} dagar kvar tills vi firar {{ states.sensor.anniversary_var_arsdag.attributes.years_at_next_anniversary }} år som gifta! Kärlek!
    {% endif %}
    
-   {% if is_state('sensor.vi_blev_ett_par','0') %}
-    Grattis på årsdagen! Nu har vi varit ett par i {{ states.sensor.vi_blev_ett_par.attributes.current_years }} år! Det har varit de bästa åren i mitt liv! 
-   {% elif states.sensor.vi_blev_ett_par.state | int == 1 %}
-    Imorgon har vi varit ett par i {{ states.ssensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år! 
-   {% elif states.sensor.vi_blev_ett_par.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.vi_blev_ett_par.state }} dagar kvar tills vi firar {{ states.sensor.vi_blev_ett_par.attributes.years_at_next_anniversary }} år tillsammans! Kärlek!
+   {% if is_state('sensor.anniversary_vi_blev_ett_par','0') %}
+    Grattis på årsdagen! Nu har vi varit ett par i {{ states.sensor.anniversary_vi_blev_ett_par.attributes.current_years }} år! Det har varit de bästa åren i mitt liv! 
+   {% elif states.sensor.anniversary_vi_blev_ett_par.state | int == 1 %}
+    Imorgon har vi varit ett par i {{ states.sensor.anniversary_vi_blev_ett_par.attributes.years_at_next_anniversary }} år! 
+   {% elif states.sensor.anniversary_vi_blev_ett_par.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.anniversary_vi_blev_ett_par.state }} dagar kvar tills vi firar {{ states.sensor.anniversary_vi_blev_ett_par.attributes.years_at_next_anniversary }} år tillsammans! Kärlek!
    {% endif %}  
   {%- endmacro -%}
   
  
 
    {%- macro fodelsedag() -%}
-   {% if is_state('sensor.evenice_fodelsedag','0') %}
-    Grattis på födelsdagen Evenice! Idag fyller du hela {{ states.sensor.evenice_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
-   {% elif states.sensor.evenice_fodelsedag.state | int == 1 %}
-    Imorgon fyller Evenice {{ states.sensor.evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
-   {% elif states.sensor.evenice_fodelsedag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.evenice_fodelsedag.state }} dagar tills Evenice fyller {{ states.sensor.evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if is_state('sensor.anniversary_evenice_fodelsedag','0') %}
+    Grattis på födelsdagen Evenice! Idag fyller du hela {{ states.sensor.anniversary_evenice_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
+   {% elif states.sensor.anniversary_evenice_fodelsedag.state | int == 1 %}
+    Imorgon fyller Evenice {{ states.sensor.anniversary_evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
+   {% elif states.sensor.anniversary_evenice_fodelsedag.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.anniversary_evenice_fodelsedag.state }} dagar tills Evenice fyller {{ states.sensor.anniversary_evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
 
-   {% if is_state('sensor.theus_fodelsedag','0') %}
-    Grattis på födelsdagen Theus! Idag fyller du hela {{ states.sensor.theus_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
-   {% elif states.sensor.theus_fodelsedag.state | int == 1 %}
-    Imorgon fyller Theus {{ states.sensor.theus_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
-   {% elif states.sensor.theus_fodelsedag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.theus_fodelsedag.state }} dagar tills Theus fyller {{ states.sensor.theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if is_state('sensor.anniversary_theus_fodelsedag','0') %}
+    Grattis på födelsdagen Theus! Idag fyller du hela {{ states.sensor.anniversary_theus_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
+   {% elif states.sensor.anniversary_theus_fodelsedag.state | int == 1 %}
+    Imorgon fyller Theus {{ states.sensor.anniversary_theus_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
+   {% elif states.sensor.anniversary_theus_fodelsedag.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.anniversary_theus_fodelsedag.state }} dagar tills Theus fyller {{ states.sensor.anniversary_theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}  
 
-   {% if is_state('sensor.oskars_fodelsedag','0') %}
-    Grattis på födelsdagen Oskar! Idag fyller du hela {{ states.sensor.oskars_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
-   {% elif states.sensor.oskars_fodelsedag.state | int == 1 %}
-    Imorgon fyller Oskar {{ states.sensor.oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
-   {% elif states.sensor.oskars_fodelsedag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.oskars_fodelsedag.state }} dagar tills Oskar fyller {{ states.sensor.oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if is_state('sensor.anniversary_oskars_fodelsedag','0') %}
+    Grattis på födelsdagen Oskar! Idag fyller du hela {{ states.sensor.anniversary_oskars_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
+   {% elif states.sensor.anniversary_oskars_fodelsedag.state | int == 1 %}
+    Imorgon fyller Oskar {{ states.sensor.anniversary_oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
+   {% elif states.sensor.anniversary_oskars_fodelsedag.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.anniversary_oskars_fodelsedag.state }} dagar tills Oskar fyller {{ states.sensor.anniversary_oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}    
    
-   {% if is_state('sensor.bellas_fodelsedag','0') %}
-    Grattis på födelsdagen Bella! Idag fyller du hela {{ states.sensor.bellas_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
-   {% elif states.sensor.bellas_fodelsedag.state | int < 20 %}
-    Se där, det är bara {{ states.sensor.bellas_fodelsedag.state }} dagar tills Bella fyller {{ states.sensor.bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
-   {% elif states.sensor.bellas_fodelsedag.state | int == 1 %}
-    Imorgon fyller Bella {{ states.sensor.bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni? 
+   {% if is_state('sensor.anniversary_bellas_fodelsedag','0') %}
+    Grattis på födelsdagen Bella! Idag fyller du hela {{ states.sensor.anniversary_bellas_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag.
+   {% elif states.sensor.anniversary_bellas_fodelsedag.state | int < 20 %}
+    Se där, det är bara {{ states.sensor.anniversary_bellas_fodelsedag.state }} dagar tills Bella fyller {{ states.sensor.anniversary_bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% elif states.sensor.anniversary_bellas_fodelsedag.state | int == 1 %}
+    Imorgon fyller Bella {{ states.sensor.anniversary_bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni? 
    {% endif %} 
    
-   {% if is_state('sensor.millas_fodelsedag','0') %}
-    Grattis på födelsdagen Milla! Idag fyller du hela {{ states.sensor.millas_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag. Voff Voff!  
-   {% elif states.sensor.millas_fodelsedag.state | int == 1 %}
-    Imorgon fyller Milla {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
-   {% elif states.sensor.millas_fodelsedag.state | int < 20 %}    
-    Se där, det är bara {{ states.sensor.millas_fodelsedag.state }} dagar tills Milla fyller {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
+   {% if is_state('sensor.anniversary_millas_fodelsedag','0') %}
+    Grattis på födelsdagen Milla! Idag fyller du hela {{ states.sensor.anniversary_millas_fodelsedag.attributes.current_years }} år! Hoppas du får en underbar dag. Voff Voff!  
+   {% elif states.sensor.anniversary_millas_fodelsedag.state | int == 1 %}
+    Imorgon fyller Milla {{ states.sensor.anniversary_millas_fodelsedag.attributes.years_at_next_anniversary }} år! Blir det någon tårta tror ni?
+   {% elif states.sensor.anniversary_millas_fodelsedag.state | int < 20 %}    
+    Se där, det är bara {{ states.sensor.anniversary_millas_fodelsedag.state }} dagar tills Milla fyller {{ states.sensor.anniversary_millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
    {% endif %}
    
 
-   {% if states.sensor.evenice_fodelsedag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills Evenice fyller {{ states.sensor.evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_evenice_fodelsedag.state | int == 120 %}
+    Det är bara hundra tjugo dagar kvar tills Evenice fyller {{ states.sensor.anniversary_evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.evenice_fodelsedag.state | int == 60 %}
-    Det är bara sextio dagar kvar tills Evenice fyller {{ states.sensor.evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_evenice_fodelsedag.state | int == 60 %}
+    Det är bara sextio dagar kvar tills Evenice fyller {{ states.sensor.anniversary_evenice_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.theus_fodelsedag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills Theus fyller {{ states.sensor.theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_theus_fodelsedag.state | int == 120 %}
+    Det är bara hundra tjugo dagar kvar tills Theus fyller {{ states.sensor.anniversary_theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.theus_fodelsedag.state | int == 60 %}
-    Det är bara sextio dagar kvar tills Theus fyller {{ states.sensor.theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_theus_fodelsedag.state | int == 60 %}
+    Det är bara sextio dagar kvar tills Theus fyller {{ states.sensor.anniversary_theus_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.millas_fodelsedag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills Milla fyller {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
+   {% if states.sensor.anniversary_millas_fodelsedag.state | int == 120 %}
+    Det är bara hundra tjugo dagar kvar tills Milla fyller {{ states.sensor.anniversary_millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
    {% endif %}
-   {% if states.sensor.millas_fodelsedag.state | int == 60 %}
-    Det är bara sextio dagar kvar tills Milla fyller {{ states.sensor.millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
+   {% if states.sensor.anniversary_millas_fodelsedag.state | int == 60 %}
+    Det är bara sextio dagar kvar tills Milla fyller {{ states.sensor.anniversary_millas_fodelsedag.attributes.years_at_next_anniversary }} år! Voff Voff!
    {% endif %}
-   {% if states.sensor.oskars_fodelsedag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills Oskar fyller {{ states.sensor.oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_oskars_fodelsedag.state | int == 120 %}
+    Det är bara hundra tjugo dagar kvar tills Oskar fyller {{ states.sensor.anniversary_oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.oskars_fodelsedag.state | int == 60 %}
-    Det är bara sextio dagar kvar tills Oskar fyller {{ states.sensor.oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_oskars_fodelsedag.state | int == 60 %}
+    Det är bara sextio dagar kvar tills Oskar fyller {{ states.sensor.anniversary_oskars_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.bellas_fodelsedag.state | int == 120 %}
-    Det är bara hundra tjugo dagar kvar tills Bella fyller {{ states.sensor.bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_bellas_fodelsedag.state | int == 120 %}
+    Det är bara hundra tjugo dagar kvar tills Bella fyller {{ states.sensor.anniversary_bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
-   {% if states.sensor.bellas_fodelsedag.state | int == 60 %}
-    Det är bara sextio dagar kvar tills Bella fyller {{ states.sensor.bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
+   {% if states.sensor.anniversary_bellas_fodelsedag.state | int == 60 %}
+    Det är bara sextio dagar kvar tills Bella fyller {{ states.sensor.anniversary_bellas_fodelsedag.attributes.years_at_next_anniversary }} år! Woop Woop!
    {% endif %}
   {%- endmacro -%}
 
-  {%- macro evenice_skola() -%}
+  {%- macro fotbolls_traning() -%}
   {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
   {% set day_of_the_week = weekday[now().isoweekday() ] %}
-  {% if day_of_the_week == 'Söndag' or day_of_the_week == 'Torsdag' %}
-      Imorgon ska Evenice ha gymnastik på skolan.
-      Glöm inte handduk, t-shirt, gympabyxor, trosor, strumpor, gymnastikskor och vattenflaska.
+  {% if day_of_the_week == 'Söndag' or day_of_the_week == 'Onsdag' or day_of_the_week == 'Fredag' %}
+      Imorgon är det fotbollsträning!
   {% endif %}
   {% if day_of_the_week == 'Måndag' %}
-     Glöm inte att läsa i böckerna som Evenice fått i läxa.
+     Idag har Evenice Fotbollsträning!
   {% endif %}
-  {% if day_of_the_week == 'Tisdag' %}
-     Glöm inte att läsa i böckerna som Evenice fått i läxa.
+  {% if day_of_the_week == 'Torsdag' %}
+    Idag har Evenice Fotbollsträning!
   {% endif %}
-  {% if day_of_the_week == 'Onsdag' %}
-     Imorgon ska Evenice läsa för fröken. Har hon läst?
+  {% if day_of_the_week == 'Lördag' %}
+     Idag är det fotbollsträning för Theus!!
   {% endif %}
   {%- endmacro -%}
 
@@ -268,31 +267,27 @@
   {%- endmacro -%}
  
   {%- macro evenice_fodelsedag() -%}
-   Idag är det {{ states.sensor.evenice_fodelsedag.state }} dagar tills Evenice fyller år!
+   Idag är det {{ states.sensor.anniversary_evenice_fodelsedag.state }} dagar tills Evenice fyller år!
   {%- endmacro -%}
    
   {%- macro theus_fodelsedag() -%}
-   Idag är det {{ states.sensor.theus_fodelsedag.state }} dagar tills Theus fyller år!
+   Idag är det {{ states.sensor.anniversary_theus_fodelsedag.state }} dagar tills Theus fyller år!
   {%- endmacro -%}  
   
   {%- macro millas_fodelsedag() -%}
-   Idag är det {{ states.sensor.millas_fodelsedag.state }} dagar tills Milla fyller år!
+   Idag är det {{ states.sensor.anniversary_millas_fodelsedag.state }} dagar tills Milla fyller år!
   {%- endmacro -%}
   
   {%- macro oskars_fodelsedag() -%}
-   Idag är det {{ states.sensor.oskars_fodelsedag.state }} dagar tills Oskar fyller år!
+   Idag är det {{ states.sensor.anniversary_oskars_fodelsedag.state }} dagar tills Oskar fyller år!
   {%- endmacro -%}
   
   {%- macro bellas_fodelsedag() -%}
-   Idag är det {{ states.sensor.bellas_fodelsedag.state }} dagar tills Bella fyller år!
+   Idag är det {{ states.sensor.anniversary_bellas_fodelsedag.state }} dagar tills Bella fyller år!
   {%- endmacro -%}
   
   {%- macro smhi_alert() -%}
    Lyssna, det är en varning utfärdad av SMHI, Meddelandet kommer här, {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['event'] }} {{ states.sensor.smhialert.attributes.messages['024']['msgs'][0]['description'] | regex_replace('Intensitet: |När:*|Var:*|Kommentar:*', '') }}
-  {%- endmacro -%}
-
-  {%- macro coronavirus() -%}
-   Och för er information, Det är just nu {{ states.sensor.sweden_coronavirus_confirmed.state }} personer smittade av coronaviruset i Sverige och {{ states.sensor.worldwide_coronavirus_confirmed.state }} personer i världen. 
   {%- endmacro -%}
    
   {# ********************************************* #}
@@ -333,8 +328,8 @@
   {{ responsibilities() }}
   {% endif %}
  
-  {% if call_evenice_skola == 1 %}
-  {{ evenice_skola() }}
+  {% if call_fotbolls_traning == 1 %}
+  {{ fotbolls_traning() }}
   {% endif %} 
 
   {% if call_time_with_screen == 1 %}
@@ -384,4 +379,4 @@
 
   
   {# call a Random fact #}
-  {{ ([iss, moon, fodelsedag, arsdag, days_until, smhi_alert, coronavirus, plants]|random)() }}
+  {{ ([iss, moon, fodelsedag, arsdag, days_until, smhi_alert, plants]|random)() }}

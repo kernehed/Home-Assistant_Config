@@ -1,4 +1,4 @@
-alias: 'plantorna'
+alias: 'ska plantorna vattnas'
 
 trigger:
   - platform: state

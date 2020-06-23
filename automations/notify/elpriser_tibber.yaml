@@ -1,0 +1,12 @@
+alias: "Elpriser"
+id: "elpriser tibber"
+trigger:
+- platform: time_pattern
+  minutes: 1
+condition:
+  condition: template
+  value_template: "{{ float(states('sensor.electricity_price_fabodvagen_10_d')) > 0.9 * float(state_attr('sensor.electricity_price_fabodvagen_10_d', 'max_price')) }}"
+action:
+- service: notify.adults
+  data_template:
+    message: "Elpriset är just nu {{states('sensor.electricity_price_fabodvagen_10_d')}} öre/kWh"

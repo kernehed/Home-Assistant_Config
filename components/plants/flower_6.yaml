@@ -1,0 +1,7 @@
+timjan:
+  sensors:
+    moisture: sensor.flower_6_moisture
+    temperature: sensor.flower_6_temperature
+    conductivity: sensor.flower_6_conductivity
+    brightness: sensor.flower_6_illuminance
+  min_conductivity: 200

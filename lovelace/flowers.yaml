@@ -19,3 +19,19 @@ cards:
     type: custom:flower-card
     entity: plant.garderobsblomma
     species: "zamioculcas zamiifolia"
+  - id: flowers5
+    type: custom:flower-card
+    entity: plant.basilika
+    species: "ocimum basilicum"
+  - id: flowers6
+    type: custom:flower-card
+    entity: plant.timjan
+    species: "thymus vulgaris"
+  - id: flowers7
+    type: custom:flower-card
+    entity: plant.oregano
+    species: "origanum vulgare"
+  - id: flowers7
+    type: custom:flower-card
+    entity: plant.persilja
+    species: "petroselinum crispum"

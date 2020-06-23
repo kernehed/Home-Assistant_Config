@@ -9,4 +9,4 @@ action:
   - service: script.speech_engine
     data:
       call_responsibilities: 1
-      call_evenice_skola: 1
+      call_fotbolls_traning: 1

@@ -1,0 +1,25 @@
+alias: 'Telegram Stock Summary'
+initial_state: true
+trigger:
+- platform: time
+  at: '18:00:00'
+action:
+- service: notify.adults
+  data:
+    message: "<b>Aktie summering</b>
+<code>
+\n
+\n
+<b>{{states.sensor.castellum.attributes.name}}</b>
+\n
+Utveckling (idag): {{states.sensor.castellum.attributes.changePercent}}% 
+\n
+Kurs: {{states.sensor.castellum.state}}kr
+\n
+\n
+<strong>{{states.sensor.xact_hogutdelande_fond.attributes.name}}</strong>
+\n
+Utveckling (idag): {{states.sensor.xact_hogutdelande_fond.attributes.changePercent}}%
+\n
+Kurs: {{states.sensor.xact_hogutdelande_fond.state}}kr
+</code>"

@@ -29,13 +29,13 @@ cards:
     entity: media_player.theus_mini
     artwork: cover
     show_source: true
-  - id: 5cc13ddac32941c8bffc5f6dfae6c8d3  # Automatically created id
+  - id: 10c27600180845edb244913123123b7  # Automatically created id
     type: entities
-    title: Storhagens förskola matsedel
+    title: Lillhagsskolans matsedel
     show_header_toggle: false
     entities:
-      - sensor.storhagensforskola_lunch_mandag
-      - sensor.storhagensforskola_lunch_tisdag
-      - sensor.storhagensforskola_lunch_onsdag
-      - sensor.storhagensforskola_lunch_torsdag
-      - sensor.storhagensforskola_lunch_fredag
+      - sensor.lillhagsskolan_lunch_mandag
+      - sensor.lillhagsskolan_lunch_tisdag
+      - sensor.lillhagsskolan_lunch_onsdag
+      - sensor.lillhagsskolan_lunch_torsdag
+      - sensor.lillhagsskolan_lunch_fredag

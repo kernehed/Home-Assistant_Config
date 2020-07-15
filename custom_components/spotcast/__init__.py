@@ -1,14 +1,16 @@
+import asyncio
 import logging
 import voluptuous as vol
+import random
+import time
+from functools import wraps, partial
 from homeassistant.components import http, websocket_api
 from homeassistant.core import callback
 from homeassistant.exceptions import HomeAssistantError
 import homeassistant.helpers.config_validation as cv
 from homeassistant.components.cast.media_player import KNOWN_CHROMECAST_INFO_KEY
-import random
-import time
 
-_VERSION = "3.2.0"
+_VERSION = "3.2.2"
 DOMAIN = "spotcast"
 
 _LOGGER = logging.getLogger(__name__)
@@ -71,6 +73,16 @@ CONFIG_SCHEMA = vol.Schema(
     extra=vol.ALLOW_EXTRA,
 )
 
+# Async wrap sync function
+def async_wrap(func):
+    @wraps(func)
+    async def run(*args, loop=None, executor=None, **kwargs):
+        if loop is None:
+            loop = asyncio.get_event_loop()
+        pfunc = partial(func, *args, **kwargs)
+        return await loop.run_in_executor(executor, pfunc)
+    return run
+
 
 def setup(hass, config):
     """Setup the Spotcast service."""
@@ -79,43 +91,63 @@ def setup(hass, config):
     sp_dc = conf[CONF_SP_DC]
     sp_key = conf[CONF_SP_KEY]
     accounts = conf.get(CONF_ACCOUNTS)
-    spotifyToken = SpotifyToken(sp_dc, sp_key)
+    spotifyTokenInstances = {}
+
+    def get_token_instance(account = None):
+        """ Get token instance for account """
+        if account is None:
+            account = "default"
+            dc = sp_dc
+            key = sp_key
+        else:
+            dc = accounts.get(account).get(CONF_SP_DC)
+            key = accounts.get(account).get(CONF_SP_KEY)
+
+        _LOGGER.debug("setting up with  account %s", account)
+        if account not in spotifyTokenInstances:
+            spotifyTokenInstances[account] = SpotifyToken(dc, key)
+        return spotifyTokenInstances[account]
 
     @callback
     def websocket_handle_playlists(hass, connection, msg):
-        """Handle to get playlist"""
-        import spotipy
 
-        playlistType = msg.get("playlist_type")
-        countryCode = msg.get("country_code")
-        locale = msg.get("locale", "en")
-        limit = msg.get("limit", 10)
+        @async_wrap
+        def get_playlist():
+            """Handle to get playlist"""
+            import spotipy
 
-        _LOGGER.debug("websocket msg: %s", msg)
+            playlistType = msg.get("playlist_type")
+            countryCode = msg.get("country_code")
+            locale = msg.get("locale", "en")
+            limit = msg.get("limit", 10)
 
-        client = spotipy.Spotify(auth=spotifyToken.access_token)
-        resp = {}
+            _LOGGER.debug("websocket msg: %s", msg)
 
-        if playlistType == "discover-weekly":
-            resp = client._get(
-                "views/made-for-x",
-                content_limit=limit,
-                locale=locale,
-                platform="web",
-                types="album,playlist,artist,show,station",
-                limit=limit,
-                offset=0,
-            )
-            resp = resp.get("content")
-        elif playlistType == "featured":
-            resp = client.featured_playlists(
-                locale=locale, country=countryCode, timestamp=None, limit=limit, offset=0
-            )
-            resp = resp.get("playlists")
-        else:
-            resp = client.user_playlists("me", limit)
+            client = spotipy.Spotify(auth=get_token_instance().access_token)
+            resp = {}
 
-        connection.send_message(websocket_api.result_message(msg["id"], resp))
+            if playlistType == "discover-weekly":
+                resp = client._get(
+                    "views/made-for-x",
+                    content_limit=limit,
+                    locale=locale,
+                    platform="web",
+                    types="album,playlist,artist,show,station",
+                    limit=limit,
+                    offset=0,
+                )
+                resp = resp.get("content")
+            elif playlistType == "featured":
+                resp = client.featured_playlists(
+                    locale=locale, country=countryCode, timestamp=None, limit=limit, offset=0
+                )
+                resp = resp.get("playlists")
+            else:
+                resp = client.user_playlists("me", limit)
+
+            connection.send_message(websocket_api.result_message(msg["id"], resp))
+
+        hass.async_add_job(get_playlist())
 
     def play(client, spotify_device_id, uri, random_song, repeat, shuffle, position):
         _LOGGER.debug(
@@ -159,16 +191,6 @@ def setup(hass, config):
                 time.sleep(2)
                 client.repeat(state=repeat, device_id=spotify_device_id)
 
-    def get_account_credentials(call):
-        """ Get credentials for account """
-        account = call.data.get(CONF_SPOTIFY_ACCOUNT)
-        dc = sp_dc
-        key = sp_key
-        if account is not None:
-            _LOGGER.debug("setting up with different account than default %s", account)
-            dc = accounts.get(account).get(CONF_SP_DC)
-            key = accounts.get(account).get(CONF_SP_KEY)
-        return dc, key
 
     def getSpotifyConnectDeviceId(client, device_name):
         devices_available = client.devices()
@@ -188,12 +210,10 @@ def setup(hass, config):
         spotify_device_id = call.data.get(CONF_SPOTIFY_DEVICE_ID)
         position = call.data.get(CONF_OFFSET)
         force_playback = call.data.get(CONF_FORCE_PLAYBACK)
-
-        # Account
-        dc, key = get_account_credentials(call)
+        account = call.data.get(CONF_SPOTIFY_ACCOUNT)
 
         # login as real browser to get powerful token
-        access_token, expires = spotifyToken.get_spotify_token(sp_dc=dc, sp_key=key)
+        access_token, expires = get_token_instance(account).get_spotify_token()
 
         # get the spotify web api client
         client = spotipy.Spotify(auth=access_token)
@@ -214,7 +234,7 @@ def setup(hass, config):
             _LOGGER.debug("Transfering playback")
             current_playback = client.current_playback()
             if current_playback is not None:
-                _LOGGER.debug("Current_playback from spotipy: %s", current_playback)
+                _LOGGER.debug("Current_playback from spotify: %s", current_playback)
                 force_playback = True
             _LOGGER.debug("Force playback: %s", force_playback)
             client.transfer_playback(device_id=spotify_device_id, force_play=force_playback)
@@ -256,7 +276,6 @@ class SpotifyToken:
 
     def get_spotify_token(self):
         import spotify_token as st
-
         self._access_token, self._token_expires = st.start_session(self.sp_dc, self.sp_key)
         expires = self._token_expires - int(time.time())
         return self._access_token, expires
@@ -330,16 +349,9 @@ class SpotifyCastDevice:
     def startSpotifyController(self, access_token, expires):
         from pychromecast.controllers.spotify import SpotifyController
 
-        # get the volume so we can remove the bloink
-        # volume = self.castDevice.status.volume_level
-        # self.castDevice.set_volume(0)
-
         sp = SpotifyController(access_token, expires)
         self.castDevice.register_handler(sp)
         sp.launch_app()
-
-        # reset the volume
-        # self.castDevice.set_volume(volume)
 
         if not sp.is_launched and not sp.credential_error:
             raise HomeAssistantError("Failed to launch spotify controller due to timeout")
@@ -350,17 +362,14 @@ class SpotifyCastDevice:
 
     def getSpotifyDeviceId(self, client):
         # Look for device
-        spotify_device_id = None
         devices_available = client.devices()
         for device in devices_available["devices"]:
             if device["id"] == self.spotifyController.device:
-                spotify_device_id = device["id"]
-                break
+                return device["id"]
 
-        if not spotify_device_id:
-            _LOGGER.error(
-                'No device with id "{}" known by Spotify'.format(self.spotifyController.device)
-            )
-            _LOGGER.error("Known devices: {}".format(devices_available["devices"]))
-            raise HomeAssistantError("Failed to get device id from Spotify")
-        return spotify_device_id
+
+        _LOGGER.error(
+            'No device with id "{}" known by Spotify'.format(self.spotifyController.device)
+        )
+        _LOGGER.error("Known devices: {}".format(devices_available["devices"]))
+        raise HomeAssistantError("Failed to get device id from Spotify")

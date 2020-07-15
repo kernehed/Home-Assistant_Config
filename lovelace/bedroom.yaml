@@ -1,6 +1,6 @@
 title: Sovrummet
 id: sovrummet
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 0c14e757b52243d49496e3869365598d  # Automatically created id
     type: picture-elements
@@ -72,7 +72,6 @@ cards:
     title: Uttag
     show_header_toggle: false
     entities:
-      - switch.uttag_1
       - switch.uttag_2
   - id: a87ac6a51dd746bfb8c69124215215125  # Automatically created id
     type: entities

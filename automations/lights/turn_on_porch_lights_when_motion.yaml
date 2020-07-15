@@ -4,6 +4,15 @@ trigger:
   platform: state
   entity_id: binary_sensor.altan_motion_sensor
   to: 'on'
+condition:
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: group.devices_adults
+      state: 'not_home'
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
 action:
   service: light.turn_on
   entity_id:

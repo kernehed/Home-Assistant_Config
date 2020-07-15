@@ -4,7 +4,7 @@ flash_lights:
     - service: homeassistant.turn_on
       data:
         entity_id:
-          - light.evenice_lampa
+          - light.theus_lampa2
           - light.theus_lampa
         brightness: 255
         rgb_color: [255,0,0]
@@ -21,7 +21,7 @@ flash_lights:
     - service: homeassistant.turn_off
       data:
         entity_id:
-          - light.evenice_lampa
+          - light.theus_lampa2
           - light.theus_lampa
           - group.light_hallen
           - group.light_koket

@@ -16,4 +16,3 @@ condition:
 action:
   service: light.turn_on
   entity_id: group.light_kallaren
-

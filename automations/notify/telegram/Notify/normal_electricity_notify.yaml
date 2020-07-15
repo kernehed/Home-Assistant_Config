@@ -1,0 +1,20 @@
+alias: "Elpriser normal"
+id: "expensive electricity"
+trigger:
+- platform: template
+  value_template: "{{states.sensor.electricity_price_fabodvagen_10_d.state | float <= 0.20}}"
+condition:
+  condition: or
+  conditions:
+    - condition: template
+      value_template: '{{ as_timestamp(now()) - as_timestamp(states.automation.elpriser_skyhoga.attributes.last_triggered) | int > 43200 }}'
+    - condition: template
+      value_template: '{{ as_timestamp(now()) - as_timestamp(states.automation.elpriser_hoga.attributes.last_triggered) | int > 43200 }}'
+action:
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Elpriset är nu nere på normala priser, ska automationerna aktiveras igen?'
+    inline_keyboard:
+      - "Aktivera:/turn_on_electricity"
+      - "Nej:/removekeyboard"

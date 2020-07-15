@@ -1,6 +1,6 @@
 title: Hallen
 id: hallen
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 4a85e352e6094377b0a2d297aca96a64  # Automatically created id
     type: entities

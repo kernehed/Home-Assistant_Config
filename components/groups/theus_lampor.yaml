@@ -1,0 +1,5 @@
+theus_lampor:
+  name: Theus lampor
+  entities:
+  - light.theus_lampa
+  - light.theus_lampa2

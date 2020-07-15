@@ -1,0 +1,26 @@
+alias: Sova i källaren
+trigger:
+  - platform: state
+    entity_id: input_boolean.sovdags_i_kallaren
+    to: 'on'
+action:
+  - service: automation.turn_off
+    entity_id: automation.tand_kallare_lamporna_nar_rorelse_i_kallaren
+  - service: script.speech_engine
+    data_template:
+      value1: >-
+          {{ [
+             "Jaha! Någon ska sova i källaren idag!!",
+             "Men vad härligt! Att sova i källaren är fantastiskt, där är det både svalt och mörkt!",
+          ] | random }}
+  - wait_template: >-
+     {{ states.input_boolean.sovdags_i_kallaren.state == 'off' }}
+    timeout: '00:05:00'
+    continue_on_timeout: 'false'
+  - service: telegram_bot.send_message
+    data_template:
+      target: -1001200237113
+      message: 'Ska jag slå av sova-i-källaren läget?'
+      inline_keyboard:
+        - "Ja:/turn_off_sova_i_kallaren"
+        - "Nej:/removekeyboard"

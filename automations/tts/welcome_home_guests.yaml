@@ -18,6 +18,7 @@ action:
   - wait_template: >-
      {{ states.binary_sensor.front_door_sensor.state == 'on' }}
     timeout: '00:05:00'
+    continue_on_timeout: 'false'
   - delay: '00:00:30'
   - service: script.speech_engine
     data_template:

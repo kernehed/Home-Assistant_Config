@@ -1,0 +1,14 @@
+alias: "Elpriser skyhöga"
+id: "very expensive electricity"
+trigger:
+- platform: template
+  value_template: "{{states.sensor.electricity_price_fabodvagen_10_d.state | float > 0.80}}"
+action:
+- service: telegram_bot.send_message
+  data_template:
+    target: -1001200237113
+    message: 'Elpriset är skyhögt nu, jag rekommenderar att stänga av vissa automationer och lampor?'
+    inline_keyboard:
+      - "Stäng av:/turn_off_electricity"
+      - "Nej:/removekeyboard"
+

@@ -1,0 +1,111 @@
+- id: '1594672537387'
+  alias: A1 turn on onoff2
+  description: ''
+  trigger:
+  - device_id: 89dbe8ea54cb49098471e94da37d4a76
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.sovrum_tak
+    service: light.turn_on
+- id: '1594713746679'
+  alias: A1 turn on onoff1
+  description: ''
+  trigger:
+  - device_id: 26845b4aa78a489585b94e2470e7fe81
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.hallen
+    service: light.turn_on
+- id: '1594716372315'
+  alias: A1 turn off onoff1
+  description: ''
+  trigger:
+  - device_id: 26845b4aa78a489585b94e2470e7fe81
+    domain: deconz
+    platform: device
+    subtype: turn_off
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.hallen
+    service: light.turn_off
+- id: '1594716891083'
+  alias: A1 turn off onoff2
+  description: ''
+  trigger:
+  - device_id: 89dbe8ea54cb49098471e94da37d4a76
+    domain: deconz
+    platform: device
+    subtype: turn_off
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.sovrum_tak
+    service: light.turn_off
+- id: '1594752130584'
+  alias: A1 toggle fjarrkontroll_2
+  description: Theus rum
+  trigger:
+  - device_id: 80b094550ae44e3d9e14b503a9244859
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.theus_lampa
+    service: light.toggle
+  - data: {}
+    entity_id: light.theus_lampa2
+    service: light.toggle
+- id: '1594753118590'
+  alias: A1 increase brightness fjarrkontroll_2
+  description: ''
+  trigger:
+  - device_id: 80b094550ae44e3d9e14b503a9244859
+    domain: deconz
+    platform: device
+    subtype: dim_up
+    type: remote_button_short_press
+  condition: []
+  action:
+  - device_id: 9e978572ca554a83be0de92e8f956c93
+    domain: light
+    entity_id: light.theus_lampa
+    type: brightness_increase
+  - device_id: d0019fc6707d485280f8d5088c098137
+    domain: light
+    entity_id: light.theus_lampa2
+    type: brightness_increase
+- id: '1594753421620'
+  alias: A1 decrease brightness fjarrkontroll_2
+  description: ''
+  trigger:
+  - device_id: 80b094550ae44e3d9e14b503a9244859
+    domain: deconz
+    platform: device
+    subtype: dim_down
+    type: remote_button_short_press
+  condition: []
+  action:
+  - device_id: 9e978572ca554a83be0de92e8f956c93
+    domain: light
+    entity_id: light.theus_lampa
+    type: brightness_decrease
+  - device_id: d0019fc6707d485280f8d5088c098137
+    domain: light
+    entity_id: light.theus_lampa2
+    type: brightness_decrease

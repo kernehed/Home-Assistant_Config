@@ -13,3 +13,4 @@ homeassistant:
   packages: !include_dir_named components/packages
 hacs:
   token: !secret github_access_token
+automation: !include automations.yaml

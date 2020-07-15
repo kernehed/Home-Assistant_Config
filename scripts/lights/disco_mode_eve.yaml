@@ -1,8 +1,0 @@
-disco_mode_evenice:
-  alias: Disco Evenice
-  sequence:
-       service: homeassistant.turn_on
-       entity_id: light.evenice_lampa
-       data:
-         brightness: 100
-         effect: random

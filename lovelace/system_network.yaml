@@ -1,7 +1,7 @@
 title: System & Nätverk
 id: system_natverk
 icon: mdi:server-network
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 7c92cd52219548b6a6a6d5ee6088e071  # Automatically created id
     type: entities
@@ -20,7 +20,6 @@ cards:
     entities:
       - sensor.plex
       - binary_sensor.gaming_pc
-      - binary_sensor.server_1
       - binary_sensor.server_2
       - binary_sensor.windows_server
       - binary_sensor.teamspeak

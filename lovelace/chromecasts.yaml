@@ -1,7 +1,7 @@
 title: Chromecasts
 id: chromecasts
 icon: mdi:cast
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - type: 'custom:spotify-card'
     client_id: !secret spotify_client_id
@@ -35,12 +35,6 @@ cards:
     name: Hallen
     artwork: cover
     show_source: true
-  - id: a90ab13d4d8141b1bc43c4b88c682911  # Automatically created id
-    type: custom:mini-media-player
-    entity: media_player.sovrummets_hogtalare
-    name: Sovrummets högtalare
-    artwork: cover
-    show_source: true
   - id: 917e5f304d474b21be8736529de769b8  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.kitchen_speaker
@@ -66,6 +60,11 @@ cards:
     entity: media_player.koket
     artwork: cover
     show_source: true
+  - id: harmonyhub
+    type: entities
+    show_header_toggle: false
+    entities:
+      - remote.harmony_hub
   - id: bcd4e7011ba14acea5d3e62f53780543  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.uppe

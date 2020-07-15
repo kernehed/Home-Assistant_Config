@@ -1,13 +1,13 @@
 title: Evenice rum
 id: evenice rum
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 7d54fe6ad20643b2a554eb459e19d39f  # Automatically created id
     type: picture-elements
     image: /local/Evenice.jpg
     elements:
       - type: state-icon
-        entity: light.evenice_lampa
+        entity: switch.uttag_1
         tap_action:
           action: toggle
         hold_action: 
@@ -15,8 +15,6 @@ cards:
         style:
           top: 95%
           left: 93%
-    entities:
-      - light.evenice_lampa
   - id: b4f5c03bd4264c5498911f0003d84b87  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.evenice_mini

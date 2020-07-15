@@ -1,6 +1,6 @@
 title: Theus rum
 id: theus rum
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 77ceb0eb4d494a2488cd27a42accc740  # Automatically created id
     type: picture-elements
@@ -16,7 +16,7 @@ cards:
           top: 95%
           left: 93%
       - type: state-icon
-        entity: switch.fibaro_wall_plug_1_switch
+        entity: light.theus_lampa2
         tap_action:
           action: toggle
         hold_action: 
@@ -24,6 +24,15 @@ cards:
         style:
           top: 95%
           left: 85%
+      - type: state-icon
+        entity: switch.fibaro_wall_plug_1_switch
+        tap_action:
+          action: toggle
+        hold_action: 
+          action: more-info
+        style:
+          top: 89%
+          left: 89%
   - id: 0261237d1f4c44dba577043899c145a9  # Automatically created id
     type: custom:mini-media-player
     entity: media_player.theus_mini

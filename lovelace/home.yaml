@@ -1,7 +1,7 @@
 title: Hem
 id: hem
 icon: mdi:home
-background: center / cover no-repeat url('/local/habakgrounds.jpg')
+#background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - id: 4db5c4664f0a4458949aec3651e4d7a6  # Automatically created id
     type: vertical-stack

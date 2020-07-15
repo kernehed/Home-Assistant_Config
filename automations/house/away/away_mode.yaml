@@ -7,22 +7,7 @@ trigger:
   to: 'not_home'
 action: 
   - service: light.turn_off
-    entity_id: group.light_vardagsrum
-  - service: light.turn_off
-    entity_id: group.light_hallen
-  - service: light.turn_off
-    entity_id: group.light_tvattstugan
-  - service: light.turn_off
-    entity_id: group.light_kallaren
-  - service: light.turn_off
-    entity_id: group.light_sovrummet
-  - service: light.turn_off
-    entity_id: group.light_koket
-  - service: light.turn_off
-    entity_id: group.theus_rum
-  - service: light.turn_off
-    entity_id: group.evenice_rum
-  - service: light.turn_off
+    entity_id: all
     entity_id: media_player.sovrummets_tv
   - service: media_player.turn_off
     entity_id: media_player.evenice_tv
@@ -32,9 +17,5 @@ action:
     entity_id: media_player.theus_mini
   - service: media_player.media_stop
     entity_id: media_player.hallen
-  - service: media_player.media_stop
-    entity_id: media_player.basement
-  - service: media_player.media_stop
-    entity_id: media_player.whole_house
   - service: media_player.media_stop
     entity_id: media_player.kitchen_speaker

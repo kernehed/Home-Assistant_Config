@@ -18,12 +18,3 @@ cards:
     entity: sensor.sonarr_upcoming_media
     image_style: fanart
     title: Upcoming TV-shows
-  - id: d73cebc946f448fbbf8678d128daab07  # Automatically created id
-    type: entities
-    title: Radio
-    show_header_toggle: false
-    entities:
-      - input_select.radio_station
-      - input_select.chromecast_radio
-      - script.radio_p3
-      - input_number.volume_radio

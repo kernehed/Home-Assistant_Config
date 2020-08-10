@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  real_time_kostnad_just_nu_decimal:
+    value_template: "{{ states('sensor.real_time_kostnad_just_nu') | float | round(2) }}"
+    unit_of_measurement: 'kr'

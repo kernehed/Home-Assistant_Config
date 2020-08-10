@@ -1,0 +1,3 @@
+sensor.real_time_fas_2:
+  friendly_name: Fas 2
+  icon: mdi:electric-switch

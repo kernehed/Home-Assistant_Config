@@ -7,7 +7,7 @@ cards:
     title: Hallens lampor
     entities:
       - light.hall_1
-      - light.hall_2
+#      - light.hall_2
       - light.hall_trapp
   - id: 890b620d2fc946d18e6eb74bca7c729b  # Automatically created id
     type: entities

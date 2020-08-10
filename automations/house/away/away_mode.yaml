@@ -8,7 +8,6 @@ trigger:
 action: 
   - service: light.turn_off
     entity_id: all
-    entity_id: media_player.sovrummets_tv
   - service: media_player.turn_off
     entity_id: media_player.evenice_tv
   - service: media_player.media_stop

@@ -40,20 +40,6 @@
   - data: {}
     entity_id: light.hallen
     service: light.turn_off
-- id: '1594716891083'
-  alias: A1 turn off onoff2
-  description: ''
-  trigger:
-  - device_id: 89dbe8ea54cb49098471e94da37d4a76
-    domain: deconz
-    platform: device
-    subtype: turn_off
-    type: remote_button_short_press
-  condition: []
-  action:
-  - data: {}
-    entity_id: light.sovrum_tak
-    service: light.turn_off
 - id: '1594752130584'
   alias: A1 toggle fjarrkontroll_2
   description: Theus rum
@@ -109,3 +95,31 @@
     domain: light
     entity_id: light.theus_lampa2
     type: brightness_decrease
+- id: '1595438350605'
+  alias: A1 turn on onoff2
+  description: ''
+  trigger:
+  - device_id: 1268c90468f84a0cbc83643fbb96ca2d
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.sovrum_tak
+    service: light.turn_on
+- id: '1594716891083'
+  alias: A1 turn off onoff2
+  description: ''
+  trigger:
+  - device_id: 1268c90468f84a0cbc83643fbb96ca2d
+    domain: deconz
+    platform: device
+    subtype: turn_off
+    type: remote_button_short_press
+  condition: []
+  action:
+  - data: {}
+    entity_id: light.sovrum_tak
+    service: light.turn_off

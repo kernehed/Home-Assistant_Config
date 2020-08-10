@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  real_time_kostnad_just_nu:
+    value_template: '{{ states.sensor.real_time_consumption_fabodvagen_10_d.attributes.accumulatedCost }}'
+    unit_of_measurement: 'kr'

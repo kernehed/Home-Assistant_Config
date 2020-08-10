@@ -1,8 +1,15 @@
 alias: Sommarlov
 trigger:
-  - platform: state
+  - platform: homeassistant
+    event: start
+  - platform: time_pattern
+    hours: '/12'
+    
+condition:
+  - condition: state
     entity_id: calendar.sommarlov
-    to: 'on'
+    state: 'on'
+
 action:
   - service: input_boolean.turn_on
     entity_id: input_boolean.sommarlov

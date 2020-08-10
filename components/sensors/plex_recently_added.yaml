@@ -1,6 +1,7 @@
 platform: plex_recently_added
-token: Bq5p61wM5N69uDrcw9hn
-server_name: Plex Server
+token: !secret plex_token
+host: !secret plex_ip
+port: 32400
 ssl: false
 ssl_cert: false
 download_images: false

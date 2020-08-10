@@ -132,11 +132,14 @@ cards:
           - input_select.christmas_palette
   - id: 37279816181f442eac123123c0473101  # Automatically created id
     type: entities
-    title: Balkongen
+    title: Elförbrukning
     show_header_toggle: false
     entities:
-      - sensor.luftdaten_11774_temperature
-      - sensor.luftdaten_11774_humidity
+      - sensor.real_time_consumption_fabodvagen_10_d
+      - sensor.real_time_fas_1
+      - sensor.real_time_fas_2
+      - sensor.real_time_fas_3
+      - sensor.real_time_kostnad_just_nu_decimal
   - id: 2bf8ccbc1f664c23b10b6533ae82f7e2  # Automatically created id
     type: weather-forecast
     entity: weather.smhi_vader

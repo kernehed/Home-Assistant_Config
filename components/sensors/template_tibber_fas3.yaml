@@ -1,0 +1,5 @@
+platform: template
+sensors:
+  real_time_fas_3:
+    value_template: '{{ states.sensor.real_time_consumption_fabodvagen_10_d.attributes.currentL3 }}'
+    unit_of_measurement: 'A'

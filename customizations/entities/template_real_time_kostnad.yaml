@@ -1,0 +1,3 @@
+sensor.real_time_kostnad_just_nu_decimal:
+  friendly_name: Kostnad idag
+  icon: mdi:currency-usd

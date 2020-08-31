@@ -37,6 +37,9 @@ resources:
     type: module
   - url: /hacsfiles/calendar-card/calendar-card.js
     type: js
+  - url: /hacsfiles/vacuum-card/vacuum-card.js
+    type: module
+
 title: Kernehed Manison
 views:
   - !include lovelace/home.yaml
@@ -54,6 +57,7 @@ views:
   - !include lovelace/flowers.yaml
   - !include lovelace/automations.yaml
   - !include lovelace/alarm.yaml
+  - !include lovelace/vacuum.yaml
   - !include lovelace/floorplan.yaml
 
 

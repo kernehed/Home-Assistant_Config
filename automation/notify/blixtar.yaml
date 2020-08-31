@@ -1,0 +1,10 @@
+alias: "Blixtnedslag"
+id: "blixtnedslag"
+trigger:
+  platform: numeric_state
+  entity_id: sensor.blixtar_lightning_counter
+  above: 0
+action:
+  - service: notify.adults
+    data:
+      message: "Det slog precis ner en blixt {{ states.sensor.blixtar_lightning_distance.state }} kilometer ifrån oss. Kolla kartan: https://kernehed.duckdns.org:8123/map"

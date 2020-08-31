@@ -3,7 +3,7 @@ trigger:
   - platform: homeassistant
     event: start
   - platform: time_pattern
-    hours: '/12'
+    hours: '/6'
     
 condition:
   - condition: state

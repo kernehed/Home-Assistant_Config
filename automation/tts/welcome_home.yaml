@@ -6,6 +6,7 @@ trigger:
       - person.bella
       - person.oskar
       - person.evenice
+      - person.theus
     from: 'not_home'
     to: 'home'
 condition:
@@ -27,6 +28,8 @@ action:
          {%- set person = "Oskar" -%}
        {%- elif trigger.entity_id == 'person.evenice' -%}
          {%- set person = "Evenice" -%}
+       {%- elif trigger.entity_id == 'person.theus' -%}
+         {%- set person = "Theus" -%}
        {%- else -%}
          {%- set person = "Alla" -%}
        {%- endif -%}

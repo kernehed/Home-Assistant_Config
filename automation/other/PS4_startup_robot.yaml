@@ -1,0 +1,15 @@
+id: playstation_4
+alias: Playstation 4
+initial_state: 'on'
+trigger: 
+  platform: state 
+  entity_id: media_player.playstation_4
+  to: idle
+action:
+  - delay: '00:00:10'
+  - service: media_player.play_media
+    data:
+      entity_id:
+        - media_player.bio
+      media_content_id: !secret content_PS4_wav
+      media_content_type: music

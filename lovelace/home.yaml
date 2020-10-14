@@ -12,16 +12,10 @@ cards:
             image: /local/Oskar-3.jpg
             elements:
               - type: state-label
-                entity: sensor.battery_oskar
+                entity: sensor.oskar_battery_level
                 style:
                   top: 8%
                   left: 15%
-                  color: white
-              - type: state-label
-                entity: sensor.oskar_tid_till_hem
-                style:
-                  top: 8%
-                  left: 85%
                   color: white
               - type: state-label
                 entity: person.oskar
@@ -33,17 +27,11 @@ cards:
             image: /local/Bella.jpg
             elements:
               - type: state-label
-                entity: sensor.battery_level_bella
+                entity: sensor.bella_battery_level
                 style:
                   top: 8%
                   left: 15%
                   color: white
-#              - type: state-label
-#                entity: sensor.bella_tid_till_hem
-#                style:
-#                  top: 8%
-#                  left: 85%
-#                  color: white
               - type: state-label
                 entity: person.bella
                 style:
@@ -67,6 +55,21 @@ cards:
 #                  color: white
               - type: state-label
                 entity: person.evenice
+                style:
+                  top: 92%
+                  left: 50%
+                  color: white
+          - type: picture-elements
+            image: /local/Theusbajen1.jpg
+            elements:
+              - type: state-label
+                entity: sensor.theus_iphone_battery_level
+                style:
+                  top: 8%
+                  left: 15%
+                  color: white
+              - type: state-label
+                entity: person.theus
                 style:
                   top: 92%
                   left: 50%
@@ -102,7 +105,7 @@ cards:
     entities:
       - entity: binary_sensor.tvattstugan_motion_sensor
         name: Tvättstugan
-      - entity: binary_sensor.skafferiet_motion_sensor
+      - entity: binary_sensor.skafferi_motion_sensor
         name: Skafferiet
       - entity: binary_sensor.kallaren_motion_sensor
         name: Källaren

@@ -1,5 +1,5 @@
 """Constants for avanza_stock."""
-__version__ = "1.0.4"
+__version__ = "1.0.7"
 
 DEFAULT_NAME = "Avanza Stock"
 
@@ -7,6 +7,7 @@ CONF_STOCK = "stock"
 CONF_SHARES = "shares"
 CONF_PURCHASE_PRICE = "purchase_price"
 CONF_CONVERSION_CURRENCY = "conversion_currency"
+CONF_INVERT_CONVERSION_CURRENCY = "invert_conversion_currency"
 
 MONITORED_CONDITIONS = [
     "change",
@@ -90,18 +91,30 @@ CHANGE_PRICE_MAPPING = [
 TOTAL_CHANGE_PRICE_MAPPING = [
     ("totalChangeOneWeek", "priceOneWeekAgo"),
     ("totalChangeOneMonth", "priceOneMonthAgo"),
-    ("totalChangeThreeMonths", "priceThreeMonthsAgo",),
+    (
+        "totalChangeThreeMonths",
+        "priceThreeMonthsAgo",
+    ),
     ("totalChangeSixMonths", "priceSixMonthsAgo"),
     ("totalChangeOneYear", "priceOneYearAgo"),
-    ("totalChangeThreeYears", "priceThreeYearsAgo",),
+    (
+        "totalChangeThreeYears",
+        "priceThreeYearsAgo",
+    ),
     ("totalChangeFiveYears", "priceFiveYearsAgo"),
-    ("totalChangeCurrentYear", "priceAtStartOfYear",),
+    (
+        "totalChangeCurrentYear",
+        "priceAtStartOfYear",
+    ),
 ]
 
 CHANGE_PERCENT_PRICE_MAPPING = [
     ("changePercentOneWeek", "priceOneWeekAgo"),
     ("changePercentOneMonth", "priceOneMonthAgo"),
-    ("changePercentThreeMonths", "priceThreeMonthsAgo",),
+    (
+        "changePercentThreeMonths",
+        "priceThreeMonthsAgo",
+    ),
     ("changePercentSixMonths", "priceSixMonthsAgo"),
     ("changePercentOneYear", "priceOneYearAgo"),
     ("changePercentThreeYears", "priceThreeYearsAgo"),

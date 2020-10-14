@@ -7,4 +7,7 @@ trigger:
 action:
   - service: notify.adults
     data:
-      message: "Det slog precis ner en blixt {{ states.sensor.blixtar_lightning_distance.state }} kilometer ifrån oss. Kolla kartan: https://kernehed.duckdns.org:8123/map"
+      message: "Det slog precis ner en blixt {{ states.sensor.blixtar_lightning_distance.state }} kilometer ifrån oss."
+  - service: script.speech_engine
+    data_template:
+      value1: "et slog precis ner en blixt {{ states.sensor.blixtar_lightning_distance.state }} kilometer ifrån oss. Försök att hålla er inomhus!."

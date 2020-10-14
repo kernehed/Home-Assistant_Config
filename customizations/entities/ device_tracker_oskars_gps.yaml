@@ -1,0 +1,3 @@
+device_tracker.oskars_gps:
+  friendly_name: Oskar
+  entity_picture: "/local/Oskar-3.jpg"

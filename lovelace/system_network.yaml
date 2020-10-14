@@ -40,7 +40,7 @@ cards:
           - sensor.uptime_router
           - sensor.installerad_routeros
           - sensor.next_router_os_release
-  - id: 123123123123213123 
+  - id: 123123123123213123d
     type: entities
     title: AdGuard
     show_header_toggle: false
@@ -112,12 +112,12 @@ cards:
       - entity: sensor.speedtest_ping
         name: Ping
         color: yellow
-  - id: 123123123123213123 
+  - id: 1231231233dd13123 
     type: entities
     title: Klienter
     show_header_toggle: false
     entities:
-      - switch.ipad
+      - switch.theus_iphone
       - switch.iphone
       - switch.oskarstelefon
       - switch.evenice_iphone

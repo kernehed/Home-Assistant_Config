@@ -1,36 +1,36 @@
 title: Robotdammsugaren
 id: Vacuum
 cards:
-  type: 'custom:vacuum-card'
-  entity: vacuum.xiaomi_vacuum_cleaner
-  stats:
-    default:
-      - attribute: filter_left
-        unit: hours
-        subtitle: Filter
-      - attribute: side_brush_left
-        unit: hours
-        subtitle: Side brush
-      - attribute: main_brush_left
-        unit: hours
-        subtitle: Main brush
-      - attribute: sensor_dirty_left
-        unit: hours
-        subtitle: Sensors
-    cleaning:
-      - attribute: cleaned_area
-        unit: m2
-        subtitle: Cleaning area
-      - attribute: cleaning_time
-        unit: minutes
-        subtitle: Cleaning time
-#  actions:
-#    - name: Städa sovrummet
-#      service: script.sovrummet
-#      icon: 'mdi:bed-empty'
-#    - name: Städa Evenice rum
-#      service: script.evenice_rum
-#      icon: 'mdi:bed-empty'
-#    - name: Städa hall
-#      service: script.hall
-#      icon: 'mdi:silverware-fork-knife'
+  - type: 'custom:vacuum-card'
+    entity: vacuum.xiaomi_vacuum_cleaner
+    stats:
+      default:
+        - attribute: filter_left
+          unit: hours
+          subtitle: Filter
+        - attribute: side_brush_left
+          unit: hours
+          subtitle: Side brush
+        - attribute: main_brush_left
+          unit: hours
+          subtitle: Main brush
+        - attribute: sensor_dirty_left
+          unit: hours
+          subtitle: Sensors
+      cleaning:
+        - attribute: cleaned_area
+          unit: m2
+          subtitle: Cleaning area
+        - attribute: cleaning_time
+          unit: minutes
+          subtitle: Cleaning time
+    actions:
+      - name: Städa sovrummet
+        service: script.sovrummet
+        icon: 'mdi:bed-empty'
+      - name: Städa Evenice rum
+        service: script.evenice_rum
+        icon: 'mdi:bed-empty'
+      - name: Städa hall
+        service: script.hall
+        icon: 'mdi:silverware-fork-knife'

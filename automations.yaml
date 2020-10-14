@@ -99,7 +99,7 @@
   alias: A1 turn on onoff2
   description: ''
   trigger:
-  - device_id: 1268c90468f84a0cbc83643fbb96ca2d
+  - device_id: c1f24e858221411c9f38c7e7c9d934bc
     domain: deconz
     platform: device
     subtype: turn_on
@@ -113,7 +113,7 @@
   alias: A1 turn off onoff2
   description: ''
   trigger:
-  - device_id: 1268c90468f84a0cbc83643fbb96ca2d
+  - device_id: c1f24e858221411c9f38c7e7c9d934bc
     domain: deconz
     platform: device
     subtype: turn_off

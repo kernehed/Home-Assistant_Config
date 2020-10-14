@@ -1,5 +1,5 @@
 platform: scrape
 name: Lillhagsskolan lunch fredag
-resource: https://skolmaten.se/lillhagsskolan/
-select: 'div.row:nth-of-type(5) p:nth-of-type(2) span'
+resource: https://sodexo.mashie.com/public/app/Lillhagsskolan/11c0672c?country=se&fbclid=IwAR0AZmeAZRzgSn4w1Xu5TineCZgkOm2NAkJkhit78N5q1_MRGiKVzfBd2ec
+select: 'div:nth-of-type(5) div.list-group-item:nth-of-type(2) div.app-daymenu-name'
 scan_interval: 14400

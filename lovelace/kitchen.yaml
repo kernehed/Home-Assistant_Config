@@ -8,7 +8,7 @@ cards:
     show_header_toggle: false
     entities:
       - light.skafferiet
-#      - light.koket_bank
+      - light.light_strip_bar
       - light.fibaro_system_fgd212_dimmer_2_level
   - id: a7baefd20bb84d5282727531233123d2e  # Automatically created id
     type: entities

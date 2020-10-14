@@ -2,7 +2,7 @@ alias: "Robot: Robot cleanup if nobody is home"
 initial_state: "on"
 trigger:
   - platform: time
-    at: "10:00"
+    at: "10:00:00"
   - platform: state
     entity_id: group.devices_adults
     from: home
@@ -14,10 +14,10 @@ condition:
       after: "10:00:00"
       before: "22:00:00"
       weekday:
-       - mon
-       - wed
-       - fri
-       - sun
+      - mon
+      - wed
+      - fri
+      - sun
     - condition: state
       entity_id: group.devices_adults
       state: not_home

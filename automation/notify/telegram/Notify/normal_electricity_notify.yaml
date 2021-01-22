@@ -1,5 +1,5 @@
 alias: "Elpriser normal"
-id: "expensive electricity"
+id: "normal electricity"
 trigger:
 - platform: template
   value_template: "{{states.sensor.electricity_price_fabodvagen_10_d.state | float <= 0.20}}"

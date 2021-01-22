@@ -1,0 +1,14 @@
+alias: Kamera motion face detection theus
+id: kamera_motion_face_theus
+initial_state: 'on'
+trigger: 
+  - platform: state
+    entity_id: binary_sensor.theus_motion_eye
+    to: 'on'
+action:
+  - delay: '00:00:05'
+  - service: image_processing.scan
+    entity_id: image_processing.face_counter_theus
+  - delay: '00:00:11'
+  - service: image_processing.scan
+    entity_id: image_processing.face_counter_theus

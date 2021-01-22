@@ -27,7 +27,7 @@ cards:
             image: /local/Bella.jpg
             elements:
               - type: state-label
-                entity: sensor.bella_battery_level
+                entity: sensor.iphone_battery_level
                 style:
                   top: 8%
                   left: 15%
@@ -42,7 +42,7 @@ cards:
             image: /local/Evenice-1.jpg
             elements:
               - type: state-label
-                entity: sensor.battery_level_evenice
+                entity: sensor.evenice_iphone_battery_level
                 style:
                   top: 8%
                   left: 15%
@@ -79,8 +79,8 @@ cards:
     title: Låset
     show_header_toggle: false
     entities:
-      - lock.polycontrol_danalock_v3_btze_locked
-      - sensor.zwave_battery_front_door
+      - lock.poly_control_danalock_v3_btze_locked
+      - sensor.poly_control_danalock_v3_btze_battery_level
       - alarm_control_panel.house
       - type: custom:fold-entity-row
         head:
@@ -125,9 +125,9 @@ cards:
         entities:
           - switch.rest_julbelysning
           - binary_sensor.front_door_sensor
-          - binary_sensor.unifi_camera
+          - binary_sensor.entre_motion_eye
           - binary_sensor.back_door_sensor
-        camera_image: camera.entre_2
+        camera_image: camera.entre
         camera_view: live
       - type: entities
         entities:

@@ -1,0 +1,3 @@
+platform: local_file
+file_path: /config/deepstack_face_snapshots/face_counter_theus_latest.jpg
+name: theus_local_file_camera

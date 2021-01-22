@@ -1,0 +1,32 @@
+esphome:
+  name: esp8266_zxmas
+  platform: ESP8266
+  board: esp01_1m
+
+light:
+  - platform: fastled_spi
+    chipset: WS2801
+    data_pin: GPIO7
+    clock_pin: GPIO6
+    num_leds: 150
+    rgb_order: BRG
+    name: "Xmas_light_kernehed"
+
+wifi:
+  ssid: "Kernehed WiFi"
+  password: "Evenice12"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp8266 Zxmas Fallback Hotspot"
+    password: "xi9XM3eVDO4B"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:

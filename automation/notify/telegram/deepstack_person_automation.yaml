@@ -1,0 +1,12 @@
+alias: Object detection automation person
+trigger:
+  - platform: event     
+    event_type: deepstack.object_detected
+    event_data:
+      name: person
+action:
+  - data_template:
+      caption: "Kameran vid entrén har noterat en person med {{ trigger.event.data.confidence }}% säkerhet"
+      file: "{{ trigger.event.data.saved_file }}"
+    service: telegram_bot.send_photo
+

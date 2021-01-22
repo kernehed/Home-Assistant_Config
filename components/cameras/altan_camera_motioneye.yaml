@@ -1,0 +1,3 @@
+platform: ffmpeg
+name: altan
+input: !secret altan_stream_source

@@ -1,4 +1,5 @@
 speech_engine:
+  mode: queued
   sequence:
     - service: script.speech_processing
       data_template:
@@ -27,3 +28,4 @@ speech_engine:
           - input_boolean.bellas_fodelsedag
           - input_boolean.vattenkokaren
           - input_boolean.plantorna
+          - input_boolean.hamstermat

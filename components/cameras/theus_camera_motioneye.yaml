@@ -1,0 +1,4 @@
+platform: ffmpeg
+name: Theus
+input: !secret theus_stream_source
+extra_arguments: -vf transpose=2

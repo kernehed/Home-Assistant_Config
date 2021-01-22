@@ -1,4 +1,5 @@
 speech_processing:
+  mode: queued
   sequence:
     - service: media_player.volume_set
       entity_id:

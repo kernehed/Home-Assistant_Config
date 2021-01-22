@@ -1,6 +1,6 @@
 title: Automationer
 id: automationer
-icon: mdi:settings
+icon: mdi:cog
 ##background: center / cover no-repeat url('/local/habakgrounds.jpg')
 cards:
   - type: custom:auto-entities

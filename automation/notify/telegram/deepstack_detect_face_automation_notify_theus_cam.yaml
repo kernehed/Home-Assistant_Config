@@ -1,0 +1,20 @@
+alias: 'Object face_Oskar_Theus'
+initial_state: on
+trigger:
+  platform: event
+  event_type: image_processing.detect_face
+  event_data:
+    entity_id: 'image_processing.face_counter_theus'
+condition:
+  condition: template
+  value_template: "{{ trigger.event.data.confidence|float > 50 }}"
+action:
+  - service: notify.adults
+    data:
+      message: "Kameran vid entrén har noterat {{ trigger.event.data.name }} med {{ trigger.event.data.confidence }}% säkerhet"
+      title: "Ansiktsigenkänning:"
+      data:
+        photo:
+          - file: "/config/deepstack_face_snapshots/face_counter_theus_latest.jpg"
+            caption: "Theus kamera har noterat {{ trigger.event.data.name }} med {{ trigger.event.data.confidence }}% säkerhet"
+          

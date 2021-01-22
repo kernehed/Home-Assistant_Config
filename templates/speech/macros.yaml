@@ -34,10 +34,10 @@
 
   {%- macro dark_outside() -%}
   {{ [
-      'Det börjar bli mörkt ute. Jag tänder några lampor nu.',
-      'Solen är officiellt nere. Kameran ute har rörelsesensorn igång',
-      'Solen har gått ner från scen. Aktiverar rörelsesensorn på kameran ute..',
-      'Det är en liten stund efter solnedgången. Dags att tända några lampor. Jag är på det.'
+      "Det börjar bli mörkt ute. Jag tänder några lampor nu.",
+      "Solen är officiellt nere. Kameran ute har rörelsesensorn igång",
+      "Solen har gått ner från scen. Aktiverar rörelsesensorn på kameran ute..",
+      "Det är en liten stund efter solnedgången. Dags att tända några lampor. Jag är på det."
   ]|random }}
   {%- endmacro -%}
 
@@ -236,20 +236,16 @@
    {% endif %}
   {%- endmacro -%}
 
-  {%- macro fotbolls_traning() -%}
+  {%- macro hamstermat() -%}
   {% set weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"] %}
   {% set day_of_the_week = weekday[now().isoweekday() ] %}
-  {% if day_of_the_week == 'Söndag' or day_of_the_week == 'Onsdag' or day_of_the_week == 'Fredag' %}
-      Imorgon är det fotbollsträning!
+  {% if day_of_the_week == 'Lördag' or day_of_the_week == 'Lördag' %}
+      Idag är {{ day_of_the_week }} och då ska hamstrarna få godis och rent i buren.
   {% endif %}
-  {% if day_of_the_week == 'Måndag' %}
-     Idag har Evenice Fotbollsträning!
-  {% endif %}
-  {% if day_of_the_week == 'Torsdag' %}
-    Idag har Evenice Fotbollsträning!
-  {% endif %}
-  {% if day_of_the_week == 'Lördag' %}
-     Idag är det fotbollsträning för Theus!!
+  {% if now().strftime('%j')|int % 2 != 0 %}
+      Idag är det Theus tur att ge hamstrarna mat.
+  {% else %}
+      Idag är det Evenice tur att ge hamstrarna mat.
   {% endif %}
   {%- endmacro -%}
 
@@ -334,8 +330,8 @@
   {{ responsibilities() }}
   {% endif %}
  
-  {% if call_fotbolls_traning == 1 %}
-  {{ fotbolls_traning() }}
+  {% if call_hamstermat == 1 %}
+  {{ hamstermat() }}
   {% endif %} 
 
   {% if call_time_with_screen == 1 %}

@@ -1,0 +1,11 @@
+alias: Object detection automation car
+trigger:
+  - platform: event     
+    event_type: deepstack.object_detected
+    event_data:
+      name: car
+action:
+  - data_template:
+      caption: "Kameran vid entrén har noterat en bil med {{ trigger.event.data.confidence }}% säkerhet"
+      file: "{{ trigger.event.data.saved_file }}"
+    service: telegram_bot.send_photo

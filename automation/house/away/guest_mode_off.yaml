@@ -1,6 +1,6 @@
 alias: gastlage
 initial_state: 'on'
-id: '1545925758700'
+id: '15459257587003213'
 trigger:
   platform: state
   entity_id: input_boolean.guest_mode

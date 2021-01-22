@@ -2,7 +2,7 @@ alias: Tänd skafferiet lampan när rörelse i skafferiet
 initial_state: 'on'
 trigger:
   platform: state
-  entity_id: binary_sensor.skafferiet_motion_sensor
+  entity_id: binary_sensor.skafferi_motion_sensor
   to: 'on'
 action:
   service: light.turn_on

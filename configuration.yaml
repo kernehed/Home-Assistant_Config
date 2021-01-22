@@ -7,10 +7,15 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Stockholm
 # EXTERNAL DIRS
-  whitelist_external_dirs:
-  - /config/snapshot
+  allowlist_external_dirs:
+  - /config/snapshot/
+  - /config/deepstack_object_snapshots/
+  - /config/deepstack_face_faces/
+  - /config/deepstack_face_snapshots/
 
   packages: !include_dir_named components/packages
 hacs:
   token: !secret github_access_token
-automation: !include automations.yaml
+  media_dirs:
+    local: /config/deepstack_object_snapshots
+#automation: !include automations.yaml

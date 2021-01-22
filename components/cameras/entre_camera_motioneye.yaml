@@ -1,0 +1,3 @@
+platform: ffmpeg
+name: entre
+input: !secret unifi_stream_source

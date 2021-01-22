@@ -1,0 +1,13 @@
+platform: deepstack_face
+ip_address: 192.168.1.203
+port: 80
+timeout: 10
+detect_only: False
+save_file_folder: /config/deepstack_face_snapshots
+save_timestamped_file: True
+save_faces: True
+save_faces_folder: /config/deepstack_face_faces
+show_boxes: True
+source:
+  - entity_id: camera.theus
+    name: face counter theus

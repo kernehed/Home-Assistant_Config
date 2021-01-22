@@ -16,4 +16,4 @@ action:
           ] | random }}
       call_inspirational_quote: 1
       call_responsibilities: 1
-      call_fotbolls_traning: 1
+      call_hamstermat: 1

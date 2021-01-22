@@ -4,35 +4,43 @@ from custom_components.hacs.helpers.functions.logger import getLogger
 from custom_components.hacs.helpers.functions.path_exsist import async_path_exsist
 from custom_components.hacs.share import get_hacs
 
+_LOGGER = getLogger()
 
-async def async_serve_category_file(requested_file):
+LONG_LIVE_CACHE_CONTROL = "public, max-age=2678400"
+REVALIDATE_CACHE_CONTROL = "no-cache"
+
+
+async def async_serve_category_file(request, requested_file):
     hacs = get_hacs()
-    logger = getLogger("web.category")
+
     try:
         if requested_file.startswith("themes/"):
-            servefile = f"{hacs.system.config_path}/{requested_file}"
+            servefile = f"{hacs.core.config_path}/{requested_file}"
+            cache_header = LONG_LIVE_CACHE_CONTROL
         else:
-            servefile = f"{hacs.system.config_path}/www/community/{requested_file}"
-
-        # Serve .gz if it exist
-        if await async_path_exsist(f"{servefile}.gz"):
-            servefile += ".gz"
-
-        if await async_path_exsist(servefile):
-            logger.debug(f"Serving {requested_file} from {servefile}")
-            response = web.FileResponse(servefile)
-            if requested_file.startswith("themes/"):
-                response.headers["Cache-Control"] = "public, max-age=2678400"
-            else:
-                response.headers["Cache-Control"] = "no-store, max-age=0"
-                response.headers["Pragma"] = "no-store"
-            return response
-        else:
-            logger.error(f"Tried to serve up '{servefile}' but it does not exist")
-
-    except (Exception, BaseException) as exception:
-        logger.debug(
-            f"there was an issue trying to serve {requested_file} - {exception}"
+            servefile = f"{hacs.core.config_path}/www/community/{requested_file}"
+            cache_header = REVALIDATE_CACHE_CONTROL
+        return await async_serve_static_file_with_cache_header(
+            request, servefile, requested_file, cache_header
         )
+    except (Exception, BaseException):
+        _LOGGER.exception("Error trying to serve %s", requested_file)
+        return web.Response(status=500)
 
-    return web.Response(status=404)
+
+async def async_serve_static_file_with_cache_header(
+    request, servefile, requested_file, cache_header
+):
+    """Serve a static file without an etag."""
+    if not await async_path_exsist(servefile):
+        _LOGGER.error(
+            "%s tried to request '%s' but the file does not exist",
+            request.remote,
+            servefile,
+        )
+        return web.Response(status=404)
+
+    _LOGGER.debug("Serving %s from %s", requested_file, servefile)
+    response = web.FileResponse(servefile)
+    response.headers["Cache-Control"] = cache_header
+    return response

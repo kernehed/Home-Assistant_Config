@@ -2,6 +2,6 @@ platform: polling
 api_key: !secret telegram_api_key
 parse_mode: html
 allowed_chat_ids:
+  - -1001200237113 # Grupp - skickar till det första ID, alltså grupp
   - 543927188 # Oskar
-  - 535882719 # Bella
-  - -1001200237113 # Grupp
+#  - 535882719 # Bella

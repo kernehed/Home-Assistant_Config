@@ -1,5 +1,0 @@
-platform: mqtt
-name: Unifi camera
-state_topic: "camera/motion/Entré"
-payload_on: "ON"
-payload_off: "OFF"

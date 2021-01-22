@@ -1,0 +1,5 @@
+entremotion:
+  alias: Entre camera motion
+  sequence:
+    - service: automation.trigger
+      entity_id: automation.kamera_motion

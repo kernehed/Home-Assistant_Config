@@ -1,0 +1,11 @@
+alias: 'hamstermat'
+
+trigger:
+  - platform: state
+    entity_id: input_boolean.hamstermat
+    to: 'on'
+
+action:
+  - service: script.speech_engine
+    data:
+      call_hamstermat: 1

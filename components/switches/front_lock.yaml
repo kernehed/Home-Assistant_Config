@@ -2,10 +2,10 @@ platform: template
 switches:
   front_lock:
     friendly_name: "Front Lock"
-    value_template: "{{ is_state('lock.polycontrol_danalock_v3_btze_locked', 'locked') }}"
+    value_template: "{{ is_state('lock.poly_control_danalock_v3_btze_locked', 'locked') }}"
     turn_on:
      service: lock.lock
-     entity_id: lock.polycontrol_danalock_v3_btze_locked
+     entity_id: lock.poly_control_danalock_v3_btze_locked
     turn_off:
      service: lock.unlock
-     entity_id: lock.polycontrol_danalock_v3_btze_locked
+     entity_id: lock.poly_control_danalock_v3_btze_locked

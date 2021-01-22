@@ -1,8 +1,8 @@
-id: script_bella_location
-alias: script_bella_location
-initial_state: 'on'
-trigger: 
-  platform: time_pattern
-  minutes: "/60"
-action:
-  - service: script.location_bella
+#id: script_bella_location
+#alias: script_bella_location
+#initial_state: 'on'
+#trigger: 
+#  platform: time_pattern
+#  minutes: "/60"
+#action:
+#  - service: script.location_bella

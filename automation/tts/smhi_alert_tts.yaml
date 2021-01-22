@@ -3,8 +3,8 @@ initial_state: 'on'
 trigger:
   - platform: time_pattern
     hours : '/3'
-    minutes: 00
-    seconds: 00
+    minutes: 0
+    seconds: 0
 condition:
   condition: and
   conditions:

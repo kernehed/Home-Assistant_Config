@@ -50,7 +50,7 @@ from homeassistant.util.dt       import utcnow                       as now
 from homeassistant.loader        import bind_hass
 from homeassistant.helpers.event import async_track_point_in_time
 from homeassistant.helpers.event import async_track_state_change
-from homeassistant.util          import sanitize_filename
+from homeassistant.util          import sanitize_path
 from homeassistant.exceptions    import HomeAssistantError
 from homeassistant.components.http import HomeAssistantView
 
@@ -477,15 +477,16 @@ class BwResources(HomeAssistantView):
 
     async def get(self, request, path):
         """Retrieve file."""
-        override_path = "{}/{}".format(self.override_folder, path)
-        default_path = "{}/{}".format(self.default_folder, path)
+        safe_path = sanitize_path(path)
+        if path != safe_path:
+            raise web.HTTPBadRequest
+        override_path = "{}/{}".format(self.override_folder, safe_path)
+        default_path = "{}/{}".format(self.default_folder, safe_path)
 
         if os.path.exists(override_path):
             return web.FileResponse(override_path)
         elif os.path.exists(default_path):
             return web.FileResponse(default_path)
-#        else:
-#            return None
 
 class BWAlarm(AlarmControlPanelEntity):
 

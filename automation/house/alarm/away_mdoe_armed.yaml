@@ -16,7 +16,7 @@ action:
       volume_level: '0.5'
   - delay: '00:00:05'
   - service: lock.lock
-    entity_id: lock.poly_control_danalock_v3_btze_locked
+    entity_id: lock.danalock_v3_btze_locked
   - service: notify.adults
     data:
       message: Bortaläget aktiverat.

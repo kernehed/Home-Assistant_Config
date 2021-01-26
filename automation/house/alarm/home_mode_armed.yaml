@@ -19,4 +19,4 @@ action:
       message: 'Larmet har ändrats till hemmaläge. Voff, Milla är själv hemma. '
   - delay: '00:00:12'
   - service: lock.lock
-    entity_id: lock.poly_control_danalock_v3_btze_locked
+    entity_id: lock.danalock_v3_btze_locked

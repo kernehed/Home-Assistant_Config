@@ -8,7 +8,7 @@ condition:
   condition: or
   conditions:
     - condition: state
-      entity_id: lock.poly_control_danalock_v3_btze_locked
+      entity_id: lock.danalock_v3_btze_locked
       state: 'unlocked'
     - condition: state
       entity_id: alarm_control_panel.house

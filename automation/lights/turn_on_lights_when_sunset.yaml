@@ -16,8 +16,6 @@ action:
     - group.light_hallen
     - light.sovrum_spotlights
     - light.hall_trapp
-  - service: switch.turn_on
-    entity_id: switch.rest_julbelysning
   - service: script.speech_engine
     data_template:
       call_dark_outside: 1

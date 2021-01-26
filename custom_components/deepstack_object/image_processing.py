@@ -4,7 +4,7 @@ Component that will perform object detection and identification via deepstack.
 For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/image_processing.deepstack_object
 """
-from collections import namedtuple
+from collections import namedtuple, Counter
 import datetime
 import io
 import logging
@@ -71,11 +71,13 @@ CONF_TARGETS = "targets"
 CONF_TIMEOUT = "timeout"
 CONF_SAVE_FILE_FOLDER = "save_file_folder"
 CONF_SAVE_TIMESTAMPTED_FILE = "save_timestamped_file"
+CONF_ALWAYS_SAVE_LATEST_JPG = "always_save_latest_jpg"
 CONF_SHOW_BOXES = "show_boxes"
 CONF_ROI_Y_MIN = "roi_y_min"
 CONF_ROI_X_MIN = "roi_x_min"
 CONF_ROI_Y_MAX = "roi_y_max"
 CONF_ROI_X_MAX = "roi_x_max"
+CONF_SCALE = "scale"
 CONF_CUSTOM_MODEL = "custom_model"
 
 DATETIME_FORMAT = "%Y-%m-%d_%H-%M-%S"
@@ -86,6 +88,7 @@ DEFAULT_ROI_Y_MIN = 0.0
 DEFAULT_ROI_Y_MAX = 1.0
 DEFAULT_ROI_X_MIN = 0.0
 DEFAULT_ROI_X_MAX = 1.0
+DEAULT_SCALE = 1.0
 DEFAULT_ROI = (
     DEFAULT_ROI_Y_MIN,
     DEFAULT_ROI_X_MIN,
@@ -127,8 +130,12 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
         vol.Optional(CONF_ROI_X_MIN, default=DEFAULT_ROI_X_MIN): cv.small_float,
         vol.Optional(CONF_ROI_Y_MAX, default=DEFAULT_ROI_Y_MAX): cv.small_float,
         vol.Optional(CONF_ROI_X_MAX, default=DEFAULT_ROI_X_MAX): cv.small_float,
+        vol.Optional(CONF_SCALE, default=DEAULT_SCALE): vol.All(
+            vol.Coerce(float, vol.Range(min=0.1, max=1))
+        ),
         vol.Optional(CONF_SAVE_FILE_FOLDER): cv.isdir,
         vol.Optional(CONF_SAVE_TIMESTAMPTED_FILE, default=False): cv.boolean,
+        vol.Optional(CONF_ALWAYS_SAVE_LATEST_JPG, default=False): cv.boolean,
         vol.Optional(CONF_SHOW_BOXES, default=True): cv.boolean,
     }
 )
@@ -223,9 +230,11 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
             roi_x_min=config[CONF_ROI_X_MIN],
             roi_y_max=config[CONF_ROI_Y_MAX],
             roi_x_max=config[CONF_ROI_X_MAX],
+            scale=config[CONF_SCALE],
             show_boxes=config[CONF_SHOW_BOXES],
             save_file_folder=save_file_folder,
             save_timestamped_file=config.get(CONF_SAVE_TIMESTAMPTED_FILE),
+            always_save_latest_jpg=config.get(CONF_ALWAYS_SAVE_LATEST_JPG),
             camera_entity=camera.get(CONF_ENTITY_ID),
             name=camera.get(CONF_NAME),
         )
@@ -234,7 +243,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
 
 class ObjectClassifyEntity(ImageProcessingEntity):
-    """Perform a face classification."""
+    """Perform a object classification."""
 
     def __init__(
         self,
@@ -249,9 +258,11 @@ class ObjectClassifyEntity(ImageProcessingEntity):
         roi_x_min,
         roi_y_max,
         roi_x_max,
+        scale,
         show_boxes,
         save_file_folder,
         save_timestamped_file,
+        always_save_latest_jpg,
         camera_entity,
         name=None,
     ):
@@ -267,6 +278,7 @@ class ObjectClassifyEntity(ImageProcessingEntity):
         )
         self._custom_model = custom_model
         self._confidence = confidence
+        self._summary = {}
         self._targets = targets
         for target in self._targets:
             if CONF_CONFIDENCE not in target.keys():
@@ -291,22 +303,39 @@ class ObjectClassifyEntity(ImageProcessingEntity):
             "y_max": roi_y_max,
             "x_max": roi_x_max,
         }
-
+        self._scale = scale
         self._show_boxes = show_boxes
         self._last_detection = None
         self._image_width = None
         self._image_height = None
         self._save_file_folder = save_file_folder
         self._save_timestamped_file = save_timestamped_file
+        self._always_save_latest_jpg = always_save_latest_jpg
+        self._image = None
 
     def process_image(self, image):
         """Process an image."""
-        self._image_width, self._image_height = Image.open(
-            io.BytesIO(bytearray(image))
-        ).size
+        self._image = Image.open(io.BytesIO(bytearray(image)))
+        self._image_width, self._image_height = self._image.size
+
+        # resize image if different then default
+        if self._scale != DEAULT_SCALE:
+            newsize = (self._image_width * self._scale, self._image_width * self._scale)
+            self._image.thumbnail(newsize, Image.ANTIALIAS)
+            self._image_width, self._image_height = self._image.size
+            with io.BytesIO() as output:
+                self._image.save(output, format="JPEG")
+                image = output.getvalue()
+            _LOGGER.debug(
+                (
+                    f"Image scaled with : {self._scale} W={self._image_width} H={self._image_height}"
+                )
+            )
+
         self._state = None
         self._objects = []  # The parsed raw data
         self._targets_found = []
+        self._summary = {}
         saved_image_path = None
 
         try:
@@ -342,10 +371,16 @@ class ObjectClassifyEntity(ImageProcessingEntity):
         if self._state > 0:
             self._last_detection = dt_util.now().strftime(DATETIME_FORMAT)
 
-        if self._save_file_folder and self._state > 0:
-            saved_image_path = self.save_image(
-                image, self._targets_found, self._save_file_folder,
-            )
+        targets_found = [
+            obj["name"] for obj in self._targets_found
+        ]  # Just the list of target names, e.g. [car, car, person]
+        self._summary = dict(Counter(targets_found))  # e.g. {'car':2, 'person':1}
+
+        if self._save_file_folder:
+            if self._state > 0 or self._always_save_latest_jpg:
+                saved_image_path = self.save_image(
+                    self._targets_found, self._save_file_folder,
+                )
 
         # Fire events
         for target in self._targets_found:
@@ -383,6 +418,7 @@ class ObjectClassifyEntity(ImageProcessingEntity):
         attr["targets_found"] = [
             {obj["name"]: obj["confidence"]} for obj in self._targets_found
         ]
+        attr["summary"] = self._summary
         if self._last_detection:
             attr["last_target_detection"] = self._last_detection
         if self._custom_model:
@@ -392,17 +428,17 @@ class ObjectClassifyEntity(ImageProcessingEntity):
         ]
         if self._save_file_folder:
             attr[CONF_SAVE_FILE_FOLDER] = str(self._save_file_folder)
-        if self._save_timestamped_file:
             attr[CONF_SAVE_TIMESTAMPTED_FILE] = self._save_timestamped_file
+            attr[CONF_ALWAYS_SAVE_LATEST_JPG] = self._always_save_latest_jpg
         return attr
 
-    def save_image(self, image, targets, directory) -> str:
+    def save_image(self, targets, directory) -> str:
         """Draws the actual bounding box of the detected objects.
 
         Returns: saved_image_path, which is the path to the saved timestamped file if configured, else the default saved image.
         """
         try:
-            img = Image.open(io.BytesIO(bytearray(image))).convert("RGB")
+            img = self._image.convert("RGB")
         except UnidentifiedImageError:
             _LOGGER.warning("Deepstack unable to process image, bad data")
             return

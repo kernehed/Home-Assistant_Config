@@ -9,7 +9,7 @@ action:
 - service: lock.lock
   data:
     entity_id:
-      - lock.poly_control_danalock_v3_btze_locked
+      - lock.danalock_v3_btze_locked
 - delay: '00:00:11'
 - service: telegram_bot.send_message
   data_template:

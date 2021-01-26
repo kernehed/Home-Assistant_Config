@@ -79,8 +79,8 @@ cards:
     title: Låset
     show_header_toggle: false
     entities:
-      - lock.poly_control_danalock_v3_btze_locked
-      - sensor.poly_control_danalock_v3_btze_battery_level
+      - lock.danalock_v3_btze_locked
+      - sensor.danalock_v3_btze_battery_level
       - alarm_control_panel.house
       - type: custom:fold-entity-row
         head:

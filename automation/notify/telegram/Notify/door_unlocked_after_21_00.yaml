@@ -2,7 +2,7 @@ id: 'door_unlocked_after_21_00_notify'
 alias: 'door unlocked after 21_00_notify'
 trigger:
 - platform: state
-  entity_id: lock.poly_control_danalock_v3_btze_locked
+  entity_id: lock.danalock_v3_btze_locked
   to: 'unlocked'
 condition:
     - condition: time
